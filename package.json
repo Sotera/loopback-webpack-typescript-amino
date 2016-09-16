@@ -1,14 +1,9 @@
 {
-  "name": "loopback-webpack-typescript-amino",
-  "version": "0.1.0",
+  "name": "loopback-getting-started",
+  "version": "0.0.0",
   "main": "server/server.js",
   "scripts": {
-    "pretest": "jshint .",
-    "build": "webpack",
-    "deploy": "gh-pages -d build",
-    "stats": "webpack --profile --json > stats.json",
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "jshint ."
   },
   "dependencies": {
     "compression": "^1.6.2",
@@ -19,40 +14,21 @@
     "loopback-component-explorer": "^2.6.0",
     "loopback-connector-mysql": "^2.3.0",
     "loopback-datasource-juggler": "^2.51.0",
-    "react": "^15.3.1",
     "serve-favicon": "^2.3.0",
     "source-map-support": "^0.4.2"
   },
   "devDependencies": {
     "chalk": "^1.1.3",
-    "clean-webpack-plugin": "^0.1.10",
-    "css-loader": "^0.25.0",
     "debug": "^2.2.0",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "gh-pages": "^0.11.0",
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.7",
-    "html-webpack-plugin": "^2.22.0",
     "jshint": "^2.9.3",
     "json-loader": "^0.5.4",
     "progress-bar-webpack-plugin": "^1.9.0",
-    "purecss": "^0.6.0",
-    "purifycss-webpack-plugin": "^2.0.3",
-    "style-loader": "^0.13.1",
     "temp": "^0.8.3",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.1",
-    "webpack-merge": "^0.14.1",
-    "webpack-validator": "^2.2.7",
+    "webpack-dev-middleware": "^1.7.0",
     "yargs": "^5.0.0"
   },
-  "author": "John Reeme <john.reeme@soteradefense.com> (http://soteradefense.com)",
-  "license": "WTFPL",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jreeme/loopback-webpack-typescript-amino"
-  },
-  "bugs": {
-    "url": "https://github.com/jreeme/loopback-webpack-typescript-amino"
-  }
+  "license": "MIT"
 }
