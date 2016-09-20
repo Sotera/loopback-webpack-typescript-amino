@@ -12,7 +12,7 @@
   },
   "filesGlob":[
     "./**/*.ts",
-    "!./node_modules/**/*.ts"
+    "!../node_modules/**/*.ts"
   ]
 }
 //https://github.com/AbeHaruhiko/vue-webpack-typescript

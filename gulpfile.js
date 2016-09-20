@@ -52,13 +52,13 @@ function Webpack() {
     appRootDir: paths.appRoot,
     config: require(path.join(paths.appRoot, 'config.json')),
     dataSources: require(path.join(paths.appRoot, 'datasources.json')),
-    models: require(path.join(paths.appRoot, 'model-config.json')),
+    models: require(path.join(paths.appRoot, 'model-build.json')),
     middleware: require(path.join(paths.appRoot, 'middleware.json')),
   };
   var compile = require('loopback-boot/lib/compiler');
   var ins = compile(options);
 
-  // remove config and dataSources since they will be installed at
+  // remove build and dataSources since they will be installed at
   // runtime from external files.
   delete ins.config;
   delete ins.dataSources;
@@ -123,11 +123,11 @@ function Webpack() {
 
   // we define a master externals handler that takes care of externalising
   // node_modules (largely copied from webpack-node-externals) except for
-  // loopback-boot. We also externalise our config.json and datasources.json
+  // loopback-boot. We also externalise our build.json and datasources.json
   // configuration files.
   function externalsHandler(context, request, callback) {
-    // externalise dynamic config files.
-    // NOTE: if you intend to deploy these config files in the same
+    // externalise dynamic build files.
+    // NOTE: if you intend to deploy these build files in the same
     // directory as the bundle, change the result to `./${m[1]}.json`
     var m = request.match(/(?:^|[\/\\])(config|datasources)\.json$/);
     if (m) return callback(null, `../server/${m[1]}.json`);

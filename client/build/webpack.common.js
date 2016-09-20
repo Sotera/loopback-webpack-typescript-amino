@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 
@@ -14,12 +13,15 @@ module.exports = {
 
   resolveLoader: {
     root: [
-      path.resolve(__dirname, '../node_modules')
+      path.resolve(__dirname, '../../node_modules')
     ]
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts'],
+    alias: {
+      'src': path.resolve(__dirname, '../src')
+    }
   },
 
   module: {
@@ -55,10 +57,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
-    }),
-
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../src', 'index.html')
     })
   ]
 };

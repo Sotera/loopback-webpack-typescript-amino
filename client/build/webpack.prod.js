@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
@@ -32,6 +33,16 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.DefinePlugin({
       'process.env': {
         'ENV': JSON.stringify(ENV)
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../src', 'index.html'),
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
       }
     })
   ]
