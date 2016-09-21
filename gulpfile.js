@@ -1,5 +1,4 @@
-'use strict'
-
+'use strict';
 // create an always-enabled debug namespace.
 var debugName = 'webpack';
 var debug = require('debug');
@@ -14,9 +13,11 @@ var temp = require('temp');
 var chalk = require('chalk');
 var webpack = require('webpack');
 var ProgressBarPlugin = require('progress-bar-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var DotEnvPlugin = require('dotenv-webpack');
 var argv = require('yargs').argv;
 
-const buildDir = 'build';
+const buildDir = 'dist/server';
 
 var paths = {
   projectRoot: __dirname,
@@ -52,7 +53,7 @@ function Webpack() {
     appRootDir: paths.appRoot,
     config: require(path.join(paths.appRoot, 'config.json')),
     dataSources: require(path.join(paths.appRoot, 'datasources.json')),
-    models: require(path.join(paths.appRoot, 'model-build.json')),
+    models: require(path.join(paths.appRoot, 'model-config.json')),
     middleware: require(path.join(paths.appRoot, 'middleware.json')),
   };
   var compile = require('loopback-boot/lib/compiler');
@@ -123,14 +124,17 @@ function Webpack() {
 
   // we define a master externals handler that takes care of externalising
   // node_modules (largely copied from webpack-node-externals) except for
-  // loopback-boot. We also externalise our build.json and datasources.json
+  // loopback-boot. We also externalise our config.json and datasources.json
   // configuration files.
   function externalsHandler(context, request, callback) {
     // externalise dynamic build files.
     // NOTE: if you intend to deploy these build files in the same
     // directory as the bundle, change the result to `./${m[1]}.json`
     var m = request.match(/(?:^|[\/\\])(config|datasources)\.json$/);
-    if (m) return callback(null, `../server/${m[1]}.json`);
+    if (m) {
+      //return callback(null, `../server/${m[1]}.json`);
+      return callback(null, `../../server/${m[1]}.json`);
+    }
     // externalise if the path begins with a node_modules name or if it's
     // an absolute path containing /node_modules/ (the latter results from
     // loopback component and middleware dependencies).
@@ -170,6 +174,17 @@ function Webpack() {
       }
     },
     plugins: [
+      //begin-JReeme
+      new DotEnvPlugin({
+        safe: false
+      }),
+      new webpack.DefinePlugin({
+        __USING_WEBPACK__: true
+      }),
+      new CleanWebpackPlugin(buildDir, {
+        root: __dirname
+      }),
+      //end-JReeme
       new ProgressBarPlugin({
         format: `  ${debugName} Packing: [${chalk.yellow.bold(':bar')}] ` +
         `${chalk.green.bold(':percent')} (${chalk.cyan.bold(':elapseds')})`,
@@ -177,12 +192,7 @@ function Webpack() {
         summary: false,
         clear: false
       }),
-      new webpack.ContextReplacementPlugin(/\bloopback-boot[\/\\]lib/, '', dependencyMap),
-      //begin-JReeme
-      new webpack.DefinePlugin({
-        __WEBPACK_IGNORE__: true
-      })
-      //end-JReeme
+      new webpack.ContextReplacementPlugin(/\bloopback-boot[\/\\]lib/, '', dependencyMap)
     ],
     module: {
       // suppress warnings for require(expr) since we are expecting these from
@@ -201,6 +211,10 @@ function Webpack() {
         {
           test: [/\.json$/i],
           loader: 'json-loader'
+        },
+        {
+          test: [/\.env$/i],
+          loader: 'raw-loader'
         },
       ]
     },

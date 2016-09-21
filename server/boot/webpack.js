@@ -13,7 +13,7 @@ module.exports = function (app) {
   webpackConfig.output.publicPath = '/'
 
   app.use(require('webpack-dev-middleware')(compiler, {
-    stats:{
+    stats: {
       colors: true,
       chunks: false
     },

@@ -1,12 +1,21 @@
-require('dotenv').config();
-if ((process.env.NODE_ENV !== 'production') && (process.env.NODE_ENV !== 'development')) {
-  console.log("Please define environment variable NODE_ENV as 'development' or 'production'");
-  process.exit(1);
+//There are two ways we might be starting this up:
+// 1) As a regular, old Express server. In this case __USING_WEBPACK__ will not be defined and we'll get
+//    process.env using 'dotenv'
+// 2) As a WebPack bundle. In this case __USING_WEBPACK__ will be defined and we'll get
+//    process.env using the 'dotenv-webpack' plugin
+if (typeof __USING_WEBPACK__ === 'undefined') {
+  require('dotenv').config();
 }
+//If user didn't set NODE_ENV let's assume it's 'development'
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-function StartDevelopmentServer(server) {
-  console.log("Starting server in 'development' mode");
-  if (typeof __WEBPACK_IGNORE__ === 'undefined' || !__WEBPACK_IGNORE__) {
+//This is the "standard issue" loopback startup code. WebPack is not involved.
+function StartServer(server) {
+  console.log('Starting server');
+  //WebPack needs to ignore this code when building the bundle because it doesn't support
+  //require.extensions (which are deprecated anyway) and loopback-boot uses them. This
+  //conditional just suppresses the warnings.
+  if (typeof __USING_WEBPACK__ === 'undefined') {
     const boot = require('loopback-boot');
     boot(server, __dirname, function (err) {
       if (err) {
@@ -19,8 +28,8 @@ function StartDevelopmentServer(server) {
   }
 }
 
-function StartProductionServerWithWebPackBundle(server) {
-  console.log("Starting server in 'production' mode");
+function StartWebPackServer(server) {
+  console.log('Starting WebPack server');
   // install source-map support so we get mapped stack traces.
   require('source-map-support').install();
   // Bootstrap the application, configure models, datasources and middleware.
@@ -45,7 +54,7 @@ function StartProductionServerWithWebPackBundle(server) {
   });
 }
 
-(function(){
+(function () {
   var loopback = require('loopback');
   var server = module.exports = loopback();
 
@@ -63,10 +72,10 @@ function StartProductionServerWithWebPackBundle(server) {
     });
   };
 
-  if (process.env.NODE_ENV === 'production') {
-    StartProductionServerWithWebPackBundle(server);
-  } else if (process.env.NODE_ENV === 'development') {
-    StartDevelopmentServer(server);
+  if (typeof __USING_WEBPACK__ === 'undefined') {
+    StartServer(server);
+  } else {
+    StartWebPackServer(server);
   }
 })();
 
