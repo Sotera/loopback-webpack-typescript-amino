@@ -3,11 +3,6 @@
 //    process.env using 'dotenv'
 // 2) As a WebPack bundle. In this case __USING_WEBPACK__ will be defined and we'll get
 //    process.env using the 'dotenv-webpack' plugin
-if (typeof __USING_WEBPACK__ === 'undefined') {
-  require('dotenv').config();
-}
-//If user didn't set NODE_ENV let's assume it's 'development'
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 //This is the "standard issue" loopback startup code. WebPack is not involved.
 function StartServer(server) {

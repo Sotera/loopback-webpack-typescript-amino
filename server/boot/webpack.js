@@ -5,7 +5,7 @@ module.exports = function (app) {
 
   var path = require('path');
   var webpack = require('webpack');
-  var webpackConfig = require(path.resolve(__dirname, '../../client/build', 'webpack.dev.js'));
+  var webpackConfig = require(path.resolve(__dirname, '../../client', 'webpack.config.js'));
   var compiler = webpack(webpackConfig);
 
   // necessary for the html plugin to work properly

@@ -14,7 +14,7 @@ var chalk = require('chalk');
 var webpack = require('webpack');
 var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var DotEnvPlugin = require('dotenv-webpack');
+//var DotEnvPlugin = require('webpack-dotenv-plugin');
 var argv = require('yargs').argv;
 
 const buildDir = 'dist/server';
@@ -127,12 +127,12 @@ function Webpack() {
   // loopback-boot. We also externalise our config.json and datasources.json
   // configuration files.
   function externalsHandler(context, request, callback) {
+    //console.log('--> ' + request);
     // externalise dynamic build files.
     // NOTE: if you intend to deploy these build files in the same
     // directory as the bundle, change the result to `./${m[1]}.json`
     var m = request.match(/(?:^|[\/\\])(config|datasources)\.json$/);
     if (m) {
-      //return callback(null, `../server/${m[1]}.json`);
       return callback(null, `../../server/${m[1]}.json`);
     }
     // externalise if the path begins with a node_modules name or if it's
@@ -175,11 +175,13 @@ function Webpack() {
     },
     plugins: [
       //begin-JReeme
-      new DotEnvPlugin({
-        safe: false
-      }),
+      //The DotEnv-* plugins don't seem to work with new WebPack (>2.0) factories
+/*      new DotEnvPlugin({
+        sample: './.env.default',
+        path: './.env'
+      }),*/
       new webpack.DefinePlugin({
-        __USING_WEBPACK__: true
+        '__USING_WEBPACK__': true
       }),
       new CleanWebpackPlugin(buildDir, {
         root: __dirname
@@ -211,11 +213,7 @@ function Webpack() {
         {
           test: [/\.json$/i],
           loader: 'json-loader'
-        },
-        {
-          test: [/\.env$/i],
-          loader: 'raw-loader'
-        },
+        }
       ]
     },
     stats: {colors: true, modules: true, reasons: true, errorDetails: true}
