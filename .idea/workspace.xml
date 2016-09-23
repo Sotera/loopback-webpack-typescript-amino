@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="684d21b5-d54b-4a4c-a02e-6c65759d6e84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/typings.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/package.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" afterPath="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/config/webpack.common.js" afterPath="$PROJECT_DIR$/client/config/webpack.common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/tsconfig.json" afterPath="$PROJECT_DIR$/client/tsconfig.json" />
     </list>
     <ignored path="loopback-webpack-typescript-amino.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +26,7 @@
     <favorites_list name="loopback-webpack-typescript-amino" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="login.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.module.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,14 +39,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="558">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
+                <marker date="1474635965758" expanded="true" signature="899:973" ph="//..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/config/webpack.common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4320">
+              <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/electron/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,7 +139,6 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/client/tsconfig.json" />
         <option value="$PROJECT_DIR$/client/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/client/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/.env.development" />
@@ -134,10 +161,11 @@
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/config/webpack.dev.js" />
         <option value="$PROJECT_DIR$/client/src/vendor.browser.ts" />
-        <option value="$PROJECT_DIR$/client/config/webpack.common.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/client/config/webpack.common.js" />
+        <option value="$PROJECT_DIR$/client/tsconfig.json" />
       </list>
     </option>
   </component>
@@ -192,7 +220,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -313,16 +340,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="electron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/.bin/webpack" />
+    <property name="last_opened_file_path" value="$USER_HOME$/tmp/switching-to-angular2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -500,6 +568,8 @@
       <workItem from="1474463005401" duration="26888000" />
       <workItem from="1474556310871" duration="17390000" />
       <workItem from="1474633486713" duration="2154000" />
+      <workItem from="1474637433892" duration="652000" />
+      <workItem from="1474641014188" duration="1381000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1473798605261</created>
@@ -533,7 +603,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99812000" />
+    <option name="totallyTimeSpent" value="101845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
@@ -543,20 +613,20 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16657881" sideWeight="0.70526314" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4051447" sideWeight="0.5028993" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24037954" sideWeight="0.26055312" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3483387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986821" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38906753" sideWeight="0.49815303" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15761729" sideWeight="0.23482428" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4051447" sideWeight="0.49710068" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3483387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4051447" sideWeight="0.49710068" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -609,7 +679,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts</url>
           <line>29</line>
-          <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
@@ -618,8 +687,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/main.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/dist/server/main.bundle2.js" />
     <entry file="file://$PROJECT_DIR$/client/build/webpack.common.js" />
     <entry file="file://$PROJECT_DIR$/dist/client/app2.css" />
     <entry file="file://$PROJECT_DIR$/client/build/webpack.prod.js" />
@@ -697,13 +764,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.env" />
     <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/typescript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -781,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/config/webpack.common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="289" column="9" selection-start-line="289" selection-start-column="9" selection-end-line="289" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/luv.env" />
     <entry file="file://$PROJECT_DIR$/server/bufu.json" />
     <entry file="file://$PROJECT_DIR$/server/.env" />
@@ -796,7 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2016">
           <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,9 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,20 +878,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="118" column="40" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json" />
     <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -864,11 +902,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="558">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
+            <marker date="1474635965758" expanded="true" signature="899:973" ph="//..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/config/webpack.common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4320">
+          <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/electron/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

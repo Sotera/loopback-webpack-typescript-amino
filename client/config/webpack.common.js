@@ -238,7 +238,7 @@ module.exports = function (options) {
       new ExtractTextPlugin({filename: 'initial.css', allChunks: true}),
 
       new AssetsPlugin({
-        path: helpers.root('dist'),
+        path: helpers.root('../dist/client'),
         filename: 'webpack-assets.json',
         prettyPrint: true
       }),
