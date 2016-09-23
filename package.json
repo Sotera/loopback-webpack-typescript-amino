@@ -22,7 +22,7 @@
     "watch:prod": "npm run build:prod -- --watch",
     "build": "npm run build:dev",
     "prebuild:dev": "npm run clean:dist",
-    "build:dev": "webpack --config client/config/webpack.dev.js --progress --profile",
+    "build:dev": "gulp && webpack --config client/config/webpack.dev.js --progress --profile",
     "prebuild:prod": "npm run clean:dist",
     "build:prod": "webpack --config client/config/webpack.prod.js  --progress --profile --bail",
     "server": "npm run server:dev",
@@ -40,6 +40,7 @@
     "start:hmr": "npm run server:dev:hmr",
     "version": "npm run build",
     "postversion": "git push && git push --tags",
+    "postinstall": "cd client && typings install",
     "electron": "electron ./src/electron/main.js"
   },
   "keywords": [
