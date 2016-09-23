@@ -2,570 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="684d21b5-d54b-4a4c-a02e-6c65759d6e84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/011-changing-color-scheme/new-color-scheme.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/images/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/images/sky-preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/fonts/socicon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/fonts/socicon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/fonts/socicon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/fonts/socicon.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/android-icon-192x192.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-114x114.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-120x120.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-152x152.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-180x180.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-57x57.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-60x60.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-72x72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-76x76.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/favicon-16x16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/favicon-32x32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/favicon-96x96.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/icon/ms-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/feed/genom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/feed/my-little-kitten.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/feed/new-york-location.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/feed/vader-and-me-preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/my-app-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/profile/Alexander.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/profile/Andrey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/profile/Kostya.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/profile/Nasta.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/profile/Nick.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/profile/Vlad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/01_default.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/02_transparent.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/03_blue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/04_peachy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/05_material.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/06_transblue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/todo/check-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/typography/banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/blue-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/blur-bg-blurred.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/blur-bg-mobile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/blur-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/chernika.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/green-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/peachy-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/sky-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/no-photo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/palette.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/arrowDown.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/arrowUp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/export.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/homeIcon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/homeIconWhite.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/minus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panDown.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panLeft.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panRight.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panUp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/plus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/xIcon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/xIconH.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/leaflet/marker-icon-2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/leaflet/marker-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/leaflet/marker-shadow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/transblue-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.bootstraprc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/Dockerfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/_VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/build.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/head-config.common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/html-elements-plugin/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/modules/angular2-hmr-prod.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.dev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/config/webpack.prod.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/001-getting-started/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/002-installation-guidelines/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/011-changing-color-scheme/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/012-project-structure/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/013-create-new-page/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/014-switch-to-blur-theme/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/015-sidebar/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/articles/016-spinner/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/css/main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/images/why-design.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/images/why-practices.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/images/why-structure.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/contents/index.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/plugins/paginator.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/templates/article.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/templates/index.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/docs/templates/layout.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.menu.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/app.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/environment.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/global.state.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/charts.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/charts.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/charts.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/charts/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/components.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/components.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/components.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/components.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/components/treeView/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/components/treeView/treeView.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/components/treeView/treeView.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/components/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/popularApp.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/popularApp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/popularApp.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/editors.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/editors.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/editors.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/editors/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/checkboxInputs/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/groupInputs/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/ratinginputs/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/standardInputs/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/validationInputs/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/inputs.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/inputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/basicForm/basicForm.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/basicForm/basicForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/basicForm/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/blockForm/blockForm.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/blockForm/blockForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/blockForm/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/horizontalForm/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/inlineForm/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/withoutLabelsForm/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/layouts.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/layouts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/forms.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/forms.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/forms.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/forms/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/login/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/login/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/login/login.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/login/login.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/login/login.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/maps.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/maps.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/maps/maps.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/pages.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/pages.menu.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/pages.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/pages.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/register/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/register/register.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/register/register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/register/register.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/register/register.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/register/register.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/borderedTable/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/condensedTable/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/contextualTable/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/hoverTable/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/responsiveTable/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/stripedTable/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/tables.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/tables.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/tables/tables.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/buttons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/disabledButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/dropdownButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/flatButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/groupButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/iconButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/largeButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/raisedButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/sizedButtons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/grid.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/typography/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/typography/typography.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/components/typography/typography.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/ui.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/ui.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/pages/ui/ui.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChart.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChart.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChartTheme.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baBackTop/baBackTop.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baBackTop/baBackTop.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baBackTop/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCard.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCard.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCardBlur.directive.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCardBlurHelper.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCard/bgMetrics.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCard/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/baCheckbox.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/baCheckbox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/baCheckbox.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/baContentTop.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/baContentTop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/baContentTop.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/baFullCalendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/baFullCalendar.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baMultiCheckbox/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/baPageTop.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/baPageTop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/baPageTop.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/baPictureUploader.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/baPictureUploader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/baPictureUploader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/baSidebar.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/baSidebar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/baSidebar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/components/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/baScrollPosition/baScrollPosition.directive.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/baScrollPosition/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/baSlimScroll/baSlimScroll.loader.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/baSlimScroll/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/baThemeRun/baThemeRun.directive.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/baThemeRun/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/directives/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/initial.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/nga.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/pipes/baAppPicture/baAppPicture.pipe.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/pipes/baAppPicture/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/pipes/baKameleonPicture/baKameleonPicture.pipe.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/pipes/baKameleonPicture/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/pipes/baProfilePicture/baProfilePicture.pipe.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/pipes/baProfilePicture/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/pipes/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_auth.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_form.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_ionicons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_layout.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_preloader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_socicon.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_table.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_treeView.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/_card.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/_dropdown.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/_tabs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/overrides.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/conf/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/conf/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/conf/colorSchemes/_blur.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/conf/colorSchemes/_mint.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/conf/colorSchemes/_ng2.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/sass/conf/conf.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/services/baImageLoader/baImageLoader.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/services/baImageLoader/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/services/baThemePreloader/baThemePreloader.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/services/baThemePreloader/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/services/baThemeSpinner/baThemeSpinner.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/services/baThemeSpinner/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/services/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/theme.config.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/theme.configProvider.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/theme.constants.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/theme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/validators/email.validator.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/validators/equalPasswords.validator.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/app/theme/validators/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/fonts/socicon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/browsers/chrome.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/browsers/firefox.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/browsers/ie.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/browsers/opera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/app/browsers/safari.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/arrow-green-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/arrow-red-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/comments.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/face.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/money.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/person.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/refresh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/shopping-cart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/feed/feed-image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/feed/feed-location.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/feed/feed-video.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Alien.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Analytics.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Apartment.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Batman.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Beach.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Bell.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Bonsai.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Boss-3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Boss-5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Burglar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Bus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Candy.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Checklist.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Cheese.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Chessboard.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Clipboard-Plan.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Desert.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Dna.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Euro-Coin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Food-Dome.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Hacker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Images.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Key.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Laptop-Signal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Locked-Cloud.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Love-Letter.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Magician.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Makeup.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Medal-2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Microscope.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Mind-Map-Paper.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Money-Increase.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Music-Equalizer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Ninja.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Online-Shopping.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Pantone.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Party-Poppers.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Phone-Booth.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Programming.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Santa.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Shop.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Street-View.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Student-3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Surfer.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Surgeon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Tower.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Vector.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/service-worker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/custom-typings.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/electron/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/main.browser.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/polyfills.browser.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/vendor.browser.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/tslint.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/typedoc.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/webpack.config.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.env" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.env.development" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.env.production" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build/helpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build/karma-test-shim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build/webpack.common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build/webpack.dev.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build/webpack.prod.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build/webpack.test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/public/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/public/images/angular.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.component.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.component.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/main.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/polyfills.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/vendor.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/typings.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jreeme.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jreeme.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/typings.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/package.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/index.html" afterPath="$PROJECT_DIR$/client/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/tsconfig.json" afterPath="$PROJECT_DIR$/client/tsconfig.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" afterPath="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/boot/webpack.js" afterPath="$PROJECT_DIR$/server/boot/webpack.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
     </list>
     <ignored path="loopback-webpack-typescript-amino.iws" />
@@ -588,24 +29,36 @@
     <favorites_list name="loopback-webpack-typescript-amino" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
+    <leaf>
+      <file leaf-file-name="login.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
+            <state relative-caret-position="414">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -634,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env.production" />
         <option value="$PROJECT_DIR$/client/component.js" />
         <option value="$PROJECT_DIR$/client/config.json" />
         <option value="$PROJECT_DIR$/client/index.js" />
@@ -683,8 +135,9 @@
         <option value="$PROJECT_DIR$/client/config/webpack.dev.js" />
         <option value="$PROJECT_DIR$/client/src/vendor.browser.ts" />
         <option value="$PROJECT_DIR$/client/config/webpack.common.js" />
-        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" />
       </list>
     </option>
   </component>
@@ -810,7 +263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -821,6 +274,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -860,7 +349,7 @@
       <recent name="$PROJECT_DIR$/client" />
     </key>
   </component>
-  <component name="RunManager" selected="Gulp.js.Gulp - default">
+  <component name="RunManager" selected="Node.js.ClientOnly">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -939,6 +428,17 @@
     <configuration default="false" name="StraightUp JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000/index.html">
       <method />
     </configuration>
+    <configuration default="false" name="ClientOnly" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server" working-dir="$PROJECT_DIR$/client">
+      <browser start="true" with-js-debugger="true" url="http://localhost:3000" />
+      <profiling v8-profiler-path="" />
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
+        <profiling v8-profiler-path="" />
+      </EXTENSION>
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+        <browser start="true" with-js-debugger="true" url="http://localhost:3000" />
+      </EXTENSION>
+      <method />
+    </configuration>
     <configuration default="false" name="WebPack build:dev" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="node_modules/.bin/webpack" application-parameters="webpack --config client/config/webpack.dev.js --progress --profile" working-dir="$PROJECT_DIR$">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
@@ -968,12 +468,17 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="5">
+    <configuration default="false" name="ClientOnly JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000">
+      <method />
+    </configuration>
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Gulp.js.Gulp - default" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.StraightUp JavaScript" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.WebPack build:dev" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.StraightUp" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.WebPack" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.ClientOnly" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.WebPack build:dev" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.StraightUp" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.WebPack" />
+      <item index="6" class="java.lang.String" itemvalue="JavaScript Debug.ClientOnly JavaScript" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -994,6 +499,7 @@
       <workItem from="1474044927352" duration="17505000" />
       <workItem from="1474463005401" duration="26888000" />
       <workItem from="1474556310871" duration="17390000" />
+      <workItem from="1474633486713" duration="2154000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1473798605261</created>
@@ -1027,24 +533,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97658000" />
+    <option name="totallyTimeSpent" value="99812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24037954" sideWeight="0.2859649" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24037954" sideWeight="0.7140351" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24037954" sideWeight="0.29473683" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16657881" sideWeight="0.70526314" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49410504" sideWeight="0.50184697" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4051447" sideWeight="0.5028993" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24037954" sideWeight="0.26055312" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3483387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986821" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38906753" sideWeight="0.49815303" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38906753" sideWeight="0.49815303" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15761729" sideWeight="0.23482428" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30546623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4051447" sideWeight="0.49710068" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1100,28 +606,18 @@
           <line>8</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="57" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/public/css/styles.css" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/client/README.md" />
-    <entry file="file://$PROJECT_DIR$/build/main.bundle.js.map" />
     <entry file="file://$PROJECT_DIR$/build/main.bundle.js" />
     <entry file="file://$PROJECT_DIR$/dist/server/main.bundle2.js" />
     <entry file="file://$PROJECT_DIR$/client/build/webpack.common.js" />
@@ -1169,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,15 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/webpack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="84" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="43864" column="16" selection-start-line="43864" selection-start-column="16" selection-end-line="43864" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,10 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#32#107#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1258,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1266,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,11 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding>
-            <element signature="e#355#390#0" expanded="false" />
-            <element signature="e#614#645#0" expanded="false" />
-            <element signature="e#750#784#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,15 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,9 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,9 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1330,19 +785,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="289" column="9" selection-start-line="289" selection-start-column="9" selection-end-line="289" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
+    <entry file="file://$PROJECT_DIR$/server/luv.env" />
+    <entry file="file://$PROJECT_DIR$/server/bufu.json" />
+    <entry file="file://$PROJECT_DIR$/server/.env" />
+    <entry file="file://$PROJECT_DIR$/dist/server/main.bundle.js" />
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
+        <state relative-caret-position="2016">
+          <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/luv.env">
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/boot/webpack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/dist/webpack-assets.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1350,45 +826,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/bufu.json">
+    <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.routing.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/server/main.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="1131" column="14" selection-start-line="1131" selection-start-column="14" selection-end-line="1131" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/client/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
+        <state relative-caret-position="108">
+          <caret line="118" column="40" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
