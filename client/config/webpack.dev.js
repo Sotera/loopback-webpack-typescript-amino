@@ -73,7 +73,7 @@ module.exports = function(options) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-filename
        */
-      filename: '[name].bundle.js',
+      filename: '[name].[hash].bundle.js',
 
       /**
        * The filename of the SourceMaps for the JavaScript files.
@@ -81,14 +81,14 @@ module.exports = function(options) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-sourcemapfilename
        */
-      sourceMapFilename: '[name].map',
+      sourceMapFilename: '[name].[hash].map',
 
       /** The filename of non-entry chunks as relative path
        * inside the output.path directory.
        *
        * See: http://webpack.github.io/docs/configuration.html#output-chunkfilename
        */
-      chunkFilename: '[id].chunk.js',
+      chunkFilename: '[id].[hash].chunk.js',
 
       library: 'ac_[name]',
       libraryTarget: 'var',
@@ -182,7 +182,9 @@ module.exports = function(options) {
     webpackHotloaderEntryPoints.push(retVal.entry[entryPoint]);
     retVal.entry[entryPoint] = webpackHotloaderEntryPoints;
   }
+  retVal.plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
   retVal.plugins.push(new webpack.HotModuleReplacementPlugin());
+  retVal.plugins.push(new webpack.NoErrorsPlugin());
   //JReeme - END https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
   return retVal;
 }
