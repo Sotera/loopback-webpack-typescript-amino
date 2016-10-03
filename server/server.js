@@ -11,6 +11,7 @@ function StartServer(server) {
   //require.extensions (which are deprecated anyway) and loopback-boot uses them. This
   //conditional just suppresses the warnings.
   if (typeof __USING_WEBPACK__ === 'undefined') {
+    process.env.NODE_ENV = 'development';
     process.env.HMR_ENABLED = 1;
     const boot = require('loopback-boot');
     boot(server, __dirname, function (err) {

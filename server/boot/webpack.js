@@ -12,12 +12,18 @@ module.exports = function (app) {
   // when serving the html from in-memory
   webpackConfig.output.publicPath = '/'
 
+
   app.use(require('webpack-dev-middleware')(compiler, {
     stats: {
       colors: true,
       chunks: false
     },
     publicPath: webpackConfig.output.publicPath
+    ,watchOptions:{
+      aggregateTimeout: 300,
+      poll: true
+    }
+    ,index: 'index.html'
   }));
 
   app.use(require('webpack-hot-middleware')(compiler));

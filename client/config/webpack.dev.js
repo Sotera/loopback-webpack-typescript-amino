@@ -1,4 +1,5 @@
 const helpers = require('./helpers');
+const webpack = require('webpack'); // used to merge webpack configs
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
 
@@ -28,7 +29,7 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = function(options) {
-  return webpackMerge(commonConfig({env: ENV}), {
+  var retVal = webpackMerge(commonConfig({env: ENV}), {
 
     /**
      * Merged metadata from webpack.common.js for index.html
@@ -172,4 +173,16 @@ module.exports = function(options) {
     }
 
   });
+  //JReeme - BEGIN https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
+  for(var entryPoint in retVal.entry){
+    var webpackHotloaderEntryPoints = [
+      'webpack-hot-middleware/client',
+      'webpack/hot/dev-server'
+    ]
+    webpackHotloaderEntryPoints.push(retVal.entry[entryPoint]);
+    retVal.entry[entryPoint] = webpackHotloaderEntryPoints;
+  }
+  retVal.plugins.push(new webpack.HotModuleReplacementPlugin());
+  //JReeme - END https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
+  return retVal;
 }
