@@ -27,7 +27,6 @@ export class Login {
   public onSubmit(values:Object):void {
     this.submitted = true;
     if (this.form.valid) {
-      alert('hello moo2 #######');
       // your code goes here
       // console.log(values);
     }

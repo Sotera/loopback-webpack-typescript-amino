@@ -52,7 +52,10 @@
     "ng2-admin"
   ],
   "author": "John Reeme <john.reeme@soteradefense.com> (http://soteradefense.com)",
-  "license": "WTFPL",
+  "license": {
+    "type":"WTFPL",
+    "url":"https://spdx.org/licenses/WTFPL"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sotera/loopback-webpack-typescript-amino.git"

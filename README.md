@@ -1,1 +1,28 @@
 
+# Introduction
+
+This rather awkwardly named project is an attempt to integrate several technologies I use to make web applications.
+I wanted an easy way to start a project fulfilling the following requirements:
+
+* Uses Angular2 (TypeScript) for the front end
+* Uses LoopBack (JavaScript) for the back end
+* Uses StrongLoop as the process manager
+* Uses WebPack as the module bundler (for both client and server)
+* Uses WebStorm 2016 as the development environment
+* Keeps the development pain threshold appropriately low
+
+Fortunately most of these requirements (with the glaring exception of WebStorm) are fulfilled elsewhere in the community
+with high quality solutions. So what this project boiled down to in the end was an effort to integrate the following:
+
+* The lovingly made https://github.com/akveo/ng2-admin admin console (client)
+* The diligently researched https://github.com/geminiyellow/loopback-webpack-example (server)
+* Some bits and pieces I had laying around to fit Node Express servers and HTML/JS clients into the WebStorm environment
+
+## License
+
+WTFPL (https://spdx.org/licenses/WTFPL)
+
+## Thanks to
+
+* The fine folks at https://github.com/akveo/ng2-admin whose project I used pretty much wholesale
+* The diligent folks at https://github.com/geminiyellow/loopback-webpack-example whose project I literally used wholesale
