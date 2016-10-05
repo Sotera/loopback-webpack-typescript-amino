@@ -5,6 +5,7 @@ import { NgaModule } from '../../theme/nga.module';
 
 import { Login } from './login.component';
 import { routing }       from './login.routing';
+import {AlertComponent} from "../../_directives/alert.component";
 
 
 @NgModule({
@@ -17,6 +18,9 @@ import { routing }       from './login.routing';
   ],
   declarations: [
     Login
+    ,AlertComponent
+  ],
+  providers:[
   ]
 })
 export default class LoginModule {}

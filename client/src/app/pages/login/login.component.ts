@@ -1,5 +1,8 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
+import {Router} from "@angular/router";
+import {AuthenticationService} from "../../_services/authentication.service";
+import {AlertService} from "../../_services/alert.service";
 
 @Component({
   selector: 'login',
@@ -7,28 +10,42 @@ import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/form
   styles: [require('./login.scss')],
   template: require('./login.html'),
 })
-export class Login {
+export class Login implements OnInit {
+  private model: any = {};
+  public form: FormGroup;
+  public username: AbstractControl;
+  public password: AbstractControl;
+  public submitted: boolean = false;
 
-  public form:FormGroup;
-  public email:AbstractControl;
-  public password:AbstractControl;
-  public submitted:boolean = false;
-
-  constructor(fb:FormBuilder) {
+  constructor(private fb: FormBuilder,
+              private router: Router,
+              private authenticationService: AuthenticationService,
+              private alertService: AlertService) {
     this.form = fb.group({
-      'email': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+      'username': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
     });
 
-    this.email = this.form.controls['email'];
+    this.username = this.form.controls['username'];
     this.password = this.form.controls['password'];
   }
 
-  public onSubmit(values:Object):void {
+  ngOnInit(): void {
+    this.authenticationService.logout();
+  }
+
+  public onSubmit(values: any): void {
     this.submitted = true;
     if (this.form.valid) {
-      // your code goes here
-      // console.log(values);
+      this.authenticationService.login(values.username, values.password)
+        .subscribe(
+          data => {
+            this.router.navigate(['/']);
+          },
+          error => {
+            this.alertService.error(error);
+            this.submitted = false;
+          });
     }
   }
 }
