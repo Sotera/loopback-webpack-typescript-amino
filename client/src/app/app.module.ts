@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule, BaseRequestOptions} from '@angular/http';
 import {RouterModule} from '@angular/router';
+import {AUTH_PROVIDERS} from 'angular2-jwt';
 import {removeNgStyles, createNewHosts, createInputTransfer} from '@angularclass/hmr';
 
 /*
@@ -19,21 +20,20 @@ import {NgaModule} from './theme/nga.module';
 import {PagesModule} from './pages/pages.module';
 import {AuthGuard} from "./_guards/auth.guard";
 import {AlertService} from "./_services/alert.service";
-import {UserService} from "./_services/user.service";
 import {AuthenticationService} from "./_services/authentication.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
+  AlertService,
   GlobalState
 ];
 
 // Application wide Authentication providers
-const AUTH_PROVIDERS = [
+const LOCAL_AUTH_PROVIDERS = [
   AuthGuard,
-  AlertService,
   AuthenticationService,
-  UserService,
+  AUTH_PROVIDERS
 ];
 
 type StoreType = {
@@ -62,7 +62,7 @@ type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    AUTH_PROVIDERS,
+    LOCAL_AUTH_PROVIDERS,
     APP_PROVIDERS
   ]
 })

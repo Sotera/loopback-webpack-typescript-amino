@@ -22,7 +22,7 @@ export class Login implements OnInit {
               private authenticationService: AuthenticationService,
               private alertService: AlertService) {
     this.form = fb.group({
-      'username': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+      'username': ['', Validators.compose([Validators.required, Validators.minLength(1)])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
     });
 
@@ -39,8 +39,9 @@ export class Login implements OnInit {
     if (this.form.valid) {
       this.authenticationService.login(values.username, values.password)
         .subscribe(
-          data => {
-            this.router.navigate(['/']);
+          loginResponse => {
+            var l = loginResponse;
+            //this.router.navigate(['/']);
           },
           error => {
             this.alertService.error(error);

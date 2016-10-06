@@ -10,10 +10,23 @@
   "auth": {
   },
   "parse": {
+    "body-parser#json": {
+      "params": {
+        "limit": "15mb"
+      }
+    },
+    "body-parser#urlencoded": {
+      "params": {
+        "extended": true,
+        "limit": "15mb"
+      }
+    }
   },
   "routes": {
-     "loopback#rest": {
-      "paths": ["${restApiRoot}"]
+    "loopback#rest": {
+      "paths": [
+        "${restApiRoot}"
+      ]
     }
   },
   "final": {
