@@ -3,6 +3,7 @@ import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/form
 import {Router} from "@angular/router";
 import {AuthenticationService} from "../../_services/authentication.service";
 import {AlertService} from "../../_services/alert.service";
+import {AppDescriptionService} from "../../_services/app-description.service";
 
 @Component({
   selector: 'login',
@@ -11,7 +12,6 @@ import {AlertService} from "../../_services/alert.service";
   template: require('./login.html'),
 })
 export class Login implements OnInit {
-  private model: any = {};
   public form: FormGroup;
   public username: AbstractControl;
   public password: AbstractControl;
@@ -20,9 +20,10 @@ export class Login implements OnInit {
   constructor(private fb: FormBuilder,
               private router: Router,
               private authenticationService: AuthenticationService,
+              public appDescriptionService: AppDescriptionService,
               private alertService: AlertService) {
     this.form = fb.group({
-      'username': ['', Validators.compose([Validators.required, Validators.minLength(1)])],
+      'username': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
     });
 
@@ -34,10 +35,10 @@ export class Login implements OnInit {
     this.authenticationService.logout();
   }
 
-  public onSubmit(values: any): void {
+  public onSubmit(loginUserInfo: LoginUserInfo): void {
     this.submitted = true;
     if (this.form.valid) {
-      this.authenticationService.login(values.username, values.password)
+      this.authenticationService.login(loginUserInfo)
         .subscribe(
           loginResponse => {
             var l = loginResponse;

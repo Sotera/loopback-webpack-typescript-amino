@@ -5,6 +5,8 @@ module.exports = function enableAuthentication(server) {
   // enable (loopback) authentication
   server.enableAuth();
 
+  var AminoUser = server.models.AminoUser;
+
   var users = [{
     id: 1,
     username: 'bob',
@@ -12,10 +14,10 @@ module.exports = function enableAuthentication(server) {
   }];
 
   function createToken(user) {
-    try{
+    try {
       var retVal = jwt.sign(_.omit(user, 'password'), 'my$ecret', {expiresIn: '1 days'});
       return retVal;
-    }catch(e){
+    } catch (e) {
       console.log(e);
     }
   }
@@ -38,7 +40,19 @@ module.exports = function enableAuthentication(server) {
     });
   });
 
-  server.post('/sessions/create', function (req, res) {
+  server.post('/auth/register', function (req, res) {
+    var newUser = req.body;
+    delete newUser.password;
+    AminoUser.create(newUser, (err, models)=> {
+      if (err) {
+        //Return status OK to give user more info about what went wrong
+        res.status(200).send({status: 'error', error: err});
+        return;
+      }
+    });
+  });
+
+  server.post('/auth/login', function (req, res) {
     if (!req.body.username || !req.body.password) {
       return res.status(400).send("You must send the username and the password");
     }

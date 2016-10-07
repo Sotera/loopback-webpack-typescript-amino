@@ -32,15 +32,16 @@
  *
  */
 
-declare var jQuery:any;
-declare var GoogleMapsLoader:any;
-declare var L:any;
-declare var AmCharts:any;
-declare var Chart:any;
-declare var Chartist:any;
+declare var jQuery: any;
+declare var GoogleMapsLoader: any;
+declare var L: any;
+declare var AmCharts: any;
+declare var Chart: any;
+declare var Chartist: any;
 
 // support NodeJS modules without type definitions
-declare module '*';
+declare module '*'
+;
 
 // Extra variables that live on Global that will be replaced by webpack DefinePlugin
 declare var ENV: string;
@@ -94,6 +95,20 @@ interface WebpackModule {
   };
 }
 
+interface BaseUserInfo{
+  username: string,
+  fullname: string,
+  email: string
+}
+interface RegistrationUserInfo extends BaseUserInfo{
+  passwords: {
+    password: string,
+    repeatPassword: string
+  }
+}
+interface LoginUserInfo extends BaseUserInfo{
+  password: string
+}
 
 interface WebpackRequire {
   (id: string): any;
@@ -112,8 +127,13 @@ interface ErrorStackTraceLimit {
 
 
 // Extend typings
-interface NodeRequire extends WebpackRequire {}
-interface ErrorConstructor extends ErrorStackTraceLimit {}
-interface NodeRequireFunction extends Es6PromiseLoader  {}
-interface NodeModule extends WebpackModule {}
-interface Global extends GlobalEnvironment  {}
+interface NodeRequire extends WebpackRequire {
+}
+interface ErrorConstructor extends ErrorStackTraceLimit {
+}
+interface NodeRequireFunction extends Es6PromiseLoader {
+}
+interface NodeModule extends WebpackModule {
+}
+interface Global extends GlobalEnvironment {
+}

@@ -9,10 +9,18 @@ export class AuthenticationService {
   constructor(private http: Http) {
   }
 
-  login(username, password) {
-    var body = JSON.stringify({username: username, password: password});
-    return this.http.post('/sessions/create', body, {headers: contentHeaders})
-      .map(this.checkAuthenticationResponse)
+  register(userInfo:LoginUserInfo) {
+    return this.httpPost(userInfo, '/auth/register');
+  }
+
+  login(userInfo:LoginUserInfo) {
+    return this.httpPost(userInfo, '/auth/login');
+  }
+
+  httpPost(loginUserInfo:LoginUserInfo, route:string) {
+    var body = JSON.stringify(loginUserInfo);
+    return this.http.post(route, body, {headers: contentHeaders})
+      .map(this.checkResponse)
       .catch(this.handleError);
   }
 
@@ -21,14 +29,20 @@ export class AuthenticationService {
     localStorage.removeItem('currentUser');
   }
 
-  private checkAuthenticationResponse(res: Response){
-    return res.json();
+  private checkResponse(res: Response){
+    var retVal = res.json();
+    if(retVal.status && retVal.status === 'error'){
+      var error = retVal.error;
+      var errorText = (error.message) ? error.message :
+        error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+      return Observable.throw(errorText);
+    }
+    return retVal;
   }
 
   private handleError(error: any) {
-    let errMsg = (error.message) ? error.message :
+    var errorText = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);
+    return Observable.throw(errorText);
   }
 }

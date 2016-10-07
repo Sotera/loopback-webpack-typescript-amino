@@ -110,6 +110,7 @@
     "loopback": "^2.34.1",
     "loopback-boot": "^2.22.0",
     "loopback-component-explorer": "^2.6.0",
+    "loopback-connector-mongodb": "^1.15.2",
     "loopback-datasource-juggler": "^2.51.0",
     "ng2-bootstrap": "1.1.5",
     "ng2-ckeditor": "1.0.7",

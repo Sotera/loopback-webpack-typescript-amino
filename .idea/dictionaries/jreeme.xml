@@ -4,6 +4,7 @@
       <w>bootstraprc</w>
       <w>devtool</w>
       <w>dirname</w>
+      <w>fullname</w>
       <w>gutil</w>
       <w>loopback</w>
       <w>polyfills</w>
