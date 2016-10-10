@@ -4,6 +4,7 @@ import {EmailValidator, EqualPasswordsValidator} from '../../theme/validators';
 import {AuthenticationService} from "../../_services/authentication.service";
 import {AppDescriptionService} from "../../_services/app-description.service";
 import {AlertService} from "../../_services/alert.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'register',
@@ -25,6 +26,7 @@ export class Register {
 
   constructor(private fb: FormBuilder,
               private authenticationService: AuthenticationService,
+              private router: Router,
               public appDescriptionService: AppDescriptionService,
               private alertService: AlertService) {
     this.form = fb.group({
@@ -53,15 +55,24 @@ export class Register {
       email: registrationUserInfo.email,
       password: registrationUserInfo.passwords.password
     };
+    this.submitted = true;
     if (this.form.valid) {
       this.authenticationService.register(loginUserInfo)
         .subscribe(
-          loginResponse => {
-            var l = loginResponse;
-            //this.router.navigate(['/']);
+          (registrationResponse: RegistrationResponse) => {
+            if (registrationResponse.status) {
+              if (registrationResponse.status === 'error') {
+                this.alertService.error(registrationResponse.err.message);
+              } else if (registrationResponse.status === 'OK') {
+                this.alertService.success('User created');
+                setTimeout(()=> {
+                  this.router.navigate(['/']);
+                }, 1000);
+              }
+            }
           },
-          error => {
-            this.alertService.error(error);
+          err => {
+            this.alertService.error(err.message);
             this.submitted = false;
           });
     }

@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule, BaseRequestOptions} from '@angular/http';
 import {RouterModule} from '@angular/router';
-import {AUTH_PROVIDERS} from 'angular2-jwt';
+import {provideAuth} from 'angular2-jwt';
 import {removeNgStyles, createNewHosts, createInputTransfer} from '@angularclass/hmr';
 
 /*
@@ -22,7 +22,6 @@ import {AuthGuard} from "./_guards/auth.guard";
 import {AlertService} from "./_services/alert.service";
 import {AuthenticationService} from "./_services/authentication.service";
 import {AppDescriptionService} from "./_services/app-description.service";
-import {AlertComponent} from "./_directives/alert.component";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -36,7 +35,7 @@ const APP_PROVIDERS = [
 const LOCAL_AUTH_PROVIDERS = [
   AuthGuard,
   AuthenticationService,
-  AUTH_PROVIDERS
+  provideAuth((new AppDescriptionService()).jwtTokenName)
 ];
 
 type StoreType = {

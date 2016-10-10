@@ -7,12 +7,6 @@ module.exports = function enableAuthentication(server) {
 
   var AminoUser = server.models.AminoUser;
 
-  var users = [{
-    id: 1,
-    username: 'bob',
-    password: 'bob-password'
-  }];
-
   function createToken(user) {
     try {
       var retVal = jwt.sign(_.omit(user, 'password'), 'my$ecret', {expiresIn: '1 days'});
@@ -22,52 +16,34 @@ module.exports = function enableAuthentication(server) {
     }
   }
 
-  server.post('/users', function (req, res) {
-    if (!req.body.username || !req.body.password) {
-      return res.status(400).send("You must send the username and the password");
-    }
-    if (_.find(users, {username: req.body.username})) {
-      return res.status(400).send("A user with that username already exists");
-    }
-
-    var profile = _.pick(req.body, 'username', 'password', 'extra');
-    profile.id = _.max(users, 'id').id + 1;
-
-    users.push(profile);
-
-    res.status(201).send({
-      id_token: createToken(profile)
-    });
-  });
-
   server.post('/auth/register', function (req, res) {
     var newUser = req.body;
-    delete newUser.password;
     AminoUser.create(newUser, (err, models)=> {
       if (err) {
-        //Return status OK to give user more info about what went wrong
-        res.status(200).send({status: 'error', error: err});
-        return;
+        return res.status(200).send({status: 'error', err});
       }
+      res.status(200).send({status: 'OK', models});
     });
   });
 
   server.post('/auth/login', function (req, res) {
-    if (!req.body.username || !req.body.password) {
-      return res.status(400).send("You must send the username and the password");
+    var username = req.body.username;
+    var password = req.body.password;
+    if (!username || !password) {
+      return res.status(200).send({status: 'error', error: new Error('Please provide username and password')});
     }
 
-    var user = _.find(users, {username: req.body.username});
-    if (!user) {
-      return res.status(401).send("The username or password don't match");
-    }
-
-    if (!(user.password === req.body.password)) {
-      return res.status(401).send("The username or password don't match");
-    }
-
-    res.status(201).send({
-      id_token: createToken(user)
+    AminoUser.login({username, password}, (err, loopbackToken)=> {
+      if (err) {
+        return res.status(200).send({status: 'error', err});
+      }
+      var userInfo = 'user stuff';
+      res.status(201).send({
+        status: 'OK',
+        userInfo,
+        jwtToken: createToken(userInfo),
+        loopbackToken
+      });
     });
   });
 };

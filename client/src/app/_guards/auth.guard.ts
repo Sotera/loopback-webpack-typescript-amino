@@ -3,17 +3,24 @@
 import {Injectable} from '@angular/core';
 import {Router, CanActivate} from '@angular/router';
 import {tokenNotExpired} from 'angular2-jwt';
+import {AppDescriptionService} from "../_services/app-description.service";
 
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private appDescriptionService: AppDescriptionService
+  ) {
   }
 
   canActivate() {
-    if (tokenNotExpired()) {
-      // logged in so return true
-      return true;
+    try{
+      if(tokenNotExpired(this.appDescriptionService.jwtTokenName)){
+        return true;
+      }
+    }catch(err){
+      return false;
     }
     // not logged in so redirect to login page
     this.router.navigate(['/login']);

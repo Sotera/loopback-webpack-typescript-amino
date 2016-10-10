@@ -40,9 +40,18 @@ export class Login implements OnInit {
     if (this.form.valid) {
       this.authenticationService.login(loginUserInfo)
         .subscribe(
-          loginResponse => {
-            var l = loginResponse;
-            //this.router.navigate(['/']);
+          (loginResponse:LoginResponse) => {
+            if (loginResponse.status) {
+              if (loginResponse.status === 'error') {
+                this.alertService.error(loginResponse.err.message);
+              } else if (loginResponse.status === 'OK') {
+                this.alertService.success('Success');
+                this.authenticationService.setJwtToken(loginResponse.jwtToken);
+                setTimeout(()=>{
+                  this.router.navigate(['/pages']);
+                }, 1000);
+              }
+            }
           },
           error => {
             this.alertService.error(error);

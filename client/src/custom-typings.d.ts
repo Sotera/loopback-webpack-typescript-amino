@@ -95,19 +95,29 @@ interface WebpackModule {
   };
 }
 
-interface BaseUserInfo{
+interface BaseUserInfo {
   username: string,
   fullname: string,
   email: string
 }
-interface RegistrationUserInfo extends BaseUserInfo{
+interface RegistrationUserInfo extends BaseUserInfo {
   passwords: {
     password: string,
     repeatPassword: string
   }
 }
-interface LoginUserInfo extends BaseUserInfo{
+interface LoginUserInfo extends BaseUserInfo {
   password: string
+}
+interface AuthenticationResponse {
+  status: string,
+  err: Error,
+}
+interface RegistrationResponse extends AuthenticationResponse {
+}
+interface LoginResponse extends AuthenticationResponse {
+  jwtToken: string,
+  loopbackToken: string
 }
 
 interface WebpackRequire {
