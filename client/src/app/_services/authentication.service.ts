@@ -4,6 +4,7 @@ import {contentHeaders} from '../_guards/index';
 import 'rxjs/add/operator/map'
 import {Observable} from "rxjs";
 import {AppDescriptionService} from "./app-description.service";
+import {Router} from "@angular/router";
 
 @Injectable()
 export class AuthenticationService {
@@ -32,6 +33,10 @@ export class AuthenticationService {
     // remove user from local storage to log user out
     localStorage.removeItem(this.appDescriptionService.jwtTokenName);
     localStorage.removeItem(this.appDescriptionService.loopbackTokenName);
+  }
+
+  setLoopbackToken(loopbackToken: string) {
+    localStorage.setItem(this.appDescriptionService.loopbackTokenName, loopbackToken);
   }
 
   setJwtToken(jwtToken: string) {

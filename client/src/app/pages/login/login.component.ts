@@ -11,7 +11,7 @@ import {AppDescriptionService} from "../../_services/app-description.service";
   styles: [require('./login.scss')],
   template: require('./login.html'),
 })
-export class Login implements OnInit {
+export class Login {
   public form: FormGroup;
   public username: AbstractControl;
   public password: AbstractControl;
@@ -31,10 +31,6 @@ export class Login implements OnInit {
     this.password = this.form.controls['password'];
   }
 
-  ngOnInit(): void {
-    this.authenticationService.logout();
-  }
-
   public onSubmit(loginUserInfo: LoginUserInfo): void {
     this.submitted = true;
     if (this.form.valid) {
@@ -43,10 +39,11 @@ export class Login implements OnInit {
           (loginResponse:LoginResponse) => {
             if (loginResponse.status) {
               if (loginResponse.status === 'error') {
-                this.alertService.error(loginResponse.err.message);
+                this.alertService.error('Login failed');
               } else if (loginResponse.status === 'OK') {
                 this.alertService.success('Success');
                 this.authenticationService.setJwtToken(loginResponse.jwtToken);
+                this.authenticationService.setLoopbackToken(loginResponse.loopbackToken.id);
                 setTimeout(()=>{
                   this.router.navigate(['/pages']);
                 }, 1000);

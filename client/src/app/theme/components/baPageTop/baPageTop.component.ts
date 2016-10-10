@@ -1,6 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 import {GlobalState} from '../../../global.state';
+import {AuthenticationService} from "../../../_services/authentication.service";
 
 @Component({
   selector: 'ba-page-top',
@@ -10,13 +11,18 @@ import {GlobalState} from '../../../global.state';
 })
 export class BaPageTop {
 
-  public isScrolled:boolean = false;
-  public isMenuCollapsed:boolean = false;
+  public isScrolled: boolean = false;
+  public isMenuCollapsed: boolean = false;
 
-  constructor(private _state:GlobalState) {
+  constructor(private _state: GlobalState,
+              private authenticationService: AuthenticationService,) {
     this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
       this.isMenuCollapsed = isCollapsed;
     });
+  }
+
+  public logout() {
+    this.authenticationService.logout();
   }
 
   public toggleMenu() {

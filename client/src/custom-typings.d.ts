@@ -115,9 +115,15 @@ interface AuthenticationResponse {
 }
 interface RegistrationResponse extends AuthenticationResponse {
 }
+interface LoopbackToken {
+  created: string,
+  id: string,
+  ttl: number,
+  userId: string
+}
 interface LoginResponse extends AuthenticationResponse {
   jwtToken: string,
-  loopbackToken: string
+  loopbackToken: LoopbackToken
 }
 
 interface WebpackRequire {
