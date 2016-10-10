@@ -3,8 +3,12 @@
     "name": "db",
     "connector": "memory"
   },
-  "mysqlDs": {
-    "name": "db",
-    "connector": "memory"
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "amino",
+    "name": "mongodb",
+    "connectionTimeout": 10000,
+    "connector": "mongodb"
   }
 }
