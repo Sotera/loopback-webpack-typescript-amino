@@ -31,6 +31,10 @@ export class Login {
     this.password = this.form.controls['password'];
   }
 
+  ngAfterViewInit(){
+    this.authenticationService.logout();
+  }
+
   public onSubmit(loginUserInfo: LoginUserInfo): void {
     this.submitted = true;
     if (this.form.valid) {
