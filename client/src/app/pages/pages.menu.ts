@@ -139,18 +139,10 @@ export const PAGES_MENU = [
         },
         children: [
           {
-            path: 'inputs',
+            path: 'user-profile',
             data: {
               menu: {
-                title: 'Setting Inputs',
-              }
-            }
-          },
-          {
-            path: 'layouts',
-            data: {
-              menu: {
-                title: 'Setting Layouts',
+                title: 'User Profile'
               }
             }
           }

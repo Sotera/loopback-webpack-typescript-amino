@@ -1,12 +1,12 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'layouts',
+  selector: 'user-profile',
   encapsulation: ViewEncapsulation.None,
   styles: [],
-  template: require('./layouts.html'),
+  template: require('./user-profile.html'),
 })
-export class Layouts {
+export class UserProfile {
 
   public defaultPicture = 'assets/img/theme/no-photo.png';
   public profile:any = {

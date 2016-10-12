@@ -1,8 +1,7 @@
 import { Routes, RouterModule }  from '@angular/router';
 
 import { Settings } from './settings.component';
-import { Inputs } from './components/inputs/inputs.component';
-import { Layouts } from './components/layouts/layouts.component';
+import {UserProfile} from "./components/user-profile/user-profile.component";
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
@@ -10,8 +9,7 @@ const routes: Routes = [
     path: '',
     component: Settings,
     children: [
-      { path: 'inputs', component: Inputs },
-      { path: 'layouts', component: Layouts }
+      { path: 'user-profile', component: UserProfile }
     ]
   }
 ];
