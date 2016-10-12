@@ -22,11 +22,13 @@ import {AuthGuard} from "./_guards/auth.guard";
 import {AlertService} from "./_services/alert.service";
 import {AuthenticationService} from "./_services/authentication.service";
 import {AppDescriptionService} from "./_services/app-description.service";
+import {UserDescriptionService} from "./_services/user-description.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
   AppDescriptionService,
+  UserDescriptionService,
   AlertService,
   GlobalState
 ];
@@ -35,7 +37,7 @@ const APP_PROVIDERS = [
 const LOCAL_AUTH_PROVIDERS = [
   AuthGuard,
   AuthenticationService,
-  provideAuth((new AppDescriptionService()).jwtTokenName)
+  provideAuth((new AppDescriptionService()).jwtTokenKeyName)
 ];
 
 type StoreType = {

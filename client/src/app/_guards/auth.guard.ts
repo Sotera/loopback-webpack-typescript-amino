@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate() {
     try{
-      if(tokenNotExpired(this.appDescriptionService.jwtTokenName)){
+      if(tokenNotExpired(this.appDescriptionService.jwtTokenKeyName)){
         return true;
       }
     }catch(err){

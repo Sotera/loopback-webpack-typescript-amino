@@ -9,7 +9,7 @@ module.exports = function enableAuthentication(server) {
 
   function createToken(user) {
     try {
-      var retVal = jwt.sign(_.omit(user, 'password'), 'my$ecret', {expiresIn: '1 days'});
+      var retVal = jwt.sign(_.omit(user, 'password'), 'my$ecret', {expiresIn: '15 minutes'});
       return retVal;
     } catch (e) {
       console.log(e);
@@ -37,12 +37,16 @@ module.exports = function enableAuthentication(server) {
       if (err) {
         return res.status(200).send({status: 'error', err});
       }
-      var userInfo = 'user stuff';
-      res.status(201).send({
-        status: 'OK',
-        userInfo,
-        jwtToken: createToken(userInfo),
-        loopbackToken
+      //Get extended user info (since loopback doesn't send it with this response :( )
+      AminoUser.findById(loopbackToken.userId, (err, aminoUser)=>{
+        delete aminoUser.password;
+        var userInfo = 'user stuff';
+        res.status(201).send({
+          status: 'OK',
+          userInfo: aminoUser,
+          jwtToken: createToken(userInfo),
+          loopbackToken
+        });
       });
     });
   });

@@ -1,8 +1,8 @@
 <div class="auth-main">
   <div class="auth-block">
     <alert></alert>
-    <h1>Sign up to {{appDescriptionService.appName}}</h1>
-    <a routerLink="/login" class="auth-link">Already have an {{appDescriptionService.appName}} account? Sign in!</a>
+    <h1>Sign up to {{appName}}</h1>
+    <a routerLink="/login" class="auth-link">Already have an {{appName}} account? Sign in!</a>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal">
 

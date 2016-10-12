@@ -121,7 +121,13 @@ interface LoopbackToken {
   ttl: number,
   userId: string
 }
+interface UserInfo{
+  username:string,
+  fullname:string,
+  email:string
+}
 interface LoginResponse extends AuthenticationResponse {
+  userInfo: UserInfo,
   jwtToken: string,
   loopbackToken: LoopbackToken
 }

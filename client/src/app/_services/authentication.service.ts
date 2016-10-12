@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map'
 import {Observable} from "rxjs";
 import {AppDescriptionService} from "./app-description.service";
 import {Router} from "@angular/router";
+import {UserDescriptionService} from "./user-description.service";
 
 @Injectable()
 export class AuthenticationService {
@@ -22,6 +23,12 @@ export class AuthenticationService {
     return this.httpPost(userInfo, '/auth/login');
   }
 
+  set loginResponse(res:LoginResponse){
+    var ads = this.appDescriptionService;
+    localStorage.setItem(ads.userInfoKeyName, JSON.stringify(res));
+    localStorage.setItem(ads.jwtTokenKeyName, res.jwtToken);
+  }
+
   httpPost(loginUserInfo: LoginUserInfo, route: string) {
     var body = JSON.stringify(loginUserInfo);
     return this.http.post(route, body, {headers: contentHeaders})
@@ -31,16 +38,8 @@ export class AuthenticationService {
 
   logout() {
     // remove user from local storage to log user out
-    localStorage.removeItem(this.appDescriptionService.jwtTokenName);
-    localStorage.removeItem(this.appDescriptionService.loopbackTokenName);
-  }
-
-  setLoopbackToken(loopbackToken: string) {
-    localStorage.setItem(this.appDescriptionService.loopbackTokenName, loopbackToken);
-  }
-
-  setJwtToken(jwtToken: string) {
-    localStorage.setItem(this.appDescriptionService.jwtTokenName, jwtToken);
+    localStorage.removeItem(this.appDescriptionService.jwtTokenKeyName);
+    localStorage.removeItem(this.appDescriptionService.userInfoKeyName);
   }
 
   private checkResponse(res: Response) {

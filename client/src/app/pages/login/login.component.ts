@@ -31,7 +31,11 @@ export class Login {
     this.password = this.form.controls['password'];
   }
 
-  ngAfterViewInit(){
+  public get appName(): string {
+    return this.appDescriptionService.appName;
+  }
+
+  ngAfterViewInit() {
     this.authenticationService.logout();
   }
 
@@ -40,15 +44,14 @@ export class Login {
     if (this.form.valid) {
       this.authenticationService.login(loginUserInfo)
         .subscribe(
-          (loginResponse:LoginResponse) => {
+          (loginResponse: LoginResponse) => {
             if (loginResponse.status) {
               if (loginResponse.status === 'error') {
                 this.alertService.error('Login failed');
               } else if (loginResponse.status === 'OK') {
                 this.alertService.success('Success');
-                this.authenticationService.setJwtToken(loginResponse.jwtToken);
-                this.authenticationService.setLoopbackToken(loginResponse.loopbackToken.id);
-                setTimeout(()=>{
+                this.authenticationService.loginResponse = loginResponse;
+                setTimeout(()=> {
                   this.router.navigate(['/pages']);
                 }, 1000);
               }

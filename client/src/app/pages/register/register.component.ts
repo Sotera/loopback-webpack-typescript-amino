@@ -47,6 +47,10 @@ export class Register {
     this.repeatPassword = this.passwords.controls['repeatPassword'];
   }
 
+  public get appName(): string {
+    return this.appDescriptionService.appName;
+  }
+
   public onSubmit(registrationUserInfo: RegistrationUserInfo): void {
     this.submitted = true;
     var loginUserInfo: LoginUserInfo = {

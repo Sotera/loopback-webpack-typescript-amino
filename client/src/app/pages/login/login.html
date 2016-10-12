@@ -1,8 +1,8 @@
 <div class="auth-main">
   <div class="auth-block">
     <alert></alert>
-    <h1>Sign in to {{appDescriptionService.appName}}</h1>
-    <a routerLink="/register" class="auth-link">New to {{appDescriptionService.appName}}? Sign up!</a>
+    <h1>Sign in to {{appName}}</h1>
+    <a routerLink="/register" class="auth-link">New to {{appName}}? Sign up!</a>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal">
       <div class="form-group row" [ngClass]="{'has-error': (!username.valid && username.touched), 'has-success': (username.valid && username.touched)}">
