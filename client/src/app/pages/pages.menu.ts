@@ -127,6 +127,36 @@ export const PAGES_MENU = [
         ]
       },
       {
+        path: 'settings',
+        data: {
+          menu: {
+            title: 'Setting Elements',
+            icon: 'ion-compose',
+            selected: false,
+            expanded: false,
+            order: 400,
+          }
+        },
+        children: [
+          {
+            path: 'inputs',
+            data: {
+              menu: {
+                title: 'Setting Inputs',
+              }
+            }
+          },
+          {
+            path: 'layouts',
+            data: {
+              menu: {
+                title: 'Setting Layouts',
+              }
+            }
+          }
+        ]
+      },
+      {
         path: 'forms',
         data: {
           menu: {
