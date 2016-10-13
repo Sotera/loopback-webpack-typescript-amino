@@ -57,6 +57,7 @@ export class Register {
       username: registrationUserInfo.username,
       fullname: registrationUserInfo.fullname,
       email: registrationUserInfo.email,
+      phone: '',
       password: registrationUserInfo.passwords.password
     };
     this.submitted = true;

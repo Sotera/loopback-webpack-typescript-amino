@@ -10,6 +10,10 @@
     "fullname": {
       "type": "string",
       "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],

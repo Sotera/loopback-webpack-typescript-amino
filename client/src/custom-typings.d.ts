@@ -98,6 +98,7 @@ interface WebpackModule {
 interface BaseUserInfo {
   username: string,
   fullname: string,
+  phone: string,
   email: string
 }
 interface RegistrationUserInfo extends BaseUserInfo {
@@ -121,13 +122,8 @@ interface LoopbackToken {
   ttl: number,
   userId: string
 }
-interface UserInfo{
-  username:string,
-  fullname:string,
-  email:string
-}
 interface LoginResponse extends AuthenticationResponse {
-  userInfo: UserInfo,
+  userInfo: BaseUserInfo,
   jwtToken: string,
   loopbackToken: LoopbackToken
 }

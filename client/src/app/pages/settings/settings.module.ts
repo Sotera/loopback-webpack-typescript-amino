@@ -1,6 +1,6 @@
 import {NgModule}      from '@angular/core';
 import {CommonModule}  from '@angular/common';
-import {FormsModule as AngularFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgaModule} from '../../theme/nga.module';
 
 import {routing}       from './settings.routing';
@@ -13,9 +13,9 @@ import {UserProfileForm} from "./components/user-profile/components/userProfileF
 @NgModule({
   imports: [
     CommonModule,
-    AngularFormsModule,
+    ReactiveFormsModule,
+    FormsModule,
     NgaModule,
-    RatingModule,
     routing
   ],
   declarations: [
