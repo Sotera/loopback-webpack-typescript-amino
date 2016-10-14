@@ -5,6 +5,8 @@ import {AuthenticationService} from "../../_services/authentication.service";
 import {AppDescriptionService} from "../../_services/app-description.service";
 import {AlertService} from "../../_services/alert.service";
 import {Router} from "@angular/router";
+import {UserRegistrationInfo} from "../../_models/authentication.models";
+import {PhoneNumberValidator} from "../../theme/validators/phoneNumber.validator";
 
 @Component({
   selector: 'register',
@@ -18,6 +20,7 @@ export class Register {
   public username: AbstractControl;
   public fullname: AbstractControl;
   public email: AbstractControl;
+  public phone: AbstractControl;
   public password: AbstractControl;
   public repeatPassword: AbstractControl;
   public passwords: FormGroup;
@@ -33,6 +36,7 @@ export class Register {
       'username': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'fullname': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'email': ['', Validators.compose([Validators.required, EmailValidator.validate])],
+      'phone': ['', Validators.compose([PhoneNumberValidator.validate])],
       'passwords': fb.group({
         'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
         'repeatPassword': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
@@ -42,6 +46,7 @@ export class Register {
     this.username = this.form.controls['username'];
     this.fullname = this.form.controls['fullname'];
     this.email = this.form.controls['email'];
+    this.phone = this.form.controls['phone'];
     this.passwords = <FormGroup> this.form.controls['passwords'];
     this.password = this.passwords.controls['password'];
     this.repeatPassword = this.passwords.controls['repeatPassword'];
@@ -51,25 +56,17 @@ export class Register {
     return this.appDescriptionService.appName;
   }
 
-  public onSubmit(registrationUserInfo: RegistrationUserInfo): void {
-    this.submitted = true;
-    var loginUserInfo: LoginUserInfo = {
-      username: registrationUserInfo.username,
-      fullname: registrationUserInfo.fullname,
-      email: registrationUserInfo.email,
-      phone: '',
-      password: registrationUserInfo.passwords.password
-    };
+  public onSubmit(submissionData: RegistrationFormSubmission): void {
     this.submitted = true;
     if (this.form.valid) {
-      this.authenticationService.register(loginUserInfo)
+      this.authenticationService.register(new UserRegistrationInfo(submissionData))
         .subscribe(
           (registrationResponse: RegistrationResponse) => {
             if (registrationResponse.status) {
               if (registrationResponse.status === 'error') {
                 this.alertService.error(registrationResponse.err.message);
               } else if (registrationResponse.status === 'OK') {
-                this.alertService.success('User created');
+                this.alertService.success(`User ${registrationResponse.newUser.username} created`);
                 setTimeout(()=> {
                   this.router.navigate(['/']);
                 }, 1000);

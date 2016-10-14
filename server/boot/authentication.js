@@ -16,13 +16,30 @@ module.exports = function enableAuthentication(server) {
     }
   }
 
+  server.post('/auth/update-user-info', function (req, res) {
+    var userInfo = req.body;
+    AminoUser.findById(userInfo.id, (err, aminoUser)=> {
+      if (err) {
+        return res.status(200).send({status: 'error', err});
+      }
+      delete userInfo.id;
+      aminoUser.updateAttributes(userInfo, (err, aminoUser)=> {
+        if (err) {
+          return res.status(200).send({status: 'error', err});
+        }
+        res.status(200).send({status: 'OK', aminoUser});
+      });
+    });
+  });
+
   server.post('/auth/register', function (req, res) {
     var newUser = req.body;
+    delete newUser.id;
     AminoUser.create(newUser, (err, models)=> {
       if (err) {
         return res.status(200).send({status: 'error', err});
       }
-      res.status(200).send({status: 'OK', models});
+      res.status(200).send({status: 'OK', newUser: JSON.parse(models.json)});
     });
   });
 
@@ -38,7 +55,7 @@ module.exports = function enableAuthentication(server) {
         return res.status(200).send({status: 'error', err});
       }
       //Get extended user info (since loopback doesn't send it with this response :( )
-      AminoUser.findById(loopbackToken.userId, (err, aminoUser)=>{
+      AminoUser.findById(loopbackToken.userId, (err, aminoUser)=> {
         delete aminoUser.password;
         var userInfo = 'user stuff';
         res.status(201).send({

@@ -95,39 +95,6 @@ interface WebpackModule {
   };
 }
 
-interface BaseUserInfo {
-  username: string,
-  fullname: string,
-  phone: string,
-  email: string
-}
-interface RegistrationUserInfo extends BaseUserInfo {
-  passwords: {
-    password: string,
-    repeatPassword: string
-  }
-}
-interface LoginUserInfo extends BaseUserInfo {
-  password: string
-}
-interface AuthenticationResponse {
-  status: string,
-  err: Error,
-}
-interface RegistrationResponse extends AuthenticationResponse {
-}
-interface LoopbackToken {
-  created: string,
-  id: string,
-  ttl: number,
-  userId: string
-}
-interface LoginResponse extends AuthenticationResponse {
-  userInfo: BaseUserInfo,
-  jwtToken: string,
-  loopbackToken: LoopbackToken
-}
-
 interface WebpackRequire {
   (id: string): any;
   (paths: string[], callback: (...modules: any[]) => void): void;
@@ -154,4 +121,49 @@ interface NodeRequireFunction extends Es6PromiseLoader {
 interface NodeModule extends WebpackModule {
 }
 interface Global extends GlobalEnvironment {
+}
+
+//This is the shape of the submission parameter for the registration form
+interface RegistrationFormSubmission {
+  username: string,
+  fullname: string,
+  email: string,
+  phone: string,
+  passwords: {
+    password: string,
+    repeatPassword: string
+  }
+}
+interface LoginFormSubmission {
+  username: string,
+  password: string
+}
+//This is the shape of the loopback token returned from the network login call
+interface LoopbackToken {
+  created: string,
+  id: string,
+  ttl: number,
+  userId: string
+}
+interface AuthenticationResponse {
+  status: string,
+  err: Error
+}
+interface UserInfo {
+  id: string,
+  username: string,
+  fullname: string,
+  email: string,
+  phone: string
+}
+interface RegistrationResponse extends AuthenticationResponse {
+  newUser: UserInfo
+}
+interface LoginResponse extends AuthenticationResponse {
+  userInfo: UserInfo,
+  jwtToken: string,
+  loopbackToken: LoopbackToken
+}
+interface UserInfoUpdateResponse extends AuthenticationResponse {
+  userInfo: UserInfo
 }

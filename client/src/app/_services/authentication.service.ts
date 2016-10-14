@@ -5,32 +5,44 @@ import 'rxjs/add/operator/map'
 import {Observable} from "rxjs";
 import {AppDescriptionService} from "./app-description.service";
 import {Router} from "@angular/router";
-import {UserDescriptionService} from "./user-description.service";
+import {UserInfoImpl, UserRegistrationInfo} from "../_models/authentication.models";
 
 @Injectable()
 export class AuthenticationService {
-  constructor(
-    private http: Http,
-    private appDescriptionService: AppDescriptionService
-  ) {
+  constructor(private http: Http,
+              private appDescriptionService: AppDescriptionService) {
   }
 
-  register(userInfo: LoginUserInfo) {
+  public get userInfo(): UserInfo {
+    var userInfoJson = localStorage.getItem(this.appDescriptionService.userInfoKeyName);
+    return new UserInfoImpl(userInfoJson);
+  }
+
+  updateUserInfo(userInfo: UserInfo) {
+    return this.httpPost(userInfo, '/auth/update-user-info');
+  }
+
+  register(userInfo: UserRegistrationInfo) {
     return this.httpPost(userInfo, '/auth/register');
   }
 
-  login(userInfo: LoginUserInfo) {
-    return this.httpPost(userInfo, '/auth/login');
+  login(loginFormSubmission: LoginFormSubmission) {
+    return this.httpPost(loginFormSubmission, '/auth/login');
   }
 
-  set loginResponse(res:LoginResponse){
+  set updateUserResponse(res: LoginResponse) {
     var ads = this.appDescriptionService;
     localStorage.setItem(ads.userInfoKeyName, JSON.stringify(res));
+  }
+
+  set loginResponse(res: LoginResponse) {
+    var ads = this.appDescriptionService;
+    localStorage.setItem(ads.userInfoKeyName, JSON.stringify(res.userInfo));
     localStorage.setItem(ads.jwtTokenKeyName, res.jwtToken);
   }
 
-  httpPost(loginUserInfo: LoginUserInfo, route: string) {
-    var body = JSON.stringify(loginUserInfo);
+  httpPost(postInfo: any, route: string) {
+    var body = JSON.stringify(postInfo);
     return this.http.post(route, body, {headers: contentHeaders})
       .map(this.checkResponse)
       .catch(this.handleError);

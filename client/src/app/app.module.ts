@@ -1,7 +1,7 @@
 import {NgModule, ApplicationRef} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpModule, BaseRequestOptions} from '@angular/http';
+import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
 import {provideAuth} from 'angular2-jwt';
 import {removeNgStyles, createNewHosts, createInputTransfer} from '@angularclass/hmr';
@@ -22,13 +22,11 @@ import {AuthGuard} from "./_guards/auth.guard";
 import {AlertService} from "./_services/alert.service";
 import {AuthenticationService} from "./_services/authentication.service";
 import {AppDescriptionService} from "./_services/app-description.service";
-import {UserDescriptionService} from "./_services/user-description.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
   AppDescriptionService,
-  UserDescriptionService,
   AlertService,
   GlobalState
 ];

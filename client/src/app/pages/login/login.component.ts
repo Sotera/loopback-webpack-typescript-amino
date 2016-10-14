@@ -39,7 +39,7 @@ export class Login {
     this.authenticationService.logout();
   }
 
-  public onSubmit(loginUserInfo: LoginUserInfo): void {
+  public onSubmit(loginUserInfo:LoginFormSubmission): void {
     this.submitted = true;
     if (this.form.valid) {
       this.authenticationService.login(loginUserInfo)
