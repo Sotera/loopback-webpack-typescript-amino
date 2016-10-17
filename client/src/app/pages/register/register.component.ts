@@ -64,9 +64,9 @@ export class Register {
           (registrationResponse: RegistrationResponse) => {
             if (registrationResponse.status) {
               if (registrationResponse.status === 'error') {
-                this.alertService.error(registrationResponse.err.message);
+                this.alertService.error(registrationResponse.error.message);
               } else if (registrationResponse.status === 'OK') {
-                this.alertService.success(`User ${registrationResponse.newUser.username} created`);
+                this.alertService.success(`User '${registrationResponse.newUser.username}' created`);
                 setTimeout(()=> {
                   this.router.navigate(['/']);
                 }, 1000);
@@ -74,7 +74,7 @@ export class Register {
             }
           },
           err => {
-            this.alertService.error(err.message);
+            this.alertService.error(error.message);
             this.submitted = false;
           });
     }

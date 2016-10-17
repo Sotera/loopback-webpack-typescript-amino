@@ -16,6 +16,7 @@ export class UserProfileForm {
               private alertService: AlertService) {
     var userInfo = this.authenticationService.userInfo;
     this.formGroup = formBuilder.group({
+      'id': [userInfo.id],
       'username': [userInfo.username, Validators.compose([Validators.required, Validators.minLength(4)])],
       'fullname': [userInfo.fullname, Validators.compose([Validators.required, Validators.minLength(4)])],
       'phone': [userInfo.phone, Validators.compose([PhoneNumberValidator.validate])],
@@ -35,23 +36,18 @@ export class UserProfileForm {
 
   private submitted: boolean = false;
 
-  /*  ngOnInit() {
-   var userInfo = this.authenticationService.userInfo;
-   this.formGroup.setValue(userInfo);
-   }*/
-
   onSubmit(userInfo: UserInfo) {
-    //alert(JSON.stringify(baseUserInfo));
     this.submitted = true;
     if (this.formGroup.valid) {
       this.authenticationService.updateUserInfo(userInfo)
         .subscribe(
-          (registrationResponse: RegistrationResponse) => {
-            if (registrationResponse.status) {
-              if (registrationResponse.status === 'error') {
-                this.alertService.error(registrationResponse.err.message);
-              } else if (registrationResponse.status === 'OK') {
-                this.alertService.success('User created');
+          (updateUserInfoResponse: UpdateUserInfoResponse) => {
+            if (updateUserInfoResponse.status) {
+              if (updateUserInfoResponse.status === 'error') {
+                this.alertService.error(updateUserInfoResponse.error.message);
+              } else if (updateUserInfoResponse.status === 'OK') {
+                this.alertService.success(`User '${updateUserInfoResponse.userInfo.username}' updated`);
+                this.authenticationService.updateUserInfoResponse = updateUserInfoResponse;
               }
             }
           },

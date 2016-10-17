@@ -20,14 +20,14 @@ module.exports = function enableAuthentication(server) {
     var userInfo = req.body;
     AminoUser.findById(userInfo.id, (err, aminoUser)=> {
       if (err) {
-        return res.status(200).send({status: 'error', err});
+        return res.status(200).send({status: 'error', error: err});
       }
       delete userInfo.id;
       aminoUser.updateAttributes(userInfo, (err, aminoUser)=> {
         if (err) {
-          return res.status(200).send({status: 'error', err});
+          return res.status(200).send({status: 'error', error: err});
         }
-        res.status(200).send({status: 'OK', aminoUser});
+        return res.status(200).send({status: 'OK', userInfo: aminoUser});
       });
     });
   });
@@ -37,9 +37,9 @@ module.exports = function enableAuthentication(server) {
     delete newUser.id;
     AminoUser.create(newUser, (err, models)=> {
       if (err) {
-        return res.status(200).send({status: 'error', err});
+        return res.status(200).send({status: 'error', error: err});
       }
-      res.status(200).send({status: 'OK', newUser: JSON.parse(models.json)});
+      return res.status(200).send({status: 'OK', newUser: JSON.parse(models.json)});
     });
   });
 
@@ -47,21 +47,20 @@ module.exports = function enableAuthentication(server) {
     var username = req.body.username;
     var password = req.body.password;
     if (!username || !password) {
-      return res.status(200).send({status: 'error', error: new Error('Please provide username and password')});
+      return res.status(200).send({status: 'error', error: {message: 'Please provide username and password'}});
     }
 
     AminoUser.login({username, password}, (err, loopbackToken)=> {
       if (err) {
-        return res.status(200).send({status: 'error', err});
+        return res.status(200).send({status: 'error', error: err});
       }
       //Get extended user info (since loopback doesn't send it with this response :( )
       AminoUser.findById(loopbackToken.userId, (err, aminoUser)=> {
         delete aminoUser.password;
-        var userInfo = 'user stuff';
-        res.status(201).send({
+        return res.status(201).send({
           status: 'OK',
           userInfo: aminoUser,
-          jwtToken: createToken(userInfo),
+          jwtToken: createToken({username: aminoUser.username}),
           loopbackToken
         });
       });

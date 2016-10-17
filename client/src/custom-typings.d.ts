@@ -147,7 +147,7 @@ interface LoopbackToken {
 }
 interface AuthenticationResponse {
   status: string,
-  err: Error
+  error: Error
 }
 interface UserInfo {
   id: string,
@@ -164,6 +164,6 @@ interface LoginResponse extends AuthenticationResponse {
   jwtToken: string,
   loopbackToken: LoopbackToken
 }
-interface UserInfoUpdateResponse extends AuthenticationResponse {
+interface UpdateUserInfoResponse extends AuthenticationResponse {
   userInfo: UserInfo
 }

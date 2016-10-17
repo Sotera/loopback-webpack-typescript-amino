@@ -30,15 +30,15 @@ export class AuthenticationService {
     return this.httpPost(loginFormSubmission, '/auth/login');
   }
 
-  set updateUserResponse(res: LoginResponse) {
+  set updateUserInfoResponse(updateUserInfoResponse: UpdateUserInfoResponse) {
     var ads = this.appDescriptionService;
-    localStorage.setItem(ads.userInfoKeyName, JSON.stringify(res));
+    localStorage.setItem(ads.userInfoKeyName, JSON.stringify(updateUserInfoResponse.userInfo));
   }
 
-  set loginResponse(res: LoginResponse) {
+  set loginResponse(loginResponse: LoginResponse) {
     var ads = this.appDescriptionService;
-    localStorage.setItem(ads.userInfoKeyName, JSON.stringify(res.userInfo));
-    localStorage.setItem(ads.jwtTokenKeyName, res.jwtToken);
+    localStorage.setItem(ads.userInfoKeyName, JSON.stringify(loginResponse.userInfo));
+    localStorage.setItem(ads.jwtTokenKeyName, loginResponse.jwtToken);
   }
 
   httpPost(postInfo: any, route: string) {

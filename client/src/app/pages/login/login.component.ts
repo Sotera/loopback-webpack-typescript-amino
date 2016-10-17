@@ -49,7 +49,7 @@ export class Login {
               if (loginResponse.status === 'error') {
                 this.alertService.error('Login failed');
               } else if (loginResponse.status === 'OK') {
-                this.alertService.success('Success');
+                this.alertService.success(`User '${loginResponse.userInfo.username}' logged in`);
                 this.authenticationService.loginResponse = loginResponse;
                 setTimeout(()=> {
                   this.router.navigate(['/pages']);
