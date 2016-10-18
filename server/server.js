@@ -13,6 +13,8 @@ function StartServer(server) {
   if (typeof __USING_WEBPACK__ === 'undefined') {
     process.env.NODE_ENV = 'development';
     process.env.HMR_ENABLED = 1;
+    //process.env.NODE_ENV = 'production';
+    //process.env.HMR_ENABLED = 0;
     const boot = require('loopback-boot');
     boot(server, __dirname, function (err) {
       if (err) {

@@ -18,6 +18,7 @@ const routes: Routes = [
       {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       {path: 'dashboard', loadChildren: () => System.import('./dashboard/dashboard.module')},
       { path: 'editors', loadChildren: () => System.import('./editors/editors.module') },
+      { path: 'vita', loadChildren: () => System.import('./vita/vita.module') },
       //{ path: 'components', loadChildren: () => System.import('./components/components.module') }
       { path: 'charts', loadChildren: () => System.import('./charts/charts.module') },
       { path: 'ui', loadChildren: () => System.import('./ui/ui.module') },

@@ -6,6 +6,9 @@ debug.enable(debugName);
 debug = debug(debugName);
 
 var gulp = require('gulp');
+var async = require('async');
+var tar = require('gulp-tar-path');
+var gzip = require('gulp-gzip');
 var gutil = require('gulp-util');
 var path = require('path');
 var fs = require('fs');
@@ -23,20 +26,68 @@ var paths = {
   projectRoot: __dirname,
   appRoot: path.join(__dirname, 'server'),
   buildDir,
-  buildRoot: path.join(__dirname, buildDir)
+  buildRoot: path.join(__dirname, buildDir),
+  outDir: path.join(__dirname, 'dist')
 };
 
-gulp.task('default', function (done) {
-  Webpack().run(function (err, stats) {
+function copyFile(source, target, cb) {
+  var cbCalled = false;
+
+  var rd = fs.createReadStream(source);
+  rd.on("error", function (err) {
+    done(err);
+  });
+  var wr = fs.createWriteStream(target);
+  wr.on("error", function (err) {
+    done(err);
+  });
+  wr.on("close", function (ex) {
+    done();
+  });
+  rd.pipe(wr);
+
+  function done(err) {
+    if (!cbCalled) {
+      cb(err);
+      cbCalled = true;
+    }
+  }
+}
+
+gulp.task('webpack', function (done) {
+  Webpack(done).run(function (err, stats) {
     if (err) throw new gutil.PluginError('webpack', err);
     gutil.log('[webpack]', stats.toString({
-      colors: true,
+      colors: true
     }));
-    done();
   });
 });
 
-function Webpack() {
+gulp.task('copy-configs', ['webpack'], function (done) {
+  async.every(['package.json', 'config.json', 'datasources.json', '_run-in-production.sh'],
+    (filename, cb)=> {
+      copyFile(
+        path.resolve(paths.appRoot, filename),
+        path.resolve(paths.buildRoot, filename),
+        cb
+      )
+    },
+    (err, result)=> {
+      done();
+    });
+});
+
+gulp.task('zip-it-up', ['copy-configs'], function () {
+  return gulp
+    .src([paths.outDir])
+    .pipe(tar('amino2.tar'))
+    .pipe(gzip())
+    .pipe(gulp.dest(paths.projectRoot));
+});
+
+gulp.task('default', ['zip-it-up']);
+
+function Webpack(done) {
   debug(`Building into ${chalk.cyan.bold('./' + paths.buildDir)}`);
 
   // if --save-instructions is omitted, we clean up the boot instructions
@@ -116,8 +167,9 @@ function Webpack() {
   try {
     fs.readdirSync(path.join(paths.projectRoot, 'node_modules'))
       .forEach(function (dir) {
-        if (dir !== '.bin' && dir !== 'loopback-boot')
+        if (dir !== '.bin' && dir !== 'loopback-boot') {
           nodeModules.add(dir);
+        }
       });
   } catch (e) {
   }
@@ -127,13 +179,13 @@ function Webpack() {
   // loopback-boot. We also externalise our config.json and datasources.json
   // configuration files.
   function externalsHandler(context, request, callback) {
-    //console.log('--> ' + request);
     // externalise dynamic build files.
     // NOTE: if you intend to deploy these build files in the same
     // directory as the bundle, change the result to `./${m[1]}.json`
     var m = request.match(/(?:^|[\/\\])(config|datasources)\.json$/);
     if (m) {
-      return callback(null, `../../server/${m[1]}.json`);
+      return callback(null, `./${m[1]}.json`);
+      //return callback(null, `../../server/${m[1]}.json`);
     }
     // externalise if the path begins with a node_modules name or if it's
     // an absolute path containing /node_modules/ (the latter results from
@@ -142,8 +194,9 @@ function Webpack() {
     if (nodeModules.has(pathBase))
       return callback(null, 'commonjs ' + request);
     m = request.match(/[\/\\]node_modules[\/\\](.*)$/);
-    if (m)
+    if (m) {
       return callback(null, 'commonjs ' + m[1].replace(/\\/g, '/'));
+    }
     // otherwise internalise (bundle) the request.
     callback();
   };
@@ -176,10 +229,10 @@ function Webpack() {
     plugins: [
       //begin-JReeme
       //The DotEnv-* plugins don't seem to work with new WebPack (>2.0) factories
-/*      new DotEnvPlugin({
-        sample: './.env.default',
-        path: './.env'
-      }),*/
+      /*      new DotEnvPlugin({
+       sample: './.env.default',
+       path: './.env'
+       }),*/
       new webpack.DefinePlugin({
         '__USING_WEBPACK__': true
       }),
@@ -217,5 +270,7 @@ function Webpack() {
       ]
     },
     stats: {colors: true, modules: true, reasons: true, errorDetails: true}
+  }, function (err, stats) {
+    done();
   });
 }

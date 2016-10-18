@@ -7,5 +7,6 @@ module.exports = function (app) {
   var wwwPath = (process.env.NODE_ENV === 'production')
     ? '../../dist/client'
     : '../../client/src';
+  console.log(path.resolve(__dirname, wwwPath));
   app.use(loopback.static(path.resolve(__dirname, wwwPath)));
 };

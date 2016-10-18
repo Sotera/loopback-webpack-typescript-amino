@@ -19,7 +19,8 @@ export class UserProfileForm {
       'id': [userInfo.id],
       'username': [userInfo.username, Validators.compose([Validators.required, Validators.minLength(4)])],
       'fullname': [userInfo.fullname, Validators.compose([Validators.required, Validators.minLength(4)])],
-      'phone': [userInfo.phone, Validators.compose([PhoneNumberValidator.validate])],
+      'phone': [userInfo.phone],
+      //'phone': [userInfo.phone, Validators.compose([PhoneNumberValidator.validate])],
       'email': [userInfo.email, Validators.compose([Validators.required, EmailValidator.validate])],
     });
     this.username = this.formGroup.controls['username'];

@@ -36,7 +36,8 @@ export class Register {
       'username': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'fullname': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'email': ['', Validators.compose([Validators.required, EmailValidator.validate])],
-      'phone': ['', Validators.compose([PhoneNumberValidator.validate])],
+      //'phone': ['', Validators.compose([PhoneNumberValidator.validate])],
+      'phone': [''],
       'passwords': fb.group({
         'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
         'repeatPassword': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
@@ -73,7 +74,7 @@ export class Register {
               }
             }
           },
-          err => {
+          error => {
             this.alertService.error(error.message);
             this.submitted = false;
           });

@@ -7,10 +7,11 @@ export class PhoneNumberValidator {
     }
     let PHONENUMBER_REGEX = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
 
-    return PHONENUMBER_REGEX.test(c.value) ? null : {
-      validateEmail: {
+    return PHONENUMBER_REGEX.test(c.value);
+/*    ? null : {
+      validatePhoneNumber: {
         valid: false
       }
-    };
+    };*/
   }
 }

@@ -1,0 +1,32 @@
+{
+  "name": "loopback-webpack-typescript-amino",
+  "version": "0.0.3",
+  "description": "A webpack starter for a Loopback server and Angular2 client",
+  "main": "server/server.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "John Reeme <john.reeme@soteradefense.com> (http://soteradefense.com)",
+  "license": {
+    "type": "WTFPL",
+    "url": "https://spdx.org/licenses/WTFPL"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sotera/loopback-webpack-typescript-amino.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sotera/loopback-webpack-typescript-amino/issues"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "jsonwebtoken": "^7.1.9",
+    "loopback": "^2.34.1",
+    "loopback-component-explorer": "^2.6.0",
+    "loopback-connector-mongodb": "^1.15.2",
+    "source-map-support": "^0.4.5"
+  },
+  "engines": {
+    "node": ">= 4.2.1",
+    "npm": ">= 3"
+  }
+}

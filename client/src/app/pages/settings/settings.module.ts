@@ -1,6 +1,6 @@
 import {NgModule}      from '@angular/core';
 import {CommonModule}  from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormsModule as AngularFormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgaModule} from '../../theme/nga.module';
 
 import {routing}       from './settings.routing';
@@ -15,7 +15,7 @@ import {AlertModule} from "../../modules/alert.module";
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule,
+    AngularFormsModule,
     AlertModule,
     NgaModule,
     routing
