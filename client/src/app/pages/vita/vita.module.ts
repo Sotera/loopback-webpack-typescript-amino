@@ -6,6 +6,7 @@ import { NgaModule } from '../../theme/nga.module';
 import { routing }       from './vita.routing';
 import { Vita } from './vita.component';
 import {EtlTask1} from "./components/etl-task1/etl-task1.component";
+import {EtlActivity} from "./components/etl-activity/etl-activity.component";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {EtlTask1} from "./components/etl-task1/etl-task1.component";
   ],
   declarations: [
     Vita,
-    EtlTask1
+    EtlTask1,
+    EtlActivity
   ]
 })
 export default class VitaModule {

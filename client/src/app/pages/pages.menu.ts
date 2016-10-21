@@ -18,8 +18,8 @@ export const PAGES_MENU = [
         path: 'vita',
         data: {
           menu: {
-            title: 'VITA',
-            icon: 'ion-eye',
+            title: 'ETL',
+            icon: 'ion-android-upload',
             selected: false,
             expanded: false,
             order: 0
@@ -30,22 +30,22 @@ export const PAGES_MENU = [
             path: 'etl-task1',
             data: {
               menu: {
-                title: 'ETL Tasks'
+                title: '- Tasks'
               }
             }
-            /*            , children: [
-             {
-             path: 'etl-task1',
-             data: {
-             menu: {
-             title: 'ETL Task 1'
+          },
+          {
+            path: 'etl-activity',
+            data: {
+              menu: {
+              title: '- Activity'
              }
              }
-             }
-             ]*/
           }
         ]
       }
+      //   ]
+      // }
 /*      , {
         path: 'editors',
         data: {
