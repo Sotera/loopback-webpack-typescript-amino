@@ -26,11 +26,19 @@ export const PAGES_MENU = [
           }
         }
         , children: [
+          // {
+          //   path: 'etl-task1',
+          //   data: {
+          //     menu: {
+          //       title: '- Tasks'
+          //     }
+          //   }
+          // },
           {
-            path: 'etl-task1',
+            path: 'etl-fileManager',
             data: {
               menu: {
-                title: '- Tasks'
+                title: '- File Manager'
               }
             }
           },
