@@ -1,0 +1,50 @@
+{
+  "name": "EtlStep",
+  "plural": "EtlSteps",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "start": {
+      "type": "date",
+      "required": false
+    },
+    "end": {
+      "type": "date",
+      "required": false
+    },
+    "result": {
+      "type": "string",
+      "required": false
+    },
+    "index": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "etlSource": {
+      "type": "embedsOne",
+      "model": "EtlResource",
+      "property": "source",
+      "options": {
+        "validate": true,
+        "forceId": true
+      }
+    },
+    "etlProducts": {
+      "type": "embedsMany",
+      "model": "EtlResource",
+      "property": "products",
+      "options": {
+        "validate": true,
+        "forceId": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
