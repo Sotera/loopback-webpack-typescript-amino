@@ -9,6 +9,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 export class EtlActivity {
   public etlActivityInfo:string = '<p>Hello ETLActivity</p>';
+
+  xyz = 'mike';
+  
   constructor() {
   }
 }

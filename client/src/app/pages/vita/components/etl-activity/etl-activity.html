@@ -2,6 +2,10 @@
   <div class="col-md-12">
     <ba-card title="File Activity" baCardClass="with-scroll">
 
+      <div>
+        <label>{{xyz}}</label>
+      </div>
+
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
@@ -17,137 +21,7 @@
           </thead>
 
           <tbody>
-            <tr>
-              <td class="text-nowrap" scope="row">inside_2015_05.tar.enc</td>
-              <td class="text-nowrap" scope="row">inside_2015_05.tar.enc</td>
-              <td>Decrypt</td>
-              <td>inside_2015_05.tar</td>
-              <td>Succeeded</td>
-              <td>10/20/2016 9:32:44 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-nowrap" scope="row">inside_2015_05.tar.enc</td>
-              <td>Untar</td>
-              <td>inside_2015_05/*.gz</td>
-              <td>Succeeded</td>
-              <td>10/20/2016 9:38:52 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-nowrap" scope="row">inside_2015_05/*.gz</td>
-              <td>Gunzip</td>
-              <td>inside_2015_05/*.pcap</td>
-              <td>Succeeded</td>
-              <td>10/20/2016 10:04:16 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-nowrap" scope="row">inside_2015_05/*.pcap</td>
-              <td>Mergecap</td>
-              <td>inside_2015_05/inside_201505.pcap</td>
-              <td>Succeeded</td>
-              <td>10/20/2016 10:25:21 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-wrap" scope="row">inside_2015_05/inside_201505.pcap</td>
-              <td>Bro</td>
-              <td>bro [conn, dhcp, dns, dpd, files, ftp, http, notice, packet_filter, pe, reporter, sip, snmp, ...]</td>
-              <td>Succeeded</td>
-              <td>10/20/2016 10:53:00 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-wrap" scope="row">bro [conn, dhcp, dns, dpd, files, ...]</td>
-              <td>HDFS</td>
-              <td>HDFS/201505/bro</td>
-              <td>Succeeded</td>
-              <td>10/20/2016 11:28:18 AM</td>
-              <td></td>
-            </tr>
 
-            <tr>
-              <td class="text-nowrap" scope="row">inside_2016_04.tar.enc</td>
-              <td class="text-nowrap" scope="row">inside_2016_04.tar.enc</td>
-              <td>Decrypt</td>
-              <td>inside_2016_04.tar</td>
-              <td>Succeeded</td>
-              <td>10/20/2016 10:34:21 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-nowrap" scope="row">inside_2016_04.tar.enc</td>
-              <td>Untar</td>
-              <td>- n/a - </td>
-              <td><code>Failed - corrupted archive</code></td>
-              <td>10/20/2016 10:35:51 AM</td>
-              <td>
-                <button type="button" class="btn btn-success btn-icon"><i class="ion-checkmark-circled"></i></button>
-                <button type="button" class="btn btn-danger btn-icon"><i class="ion-close-circled"></i></button>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="text-nowrap" scope="row">inside_2016_05.tar.enc</td>
-              <td class="text-nowrap" scope="row">inside_2016_05.tar.enc</td>
-              <td>Decrypt</td>
-              <td>inside_2016_05.tar</td>
-              <td>Succeeded</td>
-              <td>10/21/2016 8:15:43 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-nowrap" scope="row">inside_2016_05.tar.enc</td>
-              <td>Untar</td>
-              <td>inside_2016_05/*.gz</td>
-              <td>Succeeded</td>
-              <td>10/21/2016 9:24:52 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-nowrap" scope="row">inside_2016_05/*.gz</td>
-              <td>Gunzip</td>
-              <td>inside_2016_05/*.pcap</td>
-              <td>Succeeded</td>
-              <td>10/21/2016 9:58:10 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-nowrap" scope="row">inside_2016_05/*.pcap</td>
-              <td>Mergecap</td>
-              <td>inside_2016_05/inside_201506.pcap</td>
-              <td>Succeeded</td>
-              <td>10/21/2016 10:02:15 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-wrap" scope="row">inside_2016_05/inside_201605.pcap</td>
-              <td>Bro</td>
-              <td>bro [conn, dhcp, dns, dpd, files, ftp, http, notice, packet_filter, pe, reporter, sip, snmp, ...]</td>
-              <td>Succeeded</td>
-              <td>10/21/2016 11:42:10 AM</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="text-wrap" scope="row">bro [conn, dhcp, dns, dpd, files, ...]</td>
-              <td>HDFS</td>
-              <td>HDFS/201506/bro</td>
-              <td>Succeeded</td>
-              <td>10/21/2016 12:18:28 PM</td>
-              <td></td>
-            </tr>
 
           </tbody>
         </table>
