@@ -167,3 +167,6 @@ interface LoginResponse extends AuthenticationResponse {
 interface UpdateUserInfoResponse extends AuthenticationResponse {
   userInfo: UserInfo
 }
+interface Response{
+  map(cb:(res:Response)=>void);
+}
