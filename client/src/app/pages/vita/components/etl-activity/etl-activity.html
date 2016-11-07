@@ -2,10 +2,6 @@
   <div class="col-md-12">
     <ba-card title="File Activity" baCardClass="with-scroll">
 
-      <div>
-        <label>{{xyz}}</label>
-      </div>
-
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
@@ -21,11 +17,25 @@
           </thead>
 
           <tbody>
-
+            <tr *ngFor="let flow of displayFlows">
+              <td>{{flow.id}}</td>
+              <td>{{flow.name}}</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <th (click)="onSelect(flow)"> Retry?</th>
+            </tr>
 
           </tbody>
         </table>
       </div>
+
+
+      <!--<div *ngIf="selectedFlow">-->
+        <!--<label>Selected Flow : {{selectedFlow.name}}</label>-->
+      <!--</div>-->
+
 
     </ba-card>
   </div>
