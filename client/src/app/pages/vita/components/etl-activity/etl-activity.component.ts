@@ -1,35 +1,32 @@
 import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
-import {ETLFlowService} from "../../../../_services/etlFlow.service";
-import {EtlFile, EtlFlow, EtlStep, EtlResource} from "../../../../_models/flow.models";
+import {ETLService} from "../../../../_services/etl.service";
+import {EtlFile} from "../../../../_models/flow.models";
 
 @Component({
   selector: 'etl-activity-component',
   encapsulation: ViewEncapsulation.None,
-  providers: [ETLFlowService],
+  providers: [ETLService],
   template: require('./etl-activity.html'),
   styles: [require('./etl-activity.scss')]
 })
 
 export class EtlActivity implements AfterViewInit{
-  displayFlows: EtlFlow[];
+  displayFiles: EtlFile[];
 
-  constructor(private etlFlowService: ETLFlowService) {
-
-  }
+  constructor(private etlService: ETLService) {}
 
   ngAfterViewInit(): void {
-    this.loadFlows();
+    this.loadFiles();
   }
 
-  loadFlows(){
-    //get all flows
-    this.etlFlowService.getAll().subscribe(
-      (etlFlows: EtlFlow[]) => {this.displayFlows = etlFlows},
+  loadFiles(){
+    //get all files
+    this.etlService.getFiles().subscribe(
+      (etlFiles: EtlFile[]) => {this.displayFiles = etlFiles},
       err => {
         var e = err;
       });
   }
-
 
 }
 

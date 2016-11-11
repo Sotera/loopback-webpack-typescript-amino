@@ -2,9 +2,11 @@ export class EtlFlow {
   constructor(public json: string) {
     var etlFlow = JSON.parse(json);
     this.id = etlFlow.id;
+    this.name = etlFlow.name;
     this.steps = etlFlow.steps;
   }
   public id: string;
+  public name: string;
   public steps: EtlStep[];
 }
 
@@ -12,6 +14,7 @@ export class EtlStep {
   constructor(public json: string) {
     var etlStep = JSON.parse(json);
     this.id = etlStep.id;
+    this.name = etlStep.name;
     this.start = etlStep.start;
     this.end = etlStep.end;
     this.result = etlStep.result;
@@ -21,12 +24,13 @@ export class EtlStep {
 
   }
   public id: string;
+  public name: string;
   public start: string;
   public end: string;
   public result: string;
   public index: number;
-  public source = EtlResource;
-  public products = EtlResource[];
+  public source: EtlResource;
+  public products: EtlResource[];
 }
 
 export class EtlFile {

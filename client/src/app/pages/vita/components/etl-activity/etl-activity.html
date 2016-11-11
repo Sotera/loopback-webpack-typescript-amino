@@ -1,42 +1,69 @@
 <div class="row">
   <div class="col-md-12">
-    <ba-card title="File Activity" baCardClass="with-scroll">
-
+    <ba-card title="Unprocessed Files" baCardClass="with-scroll">
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th> Chain</th>
-              <th> Source File</th>
-              <th> Action(s)</th>
-              <th> Target</th>
-              <th> Status</th>
-              <th> Time</th>
-              <th> Retry?</th>
+              <th> File ID</th>
+              <th> File</th>
+              <th> Size (GB)</th>
+              <th> Created</th>
+               <th> </th>
             </tr>
           </thead>
-
           <tbody>
-            <tr *ngFor="let flow of displayFlows">
-              <td>{{flow.id}}</td>
-              <td>{{flow.name}}</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <th (click)="onSelect(flow)"> Retry?</th>
-            </tr>
-
+            <ng-container *ngFor="let file of displayFiles">
+              <tr *ngIf="file.flows.length == 0">
+                <td>{{file.id}}</td>
+                <td>{{file.path}}{{file.name}}</td>
+                <td>{{file.size}}</td>
+                <td>{{file.createDate | date: 'medium'}}</td>
+                <td (click)="onSelect(flow)"> <button type="button" class="btn btn-primary">Choose Flow</button></td>
+              </tr>
+            </ng-container>
           </tbody>
         </table>
       </div>
+    </ba-card>
 
+    <ba-card title="Processed Files" baCardClass="with-scroll">
 
-      <!--<div *ngIf="selectedFlow">-->
-        <!--<label>Selected Flow : {{selectedFlow.name}}</label>-->
-      <!--</div>-->
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <th> File</th>
+            <th> Flow</th>
+            <th> Steps</th>
+          </tr>
+          </thead>
+          <tbody>
+          <ng-container *ngFor="let file of displayFiles">
+            <ng-container *ngIf="file.flows.length > 0">
+              <tr *ngFor="let flow of file.flows">
+                <td>{{file.path}}{{file.name}}</td>
+                <td>{{flow.id}}</td>
+                <td>
+                  <div *ngFor="let step of flow.steps">
+                    {{step.name}}
+                    <div>
+                      <div>Start: {{step.start | date: 'medium'}}</div>
+                      <div>End: {{step.end | date: 'medium'}}</div>
+                      <div>Result: {{step.result}}</div>
+                    </div>
+                  </div>
 
+                </td>
 
+                  <!--<td></td>-->
+                  <!--<td (click)="onSelect(flow)"> Retry?</td>-->
+              </tr>
+            </ng-container>
+          </ng-container>
+          </tbody>
+        </table>
+      </div>
     </ba-card>
   </div>
 </div>
