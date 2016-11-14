@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
 import {ETLService} from "../../../../_services/etl.service";
-import {EtlFile} from "../../../../_models/flow.models";
+import {EtlFile, EtlFlow} from "../../../../_models/flow.models";
 
 @Component({
   selector: 'etl-activity-component',
@@ -12,6 +12,7 @@ import {EtlFile} from "../../../../_models/flow.models";
 
 export class EtlActivity implements AfterViewInit{
   displayFiles: EtlFile[];
+  detailStatus= false;
 
   constructor(private etlService: ETLService) {}
 
@@ -27,6 +28,20 @@ export class EtlActivity implements AfterViewInit{
         var e = err;
       });
   }
+
+  showDetail(): void{
+    this.detailStatus = !this.detailStatus;
+  }
+
+  deleteFile(fileId){
+    this.etlService.deleteFile(fileId).subscribe(
+      err => {
+        var e = err;
+      }
+    );
+    this.loadFiles();
+  }
+
 
 }
 

@@ -25,6 +25,10 @@ export class ETLService {
     }).catch(this.handleError);
   }
 
+  deleteFile(id) {
+    return this.http.delete('/api/etlFiles/' + id, this.jwt()).map((response: Response) => response.json());
+  }
+
   getFlows() {
     return this.http.get('/api/etlFlows', this.jwt()).map((response: Response) => {
       let jsArray = response.json();

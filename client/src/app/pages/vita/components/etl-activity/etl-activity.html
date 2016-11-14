@@ -1,15 +1,16 @@
 <div class="row">
+  <button type="button" class="btn btn-info btn-md" (click)="loadFiles()"><i class="ion-refresh"> Refresh</i></button>
   <div class="col-md-12">
     <ba-card title="Unprocessed Files" baCardClass="with-scroll">
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th> File ID</th>
-              <th> File</th>
-              <th> Size (GB)</th>
-              <th> Created</th>
-               <th> </th>
+              <th style="width: 25%"> File ID</th>
+              <th style="width: 20%"> File</th>
+              <th style="width: 15%"> Size (GB)</th>
+              <th style="width: 15%"> Created</th>
+              <th style="width: 25%"></th>
             </tr>
           </thead>
           <tbody>
@@ -19,7 +20,7 @@
                 <td>{{file.path}}{{file.name}}</td>
                 <td>{{file.size}}</td>
                 <td>{{file.createDate | date: 'medium'}}</td>
-                <td (click)="onSelect(flow)"> <button type="button" class="btn btn-primary">Choose Flow</button></td>
+                <td (click)="onSelect(flow)"> <button type="button" class="btn btn-default">Choose Flow</button></td>
               </tr>
             </ng-container>
           </tbody>
@@ -33,9 +34,11 @@
         <table class="table table-bordered table-striped">
           <thead>
           <tr>
-            <th> File</th>
-            <th> Flow</th>
-            <th> Steps</th>
+            <th style="width: 20%"> File</th>
+            <th style="width: 15%"> Flow</th>
+            <th style="width: 10%"> Last Status</th>
+            <th style="width: 45%"> Steps</th>
+            <th style="width: 10%"></th>
           </tr>
           </thead>
           <tbody>
@@ -44,20 +47,21 @@
               <tr *ngFor="let flow of file.flows">
                 <td>{{file.path}}{{file.name}}</td>
                 <td>{{flow.id}}</td>
+                <td>{{flow.lastStatus}}</td>
                 <td>
                   <div *ngFor="let step of flow.steps">
-                    {{step.name}}
-                    <div>
+                    {{step.name}} - <label>{{step.result}}</label>
+                    <div *ngIf="detailStatus==true">
                       <div>Start: {{step.start | date: 'medium'}}</div>
                       <div>End: {{step.end | date: 'medium'}}</div>
-                      <div>Result: {{step.result}}</div>
                     </div>
                   </div>
-
                 </td>
 
-                  <!--<td></td>-->
-                  <!--<td (click)="onSelect(flow)"> Retry?</td>-->
+                <td>
+                  <button type="button" class="btn btn-info btn-icon" (click)="showDetail(flow)"><i class="ion-search"></i></button>
+                  <button type="button" class="btn btn-danger btn-icon" (click)="deleteFile(file.id)"><i class="ion-trash-a"></i></button>
+                </td>
               </tr>
             </ng-container>
           </ng-container>
