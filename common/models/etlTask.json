@@ -21,7 +21,17 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "etlFlow": {
+      "type": "belongsTo",
+      "model": "EtlFlow",
+      "foreignKey": "flowId",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

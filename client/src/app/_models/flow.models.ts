@@ -4,11 +4,13 @@ export class EtlFlow {
     this.id = etlFlow.id;
     this.name = etlFlow.name;
     this.steps = etlFlow.steps;
+    this.tasks = etlFlow.tasks;
     this.lastStatus = etlFlow.lastStatus;
   }
   public id: string;
   public name: string;
   public steps: EtlStep[];
+  public tasks: EtlTask[];
   public lastStatus: string;
 }
 
