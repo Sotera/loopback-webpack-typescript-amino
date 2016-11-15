@@ -1,0 +1,27 @@
+{
+  "name": "EtlTask",
+  "plural": "EtlTasks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fileId": {
+      "type": "string",
+      "required": true
+    },
+    "flowId": {
+      "type": "string",
+      "required": true
+    },
+    "createDate": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

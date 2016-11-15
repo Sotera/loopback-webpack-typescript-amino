@@ -35,6 +35,10 @@
     "dataSource": "mongodb",
     "public": true
   },
+  "EtlTask": {
+    "dataSource": "mongodb",
+    "public": true
+  },
   "RoleMapping": {
     "dataSource": "mongodb",
     "public": false

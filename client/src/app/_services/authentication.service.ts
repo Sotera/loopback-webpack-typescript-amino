@@ -1,7 +1,7 @@
 ﻿import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {contentHeaders} from '../_guards/index';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 import {Observable} from "rxjs";
 import {AppDescriptionService} from "./app-description.service";
 import {Router} from "@angular/router";

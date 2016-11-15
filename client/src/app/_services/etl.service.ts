@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import {Observable} from "rxjs";
-import {EtlFile, EtlFlow, EtlResource, EtlStep} from "../_models/flow.models";
+import {Injectable } from '@angular/core';
+import {Http, Response } from '@angular/http';
 import {contentHeaders} from '../_guards/index';
+import {Observable} from "rxjs";
+import {EtlFile, EtlFlow, EtlResource, EtlStep, EtlTask} from "../_models/flow.models";
+
 
 @Injectable()
 export class ETLService {
@@ -20,13 +21,21 @@ export class ETLService {
   }
 
   getFileById(id) {
-    return this.http.get('/api/etlFiles/' + id, this.jwt()).map((response: Response) => {
+    return this.httpGet('/api/etlFiles/' + id).map((response: Response) => {
       return new EtlFile(response.json());
     }).catch(this.handleError);
   }
 
+  updateFile(etlFile: EtlFile) {
+    return this.httpPut(etlFile, '/api/etlFiles');
+  }
+
+  processFile(etlTask: EtlTask) {
+    return this.httpPost(etlTask, '/api/etlTasks');
+  }
+
   deleteFile(id) {
-    return this.http.delete('/api/etlFiles/' + id, this.jwt()).map((response: Response) => response.json());
+    return this.httpDelete('/api/etlFiles/' + id).map((response: Response) => response.json());
   }
 
   getFlows() {
@@ -90,6 +99,36 @@ export class ETLService {
     var errorText = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     return Observable.throw(errorText);
+  }
+
+  httpPost(postInfo: any, route: string) {
+    var body = JSON.stringify(postInfo);
+    return this.http.post(route, body, this.jwt())
+      .map(this.checkResponse)
+      .catch(this.handleError);
+  }
+
+  httpPut(postInfo: any, route: string) {
+    var body = JSON.stringify(postInfo);
+    return this.http.put(route, body, this.jwt())
+      .map(this.checkResponse)
+      .catch(this.handleError);
+  }
+
+  httpDelete(route: string) {
+    return this.http.delete(route, this.jwt())
+      .map(this.checkResponse)
+      .catch(this.handleError);
+  }
+
+  httpGet(route: string) {
+    return this.http.get(route, this.jwt())
+      .map(this.checkResponse)
+      .catch(this.handleError);
+  }
+
+  private checkResponse(res: Response) {
+    return res.json();
   }
 }
 

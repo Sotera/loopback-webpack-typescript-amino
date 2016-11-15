@@ -67,3 +67,12 @@ export class EtlResource {
   public type: string;
 }
 
+export class EtlTask {
+  constructor(public json: string) {
+    var etlTask = JSON.parse(json);
+    this.id = etlTask.id;
+    this.flowId = etlTask.flowId;
+  }
+  public id: string;
+  public flowId: string;
+}

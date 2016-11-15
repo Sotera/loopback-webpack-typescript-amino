@@ -42,6 +42,15 @@ export class EtlActivity implements AfterViewInit{
     this.loadFiles();
   }
 
+  processFile(etlTask){
+    this.etlService.processFile(etlTask).subscribe(
+      err => {
+        var e = err;
+      }
+    );
+    this.loadFiles();
+  }
+
 
 }
 

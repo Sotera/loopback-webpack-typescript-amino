@@ -20,7 +20,9 @@
                 <td>{{file.path}}{{file.name}}</td>
                 <td>{{file.size}}</td>
                 <td>{{file.createDate | date: 'medium'}}</td>
-                <td (click)="onSelect(flow)"> <button type="button" class="btn btn-default">Choose Flow</button></td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-icon" (click)="processFile({fileId:file.id, flowId:'9999d8966f770c4a521cf900'})"><i class="ion-wand"></i></button>
+                </td>
               </tr>
             </ng-container>
           </tbody>
