@@ -34,14 +34,14 @@ export const PAGES_MENU = [
           //     }
           //   }
           // },
-          {
-            path: 'etl-fileManager',
-            data: {
-              menu: {
-                title: '- File Manager'
-              }
-            }
-          },
+          // {
+          //   path: 'etl-fileManager',
+          //   data: {
+          //     menu: {
+          //       title: '- File Manager'
+          //     }
+          //   }
+          // },
           {
             path: 'etl-activity',
             data: {
@@ -49,7 +49,15 @@ export const PAGES_MENU = [
               title: '- Activity'
              }
              }
-          }
+          },
+          {
+            path: 'etl-flow',
+            data: {
+              menu: {
+                title: '- Flow Admin'
+              }
+            }
+          },
         ]
       }
       //   ]
@@ -119,7 +127,7 @@ export const PAGES_MENU = [
        }
        }
        ]
-       }*/
+       }
       , {
         path: 'ui',
         data: {
@@ -166,7 +174,7 @@ export const PAGES_MENU = [
           },
         ]
       }
-      /*      ,{
+      {
        path: 'settings',
        data: {
        menu: {

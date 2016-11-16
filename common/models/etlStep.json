@@ -47,6 +47,15 @@
         "validate": true,
         "forceId": true
       }
+    },
+    "etlFlow": {
+      "type": "belongsTo",
+      "model": "EtlFlow",
+      "property": "flowId",
+      "options": {
+        "validate": true,
+        "forceId": true
+      }
     }
   },
   "acls": [],

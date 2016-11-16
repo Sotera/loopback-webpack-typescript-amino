@@ -89,6 +89,14 @@ export class ETLService {
     }).catch(this.handleError);
   }
 
+  deleteStep(flowStep) {
+    return this.httpDelete('/api/EtlFlows/' + flowStep.flowId + '/etlSteps/' + flowStep.stepId).map((response: Response) => response.json());
+  }
+
+  processStep(flowId, etlStep: EtlStep) {
+    return this.httpPost(etlStep, '/api/EtlFlows/' + flowId + '/steps');
+  }
+
   // private helper methods
   private jwt() {
     //loopback requires contentHeaders

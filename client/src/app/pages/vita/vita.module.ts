@@ -8,6 +8,7 @@ import { Vita } from './vita.component';
 import {EtlTask1} from "./components/etl-task1/etl-task1.component";
 import {EtlActivity} from "./components/etl-activity/etl-activity.component";
 import {EtlFileManager} from "./components/etl-fileManager/etl-fileManager.component";
+import {EtlFlow} from "./components/etl-flow/etl-flow.component";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {EtlFileManager} from "./components/etl-fileManager/etl-fileManager.compo
     Vita,
     EtlTask1,
     EtlActivity,
-    EtlFileManager
+    EtlFileManager,
+    EtlFlow
   ]
 })
 export default class VitaModule {

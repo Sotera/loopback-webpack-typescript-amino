@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
 import {ETLService} from "../../../../_services/etl.service";
-import {EtlFile, EtlFlow} from "../../../../_models/flow.models";
+import {EtlFile} from "../../../../_models/flow.models";
 
 @Component({
   selector: 'etl-activity-component',
