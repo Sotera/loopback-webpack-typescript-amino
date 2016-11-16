@@ -4,13 +4,12 @@ export class EtlFlow {
     this.id = etlFlow.id;
     this.name = etlFlow.name;
     this.steps = etlFlow.steps;
-    this.tasks = etlFlow.tasks;
     this.lastStatus = etlFlow.lastStatus;
   }
   public id: string;
   public name: string;
   public steps: EtlStep[];
-  public tasks: EtlTask[];
+
   public lastStatus: string;
 }
 
@@ -46,6 +45,7 @@ export class EtlFile {
     this.size = etlFile.size;
     this.createDate = etlFile.createDate;
     this.flows = etlFile.flows;
+    this.tasks = etlFile.tasks;
 
   }
   public id: string;
@@ -54,6 +54,7 @@ export class EtlFile {
   public size: number;
   public createDate: string;
   public flows: EtlFlow[];
+  public tasks: EtlTask[];
 }
 
 export class EtlResource {
@@ -72,9 +73,9 @@ export class EtlResource {
 export class EtlTask {
   constructor(public json: string) {
     var etlTask = JSON.parse(json);
-    this.id = etlTask.id;
+    this.fileId = etlTask.fileId;
     this.flowId = etlTask.flowId;
   }
-  public id: string;
+  public fileId: string;
   public flowId: string;
 }

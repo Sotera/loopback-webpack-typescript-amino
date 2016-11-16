@@ -10,7 +10,7 @@ export class ETLService {
   constructor(private http: Http) { }
 
   getFiles() {
-    return this.http.get('/api/etlFiles', this.jwt()).map((response: Response) => {
+    return this.http.get('/api/etlFiles?filter=%7B%22include%22%3A%22tasks%22%7D', this.jwt()).map((response: Response) => {
       let jsArray = response.json();
       let etlFiles: EtlFile[] = jsArray.map(jsElement=>{
         return new EtlFile(JSON.stringify(jsElement));
@@ -31,7 +31,7 @@ export class ETLService {
   }
 
   processFile(etlTask: EtlTask) {
-    return this.httpPost(etlTask, '/api/etlTasks');
+    return this.httpPost(etlTask, '/api/EtlFiles/' + etlTask.fileId + '/tasks');
   }
 
   deleteFile(id) {

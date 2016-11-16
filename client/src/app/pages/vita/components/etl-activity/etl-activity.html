@@ -10,7 +10,7 @@
               <th style="width: 20%"> File</th>
               <th style="width: 15%"> Size (GB)</th>
               <th style="width: 15%"> Created</th>
-              <th style="width: 25%"></th>
+              <th style="width: 25%"> Tasks</th>
             </tr>
           </thead>
           <tbody>
@@ -21,6 +21,7 @@
                 <td>{{file.size}}</td>
                 <td>{{file.createDate | date: 'medium'}}</td>
                 <td>
+                  {{file.tasks.length}}
                   <button type="button" class="btn btn-primary btn-icon" (click)="processFile({fileId:file.id, flowId:'9999d8966f770c4a521cf900'})"><i class="ion-wand"></i></button>
                 </td>
               </tr>
@@ -49,7 +50,7 @@
               <tr *ngFor="let flow of file.flows">
                 <td>{{file.path}}{{file.name}}</td>
                 <td>{{flow.id}}</td>
-                <td>{{flow.lastStatus}}</td>
+                <td>{{flow.lastStatus}} {{file.tasks.length}}</td>
                 <td>
                   <div *ngFor="let step of flow.steps">
                     {{step.name}} - <label>{{step.result}}</label>

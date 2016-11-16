@@ -26,16 +26,6 @@
         "validate": true,
         "forceId": true
       }
-    },
-    "etlTasks": {
-      "type": "hasMany",
-      "model": "EtlTask",
-      "property": "tasks",
-      "foreignKey": "taskId",
-      "options": {
-        "validate": true,
-        "forceId": true
-      }
     }
   },
   "acls": [],

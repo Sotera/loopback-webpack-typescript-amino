@@ -22,10 +22,10 @@
   },
   "validations": [],
   "relations": {
-    "etlFlow": {
+    "etlFile": {
       "type": "belongsTo",
-      "model": "EtlFlow",
-      "foreignKey": "flowId",
+      "model": "EtlFile",
+      "foreignKey": "fileId",
       "options": {
         "validate": true,
         "forceId": false
