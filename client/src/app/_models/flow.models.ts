@@ -24,6 +24,7 @@ export class EtlStep {
     this.index = etlStep.index;
     this.source = etlStep.source;
     this.products = etlStep.products;
+    this.command = etlStep.command;
 
   }
   public id: string;
@@ -31,6 +32,7 @@ export class EtlStep {
   public start: string;
   public end: string;
   public result: string;
+  public command: string;
   public index: number;
   public source: EtlResource;
   public products: EtlResource[];

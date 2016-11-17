@@ -240,8 +240,18 @@ input.search-input {
   border: 1px solid $border-light;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.1);
+/* Change the color of the striped tables */
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: whitesmoke;
+  color: steelblue;
+}
+
+/* Change the color of the striped tables */
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: lightsteelblue;
+  color: steelblue;
 }
 
 @mixin color-row($color) {
@@ -278,6 +288,7 @@ input.search-input {
 
 th {
   font-weight: $font-normal;
+  background-color: steelblue;
 }
 
 .editable-empty {

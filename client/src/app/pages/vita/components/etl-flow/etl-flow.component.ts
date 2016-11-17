@@ -7,11 +7,15 @@ import {EtlFlow, EtlStep} from "../../../../_models/flow.models";
   encapsulation: ViewEncapsulation.None,
   providers: [ETLService],
   template: require('./etl-flow.html'),
-  styles: [require('./etl-flow.scss')]
+  styles: [
+    require('./etl-flow.scss')
+    // ,require('../../../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css')
+  ]
 })
 
 export class EtlFlow implements AfterViewInit{
   displayFlows: EtlFlow[];
+  detailStatus= false;
 
   constructor(private etlService: ETLService) {}
 
@@ -41,13 +45,17 @@ export class EtlFlow implements AfterViewInit{
     this.loadFlows();
   }
 
-  processStep(etlStep){
-    this.etlService.processStep(etlStep).subscribe(
+  processStep(flowId,etlStep){
+    this.etlService.processStep(flowId, etlStep).subscribe(
       err => {
         var e = err;
       }
     );
     this.loadFlows();
+  }
+
+  showDetail(): void{
+    this.detailStatus = !this.detailStatus;
   }
 }
 

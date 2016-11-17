@@ -7,7 +7,10 @@ import {EtlFile} from "../../../../_models/flow.models";
   encapsulation: ViewEncapsulation.None,
   providers: [ETLService],
   template: require('./etl-activity.html'),
-  styles: [require('./etl-activity.scss')]
+  styles: [
+    require('./etl-activity.scss')
+    // ,require('../../../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css')
+  ]
 })
 
 export class EtlActivity implements AfterViewInit{

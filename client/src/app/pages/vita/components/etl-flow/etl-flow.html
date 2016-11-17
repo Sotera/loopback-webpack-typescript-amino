@@ -1,36 +1,43 @@
 <div class="row">
-  <button type="button" class="btn btn-info btn-md" (click)="loadFlows()"><i class="ion-refresh"> Refresh</i></button>
+  <!--<a routerLink="/pages/vita/etl-flow-form">Add Flow</a>-->
   <div class="col-md-12">
     <ba-card title="Flows" baCardClass="with-scroll">
+      <div align="right">
+        <button type="button" class="btn btn-primary btn-md" (click)="loadFlows()"><i class="ion-refresh" title="Refresh results"> Refresh</i></button>
+      </div>
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
-          <tr>
-            <th style="width: 20%"> Id</th>
-            <th style="width: 20%"> Name</th>
-            <th style="width: 50%"> Steps</th>
-            <th style="width: 10%"></th>
-          </tr>
+            <tr>
+              <th style="width: 20%" class="th-center"> Name</th>
+              <th style="width: 70%" class="th-center"> Steps</th>
+              <th style="width: 10%" class="th-center"></th>
+            </tr>
           </thead>
           <tbody>
-          <ng-container *ngFor="let flow of displayFlows">
-            <tr>
-              <td>{{flow.id}}</td>
-              <td>{{flow.name}}</td>
-              <td>
-                <ng-container *ngIf="flow.steps.length > 0">
-                  <div *ngFor="let step of flow.steps">
-                    <div>{{step.id}}</div>
-                    <div>{{step.name}}</div>
-                    <div>{{step.index}}</div>
-                    <button type="button" class="btn btn-danger btn-icon" (click)="deleteStep({flowId: flow.id,stepId:step.id})"><i class="ion-minus"></i></button>
-                  </div>
-                </ng-container>
-              </td>
-              <td>
-                <button type="button" class="btn btn-primary btn-icon" (click)="addStep(flow)"><i class="ion-plus"></i></button>
-              </td>
-          </ng-container>
+            <ng-container *ngFor="let flow of displayFlows">
+              <tr>
+                <td class="td-center" title="id:{{flow.id}}">{{flow.name}}</td>
+                <td class="td-center" *ngIf="detailStatus==false">. . .</td>
+                <td class="" *ngIf="detailStatus==true">
+                  <ng-container *ngIf="flow.steps.length > 0">
+                      <div *ngFor="let step of flow.steps">
+                        <div><strong>Index</strong>: {{step.index}}</div>
+                        <div><strong>ID</strong>: {{step.id}}</div>
+                        <div><strong>Name</strong>: {{step.name}}</div>
+                        <div><strong>Command</strong>: {{step.command}}</div>
+                        <hr>
+                        <!--<button type="button" class="btn btn-danger btn-icon" (click)="deleteStep({flowId: flow.id,stepId:step.id})"><i class="ion-minus"></i></button>-->
+                      </div>
+                  </ng-container>
+                </td>
+
+                <td class="td-center">
+                  <button type="button" class="btn btn-primary btn-icon" (click)="showDetail(flow)" title="show Details" *ngIf="detailStatus==false"><i class="ion-android-expand"></i></button>
+                  <button type="button" class="btn btn-primary btn-icon" (click)="showDetail(flow)" title="hide Details" *ngIf="detailStatus==true"><i class="ion-android-contract"></i></button>
+                  <!--<button type="button" class="btn btn-primary btn-icon" (click)="addStep(flow)"><i class="ion-plus"></i></button>-->
+                </td>
+            </ng-container>
           </tbody>
         </table>
       </div>
