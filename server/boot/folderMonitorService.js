@@ -7,6 +7,7 @@ module.exports = function (app) {
   // Initialize watcher.
   var watcher = chokidar.watch(config.folderMonitorPath, {
     ignored: /[\/\\]\./,
+    ignoreInitial: true,
     persistent: true
   });
 

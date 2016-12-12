@@ -26,5 +26,5 @@
       "disableStackTrace": false
     }
   },
-  "folderMonitorPath":"/home/mframe/src/vita/folderWatcher"
+  "folderMonitorPath":"/home/mframe/src/vita/folderWatcher/*.enc"
 }
