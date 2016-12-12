@@ -87,6 +87,7 @@
     "bootstrap-loader": "1.1.6",
     "chart.js": "^1.1.1",
     "chartist": "^0.9.7",
+    "chokidar": "^1.6.1",
     "ckeditor": "^4.5.9",
     "compression": "^1.6.2",
     "core-js": "^2.4.1",

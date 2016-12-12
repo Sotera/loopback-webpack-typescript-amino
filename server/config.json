@@ -25,5 +25,6 @@
     "errorHandler": {
       "disableStackTrace": false
     }
-  }
+  },
+  "folderMonitorPath":"/home/mframe/src/vita/folderWatcher"
 }
