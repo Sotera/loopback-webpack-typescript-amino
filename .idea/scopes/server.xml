@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="server" pattern="file[loopback-webpack-typescript-amino]:server//*" />
+</component>
