@@ -1,9 +1,12 @@
+"use strict";
+const inversify_config_1 = require('../inversify.config');
 var request = require('request');
+const path = require('path');
 module.exports = function (app) {
-    var me = this;
     var etlTask = app.models.EtlTask;
     var etlFile = app.models.EtlFile;
-    var etlFlow = app.models.EtlFlow;
+    let vitaTasks = inversify_config_1.default.get('VitaTasks');
+    let fullPipeline = inversify_config_1.default.get('FullPipeline');
     etlTask.createChangeStream(function (err, changes) {
         changes.on('data', function (change) {
             if (change.type === "create") {
@@ -12,24 +15,14 @@ module.exports = function (app) {
                         return;
                     }
                     var file = obj;
-                    me.getFlowInfo(file, change.data.flowId.toString());
+                    fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
+                    fullPipeline.decryptAndUnTarOptions.password = 'xxx';
+                    vitaTasks.processFullPipelineInstance(fullPipeline, (err, result) => {
+                        let e = err;
+                    });
                 });
             }
         });
     });
-    me.getFlowInfo = function (file, flowId) {
-        etlFlow.findById(flowId, function (err, obj) {
-            if (err || !obj) {
-                return;
-            }
-            var flow = obj;
-            me.buildFirmJSON(file, flow);
-        });
-    };
-    me.buildFirmJSON = function (file, flow) {
-        var x = file;
-        var y = flow;
-        var z = 1;
-    };
 };
 //# sourceMappingURL=dbMonitorService.js.map

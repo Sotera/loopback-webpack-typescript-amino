@@ -1,10 +1,15 @@
+import kernel from '../inversify.config';
+import {VitaTasks} from "firmament-vita/js/interfaces/vita-tasks";
+import {FullPipeline} from "firmament-vita/js/interfaces/vita-options-results";
 var request = require('request');
+const path = require('path');
 
 module.exports = function (app) {
-  var me = this;
   var etlTask = app.models.EtlTask;
   var etlFile = app.models.EtlFile;
-  var etlFlow = app.models.EtlFlow;
+
+  let vitaTasks: VitaTasks = kernel.get<VitaTasks>('VitaTasks');
+  let fullPipeline: FullPipeline = kernel.get<FullPipeline>('FullPipeline');
 
   etlTask.createChangeStream(function (err, changes) {
     changes.on('data', function (change) {
@@ -14,27 +19,17 @@ module.exports = function (app) {
             return;
           }
           var file = obj;
-          me.getFlowInfo(file,change.data.flowId.toString());
+
+          fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path,file.name)];
+          fullPipeline.decryptAndUnTarOptions.password = 'xxx';
+
+          vitaTasks.processFullPipelineInstance(fullPipeline,(err,result)=>{
+            let e = err;
+          });
+
         });
       }
     });
   });
 
-  me.getFlowInfo = function (file,flowId) {
-    etlFlow.findById(flowId, function (err, obj) {
-      if (err || !obj) {
-        return;
-      }
-      var flow = obj;
-      me.buildFirmJSON(file,flow);
-    });
-  };
-
-  me.buildFirmJSON = function (file,flow){
-
-
-    var x = file;
-    var y = flow;
-    var z = 1;
-  }
 };
