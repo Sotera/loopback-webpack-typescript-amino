@@ -26,5 +26,5 @@ module.exports = function (app) {
     ,index: 'index.html'
   }));
 
-/*  app.use(require('webpack-hot-middleware')(compiler));*/
+  app.use(require('webpack-hot-middleware')(compiler));
 };

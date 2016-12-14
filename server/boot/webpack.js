@@ -19,5 +19,6 @@ module.exports = function (app) {
         },
         index: 'index.html'
     }));
+    app.use(require('webpack-hot-middleware')(compiler));
 };
 //# sourceMappingURL=webpack.js.map
