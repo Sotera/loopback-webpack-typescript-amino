@@ -18,7 +18,6 @@
     "types": [
       "chai",
       "inversify",
-      "lodash",
       "mocha",
       "node",
       "reflect-metadata"
