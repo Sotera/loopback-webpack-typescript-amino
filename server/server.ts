@@ -1,5 +1,5 @@
 import kernel from './inversify.config';
-import {VitaTasks} from "firmament-vita/js/interfaces/vita-tasks";
+import {VitaTasks, FullPipeline} from "firmament-vita";
 
 function StartServer(server) {
   console.log('Starting server');
@@ -22,10 +22,11 @@ function StartServer(server) {
 }
 
 (function () {
-  var loopback = require('loopback');
-  var server = module.exports = loopback();
+  let loopback = require('loopback');
+  let server = module.exports = loopback();
 
   let vitaTasks: VitaTasks = kernel.get<VitaTasks>('VitaTasks');
+  let fullPipeline: FullPipeline = kernel.get<FullPipeline>('FullPipeline');
 
   server.start = function () {
     return server.listen(function () {
