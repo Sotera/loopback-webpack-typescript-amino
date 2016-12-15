@@ -1,6 +1,9 @@
 import kernel from '../inversify.config';
 import {VitaTasks} from "firmament-vita/js/interfaces/vita-tasks";
 import {FullPipeline} from "firmament-vita/js/interfaces/vita-options-results";
+
+var request = require('request');
+var config = require('../config.json');
 const path = require('path');
 
 module.exports = function (app) {
@@ -17,16 +20,32 @@ module.exports = function (app) {
           if (err || !file) {
             return;
           }
+          //Append Flow to File object in database
+          let id = config.defaultFlowId;
+          let newFlow = {
+            id,
+            lastStatus:'Queued',
+            name:'Bro'
+          };
+          file.etlFlows.create(newFlow, function (err, flow) {
+            if (err || !flow) {
+              return;
+            }
+          });
 
-          fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
-          fullPipeline.decryptAndUnTarOptions.password = 'Ag4<R-byN1;B.58';
-          fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'moribund.pcap';
+          //Kick off Flow process
+          fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path,file.name)];
+          fullPipeline.decryptAndUnTarOptions.password = 'xxx';
 
-          vitaTasks.processFullPipelineInstance(fullPipeline, (err, result) => {
+          vitaTasks.processFullPipelineInstance(fullPipeline,(err,result)=>{
             let e = err;
           });
+
         });
       }
     });
   });
+
+
+
 };

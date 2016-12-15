@@ -26,5 +26,7 @@
       "disableStackTrace": false
     }
   },
-  "folderMonitorPath":"/home/mframe/src/loopback-webpack-typescript-amino/folderWatcher/*.enc"
+  "folderMonitorPath":"/home/mframe/src/loopback-webpack-typescript-amino/folderWatcher/*.enc",
+  "defaultFlowId":"582c9ed90dcb247b333fb1d6"
+
 }
