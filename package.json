@@ -95,7 +95,7 @@
     "easy-pie-chart": "^2.1.7",
     "errorhandler": "^1.4.3",
     "extract-text-webpack-plugin": "2.0.0-beta.3",
-    "firmament-vita": "0.0.6",
+    "firmament-vita": "0.0.8",
     "font-awesome": "^4.6.1",
     "font-awesome-sass-loader": "^1.0.2",
     "fullcalendar": "^2.7.2",

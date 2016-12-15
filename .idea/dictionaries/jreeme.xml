@@ -2,12 +2,14 @@
   <dictionary name="jreeme">
     <words>
       <w>bootstraprc</w>
+      <w>cors</w>
       <w>devtool</w>
       <w>dirname</w>
       <w>gutil</w>
       <w>loopback</w>
       <w>phonenumber</w>
       <w>polyfills</w>
+      <w>remoting</w>
     </words>
   </dictionary>
 </component>

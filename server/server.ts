@@ -1,6 +1,3 @@
-import kernel from './inversify.config';
-import {VitaTasks, FullPipeline} from "firmament-vita";
-
 function StartServer(server) {
   console.log('Starting server');
   //WebPack needs to ignore this code when building the bundle because it doesn't support
@@ -24,9 +21,6 @@ function StartServer(server) {
 (function () {
   let loopback = require('loopback');
   let server = module.exports = loopback();
-
-  let vitaTasks: VitaTasks = kernel.get<VitaTasks>('VitaTasks');
-  let fullPipeline: FullPipeline = kernel.get<FullPipeline>('FullPipeline');
 
   server.start = function () {
     return server.listen(function () {

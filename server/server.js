@@ -1,5 +1,3 @@
-"use strict";
-const inversify_config_1 = require('./inversify.config');
 function StartServer(server) {
     console.log('Starting server');
     process.env.NODE_ENV = 'development';
@@ -17,8 +15,6 @@ function StartServer(server) {
 (function () {
     let loopback = require('loopback');
     let server = module.exports = loopback();
-    let vitaTasks = inversify_config_1.default.get('VitaTasks');
-    let fullPipeline = inversify_config_1.default.get('FullPipeline');
     server.start = function () {
         return server.listen(function () {
             server.emit('started');
