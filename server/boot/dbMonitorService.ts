@@ -34,11 +34,20 @@ module.exports = function (app) {
           });
 
           //Kick off Flow process
+          fullPipeline.tag = {
+            fileID: file.id.toString(),
+            flowID: config.defaultFlowId
+          };
           fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path,file.name)];
           fullPipeline.decryptAndUnTarOptions.password = 'xxx';
+          fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
 
           vitaTasks.processFullPipelineInstance(fullPipeline,(err,result)=>{
             let e = err;
+            updateEtlStatus(result);
+          },(err,result)=>{
+            let e = err;
+            appendEtlResults(result);
           });
 
         });
@@ -46,6 +55,109 @@ module.exports = function (app) {
     });
   });
 
+  function updateEtlStatus(etlFile){
+    let fileID = etlFile.tag.fileID;
+    let flowID = etlFile.tag.flowID;
+
+    // etlFile.findById(fileID, function (err, file) {
+    //   if (err || !file) {
+    //     var x = err;
+    //   }
+    //     return;
+    //   }
+    //
+    //   let updatedFile = {};
+    //
+    //
+    //   file.update(updatedFile, function (err, file) {
+    //     if (err || !file) {
+    //       var e = err;
+    //     }
+    //       return;
+    //   });
+  }
+
+  function appendEtlResults(etlFile) {
+    let fileID = etlFile.fileID;
+    let flowID = etlFile.flowID;
+    let flowLastStatus = "";
+
+    let updatedFlow = app.models.EtlFlow;
+    let decryptStep = app.models.EtlStep;
+    let unzipStep = app.models.EtlStep;
+    let mergeStep = app.models.EtlStep;
+
+    //Build decryptStep
+    let decryptSrc = {
+      path: "",
+      type: ".enc"
+    };
+
+    let decryptProds = [];
+    etlFile.decrtypandUnTarResults.zipFiles.forEach(function (zipFile) {
+      let newZip  ={
+        path: zipFile,
+        type: ".pcap.gz"
+      };
+      decryptProds.push(newZip)
+    });
+
+    decryptStep.index = 1;
+    decryptStep.name = "Decrypt and Untar";
+    decryptStep.start = "";
+    decryptStep.end = "";
+    decryptStep.result = "";
+    decryptStep.source = decryptSrc;
+    decryptStep.products = decryptProds;
+
+    //Build unzipStep
+
+    //Build mergeStep
+    let mergeSrc = {
+      path: "",
+      type: ".pcap"
+    };
+    let mergeProds = [
+      {
+        path: "",
+        type: ".pcap"
+      }
+    ];
+
+    mergeStep.index = 3;
+    mergeStep.name = "Merge pcaps";
+    mergeStep.start = "";
+    mergeStep.end = "";
+    mergeStep.result = "";
+    mergeStep.source = mergeSrc;
+    mergeStep.products = decryptProds;
+
+    updatedFlow = {
+      id: flowID,
+      name: "Bro",
+      lastStatus:flowLastStatus,
+      steps:[
+        {
+          decryptStep,
+          unzipStep,
+          mergeStep
+        }
+      ]
+    };
+
+    etlFile.findById(fileID, function (err, file) {
+      if (err || !file) {
+        return;
+      }
+
+      file.etlFlows.update(updatedFlow, function (err, flow) {
+        if (err || !flow) {
+          return;
+        }
+      })
+    });
+
+  }
 
 
 };
