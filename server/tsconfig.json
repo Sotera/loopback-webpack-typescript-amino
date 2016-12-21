@@ -16,9 +16,7 @@
       "dom"
     ],
     "types": [
-      "chai",
       "inversify",
-      "mocha",
       "node",
       "reflect-metadata"
     ],
