@@ -53,7 +53,7 @@
               <tr *ngFor="let flow of file.flows">
                 <td class="td-center">{{file.path}}{{file.name}}</td>
                 <td class="td-center">{{flow.id}}</td>
-                <td class="td-center">{{flow.lastStatus}} {{file.tasks.length}}</td>
+                <td class="td-center">{{flow.lastStatus}}</td>
                 <td class="td-center">
                   <div *ngIf="detailStatus==false"> . . . </div>
                   <div *ngIf="detailStatus==true">

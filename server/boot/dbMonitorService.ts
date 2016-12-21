@@ -55,109 +55,103 @@ module.exports = function (app) {
     });
   });
 
-  function updateEtlStatus(etlFile){
-    let fileID = etlFile.tag.fileID;
-    let flowID = etlFile.tag.flowID;
+  function updateEtlStatus(updFile) {
+    let etlFile = app.models.EtlFile;
 
-    // etlFile.findById(fileID, function (err, file) {
-    //   if (err || !file) {
-    //     var x = err;
-    //   }
-    //     return;
-    //   }
-    //
-    //   let updatedFile = {};
-    //
-    //
-    //   file.update(updatedFile, function (err, file) {
-    //     if (err || !file) {
-    //       var e = err;
-    //     }
-    //       return;
-    //   });
-  }
-
-  function appendEtlResults(etlFile) {
-    let fileID = etlFile.fileID;
-    let flowID = etlFile.flowID;
-    let flowLastStatus = "";
-
-    let updatedFlow = app.models.EtlFlow;
-    let decryptStep = app.models.EtlStep;
-    let unzipStep = app.models.EtlStep;
-    let mergeStep = app.models.EtlStep;
-
-    //Build decryptStep
-    let decryptSrc = {
-      path: "",
-      type: ".enc"
-    };
-
-    let decryptProds = [];
-    etlFile.decrtypandUnTarResults.zipFiles.forEach(function (zipFile) {
-      let newZip  ={
-        path: zipFile,
-        type: ".pcap.gz"
-      };
-      decryptProds.push(newZip)
-    });
-
-    decryptStep.index = 1;
-    decryptStep.name = "Decrypt and Untar";
-    decryptStep.start = "";
-    decryptStep.end = "";
-    decryptStep.result = "";
-    decryptStep.source = decryptSrc;
-    decryptStep.products = decryptProds;
-
-    //Build unzipStep
-
-    //Build mergeStep
-    let mergeSrc = {
-      path: "",
-      type: ".pcap"
-    };
-    let mergeProds = [
-      {
-        path: "",
-        type: ".pcap"
-      }
-    ];
-
-    mergeStep.index = 3;
-    mergeStep.name = "Merge pcaps";
-    mergeStep.start = "";
-    mergeStep.end = "";
-    mergeStep.result = "";
-    mergeStep.source = mergeSrc;
-    mergeStep.products = decryptProds;
-
-    updatedFlow = {
-      id: flowID,
-      name: "Bro",
-      lastStatus:flowLastStatus,
-      steps:[
-        {
-          decryptStep,
-          unzipStep,
-          mergeStep
-        }
-      ]
-    };
-
-    etlFile.findById(fileID, function (err, file) {
+    etlFile.findById(updFile.tag.fileID, function (err, file) {
       if (err || !file) {
+        var x = err;
         return;
       }
+      let fileInfo = file;
+      fileInfo.steps=[];
 
-      file.etlFlows.update(updatedFlow, function (err, flow) {
-        if (err || !flow) {
-          return;
+      fileInfo.flows.forEach(function (flow) {
+        if(flow.id == config.defaultFlowId){
+          if(flow.lastStatus != updFile.status){
+            flow.lastStatus = updFile.status;
+          }
         }
-      })
-    });
+      });
 
+      file.updateAttributes(fileInfo,function(err,file){
+        if (err || !file) {
+          var e = err;
+        }
+      });
+    })
   }
 
+  function appendEtlResults(apdFile) {
+    let etlFile = app.models.EtlFile;
+
+    etlFile.findById(apdFile.tag.fileID, function (err, file) {
+      if (err || !file) {
+        var x = err;
+        return;
+      }
+      let fileInfo = file;
+      fileInfo.lastStatus = apdFile.status;
+
+      // //Build decryptStep
+      let decryptSrc = {
+        id:generateUUID(),
+        path: file.path + file.name,
+        type: ".enc"
+      };
+
+      let decryptProds = [];
+      apdFile.decryptAndUnTarResults.forEach(function (result) {
+        result.zipFiles.forEach(function(zipfile){
+          let newZip  ={
+            id:generateUUID(),
+            path: zipfile,
+            type: ".pcap.gz"
+          };
+          decryptProds.push(newZip)
+        });
+      });
+
+      let decryptStep = {
+        id:generateUUID(),
+        index:1,
+        name:"Decrypt and Untar",
+        start:apdFile.startTime,
+        end:apdFile.endTime,
+        result:"Success",
+        source:decryptSrc,
+        products:decryptProds
+      };
+
+      fileInfo.flows[0].steps.push(decryptStep);
+
+      //TODO
+      // Build unzipStep
+      // fileInfo.flows[0].steps.push(unzipStep);
+
+      //TODO
+      // //Build mergeStep
+      // fileInfo.flows[0].steps.push(mergeStep);
+
+      file.updateAttributes(fileInfo,function(err,file){
+        if (err || !file) {
+          var e = err;
+        }
+      });
+    })
+  }
+
+
+
+  function generateUUID(){
+    var d = new Date().getTime();
+
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = (d + Math.random()*16)%16 | 0;
+      d = Math.floor(d/16);
+      return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+  }
 
 };
