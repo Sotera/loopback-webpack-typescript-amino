@@ -39,7 +39,7 @@ module.exports = function (app) {
             flowID: config.defaultFlowId
           };
           fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path,file.name)];
-          fullPipeline.decryptAndUnTarOptions.password = 'xxx';
+          fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
           fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
 
           vitaTasks.processFullPipelineInstance(fullPipeline,(err,result)=>{
