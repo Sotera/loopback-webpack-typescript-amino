@@ -10,6 +10,10 @@
       <w>phonenumber</w>
       <w>polyfills</w>
       <w>remoting</w>
+      <w>sourcemaps</w>
+      <w>superstatic</w>
+      <w>tsconfig</w>
+      <w>tslint</w>
     </words>
   </dictionary>
 </component>

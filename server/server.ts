@@ -1,23 +1,3 @@
-function StartServer(server) {
-  console.log('Starting server');
-  //WebPack needs to ignore this code when building the bundle because it doesn't support
-  //require.extensions (which are deprecated anyway) and loopback-boot uses them. This
-  //conditional just suppresses the warnings.
-  process.env.NODE_ENV = 'development';
-  process.env.HMR_ENABLED = 1;
-  //process.env.NODE_ENV = 'production';
-  //process.env.HMR_ENABLED = 0;
-  const boot = require('loopback-boot');
-  boot(server, __dirname, function (err) {
-    if (err) {
-      throw err;
-    }
-    if (require.main === module) {
-      server.start();
-    }
-  });
-}
-
 (function () {
   let loopback = require('loopback');
   let server = module.exports = loopback();
@@ -36,6 +16,19 @@ function StartServer(server) {
     });
   };
 
-  StartServer(server);
+  console.log('Starting server');
+  /*  process.env.NODE_ENV = 'development';
+   process.env.HMR_ENABLED = 1;*/
+  process.env.NODE_ENV = 'production';
+  process.env.HMR_ENABLED = 0;
+  const boot = require('loopback-boot');
+  boot(server, __dirname, function (err) {
+    if (err) {
+      throw err;
+    }
+    if (require.main === module) {
+      server.start();
+    }
+  });
 })();
 
