@@ -18,6 +18,35 @@ with high quality solutions. So what this project boiled down to in the end was 
 * The diligently researched https://github.com/geminiyellow/loopback-webpack-example (server)
 * Some bits and pieces I had laying around to fit Node Express servers and HTML/JS clients into the WebStorm environment
 
+## How I Did It
+
+1. Grab latest akveo/ng2-admin project from github (https://github.com/akveo/ng2-admin.git)
+2. Remove some unneeded config files:
+  * .travis.yml
+  * CHANGELOG.md
+  * Dockerfile
+  * _VERSION
+  * build.sh
+  * tslint.json
+  * typedoc.json
+  * docs folder
+  * .github folder
+  * .vscode folder
+3. npm install, check that it works with 'npm run webpack-dev-server'
+4. Add some NPM modules to support the loopback server
+  * angular2-jwt
+  * chokidar
+  * compression
+  * errorhandler
+  * jsonwebtoken
+  * loopback
+  * loopback-boot
+  * loopback-component-explorer
+  * loopback-connector-mongodb
+  * loopback-datasource-juggler
+  * webpack-hot-middleware
+  
+
 ## License
 
 WTFPL (https://spdx.org/licenses/WTFPL)

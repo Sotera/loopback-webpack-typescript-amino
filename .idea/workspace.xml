@@ -1,13 +1,1102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="684d21b5-d54b-4a4c-a02e-6c65759d6e84" name="Default" comment="">
+    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/socicon.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/socicon.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/socicon.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/socicon.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/android-icon-192x192.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-114x114.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-120x120.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-152x152.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-180x180.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-57x57.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-60x60.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-72x72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-76x76.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/favicon-16x16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/favicon-32x32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/favicon-96x96.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/ms-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/feed/genom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/feed/my-little-kitten.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/feed/new-york-location.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/feed/vader-and-me-preview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/my-app-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/profile/Alexander.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/profile/Andrey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/profile/Kostya.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/profile/Nasta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/profile/Nick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/profile/Vlad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/skin-thumbnails/01_default.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/skin-thumbnails/02_transparent.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/skin-thumbnails/03_blue.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/skin-thumbnails/04_peachy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/skin-thumbnails/05_material.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/skin-thumbnails/06_transblue.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/todo/check-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/typography/banner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/typography/typo01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/typography/typo03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/typography/typo04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/typography/typo05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/typography/typo06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/typography/typo07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/blue-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/blur-bg-blurred.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/blur-bg-mobile.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/blur-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/chernika.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/green-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/peachy-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/sky-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/no-photo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/palette.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/arrowDown.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/arrowUp.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/homeIcon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/homeIconWhite.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/minus.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/panDown.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/panLeft.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/panRight.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/panUp.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/plus.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/xIcon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/ammap/xIconH.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/leaflet/marker-icon-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/leaflet/marker-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/vendor/leaflet/marker-shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/transblue-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bootstraprc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/electron/webpack.electron.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/electron/webpack.electron.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/electron/webpack.electron.prod.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/electron/webpack.renderer.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/electron/webpack.renderer.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/electron/webpack.renderer.prod.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/head-config.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/html-elements-plugin/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/modules/angular2-hmr-prod.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/webpack.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/webpack.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/webpack.prod.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpfile.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.menu.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/environment.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/global.state.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/charts.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/charts.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/charts.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components/treeView/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components/treeView/treeView.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components/treeView/treeView.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/calendar/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/feed/feed.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/feed/feed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/feed/feed.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/feed/feed.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/feed/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/lineChart/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/lineChart/lineChart.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/lineChart/lineChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/lineChart/lineChart.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/lineChart/lineChart.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/popularApp/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/popularApp/popularApp.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/popularApp/popularApp.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/popularApp/popularApp.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/todo/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/todo/todo.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/todo/todo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/todo/todo.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/todo/todo.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/usersMap/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/usersMap/usersMap.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/usersMap/usersMap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/usersMap/usersMap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/usersMap/usersMap.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/editors.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/editors.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/editors.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/editors/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInput.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/inputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/inputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/basicForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/basicForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/blockForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/blockForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/layouts.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/layouts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/forms.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/forms.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/forms.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/login/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/login/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/login/login.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/login/login.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/register/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/register/register.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/register/register.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/register/register.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/register/register.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/register/register.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/tables.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/tables.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/tables.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/typography/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/typography/typography.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/typography/typography.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/ui.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/ui.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/ui.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChartTheme.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baAmChart/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baBackTop/baBackTop.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baBackTop/baBackTop.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baBackTop/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/baCardBlur.directive.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/baCardBlurHelper.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/bgMetrics.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCheckbox/baCheckbox.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCheckbox/baCheckbox.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCheckbox/baCheckbox.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baCheckbox/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baContentTop/baContentTop.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baContentTop/baContentTop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baContentTop/baContentTop.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baContentTop/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/baMenu.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/baMenu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/baMenu.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baSidebar/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/baScrollPosition/baScrollPosition.directive.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/baScrollPosition/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.loader.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/baThemeRun/baThemeRun.directive.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/baThemeRun/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/directives/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/initial.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/nga.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/pipes/baAppPicture/baAppPicture.pipe.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/pipes/baAppPicture/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/pipes/baKameleonPicture/baKameleonPicture.pipe.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/pipes/baKameleonPicture/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/pipes/baProfilePicture/baProfilePicture.pipe.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/pipes/baProfilePicture/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/pipes/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_auth.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_form.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_ionicons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_layout.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_preloader.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_socicon.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_table.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_treeView.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/_typography.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/bootstrap-overrides/_card.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/bootstrap-overrides/_dropdown.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/bootstrap-overrides/_tabs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/bootstrap-overrides/overrides.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/conf/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/conf/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/conf/colorSchemes/_blur.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/conf/colorSchemes/_mint.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/conf/colorSchemes/_ng2.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/sass/conf/conf.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baImageLoader/baImageLoader.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baImageLoader/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baMenu/baMenu.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baMenu/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baThemePreloader/baThemePreloader.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baThemePreloader/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baThemeSpinner/baThemeSpinner.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/baThemeSpinner/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/services/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/theme.config.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/theme.configProvider.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/theme.constants.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/theme.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/validators/email.validator.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/validators/equalPasswords.validator.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/validators/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/socicon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/browsers/chrome.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/browsers/firefox.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/browsers/ie.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/browsers/opera.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/app/browsers/safari.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/arrow-green-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/arrow-red-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/comments.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/face.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/money.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/person.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/refresh.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/shopping-cart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/feed/feed-image.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/feed/feed-location.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/feed/feed-video.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Alien.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Analytics.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Apartment.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Batman.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Beach.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Bell.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Bonsai.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Boss-3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Boss-5.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Burglar.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Bus.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Candy.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Checklist.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Cheese.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Chessboard.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Clipboard-Plan.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Desert.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Dna.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Euro-Coin.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Food-Dome.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Hacker.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Images.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Key.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Laptop-Signal.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Locked-Cloud.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Love-Letter.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Magician.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Makeup.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Medal-2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Microscope.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Mind-Map-Paper.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Money-Increase.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Music-Equalizer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Ninja.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Online-Shopping.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Pantone.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Party-Poppers.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Phone-Booth.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Programming.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Santa.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Shop.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Street-View.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Student-3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Surfer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Surgeon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Tower.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/theme/icon/kameleon/Vector.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/service-worker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/custom-typings.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/desktop.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/meta/humans.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/meta/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/polyfills.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tsconfig.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack.config.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/jreeme.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/typescript-settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.jshintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/.bootstraprc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/Dockerfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/_VERSION" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/build.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/config/head-config.common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/config/helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/config/html-elements-plugin/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/config/modules/angular2-hmr-prod.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/config/webpack.common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/config/webpack.dev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/config/webpack.prod.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/001-getting-started/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/002-installation-guidelines/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/011-changing-color-scheme/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/011-changing-color-scheme/new-color-scheme.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/012-project-structure/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/013-create-new-page/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/014-switch-to-blur-theme/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/015-sidebar/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/articles/016-spinner/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/css/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/images/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/images/sky-preview.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/images/why-design.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/images/why-practices.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/images/why-structure.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/contents/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/plugins/paginator.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/templates/article.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/templates/index.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/docs/templates/layout.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.menu.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/app.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/environment.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/global.state.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/charts.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/charts.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/charts.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/chartistJs.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/components/chartistJs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/charts/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/components.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/components.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/components.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/components.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/components/treeView/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/components/treeView/treeView.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/components/treeView/treeView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/components/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/calendar.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/calendar/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/dashboard.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/feed.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/feed/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/lineChart/lineChart.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/pieChart/pieChart.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/popularApp.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/popularApp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/popularApp/popularApp.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/todo/todo.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/trafficChart/trafficChart.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/dashboard/usersMap/usersMap.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/ckeditor.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/components/ckeditor/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/editors.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/editors.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/editors.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/editors/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/checkboxInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/groupInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/ratinginputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/standardInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/validationInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/inputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/inputs/inputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/basicForm/basicForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/basicForm/basicForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/basicForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/blockForm/blockForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/blockForm/blockForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/blockForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/horizontalForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/inlineForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/withoutLabelsForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/layouts.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/components/layouts/layouts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/forms.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/forms.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/forms.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/forms/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/login/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/login/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/login/login.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/login/login.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/login/login.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/bubbleMaps.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/bubbleMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/googleMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/googleMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/leafletMaps/leafletMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/components/lineMaps/lineMaps.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/maps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/maps.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/maps/maps.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/pages.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/pages.menu.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/pages.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/pages.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/register/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/register/register.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/register/register.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/register/register.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/register/register.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/register/register.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/basicTables.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/borderedTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/condensedTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/contextualTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/hoverTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/responsiveTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/stripedTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/basicTables/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/components/smartTables/smartTables.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/tables.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/tables.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/tables/tables.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/buttons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/disabledButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/dropdownButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/flatButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/groupButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/iconButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/largeButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/raisedButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/sizedButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/buttons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/grid.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/grid/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/icons.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/icons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/typography/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/typography/typography.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/components/typography/typography.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/ui.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/ui.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/pages/ui/ui.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChart.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/baAmChartTheme.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baAmChart/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baBackTop/baBackTop.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baBackTop/baBackTop.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baBackTop/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCard.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCard.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCardBlur.directive.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCard/baCardBlurHelper.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCard/bgMetrics.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCard/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/baChartistChart.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baChartistChart/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/baCheckbox.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/baCheckbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/baCheckbox.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baCheckbox/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/baContentTop.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/baContentTop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/baContentTop.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baContentTop/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/baFullCalendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/baFullCalendar.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baFullCalendar/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/baMenu.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/components/baMenuItem/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMenu/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/baMsgCenter.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMsgCenter/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baMultiCheckbox/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/baPageTop.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/baPageTop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/baPageTop.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPageTop/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/baPictureUploader.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/baPictureUploader.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/baPictureUploader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baPictureUploader/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/baSidebar.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/baSidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/baSidebar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/baSidebar/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/components/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/baScrollPosition/baScrollPosition.directive.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/baScrollPosition/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/baSlimScroll/baSlimScroll.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/baSlimScroll/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/baThemeRun/baThemeRun.directive.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/baThemeRun/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/directives/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/initial.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/nga.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/pipes/baAppPicture/baAppPicture.pipe.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/pipes/baAppPicture/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/pipes/baKameleonPicture/baKameleonPicture.pipe.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/pipes/baKameleonPicture/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/pipes/baProfilePicture/baProfilePicture.pipe.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/pipes/baProfilePicture/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/pipes/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_auth.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_form.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_ionicons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_layout.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_preloader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_socicon.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_table.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_treeView.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/_typography.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/_card.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/_dropdown.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/_tabs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/bootstrap-overrides/overrides.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/conf/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/conf/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/conf/colorSchemes/_blur.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/conf/colorSchemes/_mint.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/conf/colorSchemes/_ng2.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/sass/conf/conf.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/services/baImageLoader/baImageLoader.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/services/baImageLoader/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/services/baThemePreloader/baThemePreloader.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/services/baThemePreloader/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/services/baThemeSpinner/baThemeSpinner.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/services/baThemeSpinner/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/services/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/theme.config.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/theme.configProvider.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/theme.constants.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/theme.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/validators/email.validator.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/validators/equalPasswords.validator.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/theme/validators/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/fonts/socicon.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/fonts/socicon.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/fonts/socicon.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/fonts/socicon.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/fonts/socicon.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/android-icon-192x192.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-114x114.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-120x120.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-144x144.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-152x152.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-180x180.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-57x57.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-60x60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-72x72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/apple-icon-76x76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/favicon-16x16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/favicon-32x32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/favicon-96x96.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/icon/ms-icon-144x144.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/browsers/chrome.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/browsers/firefox.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/browsers/ie.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/browsers/opera.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/browsers/safari.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/feed/genom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/feed/my-little-kitten.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/feed/new-york-location.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/feed/vader-and-me-preview.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/my-app-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/profile/Alexander.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/profile/Andrey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/profile/Kostya.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/profile/Nasta.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/profile/Nick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/profile/Vlad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/01_default.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/02_transparent.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/03_blue.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/04_peachy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/05_material.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/skin-thumbnails/06_transblue.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/todo/check-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/typography/banner.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo06.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/app/typography/typo07.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/arrow-green-up.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/arrow-red-down.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/blue-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/blur-bg-blurred.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/blur-bg-mobile.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/blur-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/chernika.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/comments.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/face.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/green-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/money.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/peachy-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/person.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/refresh.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/shopping-cart.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/sky-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/feed/feed-image.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/feed/feed-location.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/feed/feed-video.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Alien.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Analytics.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Apartment.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Batman.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Beach.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Bell.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Bonsai.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Boss-3.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Boss-5.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Burglar.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Bus.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Candy.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Checklist.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Cheese.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Chessboard.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Clipboard-Plan.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Desert.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Dna.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Euro-Coin.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Food-Dome.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Hacker.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Images.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Key.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Laptop-Signal.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Locked-Cloud.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Love-Letter.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Magician.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Makeup.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Medal-2.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Microscope.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Mind-Map-Paper.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Money-Increase.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Music-Equalizer.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Ninja.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Online-Shopping.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Pantone.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Party-Poppers.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Phone-Booth.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Programming.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Santa.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Shop.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Street-View.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Student-3.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Surfer.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Surgeon.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Tower.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/icon/kameleon/Vector.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/no-photo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/palette.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/arrowDown.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/arrowUp.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/export.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/homeIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/homeIconWhite.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/minus.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panDown.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panLeft.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panRight.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/panUp.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/plus.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/xIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/ammap/xIconH.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/leaflet/marker-icon-2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/leaflet/marker-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/theme/vendor/leaflet/marker-shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/img/transblue-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/assets/service-worker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/custom-typings.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/electron/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/main.browser.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/polyfills.browser.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/vendor.browser.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/tsconfig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/tslint.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/typedoc.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/typings.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/boot/authentication.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/boot/root.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/boot/routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/boot/static.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/boot/webpack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/component-config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/datasources.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/datasources.json.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/middleware.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/model-config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/server.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="$PROJECT_DIR$/.editorconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/loopback-webpack-typescript-amino.iml" afterPath="$PROJECT_DIR$/.idea/loopback-webpack-typescript-amino.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/config/webpack.common.js" afterPath="$PROJECT_DIR$/client/config/webpack.common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/tsconfig.json" afterPath="$PROJECT_DIR$/client/tsconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
-    <ignored path="loopback-webpack-typescript-amino.iws" />
-    <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -26,67 +1115,28 @@
     <favorites_list name="loopback-webpack-typescript-amino" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="505">
+                <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-                <marker date="1474635965758" expanded="true" signature="899:973" ph="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/config/webpack.common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4320">
-              <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/electron/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="751">
+              <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,78 +1144,15 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
-        <option value="CSS File" />
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/component.js" />
-        <option value="$PROJECT_DIR$/client/config.json" />
-        <option value="$PROJECT_DIR$/client/index.js" />
-        <option value="$PROJECT_DIR$/client/main.css" />
-        <option value="$PROJECT_DIR$/client/greeter.css" />
-        <option value="$PROJECT_DIR$/client/index.template.html" />
-        <option value="$PROJECT_DIR$/client/typings.json" />
-        <option value="$PROJECT_DIR$/config/helpers.js" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/client/config/webpack.prod.js" />
-        <option value="$PROJECT_DIR$/client/config/webpack.test.js" />
-        <option value="$PROJECT_DIR$/client/config/karma.conf.js" />
-        <option value="$PROJECT_DIR$/client/config/karma-test-shim.js" />
-        <option value="$PROJECT_DIR$/client/src/index.html" />
-        <option value="$PROJECT_DIR$/client/src/app/app.components.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/app.component.css" />
-        <option value="$PROJECT_DIR$/client/src/app/app.component.spec.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/client/src/vendor.ts" />
-        <option value="$PROJECT_DIR$/client/src/polyfills.ts" />
-        <option value="$PROJECT_DIR$/client/webpack.config.js" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/client/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/.env.development" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/client/public/css/styles.css" />
-        <option value="$PROJECT_DIR$/client/build/webpack.common.js" />
-        <option value="$PROJECT_DIR$/client/build/webpack.dev.js" />
-        <option value="$PROJECT_DIR$/client/build/webpack.prod.js" />
-        <option value="$PROJECT_DIR$/my.env" />
-        <option value="$PROJECT_DIR$/server/middleware.json" />
-        <option value="$PROJECT_DIR$/server/boot/static.js" />
-        <option value="$PROJECT_DIR$/client/src/app/button-checkbox.component.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/button.example.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/button-radio.component.ts" />
-        <option value="$PROJECT_DIR$/client/src/main.ts" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/server/boot/webpack.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/client/src/main.browser.ts" />
-        <option value="$PROJECT_DIR$/client/package.json" />
-        <option value="$PROJECT_DIR$/client/config/webpack.dev.js" />
-        <option value="$PROJECT_DIR$/client/src/vendor.browser.ts" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/client/src/app/pages/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/client/config/webpack.common.js" />
-        <option value="$PROJECT_DIR$/client/tsconfig.json" />
       </list>
     </option>
   </component>
@@ -175,16 +1162,6 @@
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <gulpfiles>
-      <GulpfileState>
-        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
-        <tasks>
-          <GulpTaskState>
-            <task-name>default</task-name>
-          </GulpTaskState>
-        </tasks>
-      </GulpfileState>
-    </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
@@ -194,16 +1171,6 @@
     <option name="x" value="1919" />
     <option name="width" value="1922" />
     <option name="height" value="1055" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -220,6 +1187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -241,7 +1209,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="client">
+            <PATH_ELEMENT USER_OBJECT="config">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -269,12 +1237,6 @@
               <option name="myItemId" value="loopback-webpack-typescript-amino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="loopback-webpack-typescript-amino" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -287,56 +1249,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -354,15 +1266,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="electron" />
+              <option name="myItemId" value="meta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,10 +1281,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -386,38 +1290,34 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/tmp/switching-to-angular2" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="editor.config.accepted" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="javascript.nodejs.core.library.configured.version" value="6.5.0" />
-    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/client" />
-      <recent name="$PROJECT_DIR$/client/src" />
-      <recent name="$PROJECT_DIR$/client/src/app" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/client/config" />
-      <recent name="$PROJECT_DIR$/client" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.ClientOnly">
+  <component name="RunManager">
+    <configuration default="false" name="webpack-dev-server" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run-script" />
+      <scripts>
+        <script value="webpack-dev-server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -441,6 +1341,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -454,12 +1360,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -482,72 +1382,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="Gulp - default" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks>
-        <task>default</task>
-      </tasks>
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="StraightUp JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000/index.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="ClientOnly" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server" working-dir="$PROJECT_DIR$/client">
-      <browser start="true" with-js-debugger="true" url="http://localhost:3000" />
-      <profiling v8-profiler-path="" />
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
-        <profiling v8-profiler-path="" />
-      </EXTENSION>
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-        <browser start="true" with-js-debugger="true" url="http://localhost:3000" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="WebPack build:dev" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="node_modules/.bin/webpack" application-parameters="webpack --config client/config/webpack.dev.js --progress --profile" working-dir="$PROJECT_DIR$">
-      <profiling v8-profiler-path="" />
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
-        <profiling v8-profiler-path="" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="StraightUp" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="server/server.js" working-dir="$PROJECT_DIR$">
-      <browser start="true" with-js-debugger="true" url="http://localhost:3000/index.html" />
-      <profiling v8-profiler-path="" />
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
-        <profiling v8-profiler-path="" />
-      </EXTENSION>
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-        <browser start="true" with-js-debugger="true" url="http://localhost:3000/index.html" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="WebPack" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="dist/server/main.bundle.js" working-dir="$PROJECT_DIR$">
-      <browser start="true" with-js-debugger="true" url="http://localhost:3000/index.html" />
-      <profiling v8-profiler-path="" />
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
-        <profiling v8-profiler-path="" />
-      </EXTENSION>
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-        <browser start="true" with-js-debugger="true" url="http://localhost:3000/index.html" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="ClientOnly JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000">
-      <method />
-    </configuration>
-    <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Gulp.js.Gulp - default" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.StraightUp JavaScript" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.ClientOnly" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.WebPack build:dev" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.StraightUp" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.WebPack" />
-      <item index="6" class="java.lang.String" itemvalue="JavaScript Debug.ClientOnly JavaScript" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="npm.webpack-dev-server" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="npm.webpack-dev-server" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -557,380 +1399,97 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="684d21b5-d54b-4a4c-a02e-6c65759d6e84" name="Default" comment="" />
-      <created>1473775117771</created>
+      <changelist id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="" />
+      <created>1482500330481</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1473775117771</updated>
-      <workItem from="1473775119342" duration="29565000" />
-      <workItem from="1474031654360" duration="6310000" />
-      <workItem from="1474044927352" duration="17505000" />
-      <workItem from="1474463005401" duration="26888000" />
-      <workItem from="1474556310871" duration="17390000" />
-      <workItem from="1474633486713" duration="2154000" />
-      <workItem from="1474637433892" duration="652000" />
-      <workItem from="1474641014188" duration="1381000" />
+      <updated>1482500330481</updated>
+      <workItem from="1482500333728" duration="2990000" />
     </task>
-    <task id="LOCAL-00001" summary="Initial Commit">
-      <created>1473798605261</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1473798605261</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Initial Commit">
-      <created>1474053480480</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1474053480480</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Got webpak middleware to working">
-      <created>1474402624879</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1474402624879</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Basic working, branch to add ng2-admin app">
-      <created>1474490111337</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1474490111337</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101845000" />
+    <option name="totallyTimeSpent" value="2990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24037954" sideWeight="0.29473683" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16657881" sideWeight="0.70526314" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18977332" sideWeight="0.49624866" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4051447" sideWeight="0.5028993" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24037954" sideWeight="0.26055312" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986821" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38906753" sideWeight="0.49815303" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15761729" sideWeight="0.23482428" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3483387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4051447" sideWeight="0.49710068" order="3" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49410504" sideWeight="0.50184697" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18977332" sideWeight="0.50375134" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15814444" sideWeight="0.33502537" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33226153" sideWeight="0.49815303" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15814444" sideWeight="0.33909288" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15814444" sideWeight="0.66090715" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986821" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15761729" sideWeight="0.23482428" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50375134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Initial Commit" />
-    <MESSAGE value="Got webpak middleware to working" />
-    <MESSAGE value="Basic working, branch to add ng2-admin app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic working, branch to add ng2-admin app" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/dotenv-webpack/node_modules/webpack/lib/NullFactory.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts</url>
-          <line>29</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="61" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/build/webpack.common.js" />
-    <entry file="file://$PROJECT_DIR$/dist/client/app2.css" />
-    <entry file="file://$PROJECT_DIR$/client/build/webpack.prod.js" />
-    <entry file="file://$PROJECT_DIR$/dist/server/config.json" />
-    <entry file="file://$PROJECT_DIR$/my.env" />
-    <entry file="file://$PROJECT_DIR$/server/middleware.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/routes.js">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/static.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        <state relative-caret-position="18">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/build/webpack.dev.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/index.html">
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/button-example.ts" />
-    <entry file="file://$PROJECT_DIR$/client/src/main.ts" />
-    <entry file="file://$PROJECT_DIR$/client/src/app/button-radio.component.ts" />
-    <entry file="file://$PROJECT_DIR$/client/src/app/button-checkbox.component.ts" />
-    <entry file="file://$PROJECT_DIR$/client/src/main.ts" />
-    <entry file="file://$PROJECT_DIR$/client/src/vendor.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/dotenv-webpack/node_modules/webpack/lib/NullFactory.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/Compilation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="210" column="5" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env.default" />
-    <entry file="file://$PROJECT_DIR$/client/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env" />
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/typescript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="43864" column="16" selection-start-line="43864" selection-start-column="16" selection-end-line="43864" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/awesome-typescript-loader/src/instance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main.browser.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/.bootstraprc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config/webpack.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/vendor.browser.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap-loader/lib/bootstrap.loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/chokidar/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/webpack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/node/NodeOutputFileSystem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/luv.env" />
-    <entry file="file://$PROJECT_DIR$/server/bufu.json" />
-    <entry file="file://$PROJECT_DIR$/server/.env" />
-    <entry file="file://$PROJECT_DIR$/dist/server/main.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/webpack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/webpack-assets.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json" />
-    <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="505">
+            <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/pages/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <marker date="1474635965758" expanded="true" signature="899:973" ph="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config/webpack.common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4320">
-          <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/electron/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="751">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding />
         </state>
       </provider>
