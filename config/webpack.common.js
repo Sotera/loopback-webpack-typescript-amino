@@ -21,7 +21,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 /*
  * Webpack Constants
  */
-const HMR = helpers.hasProcessFlag('hot');
+//const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
   title: 'ng2-admin - Angular 2 Admin Template',
   description: 'Free Angular 2 and Bootstrap 4 Admin Template',
@@ -35,7 +35,7 @@ const METADATA = {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = function (options) {
-  isProd = options.env === 'production';
+  let isProd = options.env === 'production';
   return {
 
     /*
@@ -54,11 +54,9 @@ module.exports = function (options) {
      * See: http://webpack.github.io/docs/configuration.html#entry
      */
     entry: {
-
-      'polyfills': './src/polyfills.browser.ts',
-      'vendor': './src/vendor.browser.ts',
-      'main': './src/main.browser.ts'
-
+      'polyfills': helpers.root('src/polyfills.browser.ts'),
+      'vendor': helpers.root('src/vendor.browser.ts'),
+      'main': helpers.root('src/main.browser.ts')
     },
 
     /*
@@ -110,7 +108,8 @@ module.exports = function (options) {
           test: /\.ts$/,
           use: [
             '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
-            'awesome-typescript-loader',
+            'awesome-typescript-loader?tsconfig=' + helpers.root('tsconfig.json'),
+            //'awesome-typescript-loader',
             'angular2-template-loader',
             'angular2-router-loader'
           ],
@@ -246,8 +245,8 @@ module.exports = function (options) {
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
       new CopyWebpackPlugin([
-        { from: 'src/assets', to: 'assets' },
-        { from: 'src/meta'}
+        {from: 'src/assets', to: 'assets'},
+        {from: 'src/meta'}
       ]),
 
       /*
@@ -259,7 +258,7 @@ module.exports = function (options) {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin({
-        template: 'src/index.html',
+        template: helpers.root('src/index.html'),
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
@@ -366,6 +365,5 @@ module.exports = function (options) {
       clearImmediate: false,
       setImmediate: false
     }
-
   };
-}
+};

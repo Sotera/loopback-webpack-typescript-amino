@@ -2,6 +2,7 @@ const helpers = require('./helpers');
 const path = require('path');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const webpack = require('webpack');
 
 /**
  * Webpack Plugins
@@ -30,8 +31,7 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = function (options) {
-  return webpackMerge(commonConfig({env: ENV}), {
-
+  let retVal = webpackMerge(commonConfig({env: ENV}), {
     /**
      * Developer tool to enhance debugging
      *
@@ -175,4 +175,21 @@ module.exports = function (options) {
     }
 
   });
+  //JReeme - BEGIN https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
+  for (let entryPoint in retVal.entry) {
+    if(!retVal.entry.hasOwnProperty(entryPoint)){
+      continue;
+    }
+    let webpackHotloaderEntryPoints = [
+      'webpack-hot-middleware/client',
+      'webpack/hot/dev-server'
+    ];
+    webpackHotloaderEntryPoints.push(retVal.entry[entryPoint]);
+    retVal.entry[entryPoint] = webpackHotloaderEntryPoints;
+  }
+  retVal.plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
+  retVal.plugins.push(new webpack.HotModuleReplacementPlugin());
+  retVal.plugins.push(new webpack.NoErrorsPlugin());
+  //JReeme - END https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
+  return retVal;
 };

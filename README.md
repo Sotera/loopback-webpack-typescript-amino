@@ -45,6 +45,31 @@ with high quality solutions. So what this project boiled down to in the end was 
   * loopback-connector-mongodb
   * loopback-datasource-juggler
   * webpack-hot-middleware
+5. Add loopback server.
+  * Use strongloop 'slc loopback' to create a loopback project
+  * Copy 'server' folder from loopback project to root of this project
+  * Change '*.js' extension to '*.ts' in server and configure TypeScript for server
+  * Add 'static.js' & 'webpack.ts' boot scripts to server. Comment out 'static'
+  * In 'config/webpack.common.js' modify entry paths to use helpers.root. This will
+    allow client to run from loopback server or webpack-dev-server
+  * Replace 'awesome-typescript-loader' with 'awesome-typescript-loader?tsconfig=' + helpers.root('tsconfig.json'),
+    so that it uses the correct tsconfig.json file
+  * Use helpers.root for all occurrences of 'src/index.html'
+  * Add following code block to end of webpack.dev.js. This will support HMR & browser refresh
+  ```javascript
+  for (var entryPoint in retVal.entry) {
+    var webpackHotloaderEntryPoints = [
+      'webpack-hot-middleware/client',
+      'webpack/hot/dev-server'
+    ]
+    webpackHotloaderEntryPoints.push(retVal.entry[entryPoint]);
+    retVal.entry[entryPoint] = webpackHotloaderEntryPoints;
+  }
+  retVal.plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
+  retVal.plugins.push(new webpack.HotModuleReplacementPlugin());
+  retVal.plugins.push(new webpack.NoErrorsPlugin());
+  ```
+  * Add webpack:/// prefix to root URL in JavaScript debug configuration for WebStorm client debugging
   
 
 ## License
