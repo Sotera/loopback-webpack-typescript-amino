@@ -146,14 +146,14 @@
     "type": "WTFPL",
     "url": "https://spdx.org/licenses/WTFPL"
   },
-  "main": "server/server.js",
+  "main": "dist/server/server.js",
   "name": "loopback-webpack-typescript-amino",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sotera/loopback-webpack-typescript-amino.git"
   },
   "scripts": {
-    "build": "npm run build:prod",
+    "build": "npm run build:prod && gulp",
     "build:dev": "npm run webpack -- --config config/webpack.dev.js",
     "build:electron": "npm run build:electron.full",
     "build:electron.full": "npm run build:electron.renderer && npm run build:electron.main",
@@ -183,7 +183,7 @@
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
     "server:dev:hmr": "npm run server:dev -- --inline --hot",
     "server:prod": "http-server dist --cors",
-    "start": "npm run server:dev",
+    "start":"/usr/bin/env node dist/server/server.js",
     "start:hmr": "npm run server:dev:hmr",
     "tslint": "tslint",
     "typedoc": "typedoc",
