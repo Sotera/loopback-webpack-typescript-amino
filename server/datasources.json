@@ -2,5 +2,13 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mongodb": {
+    "name": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "vita",
+    "connectionTimeout": 10000,
+    "connector": "mongodb"
   }
 }

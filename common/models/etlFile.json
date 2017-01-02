@@ -1,0 +1,50 @@
+{
+  "name": "EtlFile",
+  "plural": "EtlFiles",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "path": {
+      "type": "string",
+      "required": false
+    },
+    "size": {
+      "type": "number",
+      "required": false
+    },
+    "createDate": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "etlFlows": {
+      "type": "embedsMany",
+      "model": "EtlFlow",
+      "property": "flows",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    },
+    "tasks": {
+      "type": "hasMany",
+      "model": "EtlTask",
+      "foreignKey": "taskId",
+      "options": {
+        "validate": true,
+        "forceId": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "EtlFlow",
+  "plural": "EtlFlows",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name":{
+      "type": "string",
+      "required": true
+    },
+    "lastStatus":{
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "etlSteps": {
+      "type": "embedsMany",
+      "model": "EtlStep",
+      "property": "steps",
+      "options": {
+        "validate": true,
+        "forceId": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "scope":{
+    "order": "step"
+  }
+}

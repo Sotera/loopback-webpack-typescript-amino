@@ -13,8 +13,56 @@ export const PAGES_MENU = [
             order: 0
           }
         }
+      }
+      , {
+        path: 'vita',
+        data: {
+          menu: {
+            title: 'ETL',
+            icon: 'ion-android-upload',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
+        , children: [
+          // {
+          //   path: 'etl-task1',
+          //   data: {
+          //     menu: {
+          //       title: '- Tasks'
+          //     }
+          //   }
+          // },
+          // {
+          //   path: 'etl-fileManager',
+          //   data: {
+          //     menu: {
+          //       title: '- File Manager'
+          //     }
+          //   }
+          // },
+          {
+            path: 'etl-activity',
+            data: {
+              menu: {
+              title: '- Activity'
+             }
+             }
       },
       {
+            path: 'etl-flow',
+            data: {
+              menu: {
+                title: '- Flow Admin'
+              }
+            }
+          },
+        ]
+      }
+      //   ]
+      // }
+/*      , {
         path: 'editors',
         data: {
           menu: {
@@ -35,7 +83,7 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
+      },*/
       //{
       //  path: 'components',
       //  data: {
@@ -57,8 +105,8 @@ export const PAGES_MENU = [
       //      }
       //    }
       //  ]
-      //},
-      {
+      //}
+      /*      ,{
         path: 'charts',
         data: {
           menu: {
@@ -117,14 +165,6 @@ export const PAGES_MENU = [
             }
           },
           {
-            path: 'modals',
-            data: {
-              menu: {
-                title: 'Modals',
-              }
-            }
-          },
-          {
             path: 'grid',
             data: {
               menu: {
@@ -133,8 +173,30 @@ export const PAGES_MENU = [
             }
           },
         ]
-      },
+      }
       {
+       path: 'settings',
+       data: {
+       menu: {
+       title: 'Setting Elements',
+       icon: 'ion-compose',
+       selected: false,
+       expanded: false,
+       order: 400,
+       }
+      },
+       children: [
+      {
+       path: 'user-profile',
+       data: {
+       menu: {
+       title: 'User Profile'
+       }
+       }
+       }
+       ]
+       }*/
+      /*,{
         path: 'forms',
         data: {
           menu: {
@@ -253,18 +315,20 @@ export const PAGES_MENU = [
         },
         children: [
           {
-            path: ['/login'],
+       path: '',
             data: {
               menu: {
-                title: 'Login'
+       title: 'Login',
+       url: '#/login'
               }
             }
           },
           {
-            path: ['/register'],
+       path: '',
             data: {
               menu: {
-                title: 'Register'
+       title: 'Register',
+       url: '#/register'
               }
             }
           }
@@ -324,7 +388,7 @@ export const PAGES_MENU = [
             target: '_blank'
           }
         }
-      }
+       }*/
     ]
   }
 ];
