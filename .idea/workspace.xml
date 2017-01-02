@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="A quick commit/push before slc build/deploy work">
+    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.ts" afterPath="$PROJECT_DIR$/server/server.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,12 +23,24 @@
     <favorites_list name="loopback-webpack-typescript-amino" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pieChart.service.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Active Users</find>
       <find>enableProdMode</find>
+      <find>PsychoA</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -36,6 +48,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -45,13 +62,13 @@
         <option value="$PROJECT_DIR$/server/middleware.json" />
         <option value="$PROJECT_DIR$/config/webpack.common.js" />
         <option value="$PROJECT_DIR$/config/webpack.dev.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts" />
         <option value="localhost:3000/1.chunk.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/boot/static.ts" />
         <option value="$PROJECT_DIR$/server/server.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts" />
       </list>
     </option>
   </component>
@@ -405,7 +422,7 @@
       <updated>1482500330481</updated>
       <workItem from="1482500333728" duration="14819000" />
       <workItem from="1483363670716" duration="299000" />
-      <workItem from="1483363994207" duration="2096000" />
+      <workItem from="1483363994207" duration="2358000" />
     </task>
     <task id="LOCAL-00001" summary="Update ng2-admin &amp; restructure a bit (remove client folder)">
       <created>1482503412853</created>
@@ -428,11 +445,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482515874264</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="About to branch to vita-auth2">
+      <created>1483368863186</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1483368863186</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17214000" />
+    <option name="totallyTimeSpent" value="17476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
@@ -521,7 +545,8 @@
     <MESSAGE value="Update ng2-admin &amp; restructure a bit (remove client folder)" />
     <MESSAGE value="Added loopback server, wired up HMR. Now serving from loopback or webpack-dev-server." />
     <MESSAGE value="A quick commit/push before slc build/deploy work" />
-    <option name="LAST_COMMIT_MESSAGE" value="A quick commit/push before slc build/deploy work" />
+    <MESSAGE value="About to branch to vita-auth2" />
+    <option name="LAST_COMMIT_MESSAGE" value="About to branch to vita-auth2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,13 +649,6 @@
     <entry file="http://localhost:3000/1.chunk.js">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -741,6 +759,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2790">
           <caret line="155" column="31" lean-forward="false" selection-start-line="155" selection-start-column="31" selection-end-line="155" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
       </provider>
