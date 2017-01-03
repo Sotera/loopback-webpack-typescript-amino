@@ -9,6 +9,7 @@ const path = require('path');
 module.exports = function (app) {
   let etlTask = app.models.EtlTask;
   let etlFile = app.models.EtlFile;
+  let stateMap = {};
 
   let vitaTasks: VitaTasks = kernel.get<VitaTasks>('VitaTasks');
   let fullPipeline: FullPipeline = kernel.get<FullPipeline>('FullPipeline');
@@ -34,6 +35,7 @@ module.exports = function (app) {
           });
 
           //Kick off Flow process
+          stateMap[file.id.toString()] = "Queued";
           fullPipeline.tag = {
             fileID: file.id.toString(),
             flowID: config.defaultFlowId
@@ -58,28 +60,33 @@ module.exports = function (app) {
   function updateEtlStatus(updFile) {
     let etlFile = app.models.EtlFile;
 
-    etlFile.findById(updFile.tag.fileID, function (err, file) {
-      if (err || !file) {
-        var x = err;
-        return;
-      }
-      let fileInfo = file;
-      fileInfo.steps=[];
-
-      fileInfo.flows.forEach(function (flow) {
-        if(flow.id == config.defaultFlowId){
-          if(flow.lastStatus != updFile.status){
-            flow.lastStatus = updFile.status;
-          }
-        }
-      });
-
-      file.updateAttributes(fileInfo,function(err,file){
+    //If the state has changed, update it
+    if(updFile.status != stateMap[updFile.tag.fileID]){
+      stateMap[updFile.tag.fileID] = updFile.status;
+      etlFile.findById(updFile.tag.fileID, function (err, file) {
         if (err || !file) {
-          var e = err;
+          var x = err;
+          return;
         }
-      });
-    })
+        let fileInfo = file;
+        fileInfo.steps=[];
+
+        fileInfo.flows.forEach(function (flow) {
+          if(flow.id == config.defaultFlowId){
+            if(flow.lastStatus != updFile.status){
+              flow.lastStatus = updFile.status;
+            }
+          }
+        });
+
+        file.updateAttributes(fileInfo,function(err,file){
+          if (err || !file) {
+            var e = err;
+          }
+        });
+      })
+    }
+
   }
 
   function appendEtlResults(apdFile) {
@@ -91,7 +98,7 @@ module.exports = function (app) {
         return;
       }
       let fileInfo = file;
-      fileInfo.lastStatus = apdFile.status;
+      fileInfo.flows[0].lastStatus = apdFile.status;
 
       // //Build decryptStep
       let decryptSrc = {
@@ -137,6 +144,8 @@ module.exports = function (app) {
         if (err || !file) {
           var e = err;
         }
+        delete stateMap[apdFile.tag.fileID];
+        var x = stateMap;
       });
     })
   }

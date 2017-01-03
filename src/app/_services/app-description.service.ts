@@ -2,7 +2,7 @@
 
 @Injectable()
 export class AppDescriptionService {
-  private _appName:string = 'Amino 2';
+  private _appName:string = 'VITA Portal';
   private _jwtTokenKeyName:string = 'Amino_2_jwtTokenKeyName';
   private _userInfoKeyName:string = 'Amino_2_userInfoKeyName';
   constructor() {

@@ -59,8 +59,14 @@
                   <div *ngIf="detailStatus==true">
                     <div *ngFor="let step of flow.steps">
                       <div><strong>{{step.name}}</strong></div>
-                      <div>Start: {{step.start | date: 'medium'}}</div>
-                      <div>End: {{step.end | date: 'medium'}}</div>
+                      <div><strong>Start:</strong> {{step.start | date: 'medium'}}</div>
+                      <div><strong>End:</strong> {{step.end | date: 'medium'}}</div>
+                      <div><strong>Source:</strong></div>
+                      <div>{{step.source.path}}</div>
+                      <div><strong>Products:</strong></div>
+                      <div *ngFor="let product of step.products">
+                        {{product.path.split('/').pop()}}
+                      </div>
                     </div>
                   </div>
                 </td>
