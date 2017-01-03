@@ -1,93 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlFile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlFile.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlFlow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlFlow.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlResource.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlResource.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlStep.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlStep.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlTask.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/etlTask.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/01-populate-db.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/dbMonitorService.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/folderMonitorService.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/custom-typings.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/inversify.config.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_directives/alert.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_directives/alert.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_directives/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_guards/auth.guard.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_guards/headers.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_guards/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_models/authentication.models.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_models/flow.models.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_services/alert.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_services/app-description.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_services/authentication.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_services/etl.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_services/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/_services/user.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modules/alert.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/components/userProfileForm/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/components/userProfileForm/userProfileForm.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/components/userProfileForm/userProfileForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/user-profile.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/user-profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/vita.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/vita.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/validators/phoneNumber.validator.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jreeme.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jreeme.xml" />
+    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="Vita2! Latest ng2-admin (24-DEC-2016) &amp; deployable via firmament!">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/_run_docker_dist.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/boot/authentication.ts" afterPath="$PROJECT_DIR$/server/boot/authentication.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/boot/webpack.ts" afterPath="$PROJECT_DIR$/server/boot/webpack.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/datasources.json" afterPath="$PROJECT_DIR$/server/datasources.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/model-config.json" afterPath="$PROJECT_DIR$/server/model-config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.ts" afterPath="$PROJECT_DIR$/server/server.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/login/login.html" afterPath="$PROJECT_DIR$/src/app/pages/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.menu.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/register/register.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/register/register.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/register/register.html" afterPath="$PROJECT_DIR$/src/app/pages/register/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/register/register.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/register/register.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.html" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.scss" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/custom-typings.d.ts" afterPath="$PROJECT_DIR$/src/custom-typings.d.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -118,11 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="01-populate-db.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="01-populate-db.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/boot/01-populate-db.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <state relative-caret-position="792">
+              <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_run_docker_dist.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/_run_docker_dist.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,8 +57,8 @@
       <file leaf-file-name="model-config.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/model-config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -205,6 +131,7 @@
         <option value="$PROJECT_DIR$/server/boot/authentication.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/model-config.json" />
+        <option value="$PROJECT_DIR$/docker/_run_docker_dist.sh" />
       </list>
     </option>
   </component>
@@ -331,43 +258,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="boot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="docker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,7 +269,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/authentication.ts" />
+    <property name="last_opened_file_path" value="$USER_HOME$/_run.sh" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -567,7 +458,7 @@
       <workItem from="1482500333728" duration="14819000" />
       <workItem from="1483363670716" duration="299000" />
       <workItem from="1483363994207" duration="5167000" />
-      <workItem from="1483372458412" duration="12874000" />
+      <workItem from="1483372458412" duration="15195000" />
     </task>
     <task id="LOCAL-00001" summary="Update ng2-admin &amp; restructure a bit (remove client folder)">
       <created>1482503412853</created>
@@ -604,11 +495,18 @@
       <option name="project" value="LOCAL" />
       <updated>1483369105845</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Vita2! Latest ng2-admin (24-DEC-2016) &amp; deployable via firmament!">
+      <created>1483390027412</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1483390027412</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33159000" />
+    <option name="totallyTimeSpent" value="35480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
@@ -983,7 +881,8 @@
     <MESSAGE value="A quick commit/push before slc build/deploy work" />
     <MESSAGE value="About to branch to vita-auth2" />
     <MESSAGE value="First push!" />
-    <option name="LAST_COMMIT_MESSAGE" value="First push!" />
+    <MESSAGE value="Vita2! Latest ng2-admin (24-DEC-2016) &amp; deployable via firmament!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vita2! Latest ng2-admin (24-DEC-2016) &amp; deployable via firmament!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -995,15 +894,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/webpack/package.json" />
-    <entry file="file://$PROJECT_DIR$/config/modules/angular2-hmr-prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/_directives/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1415,18 +1305,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/model-config.json">
+    <entry file="file://$PROJECT_DIR$/server/boot/01-populate-db.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="792">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/01-populate-db.ts">
+    <entry file="file://$USER_HOME$/_run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/model-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/_run_docker_dist.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
