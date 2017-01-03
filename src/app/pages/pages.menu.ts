@@ -49,17 +49,18 @@ export const PAGES_MENU = [
               title: '- Activity'
              }
              }
-      },
-      {
-            path: 'etl-flow',
-            data: {
-              menu: {
-                title: '- Flow Admin'
-              }
-            }
-          },
-        ]
       }
+      // ,
+      // {
+      //       path: 'etl-flow',
+      //       data: {
+      //         menu: {
+      //           title: '- Flow Admin'
+      //         }
+      //       }
+      //     },
+      //   ]
+      // }
       //   ]
       // }
 /*      , {
