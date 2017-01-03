@@ -3,6 +3,7 @@
   "plural": "EtlFlows",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
@@ -24,7 +25,8 @@
       "property": "steps",
       "options": {
         "validate": true,
-        "forceId": true
+        "idInjection": true,
+        "forceId": false
       }
     }
   },

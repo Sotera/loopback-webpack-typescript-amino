@@ -8,7 +8,7 @@ module.exports = function (app) {
 
   var defaultFlows = [
     {
-      id:'582c9ed90dcb247b333fb1d6',
+      id:'586bcc5695e16687155b4a52',
       name:'Bro'
     }
   ];

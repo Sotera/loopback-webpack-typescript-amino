@@ -3,6 +3,7 @@
   "plural": "AminoUsers",
   "base": "User",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },

@@ -3,6 +3,7 @@
   "plural": "EtlFiles",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
@@ -41,7 +42,7 @@
       "foreignKey": "taskId",
       "options": {
         "validate": true,
-        "forceId": true
+        "forceId": false
       }
     }
   },
