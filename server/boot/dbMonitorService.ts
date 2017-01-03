@@ -166,7 +166,29 @@ module.exports = function (app) {
 
       //TODO
       // //Build mergeStep
-      // fileInfo.flows[0].steps.push(mergeStep);
+      let mergeSrc = {
+        id:generateUUID(),
+        path: 'xx',
+        type: ".pcap"
+      };
+      let mergeProds  =[{
+        id:generateUUID(),
+        path: apdFile.mergePcapFilesResult.mergedPcapFile,
+        type: ".pcap"
+      }];
+
+      let mergeStep = {
+        id:generateUUID(),
+        index:3,
+        name:"Mergecap",
+        start:apdFile.startTime,
+        end:apdFile.endTime,
+        result:"Success",
+        source:mergeSrc,
+        products:mergeProds
+      };
+
+      fileInfo.flows[0].steps.push(mergeStep);
 
       file.updateAttributes(fileInfo,function(err,file){
         if (err || !file) {
