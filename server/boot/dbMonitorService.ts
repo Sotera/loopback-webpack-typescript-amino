@@ -134,7 +134,35 @@ module.exports = function (app) {
 
       //TODO
       // Build unzipStep
-      // fileInfo.flows[0].steps.push(unzipStep);
+      let unzipSrc = {
+        id:generateUUID(),
+        path: 'xx',
+        type: ".pcap.gz"
+      };
+      let unzipProds = [];
+      apdFile.unZipFileResults.forEach(function (result) {
+        result.forEach(function(zipfile){
+          let newZipProd  ={
+            id:generateUUID(),
+            path: zipfile.unzippedFilePath,
+            type: ".pcap.gz"
+          };
+          unzipProds.push(newZipProd);
+        });
+      });
+
+      let unzipStep = {
+        id:generateUUID(),
+        index:2,
+        name:"Unzip",
+        start:apdFile.startTime,
+        end:apdFile.endTime,
+        result:"Success",
+        source:unzipSrc,
+        products:unzipProds
+      };
+
+      fileInfo.flows[0].steps.push(unzipStep);
 
       //TODO
       // //Build mergeStep
