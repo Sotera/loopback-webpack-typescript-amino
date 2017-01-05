@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="Vita2! Latest ng2-admin (24-DEC-2016) &amp; deployable via firmament!">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/_run_docker_dist.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.menu.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,18 +37,38 @@
       <file leaf-file-name="01-populate-db.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/boot/01-populate-db.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
+            <state relative-caret-position="810">
               <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_run_docker_dist.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_run_docker_dist.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker/_run_docker_dist.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pages.menu.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/pages.menu.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1873">
+              <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -113,7 +133,6 @@
         <option value="$PROJECT_DIR$/server/server.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/pages.module.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/pages.component.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/register/register.module.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/register/register.html" />
@@ -132,6 +151,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/model-config.json" />
         <option value="$PROJECT_DIR$/docker/_run_docker_dist.sh" />
+        <option value="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
       </list>
     </option>
   </component>
@@ -193,6 +213,88 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -236,34 +338,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,9 +378,19 @@
     </configuration>
     <configuration default="false" name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run-script" />
+      <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="build:prod" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:prod" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -363,7 +447,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
+      <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -420,7 +504,7 @@
     </configuration>
     <configuration default="false" name="webpack-dev-server" type="js.build_tools.npm" factoryName="npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run-script" />
+      <command value="run" />
       <scripts>
         <script value="webpack-dev-server" />
       </scripts>
@@ -428,17 +512,19 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.server.js JavaScript" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.server.js" />
       <item index="2" class="java.lang.String" itemvalue="npm.webpack-dev-server" />
       <item index="3" class="java.lang.String" itemvalue="Gulp.js.default" />
       <item index="4" class="java.lang.String" itemvalue="npm.build" />
+      <item index="5" class="java.lang.String" itemvalue="npm.build:prod" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default" />
-        <item index="1" class="java.lang.String" itemvalue="npm.build" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="npm.build:prod" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
+        <item index="2" class="java.lang.String" itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -459,6 +545,7 @@
       <workItem from="1483363670716" duration="299000" />
       <workItem from="1483363994207" duration="5167000" />
       <workItem from="1483372458412" duration="15195000" />
+      <workItem from="1483654907099" duration="790000" />
     </task>
     <task id="LOCAL-00001" summary="Update ng2-admin &amp; restructure a bit (remove client folder)">
       <created>1482503412853</created>
@@ -506,24 +593,22 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35480000" />
+    <option name="totallyTimeSpent" value="36270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24196099" sideWeight="0.21221864" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17554033" sideWeight="0.77476037" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24196099" sideWeight="0.21565495" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24196099" sideWeight="0.21221864" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17554033" sideWeight="0.78778136" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3483387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17554033" sideWeight="0.22523962" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4072883" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -531,6 +616,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3483387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -561,307 +648,23 @@
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/server/boot/authentication.js.map" />
-        <option value="$PROJECT_DIR$/server/boot/root.js" />
-        <option value="$PROJECT_DIR$/server/boot/webpack.js" />
-        <option value="$PROJECT_DIR$/server/boot/static.js.map" />
-        <option value="$PROJECT_DIR$/server/boot/authentication.js" />
-        <option value="$PROJECT_DIR$/server/boot/root.js.map" />
-        <option value="$PROJECT_DIR$/server/boot/static.js" />
         <option value="$PROJECT_DIR$/server/boot/webpack.js.map" />
-        <option value="$PROJECT_DIR$/server/server.js.map" />
-        <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/server.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMsgCenter/baMsgCenter.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMsgCenter/baMsgCenter.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMsgCenter/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMsgCenter/baMsgCenter.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMsgCenter/baMsgCenter.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMsgCenter/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/dashboard.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/dashboard.module.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/dashboard.routing.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/dashboard.module.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/dashboard.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/dashboard.routing.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/feed/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/feed/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/feed/feed.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/feed/feed.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/feed/feed.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/feed/feed.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/todo/todo.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/todo/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/todo/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/todo/todo.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/todo/todo.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/todo/todo.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/calendar/calendar.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/calendar/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/calendar/calendar.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/calendar/calendar.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/calendar/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/calendar/calendar.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/pieChart.loader.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/pieChart.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/pieChart.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/pieChart.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/pieChart.loader.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/pieChart.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/pieChart/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/usersMap/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/usersMap/usersMap.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/usersMap/usersMap.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/usersMap/usersMap.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/usersMap/usersMap.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/usersMap/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/lineChart/lineChart.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/lineChart/lineChart.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/lineChart/lineChart.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/lineChart/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/lineChart/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/lineChart/lineChart.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/popularApp/popularApp.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/popularApp/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/popularApp/popularApp.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/popularApp/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/trafficChart.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/trafficChart.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/trafficChart.loader.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/trafficChart.loader.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/trafficChart.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/dashboard/trafficChart/trafficChart.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/login.routing.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/login.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/login.module.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/login.module.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/login.routing.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/login/login.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_guards/auth.guard.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_guards/auth.guard.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_guards/headers.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_guards/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_guards/headers.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_guards/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_directives/alert.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_directives/alert.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_directives/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_directives/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemeSpinner/baThemeSpinner.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemeSpinner/baThemeSpinner.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemeSpinner/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemeSpinner/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/theme.configProvider.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/theme.constants.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/theme.config.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/nga.module.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/nga.module.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/theme.config.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/theme.configProvider.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/theme.constants.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/validators/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/validators/email.validator.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/validators/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/validators/email.validator.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/validators/equalPasswords.validator.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/validators/equalPasswords.validator.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baAppPicture/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baAppPicture/baAppPicture.pipe.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baAppPicture/baAppPicture.pipe.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baAppPicture/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baProfilePicture/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baProfilePicture/baProfilePicture.pipe.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baProfilePicture/baProfilePicture.pipe.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baProfilePicture/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baKameleonPicture/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baKameleonPicture/baKameleonPicture.pipe.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baKameleonPicture/baKameleonPicture.pipe.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/pipes/baKameleonPicture/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baImageLoader/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baImageLoader/baImageLoader.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baImageLoader/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baImageLoader/baImageLoader.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemePreloader/baThemePreloader.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemePreloader/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemePreloader/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/services/baThemePreloader/baThemePreloader.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/bgMetrics.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/baCard.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/baCard.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/baCardBlur.directive.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/baCardBlurHelper.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/baCardBlurHelper.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/bgMetrics.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCard/baCardBlur.directive.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/baMenu.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/baMenu.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/baMenu.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/baMenu.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/baAmChart.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/baAmChart.loader.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/baAmChartTheme.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/baAmChart.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/baAmChart.loader.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baAmChart/baAmChartTheme.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baBackTop/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baBackTop/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baBackTop/baBackTop.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baBackTop/baBackTop.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPageTop/baPageTop.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPageTop/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPageTop/baPageTop.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPageTop/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baSidebar/baSidebar.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baSidebar/baSidebar.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baSidebar/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baSidebar/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCheckbox/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCheckbox/baCheckbox.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCheckbox/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baCheckbox/baCheckbox.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baContentTop/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baContentTop/baContentTop.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baContentTop/baContentTop.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baContentTop/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baFullCalendar/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baFullCalendar/baFullCalendar.loader.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baFullCalendar/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baFullCalendar/baFullCalendar.loader.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baFullCalendar/baFullCalendar.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baFullCalendar/baFullCalendar.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baChartistChart/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baChartistChart/baChartistChart.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baChartistChart/baChartistChart.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baChartistChart/baChartistChart.loader.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baChartistChart/baChartistChart.loader.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baChartistChart/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMultiCheckbox/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMultiCheckbox/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPictureUploader/baPictureUploader.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPictureUploader/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPictureUploader/baPictureUploader.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baPictureUploader/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baThemeRun/baThemeRun.directive.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baThemeRun/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baThemeRun/baThemeRun.directive.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baThemeRun/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baSlimScroll/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baSlimScroll/baSlimScroll.loader.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baSlimScroll/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baSlimScroll/baSlimScroll.loader.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baScrollPosition/baScrollPosition.directive.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baScrollPosition/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baScrollPosition/baScrollPosition.directive.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/directives/baScrollPosition/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/components/baMenuItem/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/theme/components/baMenu/components/baMenuItem/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.routing.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.module.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.menu.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.module.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.menu.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.routing.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/pages.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/register.routing.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/register.module.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/register.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/register.routing.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/register.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/pages/register/register.module.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/modules/alert.module.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/modules/alert.module.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/user.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/alert.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/authentication.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/alert.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/app-description.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/authentication.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/app-description.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/_services/user.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/environment.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.module.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.service.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/global.state.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/index.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/environment.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/global.state.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.component.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.component.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.service.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.routing.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.routing.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.menu.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.loader.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.loader.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.module.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/app.menu.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/app/index.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/polyfills.browser.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/vendor.browser.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/main.browser.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/main.browser.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/polyfills.browser.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/client/src/vendor.browser.js" />
-        <option value="$PROJECT_DIR$/server/custom-typings.js.map" />
-        <option value="$PROJECT_DIR$/server/custom-typings.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/server.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/authentication.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/root.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/webpack.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/static.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/authentication.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/root.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/static.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/webpack.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/folderMonitorService.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/dbMonitorService.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/inversify.config.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/inversify.config.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/dbMonitorService.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/folderMonitorService.js.map" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/01-populate-db.js" />
-        <option value="$USER_HOME$/tmp/loopback-webpack-typescript-amino/server/boot/01-populate-db.js.map" />
+        <option value="$PROJECT_DIR$/server/boot/root.js" />
         <option value="$PROJECT_DIR$/server/boot/dbMonitorService.js.map" />
+        <option value="$PROJECT_DIR$/server/boot/static.js.map" />
         <option value="$PROJECT_DIR$/server/boot/folderMonitorService.js.map" />
+        <option value="$PROJECT_DIR$/server/boot/static.js" />
         <option value="$PROJECT_DIR$/server/boot/01-populate-db.js" />
+        <option value="$PROJECT_DIR$/server/boot/root.js.map" />
         <option value="$PROJECT_DIR$/server/boot/folderMonitorService.js" />
         <option value="$PROJECT_DIR$/server/boot/dbMonitorService.js" />
+        <option value="$PROJECT_DIR$/server/boot/authentication.js" />
         <option value="$PROJECT_DIR$/server/boot/01-populate-db.js.map" />
+        <option value="$PROJECT_DIR$/server/boot/webpack.js" />
+        <option value="$PROJECT_DIR$/server/server.js.map" />
+        <option value="$PROJECT_DIR$/server/custom-typings.js.map" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/server/custom-typings.js" />
         <option value="$PROJECT_DIR$/server/inversify.config.js" />
         <option value="$PROJECT_DIR$/server/inversify.config.js.map" />
       </list>
@@ -894,29 +697,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/_directives/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/_directives/index.js" />
     <entry file="file://$PROJECT_DIR$/src/app/pages/pages.routing.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.menu.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,14 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
           <caret line="74" column="2" lean-forward="false" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
-          <folding>
-            <marker date="1483381699108" expanded="true" signature="1359:1496" ph="..." />
-            <marker date="1483381699108" expanded="true" signature="1390:1485" ph="..." />
-            <marker date="1483381699108" expanded="true" signature="438:1254" ph="..." />
-            <marker date="1483381699108" expanded="true" signature="561:1240" ph="..." />
-            <marker date="1483381699108" expanded="false" signature="592:598" ph="©" />
-            <marker date="1483381699108" expanded="true" signature="684:933" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -939,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,7 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,9 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -981,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -989,9 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -999,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,9 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,7 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,9 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,9 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="841">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,25 +814,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/alert.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/alert.module.js" />
     <entry file="file://$PROJECT_DIR$/src/app/modules/alert.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,9 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,9 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="48" column="2" lean-forward="false" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,9 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,7 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,10 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <marker date="1483382498696" expanded="true" signature="581:2362" ph="{...}" />
-            <marker date="1483382498696" expanded="true" signature="1589:2360" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1143,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="128" column="10" lean-forward="false" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,9 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1169,9 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1179,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,7 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,7 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,7 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,9 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#85#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1237,7 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-554">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="688">
           <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,7 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,26 +981,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/package.json" />
     <entry file="file://$PROJECT_DIR$/server/server.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1307,20 +995,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/boot/01-populate-db.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
+        <state relative-caret-position="810">
           <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/_run.sh" />
     <entry file="file://$PROJECT_DIR$/server/model-config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1332,7 +1013,23 @@
     <entry file="file://$PROJECT_DIR$/docker/_run_docker_dist.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.menu.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1873">
+          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding />
         </state>
       </provider>
