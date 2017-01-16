@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
+import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
 import {ETLService} from "../../../../_services/etl.service";
 
 @Component({
@@ -11,20 +11,22 @@ import {ETLService} from "../../../../_services/etl.service";
   ]
 })
 
-export class EtlFlow implements AfterViewInit{
+export class EtlFlow implements AfterViewInit {
   displayFlows: EtlFlow[];
-  detailStatus= false;
+  detailStatus = false;
 
-  constructor(private etlService: ETLService) {}
+  constructor(private etlService: ETLService){}
 
   ngAfterViewInit(): void {
     this.loadFlows();
   }
 
-  loadFlows(){
+  loadFlows() {
     //get all flows
     this.etlService.getFlows().subscribe(
-      (etlFlows: EtlFlow[]) => {this.displayFlows = etlFlows},
+      (etlFlows: EtlFlow[]) => {
+        this.displayFlows = etlFlows
+      },
       err => {
         var e = err;
       });

@@ -1,6 +1,6 @@
 import {WebpackConfig} from "../custom-typings";
 module.exports = function (app) {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.BYPASS_WEBPACK || process.env.NODE_ENV === 'production') {
     return;
   }
 

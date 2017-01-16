@@ -2,8 +2,8 @@ import kernel from '../inversify.config';
 import {VitaTasks} from "firmament-vita/js/interfaces/vita-tasks";
 import {FullPipeline} from "firmament-vita/js/interfaces/vita-options-results";
 
-var request = require('request');
-var config = require('../config.json');
+let request = require('request');
+let config = require('../config.json');
 const path = require('path');
 
 module.exports = function (app) {
@@ -65,7 +65,7 @@ module.exports = function (app) {
       stateMap[updFile.tag.fileID] = updFile.status;
       etlFile.findById(updFile.tag.fileID, function (err, file) {
         if (err || !file) {
-          var x = err;
+          let x = err;
           return;
         }
         let fileInfo = file;
@@ -81,7 +81,7 @@ module.exports = function (app) {
 
         file.updateAttributes(fileInfo,function(err,file){
           if (err || !file) {
-            var e = err;
+            let e = err;
           }
         });
       })
@@ -94,7 +94,7 @@ module.exports = function (app) {
 
     etlFile.findById(apdFile.tag.fileID, function (err, file) {
       if (err || !file) {
-        var x = err;
+        let x = err;
         return;
       }
       let fileInfo = file;
@@ -192,10 +192,10 @@ module.exports = function (app) {
 
       file.updateAttributes(fileInfo,function(err,file){
         if (err || !file) {
-          var e = err;
+          let e = err;
         }
         delete stateMap[apdFile.tag.fileID];
-        var x = stateMap;
+        let x = stateMap;
       });
     })
   }
@@ -203,10 +203,10 @@ module.exports = function (app) {
 
 
   function generateUUID(){
-    var d = new Date().getTime();
+    let d = new Date().getTime();
 
-    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-      var r = (d + Math.random()*16)%16 | 0;
+    let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      let r = (d + Math.random()*16)%16 | 0;
       d = Math.floor(d/16);
       return (c=='x' ? r : (r&0x3|0x8)).toString(16);
     });

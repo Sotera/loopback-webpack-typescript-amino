@@ -22,12 +22,14 @@ import {AuthGuard} from "./_guards/auth.guard";
 import {AlertService} from "./_services/alert.service";
 import {AuthenticationService} from "./_services/authentication.service";
 import {AppDescriptionService} from "./_services/app-description.service";
+import {PostalService} from "./_services/postal.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
   AppDescriptionService,
   AlertService,
+  PostalService,
   GlobalState
 ];
 

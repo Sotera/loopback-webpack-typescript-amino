@@ -1,18 +1,21 @@
-import {Injectable } from '@angular/core';
-import {Http, Response } from '@angular/http';
+import {Injectable} from '@angular/core';
+import {Http, Response} from '@angular/http';
 import {contentHeaders} from '../_guards/index';
 import {Observable} from "rxjs";
 import {EtlFile, EtlFlow, EtlResource, EtlStep, EtlTask} from "../_models/flow.models";
-
+import {PostalService} from "./postal.service";
 
 @Injectable()
 export class ETLService {
-  constructor(private http: Http) { }
+  constructor(private http: Http,
+              private postalService: PostalService) {
+  }
 
   getFiles() {
+    this.postalService.init();
     return this.http.get('/api/etlFiles?filter=%7B%22include%22%3A%22tasks%22%7D', this.jwt()).map((response: Response) => {
       let jsArray = response.json();
-      let etlFiles: EtlFile[] = jsArray.map(jsElement=>{
+      let etlFiles: EtlFile[] = jsArray.map(jsElement => {
         return new EtlFile(JSON.stringify(jsElement));
       });
       return etlFiles;
@@ -41,7 +44,7 @@ export class ETLService {
   getFlows() {
     return this.http.get('/api/etlFlows', this.jwt()).map((response: Response) => {
       let jsArray = response.json();
-      let etlFlows: EtlFlow[] = jsArray.map(jsElement=>{
+      let etlFlows: EtlFlow[] = jsArray.map(jsElement => {
         return new EtlFlow(JSON.stringify(jsElement));
       });
       return etlFlows;
@@ -58,7 +61,7 @@ export class ETLService {
   getResources() {
     return this.http.get('/api/etlResources', this.jwt()).map((response: Response) => {
       let jsArray = response.json();
-      let etlResources: EtlResource[] = jsArray.map(jsElement=>{
+      let etlResources: EtlResource[] = jsArray.map(jsElement => {
         return new EtlResource(JSON.stringify(jsElement));
       });
       return etlResources;
@@ -75,7 +78,7 @@ export class ETLService {
   getSteps() {
     return this.http.get('/api/etlSteps', this.jwt()).map((response: Response) => {
       let jsArray = response.json();
-      let etlSteps: EtlStep[] = jsArray.map(jsElement=>{
+      let etlSteps: EtlStep[] = jsArray.map(jsElement => {
         return new EtlStep(JSON.stringify(jsElement));
       });
       return etlSteps;

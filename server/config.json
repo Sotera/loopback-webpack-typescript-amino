@@ -19,5 +19,7 @@
     "cors": false,
     "handleErrors": false
   },
-  "legacyExplorer": false
+  "legacyExplorer": false,
+  "folderMonitorPath": "/home/jreeme/watch",
+  "decryptPassword":"Ag4<R-byN1;B.58"
 }
