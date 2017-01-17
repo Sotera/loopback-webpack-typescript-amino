@@ -172,3 +172,9 @@ interface UpdateUserInfoResponse extends AuthenticationResponse {
 interface Response{
   map(cb:(res:Response)=>void);
 }
+interface WebSocketInfo{
+  hostname:string,
+  port:number,
+  uri:string
+}
+

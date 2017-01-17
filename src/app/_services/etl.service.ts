@@ -1,26 +1,33 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Inject} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {contentHeaders} from '../_guards/index';
-import {Observable} from "rxjs";
-import {EtlFile, EtlFlow, EtlResource, EtlStep, EtlTask} from "../_models/flow.models";
-import {PostalService} from "./postal.service";
+import {Observable} from 'rxjs';
+import {EtlFile, EtlFlow, EtlResource, EtlStep, EtlTask} from '../_models/flow.models';
+import {PostalService, PublishTarget} from './postal.service';
 
 @Injectable()
 export class ETLService {
   constructor(private http: Http,
               private postalService: PostalService) {
+    this.postalService.subscribe('WebSocketTest', 'TestTopic', (data, env) => {
+      let d = data;
+      let e = env;
+    });
+  }
+
+  luvFiles() {
+    this.postalService.publish('WebSocketTest', 'TestTopic', {how: 'now', brown: 'cow'}, PublishTarget.server);
   }
 
   getFiles() {
-    this.postalService.init();
-    return this.http.get('/api/etlFiles?filter=%7B%22include%22%3A%22tasks%22%7D', this.jwt()).map((response: Response) => {
-      let jsArray = response.json();
-      let etlFiles: EtlFile[] = jsArray.map(jsElement => {
-        return new EtlFile(JSON.stringify(jsElement));
-      });
-      return etlFiles;
-
-    }).catch(this.handleError);
+    return this.http.get('/api/etlFiles?filter=%7B%22include%22%3A%22tasks%22%7D', {headers: contentHeaders})
+      .map((response: Response) => {
+        let jsArray = response.json();
+        let etlFiles: EtlFile[] = jsArray.map(jsElement => {
+          return new EtlFile(JSON.stringify(jsElement));
+        });
+        return etlFiles;
+      }).catch(this.handleError);
   }
 
   getFileById(id) {

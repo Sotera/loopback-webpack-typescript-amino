@@ -13,12 +13,16 @@ module.exports = function (server) {
     //Serve up websocket
     webSocket.createServer(conn => {
       conn.on('text', text => {
-        setInterval(() => {
-          try {
-            conn.sendText('Gloon Piff');
-          } catch (err) {
-          }
-        }, 1000);
+        conn.sendText(JSON.stringify({
+          channel: 'WebSocketTest',
+          topic: 'TestTopic',
+          data: {name: 'Tropic of', rank: 'Cancer'}
+        }));
+        /*        setInterval(() => {
+         try {
+         } catch (err) {
+         }
+         }, 1000);*/
       });
       conn.on('close', (code, reason) => {
         console.log('closed');
@@ -38,7 +42,7 @@ module.exports = function (server) {
     postal.subscribe({
       channel: 'WebSocket',
       topic: 'Test',
-      callback: () => {
+      callback: (data, envelope) => {
         let a = 3;
       }
     });

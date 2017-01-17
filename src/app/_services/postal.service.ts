@@ -1,39 +1,87 @@
 import {Injectable} from '@angular/core';
-import {IPostal} from 'firmament-yargs';
+import {IPostal, ICallback, IEnvelope} from 'firmament-yargs';
 import {Http, Response} from "@angular/http";
+import {$WebSocket} from "angular2-websocket/angular2-websocket";
 import {contentHeaders} from '../_guards/index';
-import {Observable} from "rxjs";
+import {Observable, Subject} from "rxjs";
+import {WebSocketService} from "./websocket.service";
 let postal: IPostal = require('postal');
+
+export enum PublishTarget{
+  server,
+  local,
+  serverAndLocal
+}
 
 @Injectable()
 export class PostalService {
-  constructor(private http: Http) {
+  public messages: Subject<IEnvelope<any>>;
+
+  constructor(private http: Http,
+              private webSocketService: WebSocketService) {
     this.init();
   }
 
-  init() {
-    alert('PostalService init');
-    return this.http.get('/util/get-websocket-port', {headers: contentHeaders})
-      .map((response: Response) => {
-        alert(JSON.stringify(response.json()));
-        return [];
+  private init() {
+    let observable = this.http.get('/util/get-websocket-port', {headers: contentHeaders})
+      .map((response: Response): WebSocketInfo => {
+        return response.json();
       }).catch(this.handleError);
+
+    observable.subscribe((webSocketInfo: WebSocketInfo) => {
+        this.messages = <Subject<IEnvelope<any>>>this.webSocketService
+          .connect(webSocketInfo.uri)
+          .map((response: MessageEvent): IEnvelope<any> => {
+            return response.data;
+          }).catch(this.handleError);
+      },
+      err => {
+        console.log(this.getErrorText(err));
+      });
   }
 
-  yummy(msg: string) {
-    /*    postal.publish({
-     channel: 'CommandUtil',
-     topic: 'SuppressConsoleOutput',
-     data: {
-     suppressConsoleOutput: msg
-     }
-     });*/
+  publish(channel: string,
+          topic: string,
+          data: any,
+          publishTarget: PublishTarget = PublishTarget.serverAndLocal) {
+    if (!this.messages) {
+      return;
+    }
+    let envelope = {channel, topic, data};
+    if (publishTarget === PublishTarget.serverAndLocal || publishTarget === PublishTarget.server) {
+      this.messages.next(envelope);
+    }
+    if (publishTarget === PublishTarget.serverAndLocal || publishTarget === PublishTarget.local) {
+      postal.publish(envelope);
+    }
   }
 
-  private handleError(error: any) {
-    let errorText = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    return Observable.throw(errorText);
+  subscribe(channel: string, topic: string, cb: ICallback<any>) {
+    if (!this.messages) {
+      setTimeout(() => {
+        this.subscribe(channel, topic, cb);
+      }, 1000);
+      return;
+    }
+    //Subscribe to WebSocket
+    this.messages.subscribe((postalMessage: IEnvelope<any>) => {
+      alert(JSON.stringify(postalMessage));
+      postal.publish(postalMessage);
+    });
+    //Subscribe to Postal
+    postal.subscribe({
+      channel,
+      topic,
+      callback: cb
+    });
+  }
+
+  private handleError(err: any) {
+    return Observable.throw(this.getErrorText(err));
+  }
+
+  private getErrorText(error: any) {
+    return (error.message) ? error.message : error.status ? `${error.status} - ${error.statusText}` : 'Server error';
   }
 }
 
