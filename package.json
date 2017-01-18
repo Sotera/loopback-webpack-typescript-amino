@@ -64,6 +64,7 @@
     "postal": "^2.0.5",
     "postcss-loader": "^1.0.0",
     "rxjs": "5.0.0-beta.12",
+    "safe-json-parse": "^4.0.0",
     "tether": "^1.2.4",
     "zone.js": "~0.7.1"
   },

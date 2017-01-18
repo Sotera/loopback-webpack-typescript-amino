@@ -1,23 +1,26 @@
-var chokidar = require('chokidar');
-var config = require('../config.json');
+import kernel from '../inversify.config';
+import {IPostal, IEnvelope} from 'firmament-yargs';
+let chokidar = require('chokidar');
+let config = require('../config.json');
 
 module.exports = function (app) {
-  var EtlFile = app.models.EtlFile;
+  let postal: IPostal = kernel.get<IPostal>('IPostal');
+  let EtlFile = app.models.EtlFile;
 
   // Initialize watcher.
-  var watcher = chokidar.watch(config.folderMonitorPath, {
+  let watcher = chokidar.watch(config.folderMonitorPath, {
     ignored: /[\/\\]\./,
     ignoreInitial: true,
     persistent: true
   });
 
   watcher.on('add', (path, stats) => {
-    var fileName = path.split('\\').pop().split('/').pop();
-    var filePath = path.substr(0,path.lastIndexOf("/")+1);
-    var fileSize = stats.size.toString();
-    var fileCreateDate = stats.birthtime.toString();
+    let fileName = path.split('\\').pop().split('/').pop();
+    let filePath = path.substr(0, path.lastIndexOf("/") + 1);
+    let fileSize = stats.size.toString();
+    let fileCreateDate = stats.birthtime.toString();
 
-    var newFile = {
+    let newFile = {
       "name": fileName,
       "path": filePath,
       "size": fileSize,
@@ -28,6 +31,15 @@ module.exports = function (app) {
       if (err || !obj) {
         return;
       }
+      postal.publish({
+        channel: 'WebSocket',
+        topic: 'Broadcast',
+        data: {
+          channel: 'EtlFile',
+          topic: 'FileAdded',
+          data: {newFile}
+        }
+      });
       console.log('Created file:' + path);
     });
   });

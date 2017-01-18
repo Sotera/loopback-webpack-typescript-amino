@@ -9,14 +9,11 @@ import {PostalService, PublishTarget} from './postal.service';
 export class ETLService {
   constructor(private http: Http,
               private postalService: PostalService) {
-    this.postalService.subscribe('WebSocketTest', 'TestTopic', (data, env) => {
-      let d = data;
-      let e = env;
-    });
   }
 
   luvFiles() {
-    this.postalService.publish('WebSocketTest', 'TestTopic', {how: 'now', brown: 'cow'}, PublishTarget.server);
+    alert('luving it');
+    this.postalService.publish('WebSocketTest', 'TestTopic', {how: 'now', brown: 'cow'}, PublishTarget.local);
   }
 
   getFiles() {

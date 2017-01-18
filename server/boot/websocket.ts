@@ -1,33 +1,51 @@
 import kernel from '../inversify.config';
-import {IPostal} from 'firmament-yargs';
+import {IPostal, IEnvelope} from 'firmament-yargs';
 import nodeUrl = require('url');
+import * as _ from 'lodash';
+
 const findPort = require('find-free-port');
 const webSocket = require('nodejs-websocket');
+const safeJsonParse = require('safe-json-parse/callback');
+
 let webSocketPort: number;
 
+interface WebSocketConn {
+  sendText(text:string),
+  close()
+}
+
 module.exports = function (server) {
+  let postal: IPostal = kernel.get<IPostal>('IPostal');
+  let connections: any = {};
   findPort(7001, 8000, (err, port) => {
     if (err) {
       return;
     }
     //Serve up websocket
-    webSocket.createServer(conn => {
+    let wsServer = webSocket.createServer();
+    wsServer.on('connection',conn=>{
+      connections[conn.key] = conn;
+      console.log(`Connection from: ${conn.key}`);
       conn.on('text', text => {
-        conn.sendText(JSON.stringify({
-          channel: 'WebSocketTest',
-          topic: 'TestTopic',
-          data: {name: 'Tropic of', rank: 'Cancer'}
-        }));
-        /*        setInterval(() => {
-         try {
-         } catch (err) {
-         }
-         }, 1000);*/
+        //Incoming message from websocket, make sure it's shaped like Postal's IEnvelope<T> then
+        //use Postal to ship it
+        safeJsonParse(text, (err: Error, envelope: IEnvelope<any>) => {
+          if (err) {
+            console.log(err.message);
+            return;
+          }
+          if (!envelope || !envelope.channel || !envelope.topic || !envelope.data) {
+            console.log(`Received bad envelope on websocket: ${JSON.stringify(envelope)}`);
+            return;
+          }
+          postal.publish(envelope);
+        });
       });
       conn.on('close', (code, reason) => {
-        console.log('closed');
+        console.log(`WebSocket Closed = key: ${conn.key}, code: ${code}, reason: ${reason}`);
       });
-    }).listen(webSocketPort = port);
+    });
+    wsServer.listen(webSocketPort = port);
     //Give client a way to get websocket port
     server.get('/util/get-websocket-port', function (req, res) {
       let url = nodeUrl.parse(`http://${req.headers.host}`);
@@ -37,13 +55,17 @@ module.exports = function (server) {
         uri: `ws://${url.hostname}:${webSocketPort}`
       });
     });
-    //Set up websocket comm bus
-    let postal: IPostal = kernel.get<IPostal>('IPostal');
     postal.subscribe({
       channel: 'WebSocket',
-      topic: 'Test',
-      callback: (data, envelope) => {
-        let a = 3;
+      topic: 'Broadcast',
+      callback: (data) => {
+        _.values(connections).forEach((conn:WebSocketConn)=>{
+          try{
+            conn.sendText(JSON.stringify(data));
+          }catch(err){
+            conn.close();
+          }
+        });
       }
     });
   });

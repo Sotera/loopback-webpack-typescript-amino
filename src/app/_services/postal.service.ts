@@ -32,7 +32,7 @@ export class PostalService {
         this.messages = <Subject<IEnvelope<any>>>this.webSocketService
           .connect(webSocketInfo.uri)
           .map((response: MessageEvent): IEnvelope<any> => {
-            return response.data;
+            return JSON.parse(response.data);
           }).catch(this.handleError);
       },
       err => {
@@ -64,16 +64,21 @@ export class PostalService {
       return;
     }
     //Subscribe to WebSocket
-    this.messages.subscribe((postalMessage: IEnvelope<any>) => {
-      alert(JSON.stringify(postalMessage));
+    this.messages.subscribe(postalMessage => {
+      //alert(postalMessage.channel);
       postal.publish(postalMessage);
     });
     //Subscribe to Postal
-    postal.subscribe({
+    let envelope = {
       channel,
       topic,
-      callback: cb
-    });
+      callback: (data, env) => {
+        //alert(JSON.stringify(`Postal Sub: ${data}`));
+        cb(data, env);
+      }
+    }
+    //alert(JSON.stringify(envelope));
+    postal.subscribe(envelope);
   }
 
   private handleError(err: any) {

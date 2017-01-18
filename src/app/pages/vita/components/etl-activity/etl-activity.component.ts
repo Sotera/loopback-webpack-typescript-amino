@@ -24,6 +24,10 @@ export class EtlActivity implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.loadFiles();
+    this.postalService.subscribe('EtlFile', 'FileAdded', (data, env) => {
+      //alert(JSON.stringify(env));
+      this.loadFiles();
+    });
   }
 
   luvFiles() {
