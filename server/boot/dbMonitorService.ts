@@ -1,12 +1,13 @@
-import kernel from '../inversify.config';
+/*import kernel from '../inversify.config';
 import {VitaTasks} from "firmament-vita/js/interfaces/vita-tasks";
 import {FullPipeline} from "firmament-vita/js/interfaces/vita-options-results";
 
 let request = require('request');
 let config = require('../config.json');
-const path = require('path');
+const path = require('path');*/
 
 module.exports = function (app) {
+/*
   let etlTask = app.models.EtlTask;
   let etlFile = app.models.EtlFile;
   let stateMap = {};
@@ -212,5 +213,5 @@ module.exports = function (app) {
     });
     return uuid;
   }
-
+*/
 };

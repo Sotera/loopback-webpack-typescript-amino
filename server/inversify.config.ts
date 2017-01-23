@@ -6,9 +6,15 @@ import {InitializeDatabase} from './services/interfaces/initialize-database';
 import {InitializeDatabaseImpl} from './services/implementations/initialize-database-impl';
 import {BaseService} from './services/interfaces/base-service';
 import {BaseServiceImpl} from './services/implementations/base-service-impl';
+import {FolderMonitor} from "./services/interfaces/folder-monitor";
+import {FolderMonitorImpl} from "./services/implementations/folder-monitor-impl";
+import {DbMonitorImpl} from "./services/implementations/db-monitor-impl";
+import {DbMonitor} from "./services/interfaces/db-monitor";
 
 kernel.bind<BaseService>('BaseService').to(BaseServiceImpl).inSingletonScope();
 kernel.bind<ServiceManager>('ServiceManager').to(ServiceManagerImpl).inSingletonScope();
 kernel.bind<InitializeDatabase>('InitializeDatabase').to(InitializeDatabaseImpl).inSingletonScope();
+kernel.bind<FolderMonitor>('FolderMonitor').to(FolderMonitorImpl).inSingletonScope();
+kernel.bind<DbMonitor>('DbMonitor').to(DbMonitorImpl).inSingletonScope();
 
 export default kernel;
