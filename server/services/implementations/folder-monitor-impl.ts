@@ -1,16 +1,16 @@
 import {injectable, inject} from 'inversify';
-import {CommandUtil, IPostal} from "firmament-yargs";
+import {CommandUtil} from "firmament-yargs";
 import {BaseService} from "../interfaces/base-service";
 import {FolderMonitor} from "../interfaces/folder-monitor";
 
 const chokidar = require('chokidar');
 const config = require('../../config.json');
 
+//noinspection JSUnusedGlobalSymbols
 @injectable()
 export class FolderMonitorImpl implements FolderMonitor {
 
   constructor(@inject('BaseService') private baseService: BaseService,
-              @inject('IPostal') private postal: IPostal,
               @inject('CommandUtil') private commandUtil: CommandUtil) {
     this.commandUtil.log('FolderMonitor created');
   }
@@ -39,20 +39,8 @@ export class FolderMonitorImpl implements FolderMonitor {
       let createDate = stats.birthtime.toString();
 
       let EtlFile = me.server.models.EtlFile;
-      EtlFile.create({name, path, size, createDate}, function (err, newFile) {
-        if (err) {
-          me.commandUtil.error(err.message);
-          return;
-        }
-        me.postal.publish({
-          channel: 'WebSocket',
-          topic: 'Broadcast',
-          data: {
-            channel: 'EtlFile',
-            topic: 'FileAdded',
-            data: {newFile}
-          }
-        });
+      EtlFile.create({name, path, size, createDate}, (err) => {
+        me.commandUtil.logError(err);
       });
     });
     cb(null, null);

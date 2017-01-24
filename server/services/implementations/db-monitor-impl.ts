@@ -3,6 +3,7 @@ import {CommandUtil, IPostal} from "firmament-yargs";
 import {BaseService} from "../interfaces/base-service";
 import {DbMonitor} from "../interfaces/db-monitor";
 import {FullPipeline, VitaTasks} from "firmament-vita";
+import * as _ from 'lodash';
 
 const path = require('path');
 const config = require('../../config.json');
@@ -10,6 +11,8 @@ const config = require('../../config.json');
 @injectable()
 export class DbMonitorImpl implements DbMonitor {
   private stateMap = {};
+  private etlFile: any;
+  private etlTask: any;
 
   constructor(@inject('BaseService') private baseService: BaseService,
               @inject('IPostal') private postal: IPostal,
@@ -17,20 +20,29 @@ export class DbMonitorImpl implements DbMonitor {
               @inject('VitaTasks') private vitaTasks: VitaTasks,
               @inject('CommandUtil') private commandUtil: CommandUtil) {
     this.commandUtil.log('DbMonitor created');
+    this.etlFile = this.server.models.EtlFile;
+    this.etlTask = this.server.models.EtlTask;
   }
 
   get server(): any {
     return this.baseService.server;
   }
 
-  init(cb: (err: Error, result: any) => void) {
+  private createChangeStream_EtlFile() {
     let me = this;
-    let etlTask = me.server.models.EtlTask;
-    let etlFile = me.server.models.EtlFile;
-    etlTask.createChangeStream(function (err, changes) {
-      changes.on('data', function (change) {
+    me.etlFile.createChangeStream((err, changes) => {
+      changes.on('data', () => {
+        me.publishAllEtlFiles();
+      });
+    });
+  }
+
+  private createChangeStream_EtlTask() {
+    let me = this;
+    me.etlTask.createChangeStream((err, changes) => {
+      changes.on('data', (change) => {
         if (change.type === "create") {
-          etlFile.findById(change.data.fileId.toString(), function (err, file) {
+          me.etlFile.findById(change.data.fileId.toString(), (err, file) => {
             if (err || !file) {
               return;
             }
@@ -41,7 +53,7 @@ export class DbMonitorImpl implements DbMonitor {
               lastStatus: 'Queued',
               name: 'Bro'
             };
-            file.etlFlows.create(newFlow, function (err, flow) {
+            file.etlFlows.create(newFlow, (err, flow) => {
               if (err || !flow) {
                 return;
               }
@@ -66,6 +78,33 @@ export class DbMonitorImpl implements DbMonitor {
         }
       });
     });
+  }
+
+  init(cb: (err: Error, result: any) => void) {
+    let me = this;
+    me.createChangeStream_EtlFile();
+    me.createChangeStream_EtlTask();
+
+    //TODO: Park this subscription here temporarily until we design the subscription service
+    me.postal.subscribe({
+      channel: 'EtlTask',
+      topic: 'AddTask',
+      callback: (etlTaskData) => {
+        me.etlTask.create(etlTaskData, (err, task) => {
+          if (err || !task) {
+            return;
+          }
+        });
+      }
+    });
+    me.postal.subscribe({
+      channel: 'EtlFile',
+      topic: 'GetAllFiles',
+      callback: () => {
+        me.publishAllEtlFiles();
+      }
+    });
+
     cb(null, null);
   }
 
@@ -76,7 +115,7 @@ export class DbMonitorImpl implements DbMonitor {
     //If the state has changed, update it
     if (updFile.status != me.stateMap[updFile.tag.fileID]) {
       me.stateMap[updFile.tag.fileID] = updFile.status;
-      etlFile.findById(updFile.tag.fileID, function (err, file) {
+      etlFile.findById(updFile.tag.fileID, (err, file) => {
         if (err || !file) {
           let x = err;
           return;
@@ -84,7 +123,7 @@ export class DbMonitorImpl implements DbMonitor {
         let fileInfo = file;
         fileInfo.steps = [];
 
-        fileInfo.flows.forEach(function (flow) {
+        fileInfo.flows.forEach((flow) => {
           if (flow.id == config.defaultFlowId) {
             if (flow.lastStatus != updFile.status) {
               flow.lastStatus = updFile.status;
@@ -92,7 +131,7 @@ export class DbMonitorImpl implements DbMonitor {
           }
         });
 
-        file.updateAttributes(fileInfo, function (err, file) {
+        file.updateAttributes(fileInfo, (err, file) => {
           if (err || !file) {
             let e = err;
           }
@@ -105,7 +144,7 @@ export class DbMonitorImpl implements DbMonitor {
     let me = this;
     let etlFile = me.server.models.EtlFile;
 
-    etlFile.findById(apdFile.tag.fileID, function (err, file) {
+    etlFile.findById(apdFile.tag.fileID, (err, file) => {
       if (err || !file) {
         let x = err;
         return;
@@ -121,8 +160,8 @@ export class DbMonitorImpl implements DbMonitor {
       };
 
       let decryptProds = [];
-      apdFile.decryptAndUnTarResults.forEach(function (result) {
-        result.zipFiles.forEach(function (zipfile) {
+      apdFile.decryptAndUnTarResults.forEach((result) => {
+        result.zipFiles.forEach((zipfile) => {
           let newZip = {
             id: me.generateUUID(),
             path: zipfile,
@@ -153,8 +192,8 @@ export class DbMonitorImpl implements DbMonitor {
         type: ".pcap.gz"
       };
       let unzipProds = [];
-      apdFile.unZipFileResults.forEach(function (result) {
-        result.forEach(function (zipfile) {
+      apdFile.unZipFileResults.forEach((result) => {
+        result.forEach((zipfile) => {
           let newZipProd = {
             id: me.generateUUID(),
             path: zipfile.unzippedFilePath,
@@ -203,20 +242,43 @@ export class DbMonitorImpl implements DbMonitor {
 
       fileInfo.flows[0].steps.push(mergeStep);
 
-      file.updateAttributes(fileInfo, function (err, file) {
+      file.updateAttributes(fileInfo, (err, file) => {
         delete me.stateMap[apdFile.tag.fileID];
       });
     })
   }
 
+  private publishAllEtlFiles() {
+    let me = this;
+    let etlFile = me.server.models.EtlFile;
+    etlFile.find((err, etlFiles) => {
+      if (err) {
+        me.commandUtil.logError(err);
+        return;
+      }
+      let etlFilesSortedByDate = etlFiles.sort((a, b) => {
+        a = new Date(a.createDate);
+        b = new Date(b.createDate);
+        return a > b ? -1 : a < b ? 1 : 0;
+      });
+      me.postal.publish({
+        channel: 'WebSocket',
+        topic: 'Broadcast',
+        data: {
+          channel: 'EtlFile',
+          topic: 'AllFiles',
+          data: etlFilesSortedByDate
+        }
+      });
+    });
+  }
 
   private generateUUID() {
     let d = new Date().getTime();
-    let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
       let r = (d + Math.random() * 16) % 16 | 0;
       d = Math.floor(d / 16);
       return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
-    return uuid;
   }
 }

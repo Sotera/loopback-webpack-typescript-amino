@@ -4,7 +4,7 @@ import {ETLService} from "../../../../_services/etl.service";
 @Component({
   selector: 'etl-flow-component',
   encapsulation: ViewEncapsulation.None,
-  providers: [ETLService],
+  //providers: [ETLService],
   template: require('./etl-flow.html'),
   styles: [
     require('./etl-flow.scss')

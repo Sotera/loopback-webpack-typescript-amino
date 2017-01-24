@@ -1,12 +1,12 @@
 import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
 import {ETLService} from "../../../../_services/etl.service";
 import {EtlFile} from "../../../../_models/flow.models";
-import {PostalService} from "../../../../_services/postal.service";
+import {PostalService, PublishTarget} from "../../../../_services/postal.service";
 
 @Component({
   selector: 'etl-activity-component',
   encapsulation: ViewEncapsulation.None,
-  providers: [ETLService, PostalService],
+  //providers: [ETLService, PostalService],
   template: require('./etl-activity.html'),
   styles: [
     require('./etl-activity.scss')
@@ -23,27 +23,18 @@ export class EtlActivity implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.loadFiles();
-    this.postalService.subscribe('EtlFile', 'FileAdded', (data, env) => {
-      //alert(JSON.stringify(env));
-      this.loadFiles();
+    let me = this;
+    me.loadFiles();
+    me.postalService.subscribe('EtlFile', 'AllFiles', (data, env) => {
+      me.displayFiles = data;
     });
   }
 
-  luvFiles() {
-    //get all files
-    this.etlService.luvFiles();
-  }
+/*  luvFiles() {
+  }*/
 
   loadFiles() {
-    //get all files
-    this.etlService.getFiles().subscribe(
-      (etlFiles: EtlFile[]) => {
-        this.displayFiles = etlFiles
-      },
-      err => {
-        var e = err;
-      });
+    this.postalService.publish('EtlFile', 'GetAllFiles', {}, PublishTarget.server);
   }
 
   showDetail(): void {
@@ -60,15 +51,8 @@ export class EtlActivity implements AfterViewInit {
   }
 
   processFile(etlTask) {
-    this.etlService.processFile(etlTask).subscribe(
-      err => {
-        var e = err;
-      }
-    );
-    this.loadFiles();
+    this.postalService.publish('EtlTask', 'AddTask', etlTask, PublishTarget.server);
   }
-
-
 }
 
 

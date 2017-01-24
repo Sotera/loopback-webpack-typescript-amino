@@ -12,8 +12,8 @@ export class ETLService {
   }
 
   luvFiles() {
-    alert('luving it');
-    this.postalService.publish('WebSocketTest', 'TestTopic', {how: 'now', brown: 'cow'}, PublishTarget.local);
+/*    alert('luving it');
+    this.postalService.publish('WebSocketTest', 'TestTopic', {how: 'now', brown: 'cow'}, PublishTarget.local);*/
   }
 
   getFiles() {

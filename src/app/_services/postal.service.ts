@@ -45,6 +45,7 @@ export class PostalService {
           data: any,
           publishTarget: PublishTarget = PublishTarget.serverAndLocal) {
     if (!this.messages) {
+      alert('No Messages');
       return;
     }
     let envelope = {channel, topic, data};
