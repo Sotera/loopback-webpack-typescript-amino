@@ -6,11 +6,9 @@ import {PostalService, PublishTarget} from "../../../../_services/postal.service
 @Component({
   selector: 'etl-activity-component',
   encapsulation: ViewEncapsulation.None,
-  //providers: [ETLService, PostalService],
   template: require('./etl-activity.html'),
   styles: [
     require('./etl-activity.scss')
-    // ,require('../../../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css')
   ]
 })
 
@@ -18,20 +16,16 @@ export class EtlActivity implements AfterViewInit {
   displayFiles: EtlFile[];
   detailStatus = false;
 
-  constructor(private etlService: ETLService,
-              private postalService: PostalService) {
-  }
-
-  ngAfterViewInit(): void {
+  constructor(private postalService: PostalService) {
     let me = this;
-    me.loadFiles();
-    me.postalService.subscribe('EtlFile', 'AllFiles', (data, env) => {
-      me.displayFiles = data;
+    me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles) => {
+      me.displayFiles = etlFiles;
     });
   }
 
-/*  luvFiles() {
-  }*/
+  ngAfterViewInit(): void {
+    this.loadFiles();
+  }
 
   loadFiles() {
     this.postalService.publish('EtlFile', 'GetAllFiles', {}, PublishTarget.server);
@@ -41,13 +35,8 @@ export class EtlActivity implements AfterViewInit {
     this.detailStatus = !this.detailStatus;
   }
 
-  deleteFile(fileId) {
-    this.etlService.deleteFile(fileId).subscribe(
-      err => {
-        var e = err;
-      }
-    );
-    this.loadFiles();
+  deleteFile(id) {
+    this.postalService.publish('EtlFile', 'Delete', {id}, PublishTarget.server);
   }
 
   processFile(etlTask) {

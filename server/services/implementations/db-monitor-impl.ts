@@ -3,10 +3,18 @@ import {CommandUtil, IPostal} from "firmament-yargs";
 import {BaseService} from "../interfaces/base-service";
 import {DbMonitor} from "../interfaces/db-monitor";
 import {FullPipeline, VitaTasks} from "firmament-vita";
-import * as _ from 'lodash';
+//import * as _ from 'lodash';
 
 const path = require('path');
 const config = require('../../config.json');
+
+interface EtlStatus {
+  tag: any,
+  status: string,
+  startTime: Date,
+  currentProgress: number,
+  overallProgress: number
+}
 
 @injectable()
 export class DbMonitorImpl implements DbMonitor {
@@ -28,6 +36,41 @@ export class DbMonitorImpl implements DbMonitor {
     return this.baseService.server;
   }
 
+  init(cb: (err: Error, result: any) => void) {
+    let me = this;
+    me.createChangeStream_EtlFile();
+    me.createChangeStream_EtlTask();
+
+    //TODO: Park this subscription here temporarily until we design the subscription service
+    me.postal.subscribe({
+      channel: 'EtlTask',
+      topic: 'AddTask',
+      callback: (etlTaskData) => {
+        me.etlTask.create(etlTaskData, err => {
+          this.commandUtil.logError(err);
+        });
+      }
+    });
+    me.postal.subscribe({
+      channel: 'EtlFile',
+      topic: 'GetAllFiles',
+      callback: () => {
+        me.publishAllEtlFiles();
+      }
+    });
+    me.postal.subscribe({
+      channel: 'EtlFile',
+      topic: 'Delete',
+      callback: (fileId) => {
+        me.etlFile.destroyById(fileId.id, err => {
+          this.commandUtil.logError(err);
+        });
+      }
+    });
+
+    cb(null, null);
+  }
+
   private createChangeStream_EtlFile() {
     let me = this;
     me.etlFile.createChangeStream((err, changes) => {
@@ -41,38 +84,37 @@ export class DbMonitorImpl implements DbMonitor {
     let me = this;
     me.etlTask.createChangeStream((err, changes) => {
       changes.on('data', (change) => {
-        if (change.type === "create") {
+        if (change.type === 'create') {
           me.etlFile.findById(change.data.fileId.toString(), (err, file) => {
             if (err || !file) {
               return;
             }
             //Append Flow to File object in database
-            let id = config.defaultFlowId;
             let newFlow = {
-              id,
+              id: config.defaultFlowId,
               lastStatus: 'Queued',
               name: 'Bro'
             };
             file.etlFlows.create(newFlow, (err, flow) => {
-              if (err || !flow) {
-                return;
+              if (err) {
+                return this.commandUtil.logError(err);
               }
-            });
+              //Kick off Flow process
+              me.stateMap[file.id.toString()] = 'Queued';
+              me.fullPipeline.tag = {
+                fileID: file.id.toString(),
+                flowID: config.defaultFlowId
+              };
+              me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
+              me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
+              me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
 
-            //Kick off Flow process
-            me.stateMap[file.id.toString()] = "Queued";
-            me.fullPipeline.tag = {
-              fileID: file.id.toString(),
-              flowID: config.defaultFlowId
-            };
-            me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
-            me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
-            me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
-
-            me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, result) => {
-              me.updateEtlStatus(result);
-            }, (err, result) => {
-              me.appendEtlResults(result);
+              //me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, result) => {
+              me.processFullPipelineInstance(me.fullPipeline, (err, result: EtlStatus) => {
+                me.updateEtlStatus(result);
+              }, (err, result) => {
+                me.appendEtlResults(result);
+              });
             });
           });
         }
@@ -80,42 +122,22 @@ export class DbMonitorImpl implements DbMonitor {
     });
   }
 
-  init(cb: (err: Error, result: any) => void) {
-    let me = this;
-    me.createChangeStream_EtlFile();
-    me.createChangeStream_EtlTask();
-
-    //TODO: Park this subscription here temporarily until we design the subscription service
-    me.postal.subscribe({
-      channel: 'EtlTask',
-      topic: 'AddTask',
-      callback: (etlTaskData) => {
-        me.etlTask.create(etlTaskData, (err, task) => {
-          if (err || !task) {
-            return;
-          }
-        });
-      }
-    });
-    me.postal.subscribe({
-      channel: 'EtlFile',
-      topic: 'GetAllFiles',
-      callback: () => {
-        me.publishAllEtlFiles();
-      }
-    });
-
-    cb(null, null);
+  private processFullPipelineInstance(fullPipeline: FullPipeline,
+                                      statusCb: (err: Error, result: EtlStatus) => void,
+                                      finalCb: (err: Error, result: any) => void) {
+    setInterval(() => {
+      statusCb(null, null);
+    }, 1000);
   }
 
-  private updateEtlStatus(updFile) {
+  private updateEtlStatus(etlStatus: EtlStatus) {
     let me = this;
     let etlFile = me.server.models.EtlFile;
 
     //If the state has changed, update it
-    if (updFile.status != me.stateMap[updFile.tag.fileID]) {
-      me.stateMap[updFile.tag.fileID] = updFile.status;
-      etlFile.findById(updFile.tag.fileID, (err, file) => {
+    if (etlStatus.status != me.stateMap[etlStatus.tag.fileID]) {
+      me.stateMap[etlStatus.tag.fileID] = etlStatus.status;
+      etlFile.findById(etlStatus.tag.fileID, (err, file) => {
         if (err || !file) {
           let x = err;
           return;
@@ -125,8 +147,8 @@ export class DbMonitorImpl implements DbMonitor {
 
         fileInfo.flows.forEach((flow) => {
           if (flow.id == config.defaultFlowId) {
-            if (flow.lastStatus != updFile.status) {
-              flow.lastStatus = updFile.status;
+            if (flow.lastStatus != etlStatus.status) {
+              flow.lastStatus = etlStatus.status;
             }
           }
         });

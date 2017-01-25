@@ -11,14 +11,6 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
     {
       id: '586bcc5695e16687155b4a52',
       name: 'Bro'
-    },
-    {
-      id: '586bcc5695e16687155b4a53',
-      name: 'Blif'
-    },
-    {
-      id: '586bcc5695e16687155b4a54',
-      name: 'Slood'
     }
   ];
 
