@@ -4,10 +4,10 @@
     "connector": "memory"
   },
   "mongodb": {
-    "name": "mongodb",
     "host": "localhost",
     "port": 27017,
     "database": "vita",
+    "name": "mongodb",
     "connectionTimeout": 10000,
     "connector": "mongodb"
   }

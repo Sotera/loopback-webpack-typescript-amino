@@ -3,10 +3,10 @@
   "plural": "AminoUsers",
   "base": "User",
   "idInjection": true,
-  "forceId": false,
   "options": {
     "validateUpsert": true
   },
+  "forceId": false,
   "properties": {
     "fullname": {
       "type": "string",
@@ -14,16 +14,15 @@
     }
   },
   "validations": [],
-  "relations": {
-  },
+  "relations": {},
   "acls": [
     {
       "accessType": "*",
-      "model": "*",
-      "property": "*",
       "principalType": "ROLE",
       "principalId": "$unauthenticated",
-      "permission": "ALLOW"
+      "permission": "ALLOW",
+      "property": "*",
+      "model": "*"
     }
   ],
   "methods": {}

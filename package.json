@@ -1,4 +1,5 @@
 {
+  "name": "loopback-webpack-typescript-amino",
   "author": "John Reeme <john.reeme@soteradefense.com> (http://soteradefense.com)",
   "bugs": {
     "url": "https://github.com/sotera/loopback-webpack-typescript-amino/issues"
@@ -106,6 +107,7 @@
     "html-webpack-plugin": "^2.21.0",
     "imports-loader": "^0.6.5",
     "json-loader": "^0.5.4",
+    "loopback-cli": "^1.0.1",
     "node-sass": "^3.5.3",
     "parse5": "^2.2.2",
     "raw-loader": "0.5.1",
@@ -152,7 +154,6 @@
     "url": "https://spdx.org/licenses/WTFPL"
   },
   "main": "dist/server/server.js",
-  "name": "loopback-webpack-typescript-amino",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sotera/loopback-webpack-typescript-amino.git"
