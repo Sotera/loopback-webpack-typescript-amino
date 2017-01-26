@@ -17,15 +17,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: () => System.import('./dashboard/dashboard.module') },
-      { path: 'editors', loadChildren: () => System.import('./editors/editors.module') },
-      { path: 'vita', loadChildren: () => System.import('./vita/vita.module') },
-      //{ path: 'components', loadChildren: () => System.import('./components/components.module') }
-      { path: 'charts', loadChildren: () => System.import('./charts/charts.module') },
-      { path: 'ui', loadChildren: () => System.import('./ui/ui.module') },
-      { path: 'forms', loadChildren: () => System.import('./forms/forms.module') },
-      { path: 'settings', loadChildren: () => System.import('./settings/settings.module') },
-      { path: 'tables', loadChildren: () => System.import('./tables/tables.module') },
-      { path: 'maps', loadChildren: () => System.import('./maps/maps.module') }
+      { path: 'vita', loadChildren: () => System.import('./vita/vita.module') }
     ]
     ,canActivate: [AuthGuard]
   }

@@ -1,14 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="">
+    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="Homeward!">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlFile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlFile.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlFlow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlFlow.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlResource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlResource.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlStep.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlStep.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlTask.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/models/etlTask.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/etl.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/charts.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/charts.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/charts.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/charts/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/components.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/components.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/components.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/components.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/components/treeView/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/components/treeView/treeView.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/components/treeView/treeView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/components/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/ckeditor.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/components/ckeditor/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/editors.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/editors.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/editors.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/editors/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInput.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/inputs.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/inputs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/basicForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/basicForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/blockForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/blockForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/layouts.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/layouts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/forms.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/forms.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/forms.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/forms/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/maps.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/maps.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/maps/maps.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/components/userProfileForm/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/components/userProfileForm/userProfileForm.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/components/userProfileForm/userProfileForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/user-profile.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/components/user-profile/user-profile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/tables.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/tables.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/tables/tables.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/grid/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/icons/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/modals/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/typography/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/typography/typography.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/components/typography/typography.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/ui.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/ui.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/ui/ui.routing.ts" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/_models/flow.models.ts" afterPath="$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jreeme.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jreeme.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/etlFile.json" afterPath="$PROJECT_DIR$/common/models/etlFile.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config.json" afterPath="$PROJECT_DIR$/server/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/model-config.json" afterPath="$PROJECT_DIR$/server/model-config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" afterPath="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts" afterPath="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/_services/index.ts" afterPath="$PROJECT_DIR$/src/app/_services/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/vita/vita.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/vita/vita.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts" afterPath="$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,105 +231,40 @@
     <favorites_list name="loopback-webpack-typescript-amino" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44175014">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="etl-activity.component.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#74#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="etl-activity.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="42" column="53" lean-forward="false" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-                  <folding>
-                    <element signature="n#div#1;n#ba-card#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#td#4;n#tr#0;n#ng-container#0;n#ng-container#0;n#tbody#0;n#table#0;n#div#0;n#ba-card#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="etlFlow.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common/models/etlFlow.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="etlFile.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common/models/etlFile.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="684">
-                  <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="etlStep.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common/models/etlStep.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.244373">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="db-monitor-impl.ts" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="108">
-                      <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-                      <folding>
-                        <element signature="e#0#45#0" expanded="true" />
-                        <element signature="n#!!block;n#createChangeStream_EtlFile#0;n#DbMonitorImpl#0" expanded="false" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file leaf-file-name="db-monitor-impl.ts" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="198">
-                      <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-                      <folding>
-                        <element signature="e#0#45#0" expanded="true" />
-                        <element signature="n#!!block;n#createChangeStream_EtlFile#0;n#DbMonitorImpl#0" expanded="false" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="db-monitor-impl.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="320" column="4" lean-forward="false" selection-start-line="320" selection-start-column="4" selection-end-line="320" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!block;n#createChangeStream_EtlFile#0;n#DbMonitorImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vita.routing.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="websocket.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/boot/websocket.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,6 +291,10 @@
       <find>IMessage</find>
       <find>IPostal</find>
       <find>NgModule</find>
+      <find>Etl</find>
+      <find>etl.service</find>
+      <find>EtlActivity</find>
+      <find>EtlFlow</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -169,10 +311,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.html" />
         <option value="$PROJECT_DIR$/src/app/pages/login/login.module.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/login/login.html" />
         <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.html" />
@@ -183,7 +321,6 @@
         <option value="$PROJECT_DIR$/src/app/_services/authentication.service.ts" />
         <option value="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.html" />
         <option value="$PROJECT_DIR$/server/boot/authentication.ts" />
-        <option value="$PROJECT_DIR$/server/model-config.json" />
         <option value="$PROJECT_DIR$/docker/_run_docker_dist.sh" />
         <option value="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
         <option value="$PROJECT_DIR$/server/boot/webpack.ts" />
@@ -196,7 +333,6 @@
         <option value="$PROJECT_DIR$/config/webpack.dev.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/_services/websocket.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/_services/index.ts" />
         <option value="localhost:3000/main.bundle.js" />
         <option value="$PROJECT_DIR$/src/custom-typings.d.ts" />
         <option value="$PROJECT_DIR$/server/boot/websocket.ts" />
@@ -210,16 +346,22 @@
         <option value="$PROJECT_DIR$/server/boot/dbMonitorService.ts" />
         <option value="$PROJECT_DIR$/server/inversify.config.ts" />
         <option value="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/_services/postal.service.ts" />
         <option value="$PROJECT_DIR$/src/app/_services/etl.service.ts" />
-        <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts" />
         <option value="$PROJECT_DIR$/server/config.json" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" />
-        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
         <option value="$PROJECT_DIR$/common/models/etlFile.json" />
+        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" />
+        <option value="$PROJECT_DIR$/server/model-config.json" />
+        <option value="$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/_services/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
+        <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts" />
+        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
       </list>
     </option>
   </component>
@@ -303,6 +445,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -357,11 +531,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="boot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -415,7 +589,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/server.js" />
+    <property name="last_opened_file_path" value="$USER_HOME$/tmp/loopback-getting-started-intermediate" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -427,17 +601,34 @@
     <property name="SearchEverywhereHistoryKey" value="inversi&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/server/inversify.config.ts&#10;etl.ser&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/src/app/_services/etl.service.ts&#10;pack&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/package.json&#10;packa&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/package.json&#10;AlertComponent&#9;null&#9;null&#10;app.module&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/src/app/app.module.ts" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/app/theme/components/baMenu" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="467" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="467" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="467" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="466" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="244" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="251" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="323" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1049" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/_interfaces" />
+      <recent name="$PROJECT_DIR$/server" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/services/implementations" />
       <recent name="$PROJECT_DIR$/server/services/interfaces" />
       <recent name="$PROJECT_DIR$/server/boot" />
       <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/src/app/_services" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
@@ -467,6 +658,16 @@
       <command value="run" />
       <scripts>
         <script value="build:prod" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="build:dev" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -624,7 +825,7 @@
       <envs />
       <method />
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.server.js JavaScript" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.server.js" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.static" />
@@ -632,12 +833,14 @@
       <item index="4" class="java.lang.String" itemvalue="Gulp.js.default" />
       <item index="5" class="java.lang.String" itemvalue="npm.build" />
       <item index="6" class="java.lang.String" itemvalue="npm.build:prod" />
+      <item index="7" class="java.lang.String" itemvalue="npm.build:dev" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="npm.build:prod" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
-        <item index="2" class="java.lang.String" itemvalue="npm.build" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="npm.build:dev" />
+        <item index="1" class="java.lang.String" itemvalue="npm.build:prod" />
+        <item index="2" class="java.lang.String" itemvalue="Gulp.js.default" />
+        <item index="3" class="java.lang.String" itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -676,7 +879,8 @@
       <workItem from="1485201187633" duration="4307000" />
       <workItem from="1485272605081" duration="14192000" />
       <workItem from="1485352899539" duration="8058000" />
-      <workItem from="1485370119283" duration="3732000" />
+      <workItem from="1485370119283" duration="11362000" />
+      <workItem from="1485459497930" duration="2471000" />
     </task>
     <task id="LOCAL-00001" summary="Update ng2-admin &amp; restructure a bit (remove client folder)">
       <created>1482503412853</created>
@@ -755,11 +959,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485289574101</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Homeward!">
+      <created>1485378062859</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1485378062859</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140262000" />
+    <option name="totallyTimeSpent" value="150363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -774,26 +985,27 @@
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24196099" sideWeight="0.21221864" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13020559" sideWeight="0.76848876" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17554033" sideWeight="0.23126338" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3488372" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32690248" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3397642" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.227224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20611492" sideWeight="0.6511628" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43194" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42443728" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22186495" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -887,114 +1099,28 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts</url>
+          <line>41</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/boot/static.ts</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="165" />
+      <option name="time" value="170" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/server.js" />
-    <entry file="file://$PROJECT_DIR$/server/boot/websocket.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/nodejs-websocket/frame.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/nodejs-websocket/InStream.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/nodejs-websocket/Connection.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/nodejs-websocket/index.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/nodejs-websocket/Server.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/authentication.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/typescriptCompiler/external/lib.es6.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256518">
-          <caret line="14264" column="10" lean-forward="false" selection-start-line="14264" selection-start-column="10" selection-end-line="14264" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/interfaces/base-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/01-populate-db.js" />
     <entry file="file://$PROJECT_DIR$/server/boot/01-populate-db.ts" />
-    <entry file="file://$PROJECT_DIR$/server/boot/service-manager-startup.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/services/interfaces/initialize-database.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1054,35 +1180,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/inversify.config.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/websocket.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1102,44 +1203,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/common/models/etlTask.json" />
+    <entry file="file://$PROJECT_DIR$/common/models/etlFile.json" />
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="81" column="49" lean-forward="false" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="486">
+          <caret line="27" column="142" lean-forward="false" selection-start-line="27" selection-start-column="142" selection-end-line="27" selection-end-column="142" />
           <folding>
-            <marker date="1485188800686" expanded="true" signature="249:386" ph="..." />
-            <marker date="1485188800686" expanded="true" signature="280:375" ph="..." />
-            <marker date="1485188800686" expanded="true" signature="426:1254" ph="..." />
-            <marker date="1485188800686" expanded="true" signature="432:1032" ph="..." />
+            <element signature="n#td#4;n#tr#0;n#ng-container#0;n#ng-container#0;n#tbody#0;n#table#0;n#div#0;n#ba-card#1;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/_services/etl.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/etlTask.json">
+    <entry file="file://$PROJECT_DIR$/common/models/etlFlow.json" />
+    <entry file="file://$PROJECT_DIR$/common/models/etlStep.json" />
+    <entry file="file://$PROJECT_DIR$/server/component-config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1154,66 +1232,249 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="42" column="53" lean-forward="false" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <element signature="n#div#1;n#ba-card#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#td#4;n#tr#0;n#ng-container#0;n#ng-container#0;n#tbody#0;n#table#0;n#div#0;n#ba-card#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/etlStep.json">
+    <entry file="file://$PROJECT_DIR$/server/custom-typings.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/etlFlow.json">
+    <entry file="file://$PROJECT_DIR$/server/datasources.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
+    <entry file="file://$PROJECT_DIR$/server/inversify.config.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/middleware.development.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/middleware.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/model-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/_services/etl.service.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/_models/authentication.models.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="2" lean-forward="false" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/_services/websocket.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <element signature="n#!!block;n#createChangeStream_EtlFile#0;n#DbMonitorImpl#0" expanded="false" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+          <folding>
+            <element signature="e#577#613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/_services/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485188800686" expanded="true" signature="249:386" ph="..." />
+            <marker date="1485188800686" expanded="true" signature="280:375" ph="..." />
+            <marker date="1485188800686" expanded="true" signature="426:1254" ph="..." />
+            <marker date="1485188800686" expanded="true" signature="432:1032" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#54#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/boot/static.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="378">
+          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/etlFile.json">
+    <entry file="file://$PROJECT_DIR$/server/boot/service-manager-startup.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/boot/webpack.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
-            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#0#74#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/boot/websocket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="320" column="4" lean-forward="false" selection-start-line="320" selection-start-column="4" selection-end-line="320" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!block;n#createChangeStream_EtlFile#0;n#DbMonitorImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>

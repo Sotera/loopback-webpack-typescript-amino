@@ -1,7 +1,6 @@
 import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
-import {ETLService} from "../../../../_services/etl.service";
-import {EtlFile} from "../../../../_models/flow.models";
 import {PostalService, PublishTarget} from "../../../../_services/postal.service";
+import {EtlFile} from "../../../../_interfaces/etl.interfaces";
 
 @Component({
   selector: 'etl-activity-component',

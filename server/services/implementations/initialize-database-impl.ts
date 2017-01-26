@@ -7,10 +7,20 @@ const async = require('async');
 
 @injectable()
 export class InitializeDatabaseImpl implements InitializeDatabase {
-  static defaultFlows = [
+  static etlFlows = [
     {
-      id: '586bcc5695e16687155b4a52',
-      name: 'Bro'
+      name: 'Bro',
+      steps: [
+        {
+          name: 'UnEncryptUnTar'
+        },
+        {
+          name: 'UnZip'
+        },
+        {
+          name: 'MergeCap'
+        }
+      ]
     }
   ];
 
@@ -24,9 +34,10 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
   }
 
   init(cb: (err: Error, result: any) => void) {
-    let etlFlow = this.baseService.server.models.EtlFlow;
-    etlFlow.getDataSource().setMaxListeners(0);
-    this.createFlows(InitializeDatabaseImpl.defaultFlows, etlFlow, cb);
+    /*    let etlFlow = this.baseService.server.models.EtlFlow;
+     etlFlow.getDataSource().setMaxListeners(0);
+     this.createFlows(InitializeDatabaseImpl.etlFlows, etlFlow, cb);*/
+    cb(null, null);
   }
 
   private createFlows(flows, etlFlow, cb) {

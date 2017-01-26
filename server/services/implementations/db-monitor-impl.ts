@@ -10,8 +10,13 @@ const config = require('../../config.json');
 
 interface EtlStatus {
   tag: any,
+  streamId: string,
+  flowId: string,
+  stepId: string,
   status: string,
   startTime: Date,
+  currentTime: Date,
+  finishTime: Date,
   currentProgress: number,
   overallProgress: number
 }
@@ -38,8 +43,10 @@ export class DbMonitorImpl implements DbMonitor {
 
   init(cb: (err: Error, result: any) => void) {
     let me = this;
+/*
     me.createChangeStream_EtlFile();
     me.createChangeStream_EtlTask();
+*/
 
     //TODO: Park this subscription here temporarily until we design the subscription service
     me.postal.subscribe({
@@ -125,8 +132,27 @@ export class DbMonitorImpl implements DbMonitor {
   private processFullPipelineInstance(fullPipeline: FullPipeline,
                                       statusCb: (err: Error, result: EtlStatus) => void,
                                       finalCb: (err: Error, result: any) => void) {
+    let count = 0;
+    let statuses = ['status 1', 'status 2', 'status 3', 'status 4'];
+    let tag = {};
+    let startTime = new Date();
+    let finishTime = null;
+    let currentProgress = 0.3;
+    let overallProgress = 0.6;
+
     setInterval(() => {
-      statusCb(null, null);
+      statusCb(null, {
+        tag,
+        status: statuses[++count % statuses.length],
+        streamId:'',
+        flowId:'',
+        stepId:'',
+        startTime,
+        currentTime: new Date(),
+        finishTime,
+        currentProgress,
+        overallProgress
+      });
     }, 1000);
   }
 
@@ -271,7 +297,7 @@ export class DbMonitorImpl implements DbMonitor {
   }
 
   private publishAllEtlFiles() {
-    let me = this;
+/*    let me = this;
     let etlFile = me.server.models.EtlFile;
     etlFile.find((err, etlFiles) => {
       if (err) {
@@ -292,7 +318,7 @@ export class DbMonitorImpl implements DbMonitor {
           data: etlFilesSortedByDate
         }
       });
-    });
+    });*/
   }
 
   private generateUUID() {

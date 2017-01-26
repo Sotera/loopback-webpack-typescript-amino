@@ -5,11 +5,7 @@ import { NgaModule } from '../../theme/nga.module';
 
 import { routing }       from './vita.routing';
 import { Vita } from './vita.component';
-import {EtlTask1} from "./components/etl-task1/etl-task1.component";
 import {EtlActivity} from "./components/etl-activity/etl-activity.component";
-import {EtlFileManager} from "./components/etl-fileManager/etl-fileManager.component";
-import {EtlFlow} from "./components/etl-flow/etl-flow.component";
-
 
 @NgModule({
   imports: [
@@ -20,10 +16,7 @@ import {EtlFlow} from "./components/etl-flow/etl-flow.component";
   ],
   declarations: [
     Vita,
-    EtlTask1,
-    EtlActivity,
-    EtlFileManager,
-    EtlFlow
+    EtlActivity
   ]
 })
 export default class VitaModule {

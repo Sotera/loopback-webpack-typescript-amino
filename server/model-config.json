@@ -19,26 +19,6 @@
     "dataSource": "mongodb",
     "public": false
   },
-  "EtlFile": {
-    "dataSource": "mongodb",
-    "public": true
-  },
-  "EtlFlow": {
-    "dataSource": "mongodb",
-    "public": true
-  },
-  "EtlResource": {
-    "dataSource": "mongodb",
-    "public": true
-  },
-  "EtlStep": {
-    "dataSource": "mongodb",
-    "public": true
-  },
-  "EtlTask": {
-    "dataSource": "mongodb",
-    "public": true
-  },
   "RoleMapping": {
     "dataSource": "mongodb",
     "public": false

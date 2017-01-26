@@ -24,14 +24,12 @@ import {AuthenticationService} from "./_services/authentication.service";
 import {AppDescriptionService} from "./_services/app-description.service";
 import {PostalService} from "./_services/postal.service";
 import {WebSocketService} from "./_services/websocket.service";
-import {ETLService} from "./_services/etl.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
   AppDescriptionService,
   AlertService,
-  ETLService,
   PostalService,
   WebSocketService,
   GlobalState
@@ -76,7 +74,6 @@ type StoreType = {
 })
 
 export class AppModule {
-
   constructor(public appRef: ApplicationRef,
               public appState: AppState,
               private postalService: PostalService) {
