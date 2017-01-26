@@ -16,6 +16,7 @@ import {EtlFile} from "../../../../_models/flow.models";
 export class EtlActivity implements AfterViewInit{
   displayFiles: EtlFile[];
   detailStatus= false;
+  errorStatus= false;
 
   constructor(private etlService: ETLService) {}
 
@@ -30,10 +31,6 @@ export class EtlActivity implements AfterViewInit{
       err => {
         var e = err;
       });
-  }
-
-  showDetail(): void{
-    this.detailStatus = !this.detailStatus;
   }
 
   deleteFile(fileId){

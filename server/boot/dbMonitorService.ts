@@ -91,6 +91,7 @@ module.exports = function (app) {
 
   function appendEtlResults(apdFile) {
     let etlFile = app.models.EtlFile;
+    let etlErrs = [];
 
     etlFile.findById(apdFile.tag.fileID, function (err, file) {
       if (err || !file) {
@@ -101,6 +102,7 @@ module.exports = function (app) {
       fileInfo.flows[0].lastStatus = apdFile.status;
 
       // //Build decryptStep
+      //************************************************************************************
       let decryptSrc = {
         id:generateUUID(),
         path: file.path + file.name,
@@ -109,14 +111,22 @@ module.exports = function (app) {
 
       let decryptProds = [];
       apdFile.decryptAndUnTarResults.forEach(function (result) {
-        result.zipFiles.forEach(function(zipfile){
-          let newZip  ={
-            id:generateUUID(),
-            path: zipfile,
-            type: ".pcap.gz"
+        if(result.error){
+          let newErr = {
+            error: result.error.message,
+            location: result.exportDir
           };
-          decryptProds.push(newZip)
-        });
+          etlErrs.push(newErr);
+        }else{
+          result.zipFiles.forEach(function(zipfile){
+            let newZip  ={
+              id:generateUUID(),
+              path: zipfile,
+              type: ".pcap.gz"
+            };
+            decryptProds.push(newZip)
+          });
+        }
       });
 
       let decryptStep = {
@@ -132,8 +142,8 @@ module.exports = function (app) {
 
       fileInfo.flows[0].steps.push(decryptStep);
 
-      //TODO
       // Build unzipStep
+      //************************************************************************************
       let unzipSrc = {
         id:generateUUID(),
         path: 'xx',
@@ -141,13 +151,21 @@ module.exports = function (app) {
       };
       let unzipProds = [];
       apdFile.unZipFileResults.forEach(function (result) {
-        result.forEach(function(zipfile){
-          let newZipProd  ={
-            id:generateUUID(),
-            path: zipfile.unzippedFilePath,
-            type: ".pcap.gz"
-          };
-          unzipProds.push(newZipProd);
+        result.forEach(function(zipFile){
+          if(zipFile.error){
+            let newErr = {
+              error: zipFile.error.message,
+              location: zipFile.zippedFilePath
+            };
+            etlErrs.push(newErr);
+          }else{
+            let newZipProd  ={
+              id:generateUUID(),
+              path: zipFile.unzippedFilePath,
+              type: ".pcap.gz"
+            };
+            unzipProds.push(newZipProd);
+          }
         });
       });
 
@@ -164,8 +182,9 @@ module.exports = function (app) {
 
       fileInfo.flows[0].steps.push(unzipStep);
 
-      //TODO
+
       // //Build mergeStep
+      //************************************************************************************
       let mergeSrc = {
         id:generateUUID(),
         path: 'xx',
@@ -188,7 +207,17 @@ module.exports = function (app) {
         products:mergeProds
       };
 
+      if(apdFile.mergePcapFilesResult.error){
+        let newErr = {
+          error: apdFile.mergePcapFilesResult.error.message,
+          location: apdFile.mergePcapFilesResult.mergedPcapFile
+        };
+        etlErrs.push(newErr);
+      }
+
       fileInfo.flows[0].steps.push(mergeStep);
+
+      fileInfo.flows[0].errs = etlErrs;
 
       file.updateAttributes(fileInfo,function(err,file){
         if (err || !file) {
@@ -199,8 +228,6 @@ module.exports = function (app) {
       });
     })
   }
-
-
 
   function generateUUID(){
     var d = new Date().getTime();
