@@ -1,8 +1,8 @@
 import {injectable, inject} from 'inversify';
-import {InitializeDatabase} from "../interfaces/initialize-database";
-import {CommandUtil} from "firmament-yargs";
-import {BaseService} from "../interfaces/base-service";
-
+import {InitializeDatabase} from '../interfaces/initialize-database';
+import {CommandUtil} from 'firmament-yargs';
+import {BaseService} from '../interfaces/base-service';
+import * as _ from 'lodash';
 const async = require('async');
 
 @injectable()
@@ -12,13 +12,13 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
       name: 'Bro',
       steps: [
         {
-          name: 'UnEncryptUnTar'
+          name: 'UnEncryptAndUnTar'
         },
         {
-          name: 'UnZip'
+          name: 'UnZipAllPcaps'
         },
         {
-          name: 'MergeCap'
+          name: 'MergePcaps'
         }
       ]
     }
@@ -34,26 +34,26 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
   }
 
   init(cb: (err: Error, result: any) => void) {
-    /*    let etlFlow = this.baseService.server.models.EtlFlow;
-     etlFlow.getDataSource().setMaxListeners(0);
-     this.createFlows(InitializeDatabaseImpl.etlFlows, etlFlow, cb);*/
-    cb(null, null);
-  }
-
-  private createFlows(flows, etlFlow, cb) {
     let me = this;
-    let functionArray = [];
-    flows.forEach(flow => {
-      functionArray.push(async.apply(this.findOrCreateObject.bind(me), etlFlow, {where: {name: flow.name}}, flow));
+    let etlFlow = this.baseService.server.models.EtlFlow;
+    etlFlow.getDataSource().setMaxListeners(0);
+    InitializeDatabaseImpl.etlFlows.forEach(flow => {
+      etlFlow.findOrCreate({where: {name: flow.name}, include: ['steps']}, flow, (err, newFlow) => {
+        if (me.commandUtil.callbackIfError(cb, err)) {
+          return;
+        }
+        //Stringify & parse loopback object to get contained objects
+        let dbFlow = JSON.parse(JSON.stringify(newFlow));
+        let stepsToAdd = _.differenceWith(flow.steps, dbFlow.steps, (a, b) => {
+          return a.name === b.name;
+        });
+        async.each(stepsToAdd, newFlow.steps.create, err => {
+          if (me.commandUtil.callbackIfError(cb, err)) {
+            return;
+          }
+          cb(null, {message:'Initialized database'});
+        });
+      });
     });
-    async.parallel(functionArray, cb);
-  }
-
-  private findOrCreateObject(model, query, objToCreate, cb) {
-    try {
-      model.findOrCreate(query, objToCreate, cb);
-    } catch (err) {
-      this.commandUtil.callbackIfError(cb, err);
-    }
   }
 }

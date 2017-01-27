@@ -43,10 +43,8 @@ export class DbMonitorImpl implements DbMonitor {
 
   init(cb: (err: Error, result: any) => void) {
     let me = this;
-/*
     me.createChangeStream_EtlFile();
     me.createChangeStream_EtlTask();
-*/
 
     //TODO: Park this subscription here temporarily until we design the subscription service
     me.postal.subscribe({
@@ -74,8 +72,7 @@ export class DbMonitorImpl implements DbMonitor {
         });
       }
     });
-
-    cb(null, null);
+    cb(null, {message: 'Initialized dbMonitor'});
   }
 
   private createChangeStream_EtlFile() {

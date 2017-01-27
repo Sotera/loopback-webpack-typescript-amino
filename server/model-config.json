@@ -26,5 +26,17 @@
   "Role": {
     "dataSource": "mongodb",
     "public": false
+  },
+  "EtlFile": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "EtlFlow": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "EtlStep": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

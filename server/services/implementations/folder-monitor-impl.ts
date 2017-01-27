@@ -43,6 +43,6 @@ export class FolderMonitorImpl implements FolderMonitor {
         me.commandUtil.logError(err);
       });
     });
-    cb(null, null);
+    cb(null, {message:'Initialized folder monitor'});
   }
 }
