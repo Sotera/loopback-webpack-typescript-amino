@@ -38,5 +38,9 @@
   "EtlStep": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "EtlTask": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

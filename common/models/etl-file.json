@@ -1,0 +1,34 @@
+{
+  "name": "EtlFile",
+  "plural": "EtlFiles",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "path": {
+      "type": "string"
+    },
+    "size": {
+      "type": "number"
+    },
+    "createDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "flows": {
+      "type": "hasMany",
+      "model": "EtlFlow",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

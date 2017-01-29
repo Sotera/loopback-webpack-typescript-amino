@@ -294,13 +294,14 @@ export class DbMonitorImpl implements DbMonitor {
   }
 
   private publishAllEtlFiles() {
-/*    let me = this;
+    let me = this;
     let etlFile = me.server.models.EtlFile;
-    etlFile.find((err, etlFiles) => {
+    etlFile.find({include: ['flows']},(err, etlFiles) => {
       if (err) {
         me.commandUtil.logError(err);
         return;
       }
+      let test = JSON.parse(JSON.stringify(etlFiles));
       let etlFilesSortedByDate = etlFiles.sort((a, b) => {
         a = new Date(a.createDate);
         b = new Date(b.createDate);
@@ -315,7 +316,7 @@ export class DbMonitorImpl implements DbMonitor {
           data: etlFilesSortedByDate
         }
       });
-    });*/
+    });
   }
 
   private generateUUID() {

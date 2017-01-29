@@ -1,4 +1,4 @@
-export interface EtlFlow {
+/*export interface EtlFlow {
   id: string;
   name: string;
   steps: EtlStep[];
@@ -36,4 +36,4 @@ export interface EtlResource {
 export interface EtlTask {
   fileId: string;
   flowId: string;
-}
+}*/
