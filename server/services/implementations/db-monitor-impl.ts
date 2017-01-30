@@ -3,10 +3,11 @@ import {CommandUtil, IPostal} from "firmament-yargs";
 import {BaseService} from "../interfaces/base-service";
 import {DbMonitor} from "../interfaces/db-monitor";
 import {FullPipeline, VitaTasks} from "firmament-vita";
-//import * as _ from 'lodash';
+import * as _ from 'lodash';
 
 const path = require('path');
 const config = require('../../config.json');
+const async = require('async');
 
 interface EtlStatus {
   tag: any,
@@ -26,6 +27,7 @@ export class DbMonitorImpl implements DbMonitor {
   private stateMap = {};
   private etlFile: any;
   private etlTask: any;
+  private etlFlow: any;
 
   constructor(@inject('BaseService') private baseService: BaseService,
               @inject('IPostal') private postal: IPostal,
@@ -34,6 +36,7 @@ export class DbMonitorImpl implements DbMonitor {
               @inject('CommandUtil') private commandUtil: CommandUtil) {
     this.commandUtil.log('DbMonitor created');
     this.etlFile = this.server.models.EtlFile;
+    this.etlFlow = this.server.models.EtlFlow;
     this.etlTask = this.server.models.EtlTask;
   }
 
@@ -73,6 +76,9 @@ export class DbMonitorImpl implements DbMonitor {
       }
     });
     cb(null, {message: 'Initialized dbMonitor'});
+    /*    setTimeout(() => {
+     me.taskAdded('588e2c3c61e2fe637472be8f', 'Bro');
+     }, 3000);*/
   }
 
   private createChangeStream_EtlFile() {
@@ -89,100 +95,140 @@ export class DbMonitorImpl implements DbMonitor {
     me.etlTask.createChangeStream((err, changes) => {
       changes.on('data', (change) => {
         if (change.type === 'create') {
-          me.etlFile.findById(change.data.fileId.toString(), (err, file) => {
-            if (err || !file) {
-              return;
-            }
-            //Append Flow to File object in database
-            let newFlow = {
-              id: config.defaultFlowId,
-              lastStatus: 'Queued',
-              name: 'Bro'
-            };
-            file.etlFlows.create(newFlow, (err, flow) => {
-              if (err) {
-                return this.commandUtil.logError(err);
-              }
-              //Kick off Flow process
-              me.stateMap[file.id.toString()] = 'Queued';
-              me.fullPipeline.tag = {
-                fileID: file.id.toString(),
-                flowID: config.defaultFlowId
-              };
-              me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
-              me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
-              me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
-
-              //me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, result) => {
-              me.processFullPipelineInstance(me.fullPipeline, (err, result: EtlStatus) => {
-                me.updateEtlStatus(result);
-              }, (err, result) => {
-                me.appendEtlResults(result);
-              });
-            });
-          });
+          me.taskAdded(change.data.fileId, change.data.flowId);
         }
       });
     });
   }
 
-  private processFullPipelineInstance(fullPipeline: FullPipeline,
-                                      statusCb: (err: Error, result: EtlStatus) => void,
-                                      finalCb: (err: Error, result: any) => void) {
-    let count = 0;
-    let statuses = ['status 1', 'status 2', 'status 3', 'status 4'];
-    let tag = {};
-    let startTime = new Date();
-    let finishTime = null;
-    let currentProgress = 0.3;
-    let overallProgress = 0.6;
+  private taskAdded(fileId: string, flowId: string) {
+    let me = this;
+    async.waterfall([
+      (cb) => {
+        me.etlFlow.find({where: {name: flowId}, include: ['steps']}, cb);
+      },
+      (flows, cb) => {
+        flows = JSON.parse(JSON.stringify(flows));
+        let flow = _.find(flows, (flow: any) => {
+          return !flow.etlFileId;
+        });
 
-    setInterval(() => {
-      statusCb(null, {
-        tag,
-        status: statuses[++count % statuses.length],
-        streamId:'',
-        flowId:'',
-        stepId:'',
-        startTime,
-        currentTime: new Date(),
-        finishTime,
-        currentProgress,
-        overallProgress
+        me.etlFile.findById(fileId, {include: ['flows']}, (err, file) => {
+          flow = _.omit(flow, ['id']);
+          file.flows.create(flow, (err, newFlow) => {
+            if (me.commandUtil.callbackIfError(cb, err)) {
+              return;
+            }
+            flowId = newFlow.id.toString();
+            async.each(flow.steps, (step, cb2) => {
+              step = _.omit(step, ['id']);
+              newFlow.steps.create(step, cb2);
+            }, err => {
+              cb(err, fileId);
+            });
+          });
+        });
+      },
+      (fileId, cb) => {
+        me.etlFile.findById(fileId, (err, file) => {
+          file = JSON.parse(JSON.stringify(file));
+          cb(err, file);
+        });
+      }
+    ], (err, file) => {
+      me.fullPipeline.tag = {fileId, flowId};
+      me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
+      me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
+      me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
+
+      //me.processFullPipelineInstance(me.fullPipeline, (err, result: EtlStatus) => {
+      me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
+        me.updateEtlStatus(status);
+      }, (err, result) => {
+        me.appendEtlResults(result);
       });
-    }, 1000);
+    });
   }
 
-  private updateEtlStatus(etlStatus: EtlStatus) {
+  /*  private processFullPipelineInstance(fullPipeline: FullPipeline,
+   statusCb: (err: Error, result: EtlStatus) => void,
+   finalCb: (err: Error, result: any) => void) {
+   let count = 0;
+   let statuses = ['status 1', 'status 2', 'status 3', 'status 4'];
+   let tag = {};
+   let startTime = new Date();
+   let finishTime = null;
+   let currentProgress = 0.3;
+   let overallProgress = 0.6;
+
+   setInterval(() => {
+   statusCb(null, {
+   tag,
+   status: statuses[++count % statuses.length],
+   streamId: '',
+   flowId: '',
+   stepId: '',
+   startTime,
+   currentTime: new Date(),
+   finishTime,
+   currentProgress,
+   overallProgress
+   });
+   }, 1000);
+   }*/
+
+  private updateEtlStatus(status: any) {
     let me = this;
     let etlFile = me.server.models.EtlFile;
 
-    //If the state has changed, update it
-    if (etlStatus.status != me.stateMap[etlStatus.tag.fileID]) {
-      me.stateMap[etlStatus.tag.fileID] = etlStatus.status;
-      etlFile.findById(etlStatus.tag.fileID, (err, file) => {
-        if (err || !file) {
-          let x = err;
-          return;
+    me.etlFile.findById(status.tag.fileId, {
+      include: {
+        relation: 'flows',
+        scope: {
+          include: ['steps']
         }
-        let fileInfo = file;
-        fileInfo.steps = [];
+      }
+    }, (err, file) => {
+      file = JSON.parse(JSON.stringify(file));
+      let flow = _.find(file.flows,['id',status.tag.flowId]);
+      flow = _.find(file.flows,['id',status.tag.flowId]);
+/*      file.flows({where: {id: status.tag.flowId}}, (err, foundFlows) => {
+        if(foundFlows.length !== 1){
 
-        fileInfo.flows.forEach((flow) => {
-          if (flow.id == config.defaultFlowId) {
-            if (flow.lastStatus != etlStatus.status) {
-              flow.lastStatus = etlStatus.status;
-            }
-          }
-        });
+        }
+        let f = foundFlows[0];
+        f = foundFlows[0];
+      });*/
+    });
 
-        file.updateAttributes(fileInfo, (err, file) => {
-          if (err || !file) {
-            let e = err;
-          }
-        });
-      })
-    }
+    me.publishAllEtlFiles();
+
+    //If the state has changed, update it
+    /*    if (etlStatus.status != me.stateMap[etlStatus.tag.fileID]) {
+     me.stateMap[etlStatus.tag.fileID] = etlStatus.status;
+     etlFile.findById(etlStatus.tag.fileID, (err, file) => {
+     if (err || !file) {
+     let x = err;
+     return;
+     }
+     let fileInfo = file;
+     fileInfo.steps = [];
+
+     fileInfo.flows.forEach((flow) => {
+     if (flow.id == config.defaultFlowId) {
+     if (flow.lastStatus != etlStatus.status) {
+     flow.lastStatus = etlStatus.status;
+     }
+     }
+     });
+
+     file.updateAttributes(fileInfo, (err, file) => {
+     if (err || !file) {
+     let e = err;
+     }
+     });
+     })
+     }*/
   }
 
   private appendEtlResults(apdFile) {
@@ -296,7 +342,7 @@ export class DbMonitorImpl implements DbMonitor {
   private publishAllEtlFiles() {
     let me = this;
     let etlFile = me.server.models.EtlFile;
-    etlFile.find({include: ['flows']},(err, etlFiles) => {
+    etlFile.find({include: ['flows']}, (err, etlFiles) => {
       if (err) {
         me.commandUtil.logError(err);
         return;

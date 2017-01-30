@@ -4,31 +4,30 @@
     <ba-card title="Unprocessed Files" baCardClass="with-scroll">
       <div align="right">
         <button type="button" class="btn btn-primary btn-md" (click)="loadFiles()"><i class="ion-refresh" title="Refresh results"> Refresh</i></button>
-<!--        <button type="button" class="btn btn-primary btn-md" (click)="luvFiles()"><i class="ion-refresh" title="Luv results"> Luv Me!</i></button>-->
       </div>
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
-            <tr>
-              <th style="width: 25%" class="th-center"> File ID</th>
-              <th style="width: 25%" class="th-center"> File</th>
-              <th style="width: 15%" class="th-center"> Size (GB)</th>
-              <th style="width: 15%" class="th-center"> Created</th>
-              <th style="width: 5%" class="th-center"> Tasks</th>
-            </tr>
+          <tr>
+            <th style="width: 25%" class="th-center"> File ID</th>
+            <th style="width: 25%" class="th-center"> File</th>
+            <th style="width: 15%" class="th-center"> Size (GB)</th>
+            <th style="width: 15%" class="th-center"> Created</th>
+            <th style="width: 5%" class="th-center"> Tasks</th>
+          </tr>
           </thead>
           <tbody>
-            <ng-container *ngFor="let file of displayFiles">
-              <tr *ngIf="file.flows.length == 0">
-                <td class="td-center">{{file.id}}</td>
-                <td class="td-center">{{file.path}}{{file.name}}</td>
-                <td class="td-center">{{file.size}}</td>
-                <td class="td-center">{{file.createDate | date: 'medium'}}</td>
-                <td class="td-center">
-                  <button type="button" class="btn btn-primary btn-icon" (click)="processFile({fileId:file.id, flowId:'Bro'})" title="Bro process file"><i class="ion-android-send"> Bro</i></button>
-                </td>
-              </tr>
-            </ng-container>
+          <ng-container *ngFor="let file of displayFiles">
+            <tr *ngIf="file.flows.length == 0">
+              <td class="td-center">{{file.id}}</td>
+              <td class="td-center">{{file.path}}{{file.name}}</td>
+              <td class="td-center">{{file.size}}</td>
+              <td class="td-center">{{file.createDate | date: 'medium'}}</td>
+              <td class="td-center">
+                <button type="button" class="btn btn-primary btn-icon" (click)="processFile({fileId:file.id, flowId:'582c9ed90dcb247b333fb1d6'})" title="Bro process file"><i class="ion-android-send"> Bro</i></button>
+              </td>
+            </tr>
+          </ng-container>
           </tbody>
         </table>
       </div>
@@ -40,23 +39,35 @@
         <table class="table table-bordered table-striped">
           <thead>
           <tr>
-            <th style="width: 25%" class="th-center">File</th>
-            <th style="width: 25%" class="th-center">Flow</th>
-            <th style="width: 15%" class="th-center">Last Status</th>
-            <th style="width: 25%" class="th-center">Steps</th>
+            <th style="width: 25%" class="th-center"> File</th>
+            <th style="width: 25%" class="th-center"> Flow</th>
+            <th style="width: 15%" class="th-center"> Status</th>
+            <th style="width: 25%" class="th-center"> Steps </th>
             <th style="width: 10%" class="th-center"></th>
           </tr>
           </thead>
           <tbody>
           <ng-container *ngFor="let file of displayFiles">
-            <ng-container *ngIf="file.flows.length > 0">
+            <ng-container *ngIf="file.flows">
               <tr *ngFor="let flow of file.flows">
                 <td class="td-center">{{file.path}}{{file.name}}</td>
                 <td class="td-center">{{flow.id}}</td>
-                <td class="td-center">{{flow.lastStatus}}</td>
                 <td class="td-center">
-                  <div *ngIf="detailStatus==false"> . . . </div>
-                  <div *ngIf="detailStatus==true">
+                  <div *ngIf="!flow.errs">{{flow.lastStatus}}</div>
+                  <div *ngIf="flow.errs">{{flow.lastStatus}} ({{flow.errs.length}})</div>
+
+                  <div *ngIf="flow.errs" >
+                    <div [hidden]="!flow.steps.hideElement">
+                      <div *ngFor="let err of flow.errs">
+                        <div><strong>{{err.error}}</strong></div>
+                        <div>file - '{{err.location}}'</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="td-center">
+                  <div *ngIf="!flow.steps.hideElement"> . . . </div>
+                  <div *ngIf="flow.steps.hideElement==true">
                     <div *ngFor="let step of flow.steps">
                       <div><strong>{{step.name}}</strong></div>
                       <div><strong>Start:</strong> {{step.start | date: 'medium'}}</div>
@@ -71,8 +82,8 @@
                   </div>
                 </td>
                 <td class="td-center">
-                  <button type="button" class="btn btn-primary btn-icon" (click)="showDetail(flow)" title="show Details" *ngIf="detailStatus==false"><i class="ion-android-expand"></i></button>
-                  <button type="button" class="btn btn-primary btn-icon" (click)="showDetail(flow)" title="hide Details" *ngIf="detailStatus==true"><i class="ion-android-contract"></i></button>
+                  <button type="button" class="btn btn-primary btn-icon" (click)="flow.steps.hideElement=!flow.steps.hideElement" *ngIf="!flow.steps.hideElement" title="show Details"><i class="ion-android-expand"></i></button>
+                  <button type="button" class="btn btn-primary btn-icon" (click)="flow.steps.hideElement=!flow.steps.hideElement" *ngIf="flow.steps.hideElement" title="hide Details"><i class="ion-android-contract"></i></button>
                   <button type="button" class="btn btn-danger btn-icon" (click)="deleteFile(file.id)" title="Delete File History"><i class="ion-trash-a"></i></button>
                 </td>
               </tr>
