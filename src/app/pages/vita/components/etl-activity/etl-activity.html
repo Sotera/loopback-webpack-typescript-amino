@@ -24,7 +24,7 @@
               <td class="td-center">{{file.size}}</td>
               <td class="td-center">{{file.createDate | date: 'medium'}}</td>
               <td class="td-center">
-                <button type="button" class="btn btn-primary btn-icon" (click)="processFile({fileId:file.id, flowId:'582c9ed90dcb247b333fb1d6'})" title="Bro process file"><i class="ion-android-send"> Bro</i></button>
+                <button type="button" class="btn btn-primary btn-icon" (click)="processFile({fileId:file.id, flowId:'Bro'})" title="Bro process file"><i class="ion-android-send"> Bro</i></button>
               </td>
             </tr>
           </ng-container>
@@ -55,7 +55,6 @@
                 <td class="td-center">
                   <div *ngIf="!flow.errs">{{flow.lastStatus}}</div>
                   <div *ngIf="flow.errs">{{flow.lastStatus}} ({{flow.errs.length}})</div>
-
                   <div *ngIf="flow.errs" >
                     <div [hidden]="!flow.steps.hideElement">
                       <div *ngFor="let err of flow.errs">
@@ -70,14 +69,14 @@
                   <div *ngIf="flow.steps.hideElement==true">
                     <div *ngFor="let step of flow.steps">
                       <div><strong>{{step.name}}</strong></div>
-                      <div><strong>Start:</strong> {{step.start | date: 'medium'}}</div>
+<!--                      <div><strong>Start:</strong> {{step.start | date: 'medium'}}</div>
                       <div><strong>End:</strong> {{step.end | date: 'medium'}}</div>
                       <div><strong>Source:</strong></div>
                       <div>{{step.source.path}}</div>
                       <div><strong>Products:</strong></div>
                       <div *ngFor="let product of step.products">
                         {{product.path.split('/').pop()}}
-                      </div>
+                      </div>-->
                     </div>
                   </div>
                 </td>

@@ -42,5 +42,9 @@
   "EtlTask": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "EtlResource": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

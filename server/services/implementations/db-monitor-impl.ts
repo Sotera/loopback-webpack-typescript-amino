@@ -4,6 +4,9 @@ import {BaseService} from "../interfaces/base-service";
 import {DbMonitor} from "../interfaces/db-monitor";
 import {FullPipeline, VitaTasks} from "firmament-vita";
 import * as _ from 'lodash';
+import {EtlFlow} from "../../../common/modelClasses/etl-flow";
+import {EtlFile} from "../../../common/modelClasses/etl-file";
+import {EtlStep} from "../../../common/modelClasses/etl-step";
 
 const path = require('path');
 const config = require('../../config.json');
@@ -24,10 +27,11 @@ interface EtlStatus {
 
 @injectable()
 export class DbMonitorImpl implements DbMonitor {
-  private stateMap = {};
+  private updatingEtlStatus: boolean = false;
   private etlFile: any;
   private etlTask: any;
   private etlFlow: any;
+  private etlStep: any;
 
   constructor(@inject('BaseService') private baseService: BaseService,
               @inject('IPostal') private postal: IPostal,
@@ -38,6 +42,7 @@ export class DbMonitorImpl implements DbMonitor {
     this.etlFile = this.server.models.EtlFile;
     this.etlFlow = this.server.models.EtlFlow;
     this.etlTask = this.server.models.EtlTask;
+    this.etlStep = this.server.models.EtlStep;
   }
 
   get server(): any {
@@ -119,30 +124,30 @@ export class DbMonitorImpl implements DbMonitor {
             if (me.commandUtil.callbackIfError(cb, err)) {
               return;
             }
-            flowId = newFlow.id.toString();
-            async.each(flow.steps, (step, cb2) => {
-              step = _.omit(step, ['id']);
-              newFlow.steps.create(step, cb2);
-            }, err => {
-              cb(err, fileId);
-            });
+            cb(err, fileId, newFlow.id.toString());
+            /*            async.each(flow.steps, (step, cb2) => {
+             step = _.omit(step, ['id']);
+             newFlow.steps.create(step, cb2);
+             }, err => {
+             cb(err, fileId);
+             });*/
           });
         });
       },
-      (fileId, cb) => {
+      (fileId, flowId, cb) => {
         me.etlFile.findById(fileId, (err, file) => {
           file = JSON.parse(JSON.stringify(file));
-          cb(err, file);
+          cb(err, file, fileId, flowId);
         });
       }
-    ], (err, file) => {
+    ], (err, file, fileId, flowId) => {
       me.fullPipeline.tag = {fileId, flowId};
       me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
       me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
       me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
 
-      //me.processFullPipelineInstance(me.fullPipeline, (err, result: EtlStatus) => {
       me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
+        me.commandUtil.log(JSON.stringify(status, undefined, 2));
         me.updateEtlStatus(status);
       }, (err, result) => {
         me.appendEtlResults(result);
@@ -150,36 +155,12 @@ export class DbMonitorImpl implements DbMonitor {
     });
   }
 
-  /*  private processFullPipelineInstance(fullPipeline: FullPipeline,
-   statusCb: (err: Error, result: EtlStatus) => void,
-   finalCb: (err: Error, result: any) => void) {
-   let count = 0;
-   let statuses = ['status 1', 'status 2', 'status 3', 'status 4'];
-   let tag = {};
-   let startTime = new Date();
-   let finishTime = null;
-   let currentProgress = 0.3;
-   let overallProgress = 0.6;
-
-   setInterval(() => {
-   statusCb(null, {
-   tag,
-   status: statuses[++count % statuses.length],
-   streamId: '',
-   flowId: '',
-   stepId: '',
-   startTime,
-   currentTime: new Date(),
-   finishTime,
-   currentProgress,
-   overallProgress
-   });
-   }, 1000);
-   }*/
-
   private updateEtlStatus(status: any) {
     let me = this;
-    let etlFile = me.server.models.EtlFile;
+    if (me.updatingEtlStatus) {
+      return;
+    }
+    me.updatingEtlStatus = true;
 
     me.etlFile.findById(status.tag.fileId, {
       include: {
@@ -188,20 +169,36 @@ export class DbMonitorImpl implements DbMonitor {
           include: ['steps']
         }
       }
-    }, (err, file) => {
-      file = JSON.parse(JSON.stringify(file));
-      let flow = _.find(file.flows,['id',status.tag.flowId]);
-      flow = _.find(file.flows,['id',status.tag.flowId]);
-/*      file.flows({where: {id: status.tag.flowId}}, (err, foundFlows) => {
-        if(foundFlows.length !== 1){
-
+    }, (err, etlFile) => {
+      let file = <EtlFile>JSON.parse(JSON.stringify(etlFile));
+      let flow = <EtlFlow>_.find(file.flows, ['id', status.tag.flowId]);
+      if (status.decryptAndUnTarStatus) {
+        let step = <EtlStep>_.find(flow.steps, ['name', 'DecryptAndUnTar']);
+        if (!step) {
+          me.etlFlow.findById(status.tag.flowId, (err, etlFlow) => {
+            let newStep = new EtlStep();
+            newStep.name = 'DecryptAndUnTar';
+            etlFlow.steps.create(newStep, (err, newStep) => {
+              me.updatingEtlStatus = false;
+              me.publishAllEtlFiles();
+            });
+          });
+        } else {
+          me.etlStep.findById(step.id, (err, etlStep) => {
+            me.updatingEtlStatus = false;
+            me.publishAllEtlFiles();
+          });
         }
-        let f = foundFlows[0];
-        f = foundFlows[0];
-      });*/
+      }
+      /*      file.flows({where: {id: status.tag.flowId}}, (err, foundFlows) => {
+       if(foundFlows.length !== 1){
+
+       }
+       let f = foundFlows[0];
+       f = foundFlows[0];
+       });*/
     });
 
-    me.publishAllEtlFiles();
 
     //If the state has changed, update it
     /*    if (etlStatus.status != me.stateMap[etlStatus.tag.fileID]) {
@@ -233,121 +230,128 @@ export class DbMonitorImpl implements DbMonitor {
 
   private appendEtlResults(apdFile) {
     let me = this;
-    let etlFile = me.server.models.EtlFile;
+    /*    let etlFile = me.server.models.EtlFile;
 
-    etlFile.findById(apdFile.tag.fileID, (err, file) => {
-      if (err || !file) {
-        let x = err;
-        return;
-      }
-      let fileInfo = file;
-      fileInfo.flows[0].lastStatus = apdFile.status;
+     etlFile.findById(apdFile.tag.fileID, (err, file) => {
+     if (err || !file) {
+     let x = err;
+     return;
+     }
+     let fileInfo = file;
+     fileInfo.flows[0].lastStatus = apdFile.status;
 
-      // //Build decryptStep
-      let decryptSrc = {
-        id: me.generateUUID(),
-        path: file.path + file.name,
-        type: ".enc"
-      };
+     // //Build decryptStep
+     let decryptSrc = {
+     id: me.generateUUID(),
+     path: file.path + file.name,
+     type: ".enc"
+     };
 
-      let decryptProds = [];
-      apdFile.decryptAndUnTarResults.forEach((result) => {
-        result.zipFiles.forEach((zipfile) => {
-          let newZip = {
-            id: me.generateUUID(),
-            path: zipfile,
-            type: ".pcap.gz"
-          };
-          decryptProds.push(newZip)
-        });
-      });
+     let decryptProds = [];
+     apdFile.decryptAndUnTarResults.forEach((result) => {
+     result.zipFiles.forEach((zipfile) => {
+     let newZip = {
+     id: me.generateUUID(),
+     path: zipfile,
+     type: ".pcap.gz"
+     };
+     decryptProds.push(newZip)
+     });
+     });
 
-      let decryptStep = {
-        id: me.generateUUID(),
-        index: 1,
-        name: "Decrypt and Untar",
-        start: apdFile.startTime,
-        end: apdFile.endTime,
-        result: "Success",
-        source: decryptSrc,
-        products: decryptProds
-      };
+     let decryptStep = {
+     id: me.generateUUID(),
+     index: 1,
+     name: "Decrypt and Untar",
+     start: apdFile.startTime,
+     end: apdFile.endTime,
+     result: "Success",
+     source: decryptSrc,
+     products: decryptProds
+     };
 
-      fileInfo.flows[0].steps.push(decryptStep);
+     fileInfo.flows[0].steps.push(decryptStep);
 
-      //TODO
-      // Build unzipStep
-      let unzipSrc = {
-        id: me.generateUUID(),
-        path: 'xx',
-        type: ".pcap.gz"
-      };
-      let unzipProds = [];
-      apdFile.unZipFileResults.forEach((result) => {
-        result.forEach((zipfile) => {
-          let newZipProd = {
-            id: me.generateUUID(),
-            path: zipfile.unzippedFilePath,
-            type: ".pcap.gz"
-          };
-          unzipProds.push(newZipProd);
-        });
-      });
+     //TODO
+     // Build unzipStep
+     let unzipSrc = {
+     id: me.generateUUID(),
+     path: 'xx',
+     type: ".pcap.gz"
+     };
+     let unzipProds = [];
+     apdFile.unZipFileResults.forEach((result) => {
+     result.forEach((zipfile) => {
+     let newZipProd = {
+     id: me.generateUUID(),
+     path: zipfile.unzippedFilePath,
+     type: ".pcap.gz"
+     };
+     unzipProds.push(newZipProd);
+     });
+     });
 
-      let unzipStep = {
-        id: me.generateUUID(),
-        index: 2,
-        name: "Unzip",
-        start: apdFile.startTime,
-        end: apdFile.endTime,
-        result: "Success",
-        source: unzipSrc,
-        products: unzipProds
-      };
+     let unzipStep = {
+     id: me.generateUUID(),
+     index: 2,
+     name: "Unzip",
+     start: apdFile.startTime,
+     end: apdFile.endTime,
+     result: "Success",
+     source: unzipSrc,
+     products: unzipProds
+     };
 
-      fileInfo.flows[0].steps.push(unzipStep);
+     fileInfo.flows[0].steps.push(unzipStep);
 
-      //TODO
-      // //Build mergeStep
-      let mergeSrc = {
-        id: me.generateUUID(),
-        path: 'xx',
-        type: ".pcap"
-      };
-      let mergeProds = [{
-        id: me.generateUUID(),
-        path: apdFile.mergePcapFilesResult.mergedPcapFile,
-        type: ".pcap"
-      }];
+     //TODO
+     // //Build mergeStep
+     let mergeSrc = {
+     id: me.generateUUID(),
+     path: 'xx',
+     type: ".pcap"
+     };
+     let mergeProds = [{
+     id: me.generateUUID(),
+     path: apdFile.mergePcapFilesResult.mergedPcapFile,
+     type: ".pcap"
+     }];
 
-      let mergeStep = {
-        id: me.generateUUID(),
-        index: 3,
-        name: "Mergecap",
-        start: apdFile.startTime,
-        end: apdFile.endTime,
-        result: "Success",
-        source: mergeSrc,
-        products: mergeProds
-      };
+     let mergeStep = {
+     id: me.generateUUID(),
+     index: 3,
+     name: "Mergecap",
+     start: apdFile.startTime,
+     end: apdFile.endTime,
+     result: "Success",
+     source: mergeSrc,
+     products: mergeProds
+     };
 
-      fileInfo.flows[0].steps.push(mergeStep);
+     fileInfo.flows[0].steps.push(mergeStep);
 
-      file.updateAttributes(fileInfo, (err, file) => {
-        delete me.stateMap[apdFile.tag.fileID];
-      });
-    })
+     file.updateAttributes(fileInfo, (err, file) => {
+     delete me.stateMap[apdFile.tag.fileID];
+     });
+     })*/
   }
 
   private publishAllEtlFiles() {
     let me = this;
     let etlFile = me.server.models.EtlFile;
-    etlFile.find({include: ['flows']}, (err, etlFiles) => {
+    etlFile.find({
+      include: {
+        relation: 'flows',
+        scope: {
+          include: ['steps']
+        }
+      }
+    }, (err, etlFiles) => {
       if (err) {
         me.commandUtil.logError(err);
         return;
       }
-      let test = JSON.parse(JSON.stringify(etlFiles));
+      //let test = JSON.parse(JSON.stringify(etlFiles));
       let etlFilesSortedByDate = etlFiles.sort((a, b) => {
         a = new Date(a.createDate);
         b = new Date(b.createDate);

@@ -7,7 +7,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "name":{
+    "name": {
       "type": "string",
       "required": true
     },
@@ -33,7 +33,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "sources": {
+      "type": "hasMany",
+      "model": "EtlResource",
+      "foreignKey": ""
+    },
+    "products": {
+      "type": "hasMany",
+      "model": "EtlResource",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

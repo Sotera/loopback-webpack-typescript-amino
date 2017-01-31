@@ -7,6 +7,6 @@ export class EtlStep{
   result: string;
   command: string;
   index: number;
-  source: EtlResource;
+  sources: EtlResource[];
   products: EtlResource[];
 }
