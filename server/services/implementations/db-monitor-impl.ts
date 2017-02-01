@@ -53,6 +53,7 @@ export class DbMonitorImpl implements DbMonitor {
     let me = this;
     me.createChangeStream_EtlFile();
     me.createChangeStream_EtlTask();
+    me.createChangeStream_EtlStep();
 
     //TODO: Park this subscription here temporarily until we design the subscription service
     me.postal.subscribe({
@@ -90,6 +91,15 @@ export class DbMonitorImpl implements DbMonitor {
     let me = this;
     me.etlFile.createChangeStream((err, changes) => {
       changes.on('data', () => {
+        me.publishAllEtlFiles();
+      });
+    });
+  }
+
+  private createChangeStream_EtlStep() {
+    let me = this;
+    me.etlStep.createChangeStream((err, changes) => {
+      changes.on('data', (change) => {
         me.publishAllEtlFiles();
       });
     });
@@ -177,20 +187,22 @@ export class DbMonitorImpl implements DbMonitor {
         if (!step) {
           me.etlFlow.findById(status.tag.flowId, (err, etlFlow) => {
             let newStep = new EtlStep();
-            newStep.name = 'DecryptAndUnTar';
-            newStep.start = new Date();
+            newStep.name = status.decryptAndUnTarStatus.taskName;
+            newStep.start = new Date(status.startTime);
             etlFlow.steps.create(newStep.etlStepObject, (err, newStep) => {
               me.updatingEtlStatus = false;
-              me.publishAllEtlFiles();
+              //me.publishAllEtlFiles();
             });
           });
         } else {
+          me.updatingEtlStatus = false;
           me.etlStep.findById(step.id, (err, etlStep) => {
             let step = new EtlStep(etlStep);
-            step.end = new Date();
-            step.save();
-            me.updatingEtlStatus = false;
-            me.publishAllEtlFiles();
+            step.end = new Date(status.currentTime);
+            step.save(() => {
+              //me.updatingEtlStatus = false;
+              //me.publishAllEtlFiles();
+            });
           });
         }
       }

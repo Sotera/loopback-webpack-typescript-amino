@@ -8,12 +8,11 @@ export class EtlStep {
       : {};
   }
 
-  save() {
+  save(cb: (err: Error, model: any) => void = (() => {
+  })) {
     let me = this;
     if (me.etlStepModel) {
-      me.etlStepModel.updateAttributes(me.etlStepObject, (err, savedStep) => {
-        let e = err;
-      });
+      me.etlStepModel.updateAttributes(me.etlStepObject, cb);
     }
   }
 

@@ -13,17 +13,31 @@ import {EtlFile} from "../../../../../../common/modelClasses/etl-file";
 
 export class EtlActivity implements AfterViewInit {
   displayFiles: EtlFile[];
+  private flowExpanded: boolean[][] = [];
   detailStatus = false;
 
   constructor(private postalService: PostalService) {
     let me = this;
-    me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles) => {
+    me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles: EtlFile[]) => {
+      etlFiles.forEach(etlFile=>{
+        etlFile.flows.forEach(flow=>{
+          this.flowExpanded[flow.etlFileId] = this.flowExpanded[flow.etlFileId] || [];
+          flow.expanded = this.flowExpanded[flow.etlFileId][flow.id];
+        });
+      });
       me.displayFiles = etlFiles;
     });
   }
 
   ngAfterViewInit(): void {
     this.loadFiles();
+  }
+
+  toggleFlowExpanded(flow) {
+    this.flowExpanded[flow.etlFileId] = this.flowExpanded[flow.etlFileId] || [];
+    flow.expanded
+      = this.flowExpanded[flow.etlFileId][flow.id]
+      = !this.flowExpanded[flow.etlFileId][flow.id];
   }
 
   loadFiles() {
