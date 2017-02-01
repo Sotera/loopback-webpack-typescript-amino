@@ -178,13 +178,17 @@ export class DbMonitorImpl implements DbMonitor {
           me.etlFlow.findById(status.tag.flowId, (err, etlFlow) => {
             let newStep = new EtlStep();
             newStep.name = 'DecryptAndUnTar';
-            etlFlow.steps.create(newStep, (err, newStep) => {
+            newStep.start = new Date();
+            etlFlow.steps.create(newStep.etlStepObject, (err, newStep) => {
               me.updatingEtlStatus = false;
               me.publishAllEtlFiles();
             });
           });
         } else {
           me.etlStep.findById(step.id, (err, etlStep) => {
+            let step = new EtlStep(etlStep);
+            step.end = new Date();
+            step.save();
             me.updatingEtlStatus = false;
             me.publishAllEtlFiles();
           });
