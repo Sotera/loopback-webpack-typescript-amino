@@ -9,18 +9,7 @@ const async = require('async');
 export class InitializeDatabaseImpl implements InitializeDatabase {
   static etlFlows = [
     {
-      name: 'Bro',
-      steps: [
-        {
-          name: 'UnEncryptAndUnTar'
-        },
-        {
-          name: 'UnZipAllPcaps'
-        },
-        {
-          name: 'MergePcaps'
-        }
-      ]
+      name: 'Bro'
     }
   ];
 
@@ -36,24 +25,17 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
   init(cb: (err: Error, result: any) => void) {
     let me = this;
     let etlFlow = this.baseService.server.models.EtlFlow;
+    let etlStep = this.baseService.server.models.EtlStep;
     etlFlow.getDataSource().setMaxListeners(0);
+    let fnArray = [];
     InitializeDatabaseImpl.etlFlows.forEach(flow => {
-      etlFlow.findOrCreate({where: {name: flow.name}, include: ['steps']}, flow, (err, newFlow) => {
-        if (me.commandUtil.callbackIfError(cb, err)) {
-          return;
-        }
-        //Stringify & parse loopback object to get contained objects
-        let dbFlow = JSON.parse(JSON.stringify(newFlow));
-        let stepsToAdd = _.differenceWith(flow.steps, dbFlow.steps, (a, b) => {
-          return a.name === b.name;
-        });
-        async.each(stepsToAdd, newFlow.steps.create, err => {
-          if (me.commandUtil.callbackIfError(cb, err)) {
-            return;
-          }
-          cb(null, {message:'Initialized database'});
-        });
-      });
+      fnArray.push(async.apply(etlFlow.findOrCreate.bind(etlFlow), {where: {name: flow.name}}, flow));
+    });
+    async.parallel(fnArray, err => {
+      if (me.commandUtil.callbackIfError(cb, err)) {
+        return;
+      }
+      cb(null, {message: 'Initialized database'});
     });
   }
 }

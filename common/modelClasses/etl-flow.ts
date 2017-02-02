@@ -1,9 +1,12 @@
 import {EtlStep} from "./etl-step";
-export class EtlFlow {
-  id: string;
+import {EtlBase} from "./etl-base";
+export class EtlFlow extends EtlBase {
   etlFileId: string;
-  name: string;
   expanded: boolean;
   steps: EtlStep[];
   lastStatus: string;
+
+  constructor(protected loopbackModelInstance: any = null) {
+    super(EtlBase.server.models.EtlFlow, {include: ['steps']}, loopbackModelInstance);
+  }
 }

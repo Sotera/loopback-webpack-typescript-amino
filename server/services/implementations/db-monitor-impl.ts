@@ -7,27 +7,16 @@ import * as _ from 'lodash';
 import {EtlFlow} from "../../../common/modelClasses/etl-flow";
 import {EtlFile} from "../../../common/modelClasses/etl-file";
 import {EtlStep} from "../../../common/modelClasses/etl-step";
+import {EtlBase} from "../../../common/modelClasses/etl-base";
 
 const path = require('path');
 const config = require('../../config.json');
 const async = require('async');
 
-interface EtlStatus {
-  tag: any,
-  streamId: string,
-  flowId: string,
-  stepId: string,
-  status: string,
-  startTime: Date,
-  currentTime: Date,
-  finishTime: Date,
-  currentProgress: number,
-  overallProgress: number
-}
-
 @injectable()
 export class DbMonitorImpl implements DbMonitor {
   private updatingEtlStatus: boolean = false;
+  private etlFileCache: EtlFile[];
   private etlFile: any;
   private etlTask: any;
   private etlFlow: any;
@@ -38,6 +27,9 @@ export class DbMonitorImpl implements DbMonitor {
               @inject('FullPipeline') private fullPipeline: FullPipeline,
               @inject('VitaTasks') private vitaTasks: VitaTasks,
               @inject('CommandUtil') private commandUtil: CommandUtil) {
+    //TODO: Break model init out into its own service
+    EtlBase.server = this.server;
+
     this.commandUtil.log('DbMonitor created');
     this.etlFile = this.server.models.EtlFile;
     this.etlFlow = this.server.models.EtlFlow;
@@ -81,7 +73,9 @@ export class DbMonitorImpl implements DbMonitor {
         });
       }
     });
-    cb(null, {message: 'Initialized dbMonitor'});
+    me.loadEtlFileCache(err => {
+      cb(err, {message: 'Initialized dbMonitor'});
+    })
     /*    setTimeout(() => {
      me.taskAdded('588e2c3c61e2fe637472be8f', 'Bro');
      }, 3000);*/
@@ -91,7 +85,7 @@ export class DbMonitorImpl implements DbMonitor {
     let me = this;
     me.etlFile.createChangeStream((err, changes) => {
       changes.on('data', () => {
-        me.publishAllEtlFiles();
+        me.blowCacheAndPublishAllEtlFiles();
       });
     });
   }
@@ -99,9 +93,16 @@ export class DbMonitorImpl implements DbMonitor {
   private createChangeStream_EtlStep() {
     let me = this;
     me.etlStep.createChangeStream((err, changes) => {
-      changes.on('data', (change) => {
-        me.publishAllEtlFiles();
+      changes.on('data', () => {
+        me.blowCacheAndPublishAllEtlFiles();
       });
+    });
+  }
+
+  private blowCacheAndPublishAllEtlFiles() {
+    let me = this;
+    me.loadEtlFileCache(() => {
+      me.publishAllEtlFiles();
     });
   }
 
@@ -118,49 +119,25 @@ export class DbMonitorImpl implements DbMonitor {
 
   private taskAdded(fileId: string, flowId: string) {
     let me = this;
-    async.waterfall([
-      (cb) => {
-        me.etlFlow.find({where: {name: flowId}, include: ['steps']}, cb);
-      },
-      (flows, cb) => {
-        flows = JSON.parse(JSON.stringify(flows));
-        let flow = _.find(flows, (flow: any) => {
-          return !flow.etlFileId;
-        });
-
-        me.etlFile.findById(fileId, {include: ['flows']}, (err, file) => {
-          flow = _.omit(flow, ['id']);
-          file.flows.create(flow, (err, newFlow) => {
-            if (me.commandUtil.callbackIfError(cb, err)) {
-              return;
-            }
-            cb(err, fileId, newFlow.id.toString());
-            /*            async.each(flow.steps, (step, cb2) => {
-             step = _.omit(step, ['id']);
-             newFlow.steps.create(step, cb2);
-             }, err => {
-             cb(err, fileId);
-             });*/
-          });
-        });
-      },
-      (fileId, flowId, cb) => {
-        me.etlFile.findById(fileId, (err, file) => {
-          file = JSON.parse(JSON.stringify(file));
-          cb(err, file, fileId, flowId);
-        });
+    EtlFile.findById(fileId, (err, etlFile: EtlFile) => {
+      if (me.commandUtil.logError(err)) {
+        return;
       }
-    ], (err, file, fileId, flowId) => {
-      me.fullPipeline.tag = {fileId, flowId};
-      me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(file.path, file.name)];
-      me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
-      me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
+      etlFile.createFlow({name: flowId}, (err, etlFlow: EtlFlow) => {
+        if (me.commandUtil.logError(err)) {
+          return;
+        }
+        me.fullPipeline.tag = {fileId, flowId};
+        me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
+        me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
+        me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
 
-      me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-        me.commandUtil.log(JSON.stringify(status, undefined, 2));
-        me.updateEtlStatus(status);
-      }, (err, result) => {
-        me.appendEtlResults(result);
+        me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
+          me.commandUtil.log(JSON.stringify(status, undefined, 2));
+          me.updateEtlStatus(status);
+        }, (err, result) => {
+          me.appendEtlResults(result);
+        });
       });
     });
   }
@@ -189,10 +166,9 @@ export class DbMonitorImpl implements DbMonitor {
             let newStep = new EtlStep();
             newStep.name = status.decryptAndUnTarStatus.taskName;
             newStep.start = new Date(status.startTime);
-            etlFlow.steps.create(newStep.etlStepObject, (err, newStep) => {
-              me.updatingEtlStatus = false;
-              //me.publishAllEtlFiles();
-            });
+            /*            etlFlow.steps.create(newStep.etlStepObject, (err, newStep) => {
+             me.updatingEtlStatus = false;
+             });*/
           });
         } else {
           me.updatingEtlStatus = false;
@@ -354,8 +330,49 @@ export class DbMonitorImpl implements DbMonitor {
 
   private publishAllEtlFiles() {
     let me = this;
-    let etlFile = me.server.models.EtlFile;
-    etlFile.find({
+    me.postal.publish({
+      channel: 'WebSocket',
+      topic: 'Broadcast',
+      data: {
+        channel: 'EtlFile',
+        topic: 'AllFiles',
+        data: me.etlFileCache
+      }
+    });
+  }
+
+  private writeEtlFileCache(cb: (err: Error, etlFiles: EtlFile[]) => void) {
+    let me = this;
+    let fnArray = [];
+    me.etlFileCache.forEach(etlFile => {
+      etlFile.flows.forEach(etlFlow => {
+        etlFlow.steps.forEach(etlStep => {
+          if (!etlStep.isDirty) {
+            return;
+          }
+          fnArray.push(async.apply(me.etlStep.updateAttributes.bind(me.etlStep), etlStep));
+        });
+        if (!etlFlow.isDirty) {
+          return;
+        }
+        fnArray.push(async.apply(me.etlFlow.updateAttributes.bind(me.etlFlow), etlFlow));
+      });
+      if (!etlFile.isDirty) {
+        return;
+      }
+      fnArray.push(async.apply(me.etlFile.updateAttributes.bind(me.etlFile), etlFile));
+    });
+    async.parallel(fnArray, err => {
+      if (me.commandUtil.callbackIfError(cb, err)) {
+        return;
+      }
+      me.loadEtlFileCache(cb);
+    });
+  }
+
+  private loadEtlFileCache(cb: (err: Error, etlFiles: EtlFile[]) => void) {
+    let me = this;
+    me.etlFile.find({
       include: {
         relation: 'flows',
         scope: {
@@ -363,34 +380,25 @@ export class DbMonitorImpl implements DbMonitor {
         }
       }
     }, (err, etlFiles) => {
-      if (err) {
-        me.commandUtil.logError(err);
+      if (me.commandUtil.callbackIfError(cb, err)) {
         return;
       }
-      //let test = JSON.parse(JSON.stringify(etlFiles));
-      let etlFilesSortedByDate = etlFiles.sort((a, b) => {
-        a = new Date(a.createDate);
-        b = new Date(b.createDate);
-        return a > b ? -1 : a < b ? 1 : 0;
+      let etlFilesAsObjects = JSON.parse(JSON.stringify(etlFiles));
+      me.etlFileCache = etlFilesAsObjects.sort((a, b) => {
+        let dateA = new Date(a.createDate);
+        let dateB = new Date(b.createDate);
+        return dateA > dateB ? -1 : dateA < dateB ? 1 : 0;
       });
-      me.postal.publish({
-        channel: 'WebSocket',
-        topic: 'Broadcast',
-        data: {
-          channel: 'EtlFile',
-          topic: 'AllFiles',
-          data: etlFilesSortedByDate
-        }
-      });
+      cb(err, me.etlFileCache);
     });
-  }
+  };
 
-  private generateUUID() {
-    let d = new Date().getTime();
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-      let r = (d + Math.random() * 16) % 16 | 0;
-      d = Math.floor(d / 16);
-      return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-    });
-  }
+  /*  private generateUUID() {
+   let d = new Date().getTime();
+   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+   let r = (d + Math.random() * 16) % 16 | 0;
+   d = Math.floor(d / 16);
+   return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+   });
+   }*/
 }

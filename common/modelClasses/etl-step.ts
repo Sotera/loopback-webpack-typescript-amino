@@ -1,72 +1,42 @@
 import {EtlResource} from "./etl-resource";
-export class EtlStep {
-  etlStepObject: any;
-
-  constructor(private etlStepModel: any = null) {
-    this.etlStepObject = etlStepModel
-      ? JSON.parse(JSON.stringify(etlStepModel))
-      : {};
-  }
-
-  save(cb: (err: Error, model: any) => void = (() => {
-  })) {
-    let me = this;
-    if (me.etlStepModel) {
-      me.etlStepModel.updateAttributes(me.etlStepObject, cb);
-    }
-  }
-
-  get id(): string {
-    return this.etlStepObject.id;
-  }
-
-  set name(newName) {
-    this.etlStepObject.name = newName;
-  }
-
-  get name(): string {
-    return this.etlStepObject.name;
+import {EtlBase} from "./etl-base";
+export class EtlStep extends EtlBase {
+  constructor(protected loopbackModelInstance: any = null) {
+    super(EtlBase.server.models.EtlStep, {}, loopbackModelInstance);
   }
 
   set start(newStart) {
-    this.etlStepObject.start = newStart;
+    this.loopbackModelInstance.start = newStart;
   }
 
   get start(): Date {
-    return this.etlStepObject.start;
+    return this.loopbackModelInstance.start;
   }
 
   set end(newEnd) {
-    this.etlStepObject.end = newEnd;
+    this.loopbackModelInstance.end = newEnd;
   }
 
   get end(): Date {
-    return this.etlStepObject.end;
+    return this.loopbackModelInstance.end;
   }
 
   set result(newResult) {
-    this.etlStepObject.result = newResult;
+    this.loopbackModelInstance.result = newResult;
   }
 
   get result(): string {
-    return this.etlStepObject.result;
+    return this.loopbackModelInstance.result;
   }
 
   set command(newCommand) {
-    this.etlStepObject.command = newCommand;
+    this.loopbackModelInstance.command = newCommand;
   }
 
   get command(): string {
-    return this.etlStepObject.command;
+    return this.loopbackModelInstance.command;
   }
 
-  /*  id: string;
-   name: string;
-   start: Date;
-   end: Date;
-   result: string;
-   command: string;
-   index: number;*/
   sources: EtlResource[];
   products: EtlResource[];
 }
