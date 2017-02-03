@@ -127,7 +127,7 @@ export class DbMonitorImpl implements DbMonitor {
         if (me.commandUtil.logError(err)) {
           return;
         }
-        me.fullPipeline.tag = {fileId, flowId};
+        me.fullPipeline.tag = {fileId, flowId: etlFlow.id};
         me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
         me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
         me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';

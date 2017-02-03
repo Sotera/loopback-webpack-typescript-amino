@@ -3,8 +3,8 @@ import kernel from '../../server/inversify.config';
 export class EtlBase {
   static server: any;
   private _isDirty: boolean;
-  private typeScriptObject: any;
   private commandUtil = kernel.get<CommandUtil>('CommandUtil');
+  typeScriptObject: any;
 
   constructor(private loopbackModel: any,
               private entireObjectFilter: any,
@@ -20,28 +20,31 @@ export class EtlBase {
   }
 
   get id(): string {
-    return this.loopbackModelInstance.id;
+    return this.typeScriptObject.id;
   }
 
   set name(newName) {
-    this.loopbackModelInstance.name = newName;
+    this.typeScriptObject.name = newName;
   }
 
   get name(): string {
-    return this.loopbackModelInstance.name;
+    return this.typeScriptObject.name;
   }
 
   save(cb: (err: Error, model: any) => void = (() => {
   })) {
     let me = this;
-    if (me.loopbackModelInstance) {
-      me.loopbackModel.updateAttributes(me.loopbackModelInstance, cb);
+    if (me.typeScriptObject) {
+      me.loopbackModel.updateAttributes(me.typeScriptObject, cb);
     }
   }
 
   protected _createHasManyInstance(name, typeScriptObject, cb: (err, model) => void) {
     let me = this;
     me.loopbackModelInstance[name].create(typeScriptObject, (err, model) => {
+      if (me.commandUtil.callbackIfError(cb, err)) {
+        return;
+      }
       cb(err, model);
     });
   }

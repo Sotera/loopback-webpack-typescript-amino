@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/modelClasses/etl-base.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/modelClasses/etl-base.ts" afterPath="$PROJECT_DIR$/common/modelClasses/etl-base.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/modelClasses/etl-file.ts" afterPath="$PROJECT_DIR$/common/modelClasses/etl-file.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/modelClasses/etl-flow.ts" afterPath="$PROJECT_DIR$/common/modelClasses/etl-flow.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/modelClasses/etl-step.ts" afterPath="$PROJECT_DIR$/common/modelClasses/etl-step.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" afterPath="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.ts" afterPath="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts" afterPath="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,8 +31,8 @@
           <file leaf-file-name="db-monitor-impl.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1098">
-                  <caret line="175" column="5" lean-forward="false" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+                <state relative-caret-position="166">
+                  <caret line="129" column="56" lean-forward="false" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
                     <element signature="n#!!block;n#server#0;n#DbMonitorImpl#0" expanded="false" />
@@ -55,7 +51,7 @@
           <file leaf-file-name="etl-activity.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
+                <state relative-caret-position="414">
                   <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
                   <folding>
                     <element signature="e#0#74#0" expanded="true" />
@@ -67,10 +63,22 @@
           <file leaf-file-name="etl-base.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-base.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+                <state relative-caret-position="108">
+                  <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#44#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="etl-file.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-file.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="346">
+                  <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#35#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -80,19 +88,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="etl-file.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-file.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#35#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="etl-flow.ts" pinned="false" current-in-tab="false">
+          <file leaf-file-name="etl-flow.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-flow.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="54">
@@ -218,11 +214,11 @@
         <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.ts" />
         <option value="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.ts" />
         <option value="$PROJECT_DIR$/common/modelClasses/etl-base.js" />
-        <option value="$PROJECT_DIR$/common/modelClasses/etl-base.ts" />
         <option value="$PROJECT_DIR$/common/modelClasses/etl-flow.ts" />
         <option value="$PROJECT_DIR$/common/modelClasses/etl-step.ts" />
-        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
+        <option value="$PROJECT_DIR$/common/modelClasses/etl-base.ts" />
         <option value="$PROJECT_DIR$/common/modelClasses/etl-file.ts" />
+        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
       </list>
     </option>
   </component>
@@ -265,7 +261,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1919" />
+    <option name="x" value="3839" />
     <option name="width" value="1922" />
     <option name="height" value="1055" />
   </component>
@@ -284,7 +280,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -387,28 +382,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modelClasses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etl-base.ts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -453,6 +426,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -766,6 +740,7 @@
       <workItem from="1486058312472" duration="970000" />
       <workItem from="1486059308121" duration="5030000" />
       <workItem from="1486064462664" duration="2952000" />
+      <workItem from="1486075996270" duration="5741000" />
     </task>
     <task id="LOCAL-00001" summary="Update ng2-admin &amp; restructure a bit (remove client folder)">
       <created>1482503412853</created>
@@ -897,7 +872,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235901000" />
+    <option name="totallyTimeSpent" value="241642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,22 +884,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
+    <frame x="3839" y="0" width="1922" height="1055" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3397642" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.227224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444386" sideWeight="0.6102635" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301179" sideWeight="0.501845" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444386" sideWeight="0.38370848" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1444386" sideWeight="0.38973647" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17363344" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3397642" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.227224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444386" sideWeight="0.6162915" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43194" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17363344" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26688102" sideWeight="0.49815497" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42122185" sideWeight="0.49815497" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -932,6 +906,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43194" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1039,10 +1014,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="325" />
+      <option name="time" value="339" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1314,7 +1297,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="414">
           <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
@@ -1347,24 +1330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-base.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-base.js" />
     <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-step.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1375,20 +1341,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
+    <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-base.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="175" column="5" lean-forward="false" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+        <state relative-caret-position="108">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <element signature="n#!!block;n#server#0;n#DbMonitorImpl#0" expanded="false" />
-            <element signature="e#1925#2127#0" expanded="false" />
-            <element signature="e#2154#2280#0" expanded="false" />
-            <element signature="e#2307#2506#0" expanded="false" />
-            <element signature="n#!!block;n#createChangeStream_EtlTask#0;n#DbMonitorImpl#0" expanded="false" />
-            <element signature="n#!!block;n#publishAllEtlFiles#0;n#DbMonitorImpl#0" expanded="false" />
-            <element signature="n#!!block;n#writeEtlFileCache#0;n#DbMonitorImpl#0" expanded="false" />
-            <element signature="n#!!block;n#loadEtlFileCache#0;n#DbMonitorImpl#0" expanded="false" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1405,10 +1363,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-file.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="346">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="129" column="56" lean-forward="false" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <element signature="n#!!block;n#server#0;n#DbMonitorImpl#0" expanded="false" />
+            <element signature="e#1925#2127#0" expanded="false" />
+            <element signature="e#2154#2280#0" expanded="false" />
+            <element signature="e#2307#2506#0" expanded="false" />
+            <element signature="n#!!block;n#createChangeStream_EtlTask#0;n#DbMonitorImpl#0" expanded="false" />
+            <element signature="n#!!block;n#publishAllEtlFiles#0;n#DbMonitorImpl#0" expanded="false" />
+            <element signature="n#!!block;n#writeEtlFileCache#0;n#DbMonitorImpl#0" expanded="false" />
+            <element signature="n#!!block;n#loadEtlFileCache#0;n#DbMonitorImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>

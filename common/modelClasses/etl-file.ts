@@ -1,9 +1,7 @@
 import {EtlFlow} from './etl-flow';
-import {EtlTask} from "./etl-task";
 import {EtlBase} from "./etl-base";
+import * as _ from 'lodash';
 export class EtlFile extends EtlBase {
-  flows: EtlFlow[];
-  tasks: EtlTask[];
 
   constructor(protected loopbackModelInstance: any = null) {
     super(EtlBase.server.models.EtlFile, {
@@ -17,34 +15,44 @@ export class EtlFile extends EtlBase {
   }
 
   set size(newSize) {
-    this.loopbackModelInstance.size = newSize;
+    this.typeScriptObject.size = newSize;
   }
 
   get size(): string {
-    return this.loopbackModelInstance.size;
+    return this.typeScriptObject.size;
   }
 
   set path(newPath) {
-    this.loopbackModelInstance.path = newPath;
+    this.typeScriptObject.path = newPath;
   }
 
   get path(): string {
-    return this.loopbackModelInstance.path;
+    return this.typeScriptObject.path;
   }
 
   set createDate(newCreateDate) {
-    this.loopbackModelInstance.createDate = newCreateDate;
+    this.typeScriptObject.createDate = newCreateDate;
   }
 
   get createDate(): Date {
-    return this.loopbackModelInstance.createDate;
+    return this.typeScriptObject.createDate;
+  }
+
+  get flows(): EtlFlow[] {
+    return this.typeScriptObject.flows;
   }
 
   createFlow(typeScriptObject, cb: (err, etlFlow: EtlFlow) => void) {
     let me = this;
     this._createHasManyInstance('flows', typeScriptObject, (err, etlFlow) => {
-      me._findById(me.id, ()=>{
-        cb(err, etlFlow);
+      me._findById(me.id, (err, foundFile) => {
+        let foundFlow = _.find(foundFile.flows, (f: EtlFlow) => {
+          return f.id === etlFlow.id.toString();
+        });
+        if (!foundFlow) {
+          err = new Error('foundFlow not attached to etlFile. Or something worse.');
+        }
+        cb(err, new EtlFlow(etlFlow));
       });
     });
   }
