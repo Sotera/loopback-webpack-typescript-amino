@@ -39,7 +39,7 @@ export class FolderMonitorImpl implements FolderMonitor {
       let size = stats.size.toString();
       let createDate = stats.birthtime.toString();
 
-      EtlFile.create({name, path, size, createDate}, (err) => {
+      EtlFile.createFromTypeScriptObject({name, path, size, createDate}, (err) => {
         me.commandUtil.logError(err);
       });
     });

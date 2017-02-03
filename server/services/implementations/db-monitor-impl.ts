@@ -61,7 +61,7 @@ export class DbMonitorImpl implements DbMonitor {
       channel: 'EtlFile',
       topic: 'GetAllFiles',
       callback: () => {
-        me.publishAllEtlFiles();
+        me.blowCacheAndPublishAllEtlFiles();
       }
     });
     me.postal.subscribe({
@@ -73,9 +73,8 @@ export class DbMonitorImpl implements DbMonitor {
         });
       }
     });
-    me.loadEtlFileCache(err => {
-      cb(err, {message: 'Initialized dbMonitor'});
-    })
+    cb(null, {message: 'Initialized dbMonitor'});
+
     /*    setTimeout(() => {
      me.taskAdded('588e2c3c61e2fe637472be8f', 'Bro');
      }, 3000);*/
@@ -99,10 +98,12 @@ export class DbMonitorImpl implements DbMonitor {
     });
   }
 
-  private blowCacheAndPublishAllEtlFiles() {
+  private blowCacheAndPublishAllEtlFiles(cb: (err: Error) => void = () => {
+  }) {
     let me = this;
-    me.loadEtlFileCache(() => {
+    me.loadEtlFileCache(err => {
       me.publishAllEtlFiles();
+      cb(err);
     });
   }
 
@@ -133,63 +134,75 @@ export class DbMonitorImpl implements DbMonitor {
         me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
 
         me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-          me.commandUtil.log(JSON.stringify(status, undefined, 2));
           me.updateEtlStatus(status);
         }, (err, result) => {
           me.appendEtlResults(result);
         });
+        me.blowCacheAndPublishAllEtlFiles();
       });
     });
   }
 
   private updateEtlStatus(status: any) {
     let me = this;
+    me.commandUtil.log(JSON.stringify(status, undefined, 2));
     if (me.updatingEtlStatus) {
       return;
     }
     me.updatingEtlStatus = true;
 
-    me.etlFile.findById(status.tag.fileId, {
-      include: {
-        relation: 'flows',
-        scope: {
-          include: ['steps']
-        }
-      }
-    }, (err, etlFile) => {
-      let file = <EtlFile>JSON.parse(JSON.stringify(etlFile));
-      let flow = <EtlFlow>_.find(file.flows, ['id', status.tag.flowId]);
-      if (status.decryptAndUnTarStatus) {
-        let step = <EtlStep>_.find(flow.steps, ['name', 'DecryptAndUnTar']);
-        if (!step) {
-          me.etlFlow.findById(status.tag.flowId, (err, etlFlow) => {
-            let newStep = new EtlStep();
-            newStep.name = status.decryptAndUnTarStatus.taskName;
-            newStep.start = new Date(status.startTime);
-            /*            etlFlow.steps.create(newStep.etlStepObject, (err, newStep) => {
-             me.updatingEtlStatus = false;
-             });*/
-          });
-        } else {
-          me.updatingEtlStatus = false;
-          me.etlStep.findById(step.id, (err, etlStep) => {
-            let step = new EtlStep(etlStep);
-            step.end = new Date(status.currentTime);
-            step.save(() => {
-              //me.updatingEtlStatus = false;
-              //me.publishAllEtlFiles();
-            });
-          });
-        }
-      }
-      /*      file.flows({where: {id: status.tag.flowId}}, (err, foundFlows) => {
-       if(foundFlows.length !== 1){
+    let etlFile = _.find(me.etlFileCache,['id', status.tag.fileId]);
+    let etlFlow = _.find(etlFile.flows,['id', status.tag.flowId]);
+    let etlStep = _.find(etlFlow.steps,['name', 'DecryptAndUnTar']);
+    if(!etlStep){
+      etlFlow.createStep({name: 'DecryptAndUnTar'},(err, _etlStep:EtlStep)=>{
+        me.updatingEtlStatus = false;
+      });
+      return;
+    }
+    me.updatingEtlStatus = false;
+    let s = status;
 
-       }
-       let f = foundFlows[0];
-       f = foundFlows[0];
-       });*/
-    });
+/*    EtlFile.findById(status.tag.fileId, (err, etlFile) => {
+      me.updatingEtlStatus = false;
+    });*/
+
+    /*
+     me.etlFile.findById(status.tag.fileId, {
+     include: {
+     relation: 'flows',
+     scope: {
+     include: ['steps']
+     }
+     }
+     }, (err, etlFile) => {
+     let file = <EtlFile>JSON.parse(JSON.stringify(etlFile));
+     let flow = <EtlFlow>_.find(file.flows, ['id', status.tag.flowId]);
+     if (status.decryptAndUnTarStatus) {
+     let step = <EtlStep>_.find(flow.steps, ['name', 'DecryptAndUnTar']);
+     if (!step) {
+     me.etlFlow.findById(status.tag.flowId, (err, etlFlow) => {
+     let newStep = new EtlStep();
+     newStep.name = status.decryptAndUnTarStatus.taskName;
+     newStep.start = new Date(status.startTime);
+     /!*            etlFlow.steps.create(newStep.etlStepObject, (err, newStep) => {
+     me.updatingEtlStatus = false;
+     });*!/
+     });
+     } else {
+     me.updatingEtlStatus = false;
+     me.etlStep.findById(step.id, (err, etlStep) => {
+     let step = new EtlStep(etlStep);
+     step.end = new Date(status.currentTime);
+     step.save(() => {
+     //me.updatingEtlStatus = false;
+     //me.publishAllEtlFiles();
+     });
+     });
+     }
+     }
+     });
+     */
 
 
     //If the state has changed, update it
@@ -336,7 +349,9 @@ export class DbMonitorImpl implements DbMonitor {
       data: {
         channel: 'EtlFile',
         topic: 'AllFiles',
-        data: me.etlFileCache
+        data: _.map(me.etlFileCache, f => {
+          return f.typeScriptObject;
+        })
       }
     });
   }
@@ -372,19 +387,8 @@ export class DbMonitorImpl implements DbMonitor {
 
   private loadEtlFileCache(cb: (err: Error, etlFiles: EtlFile[]) => void) {
     let me = this;
-    me.etlFile.find({
-      include: {
-        relation: 'flows',
-        scope: {
-          include: ['steps']
-        }
-      }
-    }, (err, etlFiles) => {
-      if (me.commandUtil.callbackIfError(cb, err)) {
-        return;
-      }
-      let etlFilesAsObjects = JSON.parse(JSON.stringify(etlFiles));
-      me.etlFileCache = etlFilesAsObjects.sort((a, b) => {
+    EtlFile.find({}, (err, etlFiles) => {
+      me.etlFileCache = etlFiles.sort((a, b) => {
         let dateA = new Date(a.createDate);
         let dateB = new Date(b.createDate);
         return dateA > dateB ? -1 : dateA < dateB ? 1 : 0;

@@ -1,5 +1,6 @@
 import {CommandUtil} from 'firmament-yargs';
 import kernel from '../../server/inversify.config';
+const deepExtend = require('deep-extend');
 export class EtlBase {
   static server: any;
   private _isDirty: boolean;
@@ -45,7 +46,9 @@ export class EtlBase {
       if (me.commandUtil.callbackIfError(cb, err)) {
         return;
       }
-      cb(err, model);
+      me._findById(me.id, (err, me) => {
+        cb(err, model);
+      });
     });
   }
 
@@ -55,8 +58,17 @@ export class EtlBase {
       if (me.commandUtil.callbackIfError(cb, err)) {
         return;
       }
-      me.setModelAndModelInstance(model);
-      cb(err, me);
+      me._findById(model.id, (err, foundModel) => {
+        cb(err, me);
+      });
+    });
+  }
+
+  protected _find(filter, cb: (err, models: any[]) => void) {
+    let me = this;
+    deepExtend(filter, me.entireObjectFilter);
+    me.loopbackModel.find(filter, (err, models) => {
+      cb(err, models);
     });
   }
 

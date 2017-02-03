@@ -11,6 +11,7 @@
       <w>crypto</w>
       <w>defaultfalse</w>
       <w>dropdown</w>
+      <w>etlfile</w>
       <w>googlemaps</w>
       <w>leafletmaps</w>
       <w>linemaps</w>
