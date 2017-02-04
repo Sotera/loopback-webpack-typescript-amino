@@ -105,6 +105,14 @@ export class EtlFile extends EtlBase {
     });
   }
 
+  static createChangeStream(cb: (err, changes) => void) {
+    new EtlFile()._createChangeStream(cb);
+  }
+
+  static destroyById(id, cb: (err) => void) {
+    new EtlFile()._destroyById(id, cb);
+  }
+
   static findById(id, cb: (err, etlFile: EtlFile) => void) {
     new EtlFile()._findById(id, cb);
   }

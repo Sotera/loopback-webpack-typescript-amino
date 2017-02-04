@@ -8,6 +8,7 @@ import {EtlFlow} from "../../../common/modelClasses/etl-flow";
 import {EtlFile} from "../../../common/modelClasses/etl-file";
 import {EtlStep} from "../../../common/modelClasses/etl-step";
 import {EtlBase} from "../../../common/modelClasses/etl-base";
+import {EtlTask} from "../../../common/modelClasses/etl-task";
 
 const path = require('path');
 const config = require('../../config.json');
@@ -17,10 +18,6 @@ const async = require('async');
 export class DbMonitorImpl implements DbMonitor {
   private updatingEtlStatus: boolean = false;
   private etlFileCache: EtlFile[];
-  private etlFile: any;
-  private etlTask: any;
-  private etlFlow: any;
-  private etlStep: any;
 
   constructor(@inject('BaseService') private baseService: BaseService,
               @inject('IPostal') private postal: IPostal,
@@ -29,12 +26,7 @@ export class DbMonitorImpl implements DbMonitor {
               @inject('CommandUtil') private commandUtil: CommandUtil) {
     //TODO: Break model init out into its own service
     EtlBase.server = this.server;
-
     this.commandUtil.log('DbMonitor created');
-    this.etlFile = this.server.models.EtlFile;
-    this.etlFlow = this.server.models.EtlFlow;
-    this.etlTask = this.server.models.EtlTask;
-    this.etlStep = this.server.models.EtlStep;
   }
 
   get server(): any {
@@ -52,7 +44,7 @@ export class DbMonitorImpl implements DbMonitor {
       channel: 'EtlTask',
       topic: 'AddTask',
       callback: (etlTaskData) => {
-        me.etlTask.create(etlTaskData, err => {
+        EtlTask.createFromTypeScriptObject(etlTaskData, err => {
           this.commandUtil.logError(err);
         });
       }
@@ -68,8 +60,9 @@ export class DbMonitorImpl implements DbMonitor {
       channel: 'EtlFile',
       topic: 'Delete',
       callback: (fileId) => {
-        me.etlFile.destroyById(fileId.id, err => {
+        EtlFile.destroyById(fileId.id, err => {
           this.commandUtil.logError(err);
+          this.blowCacheAndPublishAllEtlFiles();
         });
       }
     });
@@ -82,7 +75,7 @@ export class DbMonitorImpl implements DbMonitor {
 
   private createChangeStream_EtlFile() {
     let me = this;
-    me.etlFile.createChangeStream((err, changes) => {
+    EtlFile.createChangeStream((err, changes) => {
       changes.on('data', () => {
         me.blowCacheAndPublishAllEtlFiles();
       });
@@ -91,7 +84,7 @@ export class DbMonitorImpl implements DbMonitor {
 
   private createChangeStream_EtlStep() {
     let me = this;
-    me.etlStep.createChangeStream((err, changes) => {
+    EtlStep.createChangeStream((err, changes) => {
       changes.on('data', () => {
         me.blowCacheAndPublishAllEtlFiles();
       });
@@ -109,7 +102,7 @@ export class DbMonitorImpl implements DbMonitor {
 
   private createChangeStream_EtlTask() {
     let me = this;
-    me.etlTask.createChangeStream((err, changes) => {
+    EtlTask.createChangeStream((err, changes) => {
       changes.on('data', (change) => {
         if (change.type === 'create') {
           me.taskAdded(change.data.fileId, change.data.flowId);
@@ -151,11 +144,11 @@ export class DbMonitorImpl implements DbMonitor {
     }
     me.updatingEtlStatus = true;
 
-    let etlFile = _.find(me.etlFileCache,['id', status.tag.fileId]);
-    let etlFlow = _.find(etlFile.flows,['id', status.tag.flowId]);
-    let etlStep = _.find(etlFlow.steps,['name', 'DecryptAndUnTar']);
-    if(!etlStep){
-      etlFlow.createStep({name: 'DecryptAndUnTar'},(err, _etlStep:EtlStep)=>{
+    let etlFile = _.find(me.etlFileCache, ['id', status.tag.fileId]);
+    let etlFlow = _.find(etlFile.flows, ['id', status.tag.flowId]);
+    let etlStep = _.find(etlFlow.steps, ['name', 'DecryptAndUnTar']);
+    if (!etlStep) {
+      etlFlow.createStep({name: 'DecryptAndUnTar'}, (err, _etlStep: EtlStep) => {
         me.updatingEtlStatus = false;
       });
       return;
@@ -163,9 +156,9 @@ export class DbMonitorImpl implements DbMonitor {
     me.updatingEtlStatus = false;
     let s = status;
 
-/*    EtlFile.findById(status.tag.fileId, (err, etlFile) => {
-      me.updatingEtlStatus = false;
-    });*/
+    /*    EtlFile.findById(status.tag.fileId, (err, etlFile) => {
+     me.updatingEtlStatus = false;
+     });*/
 
     /*
      me.etlFile.findById(status.tag.fileId, {
@@ -365,17 +358,17 @@ export class DbMonitorImpl implements DbMonitor {
           if (!etlStep.isDirty) {
             return;
           }
-          fnArray.push(async.apply(me.etlStep.updateAttributes.bind(me.etlStep), etlStep));
+          fnArray.push(async.apply(etlStep.save.bind(etlStep)));
         });
         if (!etlFlow.isDirty) {
           return;
         }
-        fnArray.push(async.apply(me.etlFlow.updateAttributes.bind(me.etlFlow), etlFlow));
+        fnArray.push(async.apply(etlFlow.save.bind(etlFlow)));
       });
       if (!etlFile.isDirty) {
         return;
       }
-      fnArray.push(async.apply(me.etlFile.updateAttributes.bind(me.etlFile), etlFile));
+      fnArray.push(async.apply(etlFile.save.bind(etlFile)));
     });
     async.parallel(fnArray, err => {
       if (me.commandUtil.callbackIfError(cb, err)) {

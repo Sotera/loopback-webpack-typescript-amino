@@ -9,35 +9,39 @@ export class EtlStep extends EtlBase {
   }
 
   set start(newStart) {
-    this.loopbackModelInstance.start = newStart;
+    this.typeScriptObject.start = newStart;
   }
 
   get start(): Date {
-    return this.loopbackModelInstance.start;
+    return this.typeScriptObject.start;
   }
 
   set end(newEnd) {
-    this.loopbackModelInstance.end = newEnd;
+    this.typeScriptObject.end = newEnd;
   }
 
   get end(): Date {
-    return this.loopbackModelInstance.end;
+    return this.typeScriptObject.end;
   }
 
   set result(newResult) {
-    this.loopbackModelInstance.result = newResult;
+    this.typeScriptObject.result = newResult;
   }
 
   get result(): string {
-    return this.loopbackModelInstance.result;
+    return this.typeScriptObject.result;
   }
 
   set command(newCommand) {
-    this.loopbackModelInstance.command = newCommand;
+    this.typeScriptObject.command = newCommand;
   }
 
   get command(): string {
-    return this.loopbackModelInstance.command;
+    return this.typeScriptObject.command;
+  }
+
+  static createChangeStream(cb: (err, changes) => void) {
+    new EtlStep()._createChangeStream(cb);
   }
 
   static findById(id, cb: (err, etlStep: EtlStep) => void) {

@@ -72,6 +72,21 @@ export class EtlBase {
     });
   }
 
+  protected _createChangeStream(cb: (err, changes) => void) {
+    let me = this;
+    me.loopbackModel.createChangeStream(cb);
+  }
+
+  protected _destroyById(id, cb: (err) => void) {
+    let me = this;
+    me.loopbackModel.destroyById(id, err => {
+      if (me.commandUtil.callbackIfError(cb, err)) {
+        return;
+      }
+      cb(err);
+    });
+  }
+
   protected _findById(id, cb: (err, me) => void) {
     let me = this;
     me.loopbackModel.findById(id, me.entireObjectFilter, (err, model) => {
