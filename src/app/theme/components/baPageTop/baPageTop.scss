@@ -42,53 +42,27 @@ a.al-logo:hover {
 }
 
 .user-profile {
-/*  outline-style: solid;
-  outline-color: yellow;
-  outline-width: 1px;*/
   float: right;
   min-width: 230px;
-  margin-top: 1px;
+  margin-top: 10px;
 }
 
 .al-user-profile {
-/*  outline-style: solid;
-  outline-color: red;
-  outline-width: 1px;*/
   float: right;
-  //margin-right: 8px;
+  margin-right: 12px;
   transition: all .15s ease-in-out;
   padding: 0;
-  //width: 60px;
-  //height: 60px;
+  width: 36px;
+  height: 36px;
   border: 0;
   opacity: 1;
   position: relative;
-  .username-text-container {
-/*    outline-style: solid;
-    outline-color: blue;
-    outline-width: 1px;*/
-    font-size: 18px;
-    font-weight: 500;
-    //position: relative;
-    display: inline-block;
-  }
-  .username-text{
-/*    outline-style: solid;
-    outline-color: green;
-    outline-width: 1px;*/
-    position: relative;
-    top: 8px;
-  }
   a {
-    display: inline-block;
+    display: block;
   }
   img {
-/*    outline-style: solid;
-    outline-color: cyan;
-    outline-width: 1px;*/
-    width: 64px;
-    height: 64px;
-    //margin-top: -20px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
   }
 }

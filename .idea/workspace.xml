@@ -2,9 +2,281 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/empty.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/charts.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/charts.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/charts.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/chartistJs.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/components/chartistJs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/charts/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components/treeView/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components/treeView/treeView.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/components/treeView/treeView.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/components/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/checkboxInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/checkboxInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/groupInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/groupInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/ratinginputs/ratinginputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInput.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/selectInputs/selectInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/standardInputs/standardInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/components/validationInputs/validationInputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/inputs.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/inputs/inputs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/basicForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/basicForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/basicForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/blockForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/blockForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/blockForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/horizontalForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/horizontalForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/inlineForm/inlineForm.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/components/withoutLabelsForm/withoutLabelsForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/layouts.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/components/layouts/layouts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/forms.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/forms.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/forms.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/forms/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/bubbleMaps.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/bubbleMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/googleMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/googleMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/leafletMaps/leafletMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/components/lineMaps/lineMaps.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/basicTables.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/borderedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/borderedTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/condensedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/condensedTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/contextualTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/contextualTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/hoverTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/hoverTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/responsiveTable/responsiveTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/components/stripedTable/stripedTable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/basicTables/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/components/smartTables/smartTables.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/tables.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/tables.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/tables/tables.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/disabledButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/disabledButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/dropdownButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/dropdownButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/flatButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/flatButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/groupButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/groupButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/iconButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/iconButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/largeButtons/largeButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/raisedButtons/raisedButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/components/sizedButtons/sizedButtons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/buttons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/grid/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/icons.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/icons/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/modals/modals.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/typography/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/typography/typography.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/components/typography/typography.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/ui.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/ui/ui.routing.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.browser.aot.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_directives/alert.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_directives/alert.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_directives/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_guards/auth.guard.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_guards/headers.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_guards/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_models/authentication.models.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/alert.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/app-description.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/authentication.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/postal.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/user.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/_services/websocket.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/app.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/modules/alert.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/index.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.loader.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/theme/validators/phoneNumber.validator.ts" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/vita/vita.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/ui/ui.component.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/vita/vita.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/components/components.module.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.scss" afterPath="$PROJECT_DIR$/config/resource-override.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.webpack.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/helpers.js" afterPath="$PROJECT_DIR$/config/helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/webpack.common.js" afterPath="$PROJECT_DIR$/config/webpack.common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/webpack.dev.js" afterPath="$PROJECT_DIR$/config/webpack.dev.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/webpack.prod.js" afterPath="$PROJECT_DIR$/config/webpack.prod.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.routing.ts" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.scss" afterPath="$PROJECT_DIR$/src/app/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/environment.ts" afterPath="$PROJECT_DIR$/src/app/environment.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routing.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routing.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/feed/feed.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/feed/feed.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/lineChart/lineChart.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/lineChart/lineChart.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pieChart/pieChart.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/popularApp/popularApp.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/popularApp/popularApp.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/todo/todo.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/todo/todo.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/trafficChart/trafficChart.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/dashboard/usersMap/usersMap.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/usersMap/usersMap.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/login/login.html" afterPath="$PROJECT_DIR$/src/app/pages/login/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/login/login.routing.ts" afterPath="$PROJECT_DIR$/src/app/pages/login/login.routing.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.menu.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/register/register.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/register/register.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/register/register.html" afterPath="$PROJECT_DIR$/src/app/pages/register/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/register/register.module.ts" afterPath="$PROJECT_DIR$/src/app/pages/register/register.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baBackTop/baBackTop.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baBackTop/baBackTop.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.scss" afterPath="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baCheckbox/baCheckbox.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baCheckbox/baCheckbox.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baContentTop/baContentTop.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baContentTop/baContentTop.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baMenu/baMenu.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/baMenu.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.html" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.scss" afterPath="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.html" afterPath="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.component.ts" afterPath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.html" afterPath="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts" afterPath="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/nga.module.ts" afterPath="$PROJECT_DIR$/src/app/theme/nga.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/sass/conf/colorSchemes/_blur.scss" afterPath="$PROJECT_DIR$/src/app/theme/sass/conf/colorSchemes/_blur.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/services/baMenu/baMenu.service.ts" afterPath="$PROJECT_DIR$/src/app/theme/services/baMenu/baMenu.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/theme.config.ts" afterPath="$PROJECT_DIR$/src/app/theme/theme.config.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/theme/theme.configProvider.ts" afterPath="$PROJECT_DIR$/src/app/theme/theme.configProvider.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/custom-typings.d.ts" afterPath="$PROJECT_DIR$/src/custom-typings.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +297,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="tsconfig.webpack.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsconfig.webpack.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="115" column="46" lean-forward="false" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+            <state relative-caret-position="36">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -38,9 +320,55 @@
       <file leaf-file-name="webpack.common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/webpack.common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="378">
+              <caret line="122" column="14" lean-forward="false" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baSlimScroll.directive.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calendar.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baFullCalendar.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#92#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,31 +410,30 @@
       <find>etl.interfaces</find>
       <find>DEBUG_F</find>
       <find>ForkCheckerPlugin</find>
+      <find>lodash</find>
+      <find>fallbackj</find>
+      <find>fallbackLoader</find>
+      <find>ckeditor</find>
+      <find>slimScroll</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/node_modules/</dir>
       <dir>$PROJECT_DIR$/node_modules/debug</dir>
+      <dir>$PROJECT_DIR$/node_modules/@types</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="vita2" />
+        <entry key="$PROJECT_DIR$" value="webSockets" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/_services/websocket.service.ts" />
-        <option value="localhost:3000/main.bundle.js" />
-        <option value="$PROJECT_DIR$/src/custom-typings.d.ts" />
-        <option value="$PROJECT_DIR$/server/boot/websocket.ts" />
-        <option value="$PROJECT_DIR$/postcss.config.js" />
-        <option value="$PROJECT_DIR$/server/boot/01-populate-db.ts" />
-        <option value="$PROJECT_DIR$/server/boot/service-manager-startup.ts" />
         <option value="$PROJECT_DIR$/server/services/interfaces/folder-monitor.ts" />
         <option value="$PROJECT_DIR$/server/boot/folderMonitorService.ts" />
         <option value="$PROJECT_DIR$/server/services/interfaces/db-monitor.ts" />
@@ -119,7 +446,6 @@
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/_services/index.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/vita/vita.module.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts" />
         <option value="$PROJECT_DIR$/common/models/etl-file.json" />
@@ -149,8 +475,16 @@
         <option value="$PROJECT_DIR$/common/modelClasses/etl-step.ts" />
         <option value="$PROJECT_DIR$/common/modelClasses/etl-task.ts" />
         <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/pages.menu.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/pages.routing.ts" />
+        <option value="$PROJECT_DIR$/src/app/theme/services/baMenu/baMenu.service.ts" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/tsconfig.webpack.json" />
         <option value="$PROJECT_DIR$/config/webpack.common.js" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts" />
       </list>
     </option>
   </component>
@@ -212,6 +546,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,6 +570,158 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baSlimScroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baFullCalendar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,19 +769,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/tmp/loopback-webpack-typescript-amino" />
+    <property name="last_opened_file_path" value="$USER_HOME$/tmp/ng2-admin/package.json" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/server/boot/authentication.ts" />
+    <property name="two.files.diff.last.used.file" value="$USER_HOME$/tmp/ng2-admin/package.json" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.9.2" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="SearchEverywhereHistoryKey" value="inversi&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/server/inversify.config.ts&#10;etl.ser&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/src/app/_services/etl.service.ts&#10;pack&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/package.json&#10;packa&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/package.json&#10;AlertComponent&#9;null&#9;null&#10;app.module&#9;FILE&#9;file:///home/jreeme/src/loopback-webpack-typescript-amino/src/app/app.module.ts" />
@@ -319,11 +805,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/common/modelClasses" />
       <recent name="$PROJECT_DIR$/common/models" />
       <recent name="$PROJECT_DIR$/src/app/_modelClasses" />
       <recent name="$PROJECT_DIR$/server/services/implementations" />
-      <recent name="$PROJECT_DIR$/server/services/interfaces" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/common" />
@@ -604,7 +1090,9 @@
       <workItem from="1486311307837" duration="696000" />
       <workItem from="1486312473246" duration="653000" />
       <workItem from="1486486566779" duration="72000" />
-      <workItem from="1486486782226" duration="2075000" />
+      <workItem from="1486486782226" duration="11073000" />
+      <workItem from="1486500056719" duration="469000" />
+      <workItem from="1486501042244" duration="1493000" />
     </task>
     <task id="LOCAL-00001" summary="Update ng2-admin &amp; restructure a bit (remove client folder)">
       <created>1482503412853</created>
@@ -746,11 +1234,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486165581539</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Before branch to vita3. Need to update ng2-admin to deal with move to TS 2.1.5 &amp; other upgrades.">
+      <created>1486490025122</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1486490025122</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273825000" />
+    <option name="totallyTimeSpent" value="284785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,18 +1261,18 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3301179" sideWeight="0.501845" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47695607" sideWeight="0.50395364" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444386" sideWeight="0.414791" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2743837" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2113864" sideWeight="0.4484127" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25830653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27116826" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3397642" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2261522" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444386" sideWeight="0.585209" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2113864" sideWeight="0.5515873" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43194" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3762058" sideWeight="0.49815497" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39335477" sideWeight="0.4960464" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -888,7 +1383,8 @@
     <MESSAGE value="Add postcss.config.js" />
     <MESSAGE value="Homeward!" />
     <MESSAGE value="Got Mike's HTML changes to etl-activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got Mike's HTML changes to etl-activity" />
+    <MESSAGE value="Before branch to vita3. Need to update ng2-admin to deal with move to TS 2.1.5 &amp; other upgrades." />
+    <option name="LAST_COMMIT_MESSAGE" value="Before branch to vita3. Need to update ng2-admin to deal with move to TS 2.1.5 &amp; other upgrades." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,148 +1408,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/middleware.development.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/middleware.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/_services/etl.service.ts" />
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/_models/authentication.models.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/_services/websocket.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/_services/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/service-manager-startup.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/vita.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/loopback-datasource-juggler/lib/introspection.js" />
-    <entry file="file://$PROJECT_DIR$/server/boot/root.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/boot/static.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/etl-task.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1068,13 +1422,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="2" lean-forward="false" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.ts" />
     <entry file="file://$PROJECT_DIR$/server/boot/websocket.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1143,20 +1491,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-base.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="93" lean-forward="false" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" />
     <entry file="file://$PROJECT_DIR$/common/modelClasses/etl-flow.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
@@ -1214,23 +1550,194 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="265" column="71" lean-forward="false" selection-start-line="265" selection-start-column="71" selection-end-line="265" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/modules/angular2-hmr-prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/ui/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bootstraprc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/postcss.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.menu.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/Compilation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="229" column="43" lean-forward="false" selection-start-line="229" selection-start-column="43" selection-end-line="229" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/custom-typings.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor.browser.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/theme/theme.configProvider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/theme/services/baMenu/baMenu.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/polyfills.browser.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.webpack.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="378">
+          <caret line="122" column="14" lean-forward="false" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="115" column="46" lean-forward="false" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+        <state relative-caret-position="522">
+          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/jquery/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62612">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#JQueryAjaxSettings#0" expanded="false" />
+            <element signature="n#!!block;n#JQueryXHR#0" expanded="false" />
+            <element signature="n#!!block;n#JQueryCallback#0" expanded="false" />
+            <element signature="n#!!block;n#JQueryGenericPromise#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/dashboard/calendar/calendar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#92#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -10,18 +10,21 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-//const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const ngcWebpack = require('ngc-webpack');
+
 
 /*
  * Webpack Constants
  */
-//const HMR = helpers.hasProcessFlag('hot');
+const HMR = helpers.hasProcessFlag('hot');
+const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
   title: 'ng2-admin - Angular 2 Admin Template',
   description: 'Free Angular 2 and Bootstrap 4 Admin Template',
@@ -35,7 +38,7 @@ const METADATA = {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = function (options) {
-  let isProd = options.env === 'production';
+  isProd = options.env === 'production';
   return {
 
     /*
@@ -54,9 +57,10 @@ module.exports = function (options) {
      * See: http://webpack.github.io/docs/configuration.html#entry
      */
     entry: {
-      'polyfills': helpers.root('src/polyfills.browser.ts'),
-      'vendor': helpers.root('src/vendor.browser.ts'),
-      'main': helpers.root('src/main.browser.ts')
+
+      'polyfills': './src/polyfills.browser.ts',
+      'vendor': './src/vendor.browser.ts',
+      'main': AOT ? './src/main.browser.aot.ts' : './src/main.browser.ts'
     },
 
     /*
@@ -86,32 +90,47 @@ module.exports = function (options) {
     module: {
 
       rules: [
-        {
-          test: /\.ts$/,
-          loader: 'string-replace-loader',
-          query: {
-            search: /(System|SystemJS)(.*[\n\r]\s*\.|\.)import\((.+)\)/g,
-            replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)'
-          },
-          include: [helpers.root('src')],
-          enforce: 'pre'
-        },
 
         /*
-         * Typescript loader support for .ts and Angular 2 async routes via .async.ts
-         * Replace templateUrl and stylesUrl with require()
+         * Typescript loader support for .ts
+         *
+         * Component Template/Style integration using `angular2-template-loader`
+         * Angular 2 lazy loading (async routes) via `ng-router-loader`
+         *
+         * `ng-router-loader` expects vanilla JavaScript code, not TypeScript code. This is why the
+         * order of the loader matter.
          *
          * See: https://github.com/s-panferov/awesome-typescript-loader
          * See: https://github.com/TheLarkInn/angular2-template-loader
+         * See: https://github.com/shlomiassaf/ng-router-loader
          */
         {
           test: /\.ts$/,
           use: [
-            '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
-            'awesome-typescript-loader?tsconfig=' + helpers.root('tsconfig.json'),
-            //'awesome-typescript-loader',
-            'angular2-template-loader',
-            'angular2-router-loader'
+            {
+              loader: '@angularclass/hmr-loader',
+              options: {
+                pretty: !isProd,
+                prod: isProd
+              }
+            },
+            { // MAKE SURE TO CHAIN VANILLA JS CODE, I.E. TS COMPILATION OUTPUT.
+              loader: 'ng-router-loader',
+              options: {
+                loader: 'async-import',
+                genDir: 'compiled',
+                aot: AOT
+              }
+            },
+            {
+              loader: 'awesome-typescript-loader',
+              options: {
+                configFileName: helpers.root('tsconfig.json')
+              }
+            },
+            {
+              loader: 'angular2-template-loader'
+            }
           ],
           exclude: [/\.(spec|e2e)\.ts$/]
         },
@@ -127,13 +146,12 @@ module.exports = function (options) {
         },
 
         /*
-         * to string and css loader support for *.css files
+         * to string and css loader support for *.css files (from Angular components)
          * Returns file content as string
          *
          */
         {
           test: /\.css$/,
-          // loaders: ['to-string-loader', 'css-loader']
           use: ['raw-loader']
         },
 
@@ -145,8 +163,8 @@ module.exports = function (options) {
         {
           test: /initial\.scss$/,
           loader: ExtractTextPlugin.extract({
-            fallbackLoader: 'style-loader',
-            loader: 'css-loader!sass-loader?sourceMap'
+            fallback: 'style-loader',
+            use: 'css-loader!sass-loader?sourceMap'
           })
         },
 
@@ -185,10 +203,6 @@ module.exports = function (options) {
       ]
     },
 
-    resolveLoader: {
-      moduleExtensions: ['-loader']
-    },
-
     /*
      * Add additional plugins to the compiler.
      *
@@ -209,7 +223,7 @@ module.exports = function (options) {
        *
        * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
        */
-      //new ForkCheckerPlugin(),
+      //new CheckerPlugin(),
       /*
        * Plugin: CommonsChunkPlugin
        * Description: Shares common code between the pages.
@@ -218,6 +232,17 @@ module.exports = function (options) {
        * See: https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
        * See: https://github.com/webpack/docs/wiki/optimization#multi-page-app
        */
+      new CommonsChunkPlugin({
+        name: 'polyfills',
+        chunks: ['polyfills']
+      }),
+      // This enables tree shaking of the vendor modules
+      new CommonsChunkPlugin({
+        name: 'vendor',
+        chunks: ['main'],
+        minChunks: module => /node_modules/.test(module.resource)
+      }),
+      // Specify the correct order the scripts will be injected in
       new CommonsChunkPlugin({
         name: ['polyfills', 'vendor'].reverse()
       }),
@@ -258,7 +283,7 @@ module.exports = function (options) {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin({
-        template: helpers.root('src/index.html'),
+        template: 'src/index.html',
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
@@ -348,7 +373,13 @@ module.exports = function (options) {
       new NormalModuleReplacementPlugin(
         /facade(\\|\/)math/,
         helpers.root('node_modules/@angular/core/src/facade/math.js')
-      )
+      ),
+
+      new ngcWebpack.NgcWebpackPlugin({
+        disabled: !AOT,
+        tsConfig: helpers.root('tsconfig.webpack.json'),
+        resourceOverride: helpers.root('config/resource-override.js')
+      })
     ],
 
     /*
@@ -365,5 +396,6 @@ module.exports = function (options) {
       clearImmediate: false,
       setImmediate: false
     }
+
   };
-};
+}

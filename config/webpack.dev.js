@@ -1,12 +1,13 @@
 const helpers = require('./helpers');
 const path = require('path');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
+const webpackMergeDll = webpackMerge.strategy({plugins: 'replace'});
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
-const webpack = require('webpack');
 
 /**
  * Webpack Plugins
  */
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
@@ -25,20 +26,23 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
   HMR: HMR
 });
 
+const DllBundlesPlugin = require('webpack-dll-bundles-plugin').DllBundlesPlugin;
+
 /**
  * Webpack configuration
  *
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = function (options) {
-  let retVal = webpackMerge(commonConfig({env: ENV}), {
+  return webpackMerge(commonConfig({env: ENV}), {
+
     /**
      * Developer tool to enhance debugging
      *
      * See: http://webpack.github.io/docs/configuration.html#devtool
      * See: https://github.com/webpack/docs/wiki/build-performance#sourcemaps
      */
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
 
     /**
      * Options affecting the output of the compilation.
@@ -102,6 +106,52 @@ module.exports = function (options) {
           'HMR': METADATA.HMR,
         }
       }),
+
+      new DllBundlesPlugin({
+        bundles: {
+          polyfills: [
+            'core-js',
+            {
+              name: 'zone.js',
+              path: 'zone.js/dist/zone.js'
+            },
+            {
+              name: 'zone.js',
+              path: 'zone.js/dist/long-stack-trace-zone.js'
+            },
+            'ts-helpers',
+          ],
+          vendor: [
+            '@angular/platform-browser',
+            '@angular/platform-browser-dynamic',
+            '@angular/core',
+            '@angular/common',
+            '@angular/forms',
+            '@angular/http',
+            '@angular/router',
+            '@angularclass/hmr',
+            'rxjs',
+          ]
+        },
+        dllDir: helpers.root('dll'),
+        webpackConfig: webpackMergeDll(commonConfig({env: ENV}), {
+          devtool: 'cheap-module-source-map',
+          plugins: []
+        })
+      }),
+
+      /**
+       * Plugin: AddAssetHtmlPlugin
+       * Description: Adds the given JS or CSS file to the files
+       * Webpack knows about, and put it into the list of assets
+       * html-webpack-plugin injects into the generated html.
+       *
+       * See: https://github.com/SimenB/add-asset-html-webpack-plugin
+       */
+      new AddAssetHtmlPlugin([
+        { filepath: helpers.root(`dll/${DllBundlesPlugin.resolveFile('polyfills')}`) },
+        { filepath: helpers.root(`dll/${DllBundlesPlugin.resolveFile('vendor')}`) }
+      ]),
 
       /**
        * Plugin: NamedModulesPlugin (experimental)
@@ -175,21 +225,4 @@ module.exports = function (options) {
     }
 
   });
-  //JReeme - BEGIN https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
-  for (let entryPoint in retVal.entry) {
-    if(!retVal.entry.hasOwnProperty(entryPoint)){
-      continue;
-    }
-    let webpackHotloaderEntryPoints = [
-      'webpack-hot-middleware/client',
-      'webpack/hot/dev-server'
-    ];
-    webpackHotloaderEntryPoints.push(retVal.entry[entryPoint]);
-    retVal.entry[entryPoint] = webpackHotloaderEntryPoints;
-  }
-  retVal.plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
-  retVal.plugins.push(new webpack.HotModuleReplacementPlugin());
-  retVal.plugins.push(new webpack.NoErrorsPlugin());
-  //JReeme - END https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
-  return retVal;
 };

@@ -1,6 +1,6 @@
 import {Directive, Input, Output, ElementRef, EventEmitter} from '@angular/core';
 
-import './baSlimScroll.loader.ts';
+import 'jquery-slimscroll';
 
 @Directive({
   selector: '[baSlimScroll]'
@@ -22,10 +22,10 @@ export class BaSlimScroll {
   }
 
   private _init() {
-    jQuery(this._elementRef.nativeElement).slimScroll(this.baSlimScrollOptions);
+    (<any>jQuery(this._elementRef.nativeElement)).slimScroll(this.baSlimScrollOptions);
   }
 
   private _destroy() {
-    jQuery(this._elementRef.nativeElement).slimScroll({ destroy: true });
+    (<any>jQuery(this._elementRef.nativeElement)).slimScroll({ destroy: true });
   }
 }

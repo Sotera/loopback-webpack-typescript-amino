@@ -1,17 +1,17 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgaModule} from '../../theme/nga.module';
-import {Register} from './register.component';
-import {routing} from './register.routing';
-import {AlertModule} from "../../modules/alert.module";
+import { NgModule }      from '@angular/core';
+import { CommonModule }  from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgaModule } from '../../theme/nga.module';
+
+import { Register } from './register.component';
+import { routing }       from './register.routing';
+
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    AlertModule,
     NgaModule,
     routing
   ],
@@ -19,5 +19,4 @@ import {AlertModule} from "../../modules/alert.module";
     Register
   ]
 })
-export default class RegisterModule {
-}
+export class RegisterModule {}

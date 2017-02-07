@@ -3,39 +3,25 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "pretty": true,
     "sourceMap": true,
-    "noEmitHelpers": true,
-    "strictNullChecks": false,
-    "baseUrl": "./src",
-    "paths": {
-    },
     "lib": [
-      "dom",
-      "es6"
+      "es6",
+      "dom"
     ],
     "types": [
-      "hammerjs",
+      "inversify",
       "node",
-      "lodash",
-      "source-map",
-      "uglify-js",
-      "webpack",
-      "fullcalendar",
-      "jquery.slimscroll"
-    ]
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useWebpackText": true
-  },
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+      "jquery",
+      "reflect-metadata"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
 }

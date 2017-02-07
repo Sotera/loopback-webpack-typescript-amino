@@ -1,7 +1,11 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component } from '@angular/core';
+import { Routes } from '@angular/router';
+
+import { BaMenuService } from '../theme';
+import { MENU } from '../app.menu';
+
 @Component({
   selector: 'pages',
-  encapsulation: ViewEncapsulation.None,
   styles: [],
   template: `
     <ba-sidebar></ba-sidebar>
@@ -13,7 +17,6 @@ import {Component, ViewEncapsulation} from '@angular/core';
       </div>
     </div>
     <footer class="al-footer clearfix">
-<!--      
       <div class="al-footer-right">Created with <i class="ion-heart"></i></div>
       <div class="al-footer-main clearfix">
         <div class="al-copy">&copy; <a href="http://akveo.com">Akveo</a> 2016</div>
@@ -23,18 +26,17 @@ import {Component, ViewEncapsulation} from '@angular/core';
           <li><i class="socicon socicon-google"></i></li>
           <li><i class="socicon socicon-github"></i></li>
         </ul>
-      <div class="al-footer-right">Powered by Amino2 <i class="ion-heart"></i></div>
-      </div>-->
-      <div class="al-footer-right">Powered by <a href="https://github.com/Sotera/loopback-webpack-typescript-amino">Amino2</a> <img src="{{ ('Dna' | baKameleonPicture )}}" width="32px" height="32px"></div>
+      </div>
     </footer>
     <ba-back-top position="200"></ba-back-top>
     `
 })
 export class Pages {
 
-  constructor() {
+  constructor(private _menuService: BaMenuService,) {
   }
 
   ngOnInit() {
+    this._menuService.updateMenuByRoutes(<Routes>MENU);
   }
 }

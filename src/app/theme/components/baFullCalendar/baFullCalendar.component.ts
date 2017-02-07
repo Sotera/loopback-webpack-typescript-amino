@@ -1,11 +1,12 @@
-import {Component, ViewChild, ViewEncapsulation, Input, Output, ElementRef, EventEmitter} from '@angular/core';
+import {Component, ViewChild, Input, Output, ElementRef, EventEmitter} from '@angular/core';
 
-import './baFullCalendar.loader.ts';
+import 'fullcalendar/dist/fullcalendar.js';
+
+import 'style-loader!./baFullCalendar.scss';
 
 @Component({
   selector: 'ba-full-calendar',
-  template: require('./baFullCalendar.html'),
-  encapsulation: ViewEncapsulation.None,
+  templateUrl: './baFullCalendar.html',
 })
 export class BaFullCalendar {
 
@@ -13,10 +14,10 @@ export class BaFullCalendar {
   @Input() baFullCalendarClass:string;
   @Output() onCalendarReady = new EventEmitter<any>();
 
-  @ViewChild('baFullCalendar') private _selector:ElementRef;
+  @ViewChild('baFullCalendar') public _selector:ElementRef;
 
   ngAfterViewInit() {
-    let calendar = jQuery(this._selector.nativeElement).fullCalendar(this.baFullCalendarConfiguration);
+    let calendar = (<any>jQuery(this._selector.nativeElement)).fullCalendar(this.baFullCalendarConfiguration);
     this.onCalendarReady.emit(calendar);
   }
 }
