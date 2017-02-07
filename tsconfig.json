@@ -19,6 +19,7 @@
     "types": [
       "hammerjs",
       "node",
+      "lodash",
       "source-map",
       "uglify-js",
       "webpack",
