@@ -97,7 +97,6 @@ interface WebpackModule {
   };
 }
 
-
 interface WebpackRequire {
   (id: string): any;
   (paths: string[], callback: (...modules: any[]) => void): void;
@@ -115,8 +114,67 @@ interface ErrorStackTraceLimit {
 
 
 // Extend typings
-interface NodeRequire extends WebpackRequire {}
-interface ErrorConstructor extends ErrorStackTraceLimit {}
-interface NodeRequireFunction extends Es6PromiseLoader  {}
-interface NodeModule extends WebpackModule {}
-interface Global extends GlobalEnvironment  {}
+interface NodeRequire extends WebpackRequire {
+}
+interface ErrorConstructor extends ErrorStackTraceLimit {
+}
+interface NodeRequireFunction extends Es6PromiseLoader {
+}
+interface NodeModule extends WebpackModule {
+}
+interface Global extends GlobalEnvironment {
+}
+
+//This is the shape of the submission parameter for the registration form
+interface RegistrationFormSubmission {
+  username: string,
+  fullname: string,
+  email: string,
+  phone: string,
+  passwords: {
+    password: string,
+    repeatPassword: string
+  }
+}
+interface LoginFormSubmission {
+  username: string,
+  password: string
+}
+//This is the shape of the loopback token returned from the network login call
+interface LoopbackToken {
+  created: string,
+  id: string,
+  ttl: number,
+  userId: string
+}
+interface AuthenticationResponse {
+  status: string,
+  error: Error
+}
+interface UserInfo {
+  id: string,
+  username: string,
+  fullname: string,
+  email: string,
+  phone: string
+}
+interface RegistrationResponse extends AuthenticationResponse {
+  newUser: UserInfo
+}
+interface LoginResponse extends AuthenticationResponse {
+  userInfo: UserInfo,
+  jwtToken: string,
+  loopbackToken: LoopbackToken
+}
+interface UpdateUserInfoResponse extends AuthenticationResponse {
+  userInfo: UserInfo
+}
+interface Response{
+  map(cb:(res:Response)=>void);
+}
+interface WebSocketInfo{
+  hostname:string,
+  port:number,
+  uri:string
+}
+

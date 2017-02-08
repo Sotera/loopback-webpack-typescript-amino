@@ -1,6 +1,7 @@
 import { Routes, RouterModule }  from '@angular/router';
 import { Pages } from './pages.component';
-import { ModuleWithProviders } from '@angular/core';
+import {AuthGuard} from "../_guards/auth.guard";
+import {ModuleWithProviders} from "@angular/core";
 // noinspection TypeScriptValidateTypes
 
 // export function loadChildren(path) { return System.import(path); };
@@ -20,13 +21,9 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: 'app/pages/dashboard/dashboard.module#DashboardModule' },
-      { path: 'components', loadChildren: 'app/pages/components/components.module#ComponentsModule' },
-      { path: 'charts', loadChildren: 'app/pages/charts/charts.module#ChartsModule' },
-      { path: 'ui', loadChildren: 'app/pages/ui/ui.module#UiModule' },
-      { path: 'forms', loadChildren: 'app/pages/forms/forms.module#FormsModule' },
-      { path: 'tables', loadChildren: 'app/pages/tables/tables.module#TablesModule' },
-      { path: 'maps', loadChildren: 'app/pages/maps/maps.module#MapsModule' }
+      { path: 'vita', loadChildren: 'app/pages/vita/vita.module#VitaModule' }
     ]
+    ,canActivate: [AuthGuard]
   }
 ];
 

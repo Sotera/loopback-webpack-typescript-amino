@@ -3,8 +3,9 @@ import { CommonModule }  from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 
-import { Dashboard } from './dashboard.component';
-import { routing }       from './dashboard.routing';
+import { routing }       from './vita.routing';
+import { Vita } from './vita.component';
+import {EtlActivity} from "./components/etl-activity/etl-activity.component";
 
 @NgModule({
   imports: [
@@ -14,9 +15,9 @@ import { routing }       from './dashboard.routing';
     routing
   ],
   declarations: [
-    Dashboard
-  ],
-  providers: [
+    Vita,
+    EtlActivity
   ]
 })
-export class DashboardModule {}
+export default class VitaModule {
+}
