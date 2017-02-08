@@ -5,6 +5,8 @@ import {AuthenticationService} from "../../_services/authentication.service";
 import {AlertService} from "../../_services/alert.service";
 import {AppDescriptionService} from "../../_services/app-description.service";
 
+import 'style-loader!./login.scss';
+
 @Component({
   selector: 'login',
   templateUrl: './login.html',

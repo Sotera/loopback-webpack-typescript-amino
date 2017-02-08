@@ -3,6 +3,8 @@ import {Component} from '@angular/core';
 import {GlobalState} from '../../../global.state';
 import {AuthenticationService} from "../../../_services/authentication.service";
 
+import 'style-loader!./baPageTop.scss';
+
 @Component({
   selector: 'ba-page-top',
   templateUrl: './baPageTop.html',

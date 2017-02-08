@@ -19,5 +19,5 @@ import {EtlActivity} from "./components/etl-activity/etl-activity.component";
     EtlActivity
   ]
 })
-export default class VitaModule {
+export class VitaModule {
 }

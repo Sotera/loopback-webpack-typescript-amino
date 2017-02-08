@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
 import {UserRegistrationInfo} from "../../_models/authentication.models";
 import {PhoneNumberValidator} from "../../theme/validators/phoneNumber.validator";
 
+import 'style-loader!./register.scss';
+
 @Component({
   selector: 'register',
   templateUrl: './register.html',
