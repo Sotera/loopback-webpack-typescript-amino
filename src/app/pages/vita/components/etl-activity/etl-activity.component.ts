@@ -40,6 +40,10 @@ export class EtlActivity implements AfterViewInit {
       = !this.flowExpanded[flow.etlFileId][flow.id];
   }
 
+  testPostalSignal() {
+    this.postalService.publish('TestSignal', 'ProdFirmamentVita', {}, PublishTarget.server);
+  }
+
   loadFiles() {
     this.postalService.publish('EtlFile', 'GetAllFiles', {}, PublishTarget.server);
   }

@@ -41,6 +41,21 @@ export class DbMonitorImpl implements DbMonitor {
 
     //TODO: Park this subscription here temporarily until we design the subscription service
     me.postal.subscribe({
+      channel: 'TestSignal',
+      topic: 'ProdFirmamentVita',
+      callback: () => {
+        me.fullPipeline.tag = {fileId:'abcd', flowId:'efgh'};
+        me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve('/tmp', 'tmp.txt')];
+        me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
+        me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
+        me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
+          me.updateEtlStatus(status);
+        }, (err, result) => {
+          me.appendEtlResults(result);
+        });
+      }
+    });
+    me.postal.subscribe({
       channel: 'EtlTask',
       topic: 'AddTask',
       callback: (etlTaskData) => {
@@ -67,10 +82,6 @@ export class DbMonitorImpl implements DbMonitor {
       }
     });
     cb(null, {message: 'Initialized dbMonitor'});
-
-    /*    setTimeout(() => {
-     me.taskAdded('588e2c3c61e2fe637472be8f', 'Bro');
-     }, 3000);*/
   }
 
   private createChangeStream_EtlFile() {
@@ -83,12 +94,12 @@ export class DbMonitorImpl implements DbMonitor {
   }
 
   private createChangeStream_EtlStep() {
-    let me = this;
+/*    let me = this;
     EtlStep.createChangeStream((err, changes) => {
       changes.on('data', () => {
         me.blowCacheAndPublishAllEtlFiles();
       });
-    });
+    });*/
   }
 
   private blowCacheAndPublishAllEtlFiles(cb: (err: Error) => void = () => {
@@ -154,8 +165,7 @@ export class DbMonitorImpl implements DbMonitor {
       return;
     }
     me.updatingEtlStatus = false;
-    let s = status;
-
+///--->
     /*    EtlFile.findById(status.tag.fileId, (err, etlFile) => {
      me.updatingEtlStatus = false;
      });*/
@@ -224,6 +234,7 @@ export class DbMonitorImpl implements DbMonitor {
      });
      })
      }*/
+///--->
   }
 
   private appendEtlResults(apdFile) {
