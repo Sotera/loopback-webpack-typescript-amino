@@ -22,13 +22,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "flows": {
-      "type": "hasMany",
-      "model": "EtlFlow",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

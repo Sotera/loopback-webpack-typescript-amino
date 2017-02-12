@@ -19,13 +19,17 @@ export class EtlActivity implements AfterViewInit {
   constructor(private postalService: PostalService) {
     let me = this;
     me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles: EtlFile[]) => {
-      etlFiles.forEach(etlFile=>{
-        etlFile.flows.forEach(flow=>{
-          this.flowExpanded[flow.etlFileId] = this.flowExpanded[flow.etlFileId] || [];
-          flow.expanded = this.flowExpanded[flow.etlFileId][flow.id];
+      try {
+        etlFiles.forEach(etlFile => {
+          etlFile.flows.forEach(flow => {
+            this.flowExpanded[flow.etlFileId] = this.flowExpanded[flow.etlFileId] || [];
+            flow.expanded = this.flowExpanded[flow.etlFileId][flow.id];
+          });
         });
-      });
-      me.displayFiles = etlFiles;
+        me.displayFiles = etlFiles;
+      } catch (err) {
+        alert(JSON.stringify(err));
+      }
     });
   }
 

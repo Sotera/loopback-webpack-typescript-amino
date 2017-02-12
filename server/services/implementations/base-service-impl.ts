@@ -8,6 +8,10 @@ export class BaseServiceImpl implements BaseService {
 
   public server: any;
 
+  initSubscriptions(cb: (err: Error, result: any) => void) {
+    cb(null, null);
+  }
+
   init(cb: (err: Error, result: any) => void) {
     cb(null, null);
   }

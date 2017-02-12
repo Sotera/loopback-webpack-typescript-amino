@@ -10,11 +10,26 @@ import {FolderMonitor} from "./services/interfaces/folder-monitor";
 import {FolderMonitorImpl} from "./services/implementations/folder-monitor-impl";
 import {DbMonitorImpl} from "./services/implementations/db-monitor-impl";
 import {DbMonitor} from "./services/interfaces/db-monitor";
+import {Loopback} from "./services/interfaces/loopback";
+import {LoopbackImpl} from "./services/implementations/loopback-impl";
+import {EtlFile} from "./models/interfaces/etl-file";
+import {EtlFileImpl} from "./models/implementations/etl-file-impl";
+import {EtlFlow} from "./models/interfaces/etl-flow";
+import {EtlFlowImpl} from "./models/implementations/etl-flow-impl";
+import {EtlTask} from "./models/interfaces/etl-task";
+import {EtlTaskImpl} from "./models/implementations/etl-task-impl";
+import {EtlStepImpl} from "./models/implementations/etl-step-impl";
+import {EtlStep} from "./models/interfaces/etl-step";
 
 kernel.bind<BaseService>('BaseService').to(BaseServiceImpl).inSingletonScope();
 kernel.bind<ServiceManager>('ServiceManager').to(ServiceManagerImpl).inSingletonScope();
 kernel.bind<InitializeDatabase>('InitializeDatabase').to(InitializeDatabaseImpl).inSingletonScope();
 kernel.bind<FolderMonitor>('FolderMonitor').to(FolderMonitorImpl).inSingletonScope();
 kernel.bind<DbMonitor>('DbMonitor').to(DbMonitorImpl).inSingletonScope();
+kernel.bind<Loopback>('Loopback').to(LoopbackImpl).inSingletonScope();
+kernel.bind<EtlFile>('EtlFile').to(EtlFileImpl);
+kernel.bind<EtlFlow>('EtlFlow').to(EtlFlowImpl);
+kernel.bind<EtlTask>('EtlTask').to(EtlTaskImpl);
+kernel.bind<EtlStep>('EtlStep').to(EtlStepImpl);
 
 export default kernel;

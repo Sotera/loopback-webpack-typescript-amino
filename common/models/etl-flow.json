@@ -11,18 +11,19 @@
       "type": "string",
       "required": true
     },
+    "aminoId": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string"
+    },
     "lastStatus": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {
-    "steps": {
-      "type": "hasMany",
-      "model": "EtlStep",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

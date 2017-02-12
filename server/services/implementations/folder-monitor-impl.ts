@@ -1,8 +1,8 @@
 import {injectable, inject} from 'inversify';
-import {CommandUtil} from "firmament-yargs";
+import {CommandUtil, IPostal} from "firmament-yargs";
 import {BaseService} from "../interfaces/base-service";
 import {FolderMonitor} from "../interfaces/folder-monitor";
-import {EtlFile} from "../../../common/modelClasses/etl-file";
+import {EtlFile} from "../../models/interfaces/etl-file";
 
 const chokidar = require('chokidar');
 const config = require('../../config.json');
@@ -12,12 +12,17 @@ const config = require('../../config.json');
 export class FolderMonitorImpl implements FolderMonitor {
 
   constructor(@inject('BaseService') private baseService: BaseService,
+              @inject('IPostal') private postal: IPostal,
               @inject('CommandUtil') private commandUtil: CommandUtil) {
     this.commandUtil.log('FolderMonitor created');
   }
 
   get server(): any {
     return this.baseService.server;
+  }
+
+  initSubscriptions(cb: (err: Error, result: any) => void) {
+    cb(null, {message: 'Initialized folderMonitor Subscriptions'});
   }
 
   init(cb: (err: Error, result: any) => void) {
@@ -39,10 +44,15 @@ export class FolderMonitorImpl implements FolderMonitor {
       let size = stats.size.toString();
       let createDate = stats.birthtime.toString();
 
-      EtlFile.createFromTypeScriptObject({name, path, size, createDate}, (err) => {
-        me.commandUtil.logError(err);
+      me.postal.publish({
+        channel: 'Loopback',
+        topic: 'Create',
+        data: {
+          className: 'EtlFile',
+          initializationObject: {name, path, size, createDate}
+        }
       });
     });
-    cb(null, {message:'Initialized folder monitor'});
+    cb(null, {message: 'Initialized folderMonitor'});
   }
 }

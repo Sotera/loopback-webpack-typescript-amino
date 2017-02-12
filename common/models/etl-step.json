@@ -11,6 +11,10 @@
       "type": "string",
       "required": true
     },
+    "parentFlowId": {
+      "type": "string",
+      "required": true
+    },
     "start": {
       "type": "date",
       "required": false
@@ -33,18 +37,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "sources": {
-      "type": "hasMany",
-      "model": "EtlResource",
-      "foreignKey": ""
-    },
-    "products": {
-      "type": "hasMany",
-      "model": "EtlResource",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }
