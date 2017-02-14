@@ -2,7 +2,6 @@ import {injectable, inject} from 'inversify';
 import {InitializeDatabase} from '../interfaces/initialize-database';
 import {CommandUtil, IPostal} from 'firmament-yargs';
 import {BaseService} from '../interfaces/base-service';
-import * as _ from 'lodash';
 import {EtlFlow} from "../../models/interfaces/etl-flow";
 import {EtlStep} from "../../models/interfaces/etl-step";
 const async = require('async');
@@ -61,63 +60,50 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
 
   init(cb: (err: Error, result: any) => void) {
     let me = this;
-    let fnArray = [];
-    InitializeDatabaseImpl.templateFlows.forEach(templateFlow => {
-      fnArray.push(async.apply(
-        (flow, cb: (err: Error, result: any) => void) => {
-          me.postal.publish({
-            channel: 'Loopback',
-            topic: 'FindOrCreate',
-            data: {
-              className: 'EtlFlow',
-              filter: flow.filter,
-              initializationObject: {
-                name: flow.name,
-                type: flow.type
-              },
-              callback: (err, etlFlow) => {
-                cb(err, {etlFlow, templateFlow});
-              }
+    async.map(InitializeDatabaseImpl.templateFlows,
+      (templateFlow, cb) => {
+        me.postal.publish({
+          channel: 'Loopback',
+          topic: 'FindOrCreate',
+          data: {
+            className: 'EtlFlow',
+            filter: templateFlow.filter,
+            initializationObject: {
+              name: templateFlow.name,
+              type: templateFlow.type
+            },
+            callback: (err, etlFlow) => {
+              cb(err, {etlFlow, templateFlow});
             }
-          });
-        }, templateFlow)
-      );
-    });
-    async.parallel(fnArray, (err, results: any[]) => {
-      if (me.commandUtil.callbackIfError(cb, err)) {
-        return;
-      }
-      let fnArray = [];
-      results.forEach(({etlFlow, templateFlow}) => {
-        templateFlow.steps.forEach(step => {
-          fnArray.push(async.apply(
-            (flow, cb: (err: Error, etlStep: EtlStep) => void) => {
-              let parentFlowAminoId = etlFlow.aminoId;
-              me.postal.publish({
-                channel: 'Loopback',
-                topic: 'FindOrCreate',
-                data: {
-                  className: 'EtlStep',
-                  filter: {where: {and: [{name: step.name}, {parentFlowAminoId}]}},
-                  initializationObject: {
-                    name: step.name,
-                    parentFlowAminoId
-                  },
-                  callback: (err, etlStep) => {
-                    cb(err, etlStep);
-                  }
-                }
-              });
-            }, templateFlow)
-          );
+          }
         });
+      },
+      (err, results) => {
+        async.map(results,
+          ({etlFlow, templateFlow}, cb) => {
+            async.map(templateFlow.steps,
+              (step, cb) => {
+                let parentFlowAminoId = etlFlow.aminoId;
+                me.postal.publish({
+                  channel: 'Loopback',
+                  topic: 'FindOrCreate',
+                  data: {
+                    className: 'EtlStep',
+                    filter: {where: {and: [{name: step.name}, {parentFlowAminoId}]}},
+                    initializationObject: {
+                      name: step.name,
+                      parentFlowAminoId
+                    },
+                    callback: (err, etlStep) => {
+                      cb(err, etlStep);
+                    }
+                  }
+                });
+              }, cb);
+          },
+          (err/*, results*/) => {
+            cb(err, {message: 'Initialized initializeDatabase'});
+          });
       });
-      async.parallel(fnArray, (err, results: any[]) => {
-        if (me.commandUtil.callbackIfError(cb, err)) {
-          return;
-        }
-        cb(null, {message: 'Initialized initializeDatabase'});
-      });
-    });
   }
 }

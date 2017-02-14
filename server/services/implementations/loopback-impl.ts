@@ -92,6 +92,7 @@ export class LoopbackImpl implements Loopback {
         updateAttributeOptions.callback(err, newWrapper);
       });
   }
+
   private loopbackUpdateAttributes(updateAttributesOptions: UpdateAttributesOptions) {
     updateAttributesOptions.loopbackModelToUpdate.updateAttributes(
       updateAttributesOptions.updatedAttributes,
@@ -170,22 +171,18 @@ export class LoopbackImpl implements Loopback {
 
   private loopbackCreateHasManyObject(mCHMOO: ModelCreateHasManyObjectOptions) {
     let me = this;
-    let fnArray = [];
-    mCHMOO.containedObjects.forEach((containedObject: ModelCreateOptions) => {
-      fnArray.push(async.apply(
-        (containedObject: ModelCreateOptions, cb: (err: Error, createdObject: EtlBase) => void) => {
-          containedObject.callback = cb;
-          containedObject.initializationObject['parentFileAminoId'] = mCHMOO.containerObject.aminoId;
-          me.postal.publish({
-            channel: 'Loopback',
-            topic: 'Create',
-            data: containedObject
-          });
-        }, containedObject));
-    });
     mCHMOO.callback = mCHMOO.callback || (() => {
       });
-    async.parallel(fnArray, mCHMOO.callback);
+    async.map(mCHMOO.containedObjects,
+      (modelCreateOptions: ModelCreateOptions, cb) => {
+        modelCreateOptions.callback = cb;
+        modelCreateOptions.initializationObject[mCHMOO.parentPropertyName] = mCHMOO.containerObject.aminoId;
+        me.postal.publish({
+          channel: 'Loopback',
+          topic: 'Create',
+          data: modelCreateOptions
+        });
+      }, mCHMOO.callback);
   }
 
   private loopbackCreate(modelCreateOptions: ModelCreateOptions) {

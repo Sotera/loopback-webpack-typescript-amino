@@ -12,6 +12,7 @@ export interface ModelCreateOptions {
 
 export interface ModelCreateHasManyObjectOptions {
   containerObject: EtlBase;
+  parentPropertyName:string;
   containedObjects: ModelCreateOptions[],
   callback: (err: Error, createdModels: EtlBase[]) => void;
 }

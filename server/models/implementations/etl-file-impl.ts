@@ -21,112 +21,105 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
     if (typeof cb !== 'function') {
       return;
     }
-    me.postal.publish({
-      channel: 'Loopback',
-      topic: 'Find',
-      data: {
-        className: 'EtlFlow',
-        filter: {where: {parentFileAminoId: me.aminoId}},
-        callback: (err, etlFlows: EtlFlow[]) => {
-          me._flows = etlFlows;
-          cb(err, me);
-        }
+    async.waterfall([
+      (cb) => {
+        me.postal.publish({
+          channel: 'Loopback',
+          topic: 'Find',
+          data: {
+            className: 'EtlFlow',
+            filter: {where: {parentFileAminoId: me.aminoId}},
+            callback: cb
+          }
+        });
+      },
+      (etlFlows: EtlFlow[], cb) => {
+        me._flows = etlFlows;
+        async.map(etlFlows, (etlFlow, cb) => {
+          etlFlow.loadEntireObject(cb);
+        }, cb);
       }
+    ], (err) => {
+      cb(err, me);
     });
   }
 
   addFlows(flows: any[], cb: (err: Error, etlFlows: EtlFlow[]) => void) {
     let me = this;
     async.waterfall([
-        (cb) => {
-          //Get the flow template
-          let fnArray = [];
-          flows.forEach((flow: EtlFlow) => {
-            fnArray.push(
-              async.apply(
-                (flow: EtlFlow, cb: (err: Error, foundObject) => void) => {
-                  me.postal.publish({
-                    channel: 'Loopback',
-                    topic: 'Find',
-                    data: {
-                      className: 'EtlFlow',
-                      filter: {where: {and: [{name: flow.name}, {type: 'template'}]}},
-                      callback: (err, etlFlows: EtlFlow[]) => {
-                        cb(err, etlFlows.length ? etlFlows[0] : null);
-                      }
-                    }
-                  });
-                },
-                flow));
-          });
-          async.parallel(fnArray, (err, etlFlows: EtlFlow[]) => {
-            etlFlows = etlFlows.filter(flow => {
-              return !!flow;
-            });
-            cb(err, etlFlows);
-          });
-        },
-        (etlFlows: EtlFlow[], cb) => {
-          //Get the steps for each flow
-          async.each(etlFlows, (etlFlow: EtlFlow, cb) => {
-            etlFlow.loadEntireObject(cb);
-          }, (err) => {
-            cb(err, etlFlows);
-          });
-        },
-        (flows: EtlFlow[], cb) => {
-          //Create flows with found flow templates
-          let containedObjects = [];
-          flows.forEach(flow => {
-            let initializationObject = flow.pojo;
-            initializationObject = _.omit(initializationObject, ['id', 'aminoId', 'type']);
-            containedObjects.push({
+      (cb) => {
+        async.map(flows, (flow, cb) => {
+          me.postal.publish({
+            channel: 'Loopback',
+            topic: 'Find',
+            data: {
               className: 'EtlFlow',
-              initializationObject
-            });
+              filter: {where: {and: [{name: flow.name}, {type: 'template'}]}},
+              callback: (err, etlFlows: EtlFlow[]) => {
+                cb(err, etlFlows.length ? etlFlows[0] : null);
+              }
+            }
           });
+        }, (err, etlFlows: EtlFlow[]) => {
+          cb(err, etlFlows.filter(etlFlow => {
+            return !!etlFlow;
+          }));
+        });
+      },
+      (etlFlows: EtlFlow[], cb) => {
+        //Get the steps for each flow
+        async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
+          etlFlow.loadEntireObject(cb);
+        }, cb);
+      },
+      (etlFlows: EtlFlow[], cb) => {
+        async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
+          let steps = etlFlow.pojo.steps.map(step => {
+            return {name: step.name};
+          });
+          cb(null, {
+            className: 'EtlFlow',
+            initializationObject: {
+              name: etlFlow.pojo.name, steps
+            }
+          });
+        }, (err, containedObjects) => {
           me.postal.publish({
             channel: 'Loopback',
             topic: 'CreateHasManyObject',
             data: {
               containerObject: me,
+              parentPropertyName: 'parentFileAminoId',
               containedObjects,
               callback: cb
             }
           });
-        },
-        (etlFlows, cb) => {
-          async.each(etlFlows, (etlFlow: EtlFlow, cb) => {
-            let stepsToAdd = [];
-            etlFlow.loopbackModel.steps.forEach(step => {
-              stepsToAdd.push({name: step.name});
-            });
-            etlFlow.addSteps(stepsToAdd, (err, results) => {
-              //Remove 'steps' property from etlFlow
-              me.postal.publish({
-                channel: 'Loopback',
-                topic: 'UpdateAttribute',
-                data: {
-                  className: 'EtlFlow',
-                  loopbackModelToUpdate: etlFlow.loopbackModel,
-                  attributeName: 'steps',
-                  newAttributeValue: null,
-                  callback: (err, etlFlow: EtlFlow) => {
-                    cb(err, etlFlow);
-                  }
-                }
-              });
-            });
-          }, (err) => {
-            cb(err);
-          });
-        }
-      ],
-      (err: Error, results) => {
-        me.loadEntireObject(err => {
-          cb(err, results);
         });
-      });
+      },
+      (etlFlows: EtlFlow[], cb) => {
+        async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
+          let steps = etlFlow.loopbackModel.steps.map(step => {
+            return {name: step.name};
+          });
+          etlFlow.addSteps(steps, () => {
+            //Remove 'steps' property from etlFlow
+            me.postal.publish({
+              channel: 'Loopback',
+              topic: 'UpdateAttribute',
+              data: {
+                className: 'EtlFlow',
+                loopbackModelToUpdate: etlFlow.loopbackModel,
+                attributeName: 'steps',
+                newAttributeValue: null,
+                callback: (err) => {
+                  cb(err, etlFlow);
+                }
+              }
+            });
+          });
+        }, cb);
+      }
+    ], cb);
   }
 
   get pojo(): any {
