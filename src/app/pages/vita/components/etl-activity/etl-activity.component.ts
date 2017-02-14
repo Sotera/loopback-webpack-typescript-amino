@@ -1,6 +1,6 @@
 import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
 import {PostalService, PublishTarget} from "../../../../_services/postal.service";
-import {EtlFile} from "../../../../../../common/modelClasses/etl-file";
+import {EtlFile} from "../../../../../../server/models/interfaces/etl-file";
 
 @Component({
   selector: 'etl-activity-component',
@@ -22,8 +22,8 @@ export class EtlActivity implements AfterViewInit {
       try {
         etlFiles.forEach(etlFile => {
           etlFile.flows.forEach(flow => {
-            this.flowExpanded[flow.etlFileId] = this.flowExpanded[flow.etlFileId] || [];
-            flow.expanded = this.flowExpanded[flow.etlFileId][flow.id];
+            this.flowExpanded[flow.parentFileAminoId] = this.flowExpanded[flow.parentFileAminoId] || [];
+            flow.expanded = this.flowExpanded[flow.parentFileAminoId][flow.id];
           });
         });
         me.displayFiles = etlFiles;

@@ -46,5 +46,9 @@
   "EtlResource": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "EtlBase": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

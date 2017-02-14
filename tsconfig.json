@@ -15,11 +15,8 @@
       "es6",
       "dom"
     ],
-    "types": [
-      "inversify",
-      "node",
-      "jquery",
-      "reflect-metadata"
+    "typeRoots": [
+      "node_modules/@types"
     ],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true

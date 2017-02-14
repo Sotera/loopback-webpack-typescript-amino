@@ -1,18 +1,22 @@
 import {injectable, inject} from 'inversify';
-import {CommandUtil, IPostal} from "firmament-yargs";
-import {BaseService} from "../interfaces/base-service";
-import {Loopback} from "../interfaces/loopback";
+import {CommandUtil, IPostal} from 'firmament-yargs';
+import {BaseService} from '../interfaces/base-service';
+import {Loopback} from '../interfaces/loopback';
 import kernel from '../../inversify.config';
 import * as _ from 'lodash';
-import {EtlBase} from "../../models/interfaces/etl-base";
+import {EtlBase} from '../../models/interfaces/etl-base';
 import {
   ModelCreateOptions,
   CreateChangeStreamOptions,
   ModelFindOptions,
   ModelFindByIdOptions
-} from "../../models/interfaces/loopback-control";
-import {ModelFindOrCreateOptions} from "../../models/interfaces/loopback-control";
-import {Guid} from "../../util/guid-gen";
+} from '../../models/interfaces/loopback-control';
+import {ModelFindOrCreateOptions} from '../../models/interfaces/loopback-control';
+import {Guid} from '../../util/guid-gen';
+import {ModelCreateHasManyObjectOptions} from '../../models/interfaces/loopback-control';
+import {UpdateAttributesOptions} from "../../models/interfaces/loopback-control";
+import {UpdateAttributeOptions} from "../../models/interfaces/loopback-control";
+const async = require('async');
 
 @injectable()
 export class LoopbackImpl implements Loopback {
@@ -39,6 +43,11 @@ export class LoopbackImpl implements Loopback {
     });
     me.postal.subscribe({
       channel: 'Loopback',
+      topic: 'CreateHasManyObject',
+      callback: me.loopbackCreateHasManyObject.bind(me)
+    });
+    me.postal.subscribe({
+      channel: 'Loopback',
       topic: 'Create',
       callback: me.loopbackCreate.bind(me)
     });
@@ -57,7 +66,43 @@ export class LoopbackImpl implements Loopback {
       topic: 'FindById',
       callback: me.loopbackFindById.bind(me)
     });
+    me.postal.subscribe({
+      channel: 'Loopback',
+      topic: 'UpdateAttribute',
+      callback: me.loopbackUpdateAttribute.bind(me)
+    });
+    me.postal.subscribe({
+      channel: 'Loopback',
+      topic: 'UpdateAttributes',
+      callback: me.loopbackUpdateAttributes.bind(me)
+    });
     cb(null, {message: 'Initialized Loopback Subscriptions'});
+  }
+
+  private loopbackUpdateAttribute(updateAttributeOptions: UpdateAttributeOptions) {
+    updateAttributeOptions.loopbackModelToUpdate.updateAttribute(
+      updateAttributeOptions.attributeName,
+      updateAttributeOptions.newAttributeValue,
+      (err, updatedInstance) => {
+        if (typeof updateAttributeOptions.callback !== 'function') {
+          return;
+        }
+        let newWrapper = kernel.get<EtlBase>(updateAttributeOptions.className);
+        newWrapper.loopbackModel = updatedInstance;
+        updateAttributeOptions.callback(err, newWrapper);
+      });
+  }
+  private loopbackUpdateAttributes(updateAttributesOptions: UpdateAttributesOptions) {
+    updateAttributesOptions.loopbackModelToUpdate.updateAttributes(
+      updateAttributesOptions.updatedAttributes,
+      (err, updatedInstance) => {
+        if (typeof updateAttributesOptions.callback !== 'function') {
+          return;
+        }
+        let newWrapper = kernel.get<EtlBase>(updateAttributesOptions.className);
+        newWrapper.loopbackModel = updatedInstance;
+        updateAttributesOptions.callback(err, newWrapper);
+      });
   }
 
   private createChangeStream(createChangeStreamOptions: CreateChangeStreamOptions) {
@@ -123,10 +168,31 @@ export class LoopbackImpl implements Loopback {
       });
   }
 
+  private loopbackCreateHasManyObject(mCHMOO: ModelCreateHasManyObjectOptions) {
+    let me = this;
+    let fnArray = [];
+    mCHMOO.containedObjects.forEach((containedObject: ModelCreateOptions) => {
+      fnArray.push(async.apply(
+        (containedObject: ModelCreateOptions, cb: (err: Error, createdObject: EtlBase) => void) => {
+          containedObject.callback = cb;
+          containedObject.initializationObject['parentFileAminoId'] = mCHMOO.containerObject.aminoId;
+          me.postal.publish({
+            channel: 'Loopback',
+            topic: 'Create',
+            data: containedObject
+          });
+        }, containedObject));
+    });
+    mCHMOO.callback = mCHMOO.callback || (() => {
+      });
+    async.parallel(fnArray, mCHMOO.callback);
+  }
+
   private loopbackCreate(modelCreateOptions: ModelCreateOptions) {
     let me = this;
     let initializationObject = modelCreateOptions.initializationObject || {};
     initializationObject.aminoId = Guid.generate();
+    initializationObject.name = initializationObject.name || Guid.generate();
     me.server.models[modelCreateOptions.className].create(
       initializationObject,
       (err, newModel) => {

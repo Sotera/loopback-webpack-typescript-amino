@@ -1,24 +1,19 @@
 {
   "name": "EtlFlow",
   "plural": "EtlFlows",
-  "base": "PersistedModel",
+  "base": "EtlBase",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "aminoId": {
-      "type": "string",
-      "required": true
-    },
     "type": {
       "type": "string"
     },
     "lastStatus": {
+      "type": "string"
+    },
+    "parentFileAminoId": {
       "type": "string"
     }
   },

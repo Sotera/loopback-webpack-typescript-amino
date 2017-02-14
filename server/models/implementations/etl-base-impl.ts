@@ -1,4 +1,4 @@
-import {inject,injectable} from 'inversify';
+import {inject, injectable} from 'inversify';
 import {IPostal} from "firmament-yargs";
 import {EtlBase} from "../interfaces/etl-base";
 
@@ -6,7 +6,14 @@ import {EtlBase} from "../interfaces/etl-base";
 export class EtlBaseImpl implements EtlBase {
   loopbackModel: any;
 
-  constructor(){
+  constructor() {
+  }
+
+  loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
+    if (typeof cb !== 'function') {
+      return;
+    }
+    cb();
   }
 
   get pojo(): any {

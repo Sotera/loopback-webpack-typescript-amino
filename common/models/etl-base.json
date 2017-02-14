@@ -1,22 +1,19 @@
 {
-  "name": "EtlTask",
-  "plural": "EtlTasks",
-  "base": "EtlBase",
+  "name": "EtlBase",
+  "plural": "EtlBases",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "fileId": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "flowId": {
+    "aminoId": {
       "type": "string",
       "required": true
-    },
-    "createDate": {
-      "type": "date"
     }
   },
   "validations": [],

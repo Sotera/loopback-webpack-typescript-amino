@@ -1,17 +1,13 @@
 {
   "name": "EtlStep",
   "plural": "EtlSteps",
-  "base": "PersistedModel",
+  "base": "EtlBase",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "parentFlowId": {
+    "parentFlowAminoId": {
       "type": "string",
       "required": true
     },

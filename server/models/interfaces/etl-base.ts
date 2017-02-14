@@ -4,4 +4,5 @@ export interface EtlBase {
   name: string;
   loopbackModel: any;
   pojo: any;
+  loadEntireObject(cb: (err: Error, etlBase: EtlBase) => void): void;
 }

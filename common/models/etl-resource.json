@@ -1,7 +1,7 @@
 {
   "name": "EtlResource",
   "plural": "EtlResources",
-  "base": "PersistedModel",
+  "base": "EtlBase",
   "idInjection": true,
   "options": {
     "validateUpsert": true

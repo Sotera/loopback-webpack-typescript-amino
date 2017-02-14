@@ -7,4 +7,12 @@ export class EtlStepImpl extends EtlBaseImpl implements EtlStep {
   constructor(@inject('IPostal') private postal: IPostal) {
     super();
   }
+
+  set parentFlowAminoId(newParentFlowAminoId) {
+    this.loopbackModel.parentFlowAminoId = newParentFlowAminoId;
+  }
+
+  get parentFlowAminoId(): string {
+    return this.loopbackModel.parentFlowAminoId;
+  }
 }

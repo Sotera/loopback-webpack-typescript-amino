@@ -92,17 +92,16 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
         templateFlow.steps.forEach(step => {
           fnArray.push(async.apply(
             (flow, cb: (err: Error, etlStep: EtlStep) => void) => {
-              let parentFlowId = etlFlow.aminoId;
+              let parentFlowAminoId = etlFlow.aminoId;
               me.postal.publish({
                 channel: 'Loopback',
-                //topic: 'Find',
                 topic: 'FindOrCreate',
                 data: {
                   className: 'EtlStep',
-                  filter: {where: {and: [{name: step.name}, {parentFlowId}]}},
+                  filter: {where: {and: [{name: step.name}, {parentFlowAminoId}]}},
                   initializationObject: {
                     name: step.name,
-                    parentFlowId
+                    parentFlowAminoId
                   },
                   callback: (err, etlStep) => {
                     cb(err, etlStep);

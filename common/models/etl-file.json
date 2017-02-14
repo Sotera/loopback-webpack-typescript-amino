@@ -1,16 +1,12 @@
 {
   "name": "EtlFile",
   "plural": "EtlFiles",
-  "base": "PersistedModel",
+  "base": "EtlBase",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
     "path": {
       "type": "string"
     },

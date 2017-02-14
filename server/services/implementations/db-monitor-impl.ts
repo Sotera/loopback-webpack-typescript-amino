@@ -5,16 +5,7 @@ import {DbMonitor} from "../interfaces/db-monitor";
 import {FullPipeline, VitaTasks} from "firmament-vita";
 import * as _ from 'lodash';
 import {EtlFile} from "../../models/interfaces/etl-file";
-/*
- import {EtlFlow} from "../../../common/modelClasses/etl-flow";
- import {EtlFile} from "../../../common/modelClasses/etl-file";
- import {EtlStep} from "../../../common/modelClasses/etl-step";
- import {EtlBase} from "../../../common/modelClasses/etl-base";
- import {EtlTask} from "../../../common/modelClasses/etl-task";
- */
-
 const path = require('path');
-const config = require('../../config.json');
 const async = require('async');
 
 @injectable()
@@ -33,9 +24,28 @@ export class DbMonitorImpl implements DbMonitor {
 
   init(cb: (err: Error, result: any) => void) {
     let me = this;
-    me.createChangeStream_EtlFile();
-    me.createChangeStream_EtlTask();
-    me.createChangeStream_EtlStep();
+    me.postal.publish({
+      channel: 'Loopback',
+      topic: 'CreateChangeStream',
+      data: {
+        className: 'EtlFile',
+        collectionChangedCallback: (change) => {
+          me.publishAllEtlFiles();
+        }
+      }
+    });
+    me.postal.publish({
+      channel: 'Loopback',
+      topic: 'CreateChangeStream',
+      data: {
+        className: 'EtlTask',
+        collectionChangedCallback: (change) => {
+          if (change.type === 'create') {
+            me.taskAdded(change.data.fileId, change.data.flowId);
+          }
+        }
+      }
+    });
     cb(null, {message: 'Initialized dbMonitor'});
   }
 
@@ -92,45 +102,6 @@ export class DbMonitorImpl implements DbMonitor {
     cb(null, {message: 'Initialized dbMonitor Subscriptions'});
   }
 
-  private createChangeStream_EtlFile() {
-    let me = this;
-    me.postal.publish({
-      channel: 'Loopback',
-      topic: 'CreateChangeStream',
-      data: {
-        className: 'EtlFile',
-        collectionChangedCallback: (change) => {
-          me.publishAllEtlFiles();
-        }
-      }
-    });
-  }
-
-  private createChangeStream_EtlStep() {
-    /*    let me = this;
-     EtlStep.createChangeStream((err, changes) => {
-     changes.on('data', () => {
-     me.blowCacheAndPublishAllEtlFiles();
-     });
-     });*/
-  }
-
-  private createChangeStream_EtlTask() {
-    let me = this;
-    me.postal.publish({
-      channel: 'Loopback',
-      topic: 'CreateChangeStream',
-      data: {
-        className: 'EtlTask',
-        collectionChangedCallback: (change) => {
-          if (change.type === 'create') {
-            me.taskAdded(change.data.fileId, change.data.flowId);
-          }
-        }
-      }
-    });
-  }
-
   private taskAdded(fileId: string, flowId: string) {
     //This gets called from a DB signal indicating a task was created in the
     //EtlTask DB. Now we need to add a flow to the appropriate EtlFile object
@@ -145,7 +116,14 @@ export class DbMonitorImpl implements DbMonitor {
           if (me.commandUtil.logError(err)) {
             return;
           }
-
+          etlFile.addFlows([
+              {
+                name: flowId
+              }
+            ],
+            () => {
+              me.publishAllEtlFiles();
+            });
         }
       }
     });
@@ -375,29 +353,23 @@ export class DbMonitorImpl implements DbMonitor {
         className: 'EtlFile',
         filter: {order: 'createDate DESC'},
         callback: (err, etlFiles: EtlFile[]) => {
-          let data = _.map(etlFiles, f => {
-            return f.pojo;
-          });
-          me.postal.publish({
-            channel: 'WebSocket',
-            topic: 'Broadcast',
-            data: {
-              channel: 'EtlFile',
-              topic: 'AllFiles',
-              data
-            }
+          async.map(etlFiles, (etlFile: EtlFile, cb) => {
+            etlFile.loadEntireObject((err, etlFile) => {
+              cb(err, etlFile.pojo);
+            });
+          }, (err, etlFilePojos) => {
+            me.postal.publish({
+              channel: 'WebSocket',
+              topic: 'Broadcast',
+              data: {
+                channel: 'EtlFile',
+                topic: 'AllFiles',
+                data: etlFilePojos
+              }
+            });
           });
         }
       }
     });
   }
-
-  /*  private generateUUID() {
-   let d = new Date().getTime();
-   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-   let r = (d + Math.random() * 16) % 16 | 0;
-   d = Math.floor(d / 16);
-   return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-   });
-   }*/
 }
