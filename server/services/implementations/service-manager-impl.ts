@@ -1,6 +1,5 @@
 import {injectable, inject} from 'inversify';
 import {ServiceManager} from "../interfaces/service-manager";
-import {CommandUtil} from "firmament-yargs";
 import {BaseService} from "../interfaces/base-service";
 import {InitializeDatabase} from "../interfaces/initialize-database";
 import {FolderMonitor} from "../interfaces/folder-monitor";
@@ -12,7 +11,6 @@ const async = require('async');
 @injectable()
 export class ServiceManagerImpl implements ServiceManager {
   constructor(@inject('BaseService') private baseService: BaseService,
-              @inject('CommandUtil') private commandUtil: CommandUtil,
               @inject('FolderMonitor') private folderMonitor: FolderMonitor,
               @inject('DbMonitor') private dbMonitor: DbMonitor,
               @inject('Loopback') private loopback: Loopback,
@@ -24,26 +22,23 @@ export class ServiceManagerImpl implements ServiceManager {
   }
 
   initSubscriptions(cb: (err: Error, result: any) => void) {
+    cb(null, null);
   }
 
   init(cb: (err: Error, result: any) => void) {
-    async.series([
-      cb => {
-        let functionArray = [];
-        functionArray.push(async.apply(this.initializeDatabase.initSubscriptions.bind(this.initializeDatabase)));
-        functionArray.push(async.apply(this.folderMonitor.initSubscriptions.bind(this.folderMonitor)));
-        functionArray.push(async.apply(this.dbMonitor.initSubscriptions.bind(this.dbMonitor)));
-        functionArray.push(async.apply(this.loopback.initSubscriptions.bind(this.loopback)));
-        async.parallel(functionArray, cb);
-      },
-      cb => {
-        let functionArray = [];
-        functionArray.push(async.apply(this.initializeDatabase.init.bind(this.initializeDatabase)));
-        functionArray.push(async.apply(this.folderMonitor.init.bind(this.folderMonitor)));
-        functionArray.push(async.apply(this.dbMonitor.init.bind(this.dbMonitor)));
-        functionArray.push(async.apply(this.loopback.init.bind(this.loopback)));
-        async.parallel(functionArray, cb);
-      }
-    ], cb);
+    let fnArray = [
+      this.initializeDatabase.initSubscriptions.bind(this.initializeDatabase),
+      this.folderMonitor.initSubscriptions.bind(this.folderMonitor),
+      this.dbMonitor.initSubscriptions.bind(this.dbMonitor),
+      this.loopback.initSubscriptions.bind(this.loopback),
+      this.initializeDatabase.init.bind(this.initializeDatabase),
+      this.folderMonitor.init.bind(this.folderMonitor),
+      this.dbMonitor.init.bind(this.dbMonitor),
+      this.loopback.init.bind(this.loopback)
+    ];
+    async.mapSeries(fnArray,
+      (fn, cb) => {
+        fn(cb);
+      }, cb);
   }
 }

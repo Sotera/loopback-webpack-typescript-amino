@@ -5,8 +5,11 @@ import {DbMonitor} from "../interfaces/db-monitor";
 import {FullPipeline, VitaTasks} from "firmament-vita";
 import * as _ from 'lodash';
 import {EtlFile} from "../../models/interfaces/etl-file";
+import {EtlFlow} from "../../models/interfaces/etl-flow";
+import {EtlBase} from "../../models/interfaces/etl-base";
 const path = require('path');
 const async = require('async');
+const config = require('../../config.json');
 
 @injectable()
 export class DbMonitorImpl implements DbMonitor {
@@ -42,6 +45,18 @@ export class DbMonitorImpl implements DbMonitor {
         collectionChangedCallback: (change) => {
           if (change.type === 'create') {
             me.taskAdded(change.data.fileId, change.data.flowId);
+          }
+        }
+      }
+    });
+    me.postal.publish({
+      channel: 'Loopback',
+      topic: 'CreateChangeStream',
+      data: {
+        className: 'EtlFlow',
+        collectionChangedCallback: (change) => {
+          if (change.type === 'create') {
+            me.startFlow(change.target.toString());
           }
         }
       }
@@ -93,10 +108,18 @@ export class DbMonitorImpl implements DbMonitor {
       channel: 'EtlFile',
       topic: 'Delete',
       callback: (fileId) => {
-        /*        EtlFile.destroyById(fileId.id, err => {
-         this.commandUtil.logError(err);
-         this.blowCacheAndPublishAllEtlFiles();
-         });*/
+        me.postal.publish({
+          channel: 'Loopback',
+          topic: 'DestroyById',
+          data: {
+            className: 'EtlFile',
+            id: fileId.id,
+            callback: (err) => {
+              this.commandUtil.logError(err);
+              this.publishAllEtlFiles();
+            }
+          }
+        });
       }
     });
     cb(null, {message: 'Initialized dbMonitor Subscriptions'});
@@ -106,48 +129,38 @@ export class DbMonitorImpl implements DbMonitor {
     //This gets called from a DB signal indicating a task was created in the
     //EtlTask DB. Now we need to add a flow to the appropriate EtlFile object
     let me = this;
-    me.postal.publish({
-      channel: 'Loopback',
-      topic: 'FindById',
-      data: {
-        className: 'EtlFile',
-        id: fileId,
-        callback: (err, etlFile: EtlFile) => {
-          if (me.commandUtil.logError(err)) {
-            return;
-          }
-          etlFile.addFlows([
-              {
-                name: flowId
-              }
-            ],
-            () => {
-              me.publishAllEtlFiles();
-            });
-        }
+    me.getModelById(fileId, 'EtlFile', (err, etlFile: EtlFile) => {
+      if (me.commandUtil.logError(err)) {
+        return;
       }
+      etlFile.addFlows([{name: flowId}], () => {
+        me.publishAllEtlFiles();
+      });
     });
-    /*    EtlFile.findById(fileId, (err, etlFile: EtlFile) => {
-     if (me.commandUtil.logError(err)) {
-     return;
-     }
-     etlFile.createFlow({name: flowId}, (err, etlFlow: EtlFlow) => {
-     if (me.commandUtil.logError(err)) {
-     return;
-     }
-     me.fullPipeline.tag = {fileId, flowId: etlFlow.id};
-     me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
-     me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
-     me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
+  }
 
-     me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-     me.updateEtlStatus(status);
-     }, (err, result) => {
-     me.appendEtlResults(result);
-     });
-     me.blowCacheAndPublishAllEtlFiles();
-     });
-     });*/
+  private startFlow(flowId: string) {
+    let me = this;
+    async.waterfall([
+      (cb) => {
+        me.getModelById(flowId, 'EtlFlow', cb);
+      },
+      (etlFlow: EtlFlow, cb) => {
+        me.getModelByAminoId(etlFlow.parentFileAminoId, 'EtlFile', (err, etlFile: EtlFile) => {
+          cb(err, {etlFlow, etlFile});
+        });
+      }
+    ], (err, {etlFlow, etlFile}) => {
+      me.fullPipeline.tag = {etlFlow, etlFile};
+      me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
+      me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
+      me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
+      me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
+        me.updateEtlStatus(status);
+      }, (err, result) => {
+        me.appendEtlResults(result);
+      });
+    });
   }
 
   private updateEtlStatus(status: any) {
@@ -236,8 +249,11 @@ export class DbMonitorImpl implements DbMonitor {
 ///--->
   }
 
-  private appendEtlResults(apdFile) {
+  private appendEtlResults(status) {
     let me = this;
+    me.commandUtil.log(JSON.stringify(status, undefined, 2));
+    me.publishAllEtlFiles();
+
     /*    let etlFile = me.server.models.EtlFile;
 
      etlFile.findById(apdFile.tag.fileID, (err, file) => {
@@ -371,5 +387,13 @@ export class DbMonitorImpl implements DbMonitor {
         }
       }
     });
+  }
+
+  private getModelByAminoId(aminoId: string, className: string, callback: (err, etlBase: EtlBase) => void) {
+    this.postal.publish({channel: 'Loopback', topic: 'FindByAminoId', data: {className, aminoId, callback}});
+  }
+
+  private getModelById(id: string, className: string, callback: (err, etlBase: EtlBase) => void) {
+    this.postal.publish({channel: 'Loopback', topic: 'FindById', data: {className, id, callback}});
   }
 }

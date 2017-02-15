@@ -30,6 +30,18 @@ export interface ModelFindOrCreateOptions {
   callback: (err: Error, foundModel: EtlBase) => void;
 }
 
+export interface ModelDestroyByIdOptions {
+  className: string;
+  id: string;
+  callback: (err: Error) => void;
+}
+
+export interface ModelFindByAminoIdOptions {
+  className: string;
+  aminoId: string;
+  callback: (err: Error, foundModel: EtlBase) => void;
+}
+
 export interface ModelFindByIdOptions {
   className: string;
   id: string;

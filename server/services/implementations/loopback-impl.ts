@@ -16,6 +16,8 @@ import {Guid} from '../../util/guid-gen';
 import {ModelCreateHasManyObjectOptions} from '../../models/interfaces/loopback-control';
 import {UpdateAttributesOptions} from "../../models/interfaces/loopback-control";
 import {UpdateAttributeOptions} from "../../models/interfaces/loopback-control";
+import {ModelDestroyByIdOptions} from "../../models/interfaces/loopback-control";
+import {ModelFindByAminoIdOptions} from "../../models/interfaces/loopback-control";
 const async = require('async');
 
 @injectable()
@@ -63,8 +65,18 @@ export class LoopbackImpl implements Loopback {
     });
     me.postal.subscribe({
       channel: 'Loopback',
+      topic: 'FindByAminoId',
+      callback: me.loopbackFindByAminoId.bind(me)
+    });
+    me.postal.subscribe({
+      channel: 'Loopback',
       topic: 'FindById',
       callback: me.loopbackFindById.bind(me)
+    });
+    me.postal.subscribe({
+      channel: 'Loopback',
+      topic: 'DestroyById',
+      callback: me.loopbackDestroyById.bind(me)
     });
     me.postal.subscribe({
       channel: 'Loopback',
@@ -116,6 +128,31 @@ export class LoopbackImpl implements Loopback {
       changes.on('data', change => {
         cb(change);
       });
+    });
+  }
+
+  private loopbackDestroyById(modelDestroyByIdOptions: ModelDestroyByIdOptions) {
+    let me = this;
+    me.server.models[modelDestroyByIdOptions.className].destroyById(
+      modelDestroyByIdOptions.id,
+      (err, model) => {
+        if (typeof modelDestroyByIdOptions.callback !== 'function') {
+          return;
+        }
+        modelDestroyByIdOptions.callback(err);
+      });
+  }
+
+  private loopbackFindByAminoId(modelFindByAminoIdOptions: ModelFindByAminoIdOptions) {
+    this.loopbackFind({
+      className: modelFindByAminoIdOptions.className,
+      filter: {where: {aminoId: modelFindByAminoIdOptions.aminoId}},
+      callback: (err, foundModels: EtlBase[]) => {
+        let foundModel = (foundModels && foundModels.length === 1)
+          ? foundModels[0]
+          : null;
+        modelFindByAminoIdOptions.callback(err, foundModel);
+      }
     });
   }
 
