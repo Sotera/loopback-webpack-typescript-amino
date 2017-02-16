@@ -22,7 +22,7 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
           name: 'UnZip'
         },
         {
-          name: 'MergePcap'
+          name: 'MergePCap'
         }
       ]
     },

@@ -7,6 +7,7 @@ import * as _ from 'lodash';
 import {EtlFile} from "../../models/interfaces/etl-file";
 import {EtlFlow} from "../../models/interfaces/etl-flow";
 import {EtlBase} from "../../models/interfaces/etl-base";
+import {EtlStep} from "../../models/interfaces/etl-step";
 const path = require('path');
 const async = require('async');
 const config = require('../../config.json');
@@ -147,11 +148,13 @@ export class DbMonitorImpl implements DbMonitor {
       },
       (etlFlow: EtlFlow, cb) => {
         me.getModelByAminoId(etlFlow.parentFileAminoId, 'EtlFile', (err, etlFile: EtlFile) => {
-          cb(err, {etlFlow, etlFile});
+          etlFlow.loadEntireObject((err, etlFlow: EtlFlow) => {
+            cb(err, {etlFlow, etlFile});
+          });
         });
       }
     ], (err, {etlFlow, etlFile}) => {
-      me.fullPipeline.tag = {etlFlow, etlFile};
+      me.fullPipeline.tag = etlFlow;
       me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
       me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
       me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
@@ -163,9 +166,9 @@ export class DbMonitorImpl implements DbMonitor {
     });
   }
 
-  private updateEtlStatus(status: any) {
+  private updateEtlStatus(etlStep: EtlStep) {
     let me = this;
-    me.commandUtil.log(JSON.stringify(status, undefined, 2));
+    me.commandUtil.log(JSON.stringify(etlStep, undefined, 2));
 
     /*    let etlFile = _.find(me.etlFileCache, ['id', status.tag.fileId]);
      let etlFlow = _.find(etlFile.flows, ['id', status.tag.flowId]);

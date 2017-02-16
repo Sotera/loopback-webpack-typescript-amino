@@ -10,8 +10,11 @@
     "type": {
       "type": "string"
     },
-    "lastStatus": {
+    "status": {
       "type": "string"
+    },
+    "currentStepIndex": {
+      "type": "number"
     },
     "parentFileAminoId": {
       "type": "string"

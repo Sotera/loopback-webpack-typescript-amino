@@ -40,7 +40,31 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
     });
   }
 
-  set parentFileAminoId(newParentFileAminoId) {
+  set status(newStatus: string) {
+    this.loopbackModel.status = newStatus;
+  }
+
+  get status(): string {
+    return this.loopbackModel.status;
+  }
+
+  set currentStepIndex(newCurrentStepIndex: number) {
+    this.loopbackModel.currentStepIndex = newCurrentStepIndex;
+  }
+
+  get currentStepIndex(): number {
+    return this.loopbackModel.currentStepIndex;
+  }
+
+  set type(newType: string) {
+    this.loopbackModel.type = newType;
+  }
+
+  get type(): string {
+    return this.loopbackModel.type;
+  }
+
+  set parentFileAminoId(newParentFileAminoId: string) {
     this.loopbackModel.parentFileAminoId = newParentFileAminoId;
   }
 
