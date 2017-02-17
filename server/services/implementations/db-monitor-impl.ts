@@ -14,6 +14,8 @@ const config = require('../../config.json');
 
 @injectable()
 export class DbMonitorImpl implements DbMonitor {
+  private etlFileCache: EtlFile[] = [];
+
   constructor(@inject('BaseService') private baseService: BaseService,
               @inject('IPostal') private postal: IPostal,
               @inject('FullPipeline') private fullPipeline: FullPipeline,
@@ -33,8 +35,8 @@ export class DbMonitorImpl implements DbMonitor {
       topic: 'CreateChangeStream',
       data: {
         className: 'EtlFile',
-        collectionChangedCallback: (change) => {
-          me.publishAllEtlFiles();
+        collectionChangedCallback: (/*change*/) => {
+          me.writeBackRefreshAndPublishEtlFileCache();
         }
       }
     });
@@ -63,6 +65,16 @@ export class DbMonitorImpl implements DbMonitor {
       }
     });
     cb(null, {message: 'Initialized dbMonitor'});
+
+    me.server.on('started', () => {
+      let efc = me.etlFileCache;
+      me.refreshEtlFileCache((err, etlFiles) => {
+        etlFiles[0].flows[0].steps[0].status = 'Bloog';
+        me.writeBackEtlFileCache((err) => {
+          let e = err;
+        });
+      });
+    });
   }
 
   initSubscriptions(cb: (err: Error, result: any) => void) {
@@ -102,7 +114,7 @@ export class DbMonitorImpl implements DbMonitor {
       channel: 'EtlFile',
       topic: 'GetAllFiles',
       callback: () => {
-        me.publishAllEtlFiles();
+        me.writeBackRefreshAndPublishEtlFileCache();
       }
     });
     me.postal.subscribe({
@@ -116,8 +128,8 @@ export class DbMonitorImpl implements DbMonitor {
             className: 'EtlFile',
             id: fileId.id,
             callback: (err) => {
-              this.commandUtil.logError(err);
-              this.publishAllEtlFiles();
+              me.commandUtil.logError(err);
+              me.writeBackRefreshAndPublishEtlFileCache();
             }
           }
         });
@@ -135,7 +147,7 @@ export class DbMonitorImpl implements DbMonitor {
         return;
       }
       etlFile.addFlows([{name: flowId}], () => {
-        me.publishAllEtlFiles();
+        me.writeBackRefreshAndPublishEtlFileCache();
       });
     });
   }
@@ -154,21 +166,23 @@ export class DbMonitorImpl implements DbMonitor {
         });
       }
     ], (err, {etlFlow, etlFile}) => {
+
       me.fullPipeline.tag = etlFlow;
       me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
       me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
       me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
       me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-        me.updateEtlStatus(status);
+        me.updateEtlStatus(status.tag);
       }, (err, result) => {
         me.appendEtlResults(result);
       });
     });
   }
 
-  private updateEtlStatus(etlStep: EtlStep) {
+  private updateEtlStatus(etlFlow: EtlFlow) {
     let me = this;
-    me.commandUtil.log(JSON.stringify(etlStep, undefined, 2));
+    me.commandUtil.log(JSON.stringify(etlFlow, undefined, 2));
+
 
     /*    let etlFile = _.find(me.etlFileCache, ['id', status.tag.fileId]);
      let etlFlow = _.find(etlFile.flows, ['id', status.tag.flowId]);
@@ -179,7 +193,7 @@ export class DbMonitorImpl implements DbMonitor {
      });
      return;
      }*/
-    me.publishAllEtlFiles();
+    me.publishEtlFileCache();
 ///--->
     /*    EtlFile.findById(status.tag.fileId, (err, etlFile) => {
      me.updatingEtlStatus = false;
@@ -214,7 +228,7 @@ export class DbMonitorImpl implements DbMonitor {
      step.end = new Date(status.currentTime);
      step.save(() => {
      //me.updatingEtlStatus = false;
-     //me.publishAllEtlFiles();
+     //me.publishEtlFileCache();
      });
      });
      }
@@ -255,7 +269,7 @@ export class DbMonitorImpl implements DbMonitor {
   private appendEtlResults(status) {
     let me = this;
     me.commandUtil.log(JSON.stringify(status, undefined, 2));
-    me.publishAllEtlFiles();
+    me.publishEtlFileCache();
 
     /*    let etlFile = me.server.models.EtlFile;
 
@@ -363,7 +377,46 @@ export class DbMonitorImpl implements DbMonitor {
      })*/
   }
 
-  private publishAllEtlFiles() {
+  private writeBackRefreshAndPublishEtlFileCache() {
+    let me = this;
+    me.writeBackEtlFileCache(() => {
+      me.refreshEtlFileCache((err, etlFiles) => {
+        me.publishEtlFileCache(etlFiles);
+      });
+    });
+  }
+
+  private publishEtlFileCache(etlFileCache: EtlFile[] = null) {
+    let me = this;
+    etlFileCache = etlFileCache || me.etlFileCache;
+    me.postal.publish({
+      channel: 'WebSocket',
+      topic: 'Broadcast',
+      data: {
+        channel: 'EtlFile',
+        topic: 'AllFiles',
+        data: etlFileCache.map((etlFile) => {
+          return etlFile.pojo;
+        })
+      }
+    });
+  }
+
+  private writeBackEtlFileCache(cb: (err) => void) {
+    let me = this;
+    async.each(me.etlFileCache,
+      (etlFile: EtlFile, cb) => {
+        etlFile.writeToDb(cb);
+      },
+      (err) => {
+        if (typeof cb !== 'function') {
+          return;
+        }
+        cb(null);
+      });
+  }
+
+  private refreshEtlFileCache(cb: (err, etlFiles: EtlFile[]) => void) {
     let me = this;
     me.postal.publish({
       channel: 'Loopback',
@@ -373,19 +426,13 @@ export class DbMonitorImpl implements DbMonitor {
         filter: {order: 'createDate DESC'},
         callback: (err, etlFiles: EtlFile[]) => {
           async.map(etlFiles, (etlFile: EtlFile, cb) => {
-            etlFile.loadEntireObject((err, etlFile) => {
-              cb(err, etlFile.pojo);
-            });
-          }, (err, etlFilePojos) => {
-            me.postal.publish({
-              channel: 'WebSocket',
-              topic: 'Broadcast',
-              data: {
-                channel: 'EtlFile',
-                topic: 'AllFiles',
-                data: etlFilePojos
-              }
-            });
+            etlFile.loadEntireObject(cb);
+          }, (err, etlFiles) => {
+            me.etlFileCache = etlFiles;
+            if (typeof cb !== 'function') {
+              return;
+            }
+            cb(err, etlFiles);
           });
         }
       }

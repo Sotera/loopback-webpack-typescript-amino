@@ -16,8 +16,7 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
       steps: [
         {
           name: 'DecryptAndUnTar',
-        }
-        ,
+        },
         {
           name: 'UnZip'
         },
@@ -33,11 +32,11 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
       steps: [
         {
           name: 'LuvAMuffin'
-        }
-        , {
+        },
+        {
           name: 'WorkAWhiddle'
-        }
-        , {
+        },
+        {
           name: 'SavABaloonHead'
         }
       ]

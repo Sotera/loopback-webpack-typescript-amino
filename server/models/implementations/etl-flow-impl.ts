@@ -21,6 +21,20 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
     return this._steps || [];
   }
 
+  writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
+    let me = this;
+    async.each(me.steps,
+      (etlStep: EtlStep, cb) => {
+        etlStep.writeToDb(cb);
+      },
+      (err, results) => {
+        if (typeof cb !== 'function') {
+          return;
+        }
+        cb();
+      });
+  }
+
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
     let me = this;
     if (typeof cb !== 'function') {

@@ -9,6 +9,13 @@ export class EtlBaseImpl implements EtlBase {
   constructor() {
   }
 
+  writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
+    if (typeof cb !== 'function') {
+      return;
+    }
+    cb();
+  }
+
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
     if (typeof cb !== 'function') {
       return;

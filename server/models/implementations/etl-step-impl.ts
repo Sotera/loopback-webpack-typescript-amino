@@ -2,11 +2,21 @@ import {injectable, inject} from 'inversify';
 import {IPostal} from "firmament-yargs";
 import {EtlBaseImpl} from "./etl-base-impl";
 import {EtlStep} from "../interfaces/etl-step";
+import {EtlBase} from "../interfaces/etl-base";
 @injectable()
 export class EtlStepImpl extends EtlBaseImpl implements EtlStep {
 
   constructor(@inject('IPostal') private postal: IPostal) {
     super();
+  }
+
+  writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
+    let me = this;
+    let s = me['status'];
+    if (typeof cb !== 'function') {
+      return;
+    }
+    cb();
   }
 
   set endTime(newProgress: Date) {

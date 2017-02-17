@@ -16,6 +16,20 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
     super();
   }
 
+  writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
+    let me = this;
+    async.each(me.flows,
+      (etlFlow: EtlFlow, cb) => {
+        etlFlow.writeToDb(cb);
+      },
+      (err, results) => {
+        if (typeof cb !== 'function') {
+          return;
+        }
+        cb();
+      });
+  }
+
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
     let me = this;
     if (typeof cb !== 'function') {
