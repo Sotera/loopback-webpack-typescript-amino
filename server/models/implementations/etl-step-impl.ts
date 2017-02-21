@@ -5,65 +5,55 @@ import {EtlStep} from "../interfaces/etl-step";
 import {EtlBase} from "../interfaces/etl-base";
 @injectable()
 export class EtlStepImpl extends EtlBaseImpl implements EtlStep {
-
-  constructor(@inject('IPostal') private postal: IPostal) {
-    super();
+  constructor(@inject('IPostal') protected postal: IPostal) {
+    super(postal);
   }
 
-  writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
-    let me = this;
-    let s = me['status'];
-    if (typeof cb !== 'function') {
-      return;
-    }
-    cb();
-  }
-
-  set endTime(newProgress: Date) {
-    this.loopbackModel.endTime = newProgress;
+  set endTime(newEndTime: Date) {
+    this.setProperty<Date>('endTime', newEndTime);
   }
 
   get endTime(): Date {
-    return this.loopbackModel.endTime;
+    return this.getProperty<Date>('endTime');
   }
 
-  set currentTime(newProgress: Date) {
-    this.loopbackModel.currentTime = newProgress;
+  set currentTime(newCurrentTime: Date) {
+    this.setProperty<Date>('currentTime', newCurrentTime);
   }
 
   get currentTime(): Date {
-    return this.loopbackModel.currentTime;
+    return this.getProperty<Date>('currentTime');
   }
 
-  set startTime(newProgress: Date) {
-    this.loopbackModel.startTime = newProgress;
+  set startTime(newStartTime: Date) {
+    this.setProperty<Date>('startTime', newStartTime);
   }
 
   get startTime(): Date {
-    return this.loopbackModel.startTime;
+    return this.getProperty<Date>('startTime');
   }
 
   set progress(newProgress: number) {
-    this.loopbackModel.progress = newProgress;
+    this.setProperty<number>('progress', newProgress);
   }
 
   get progress(): number {
-    return this.loopbackModel.progress;
+    return this.getProperty<number>('progress');
   }
 
   set status(newStatus: string) {
-    this.loopbackModel.status = newStatus;
+    this.setProperty<string>('status', newStatus);
   }
 
   get status(): string {
-    return this.loopbackModel.status;
+    return this.getProperty<string>('status');
   }
 
   set parentFlowAminoId(newParentFlowAminoId: string) {
-    this.loopbackModel.parentFlowAminoId = newParentFlowAminoId;
+    this.setProperty<string>('parentFlowAminoId', newParentFlowAminoId);
   }
 
   get parentFlowAminoId(): string {
-    return this.loopbackModel.parentFlowAminoId;
+    return this.getProperty<string>('parentFlowAminoId');
   }
 }

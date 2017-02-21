@@ -12,9 +12,8 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
   private _steps: EtlStep[];
   expanded: boolean;
 
-  constructor(@inject('IPostal') private postal: IPostal,
-              @inject('CommandUtil') private commandUtil: CommandUtil) {
-    super();
+  constructor(@inject('IPostal') protected postal: IPostal) {
+    super(postal);
   }
 
   get steps(): EtlStep[] {
@@ -24,22 +23,19 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
   writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
     let me = this;
     async.each(me.steps,
+      //First do them ...
       (etlStep: EtlStep, cb) => {
         etlStep.writeToDb(cb);
       },
       (err, results) => {
-        if (typeof cb !== 'function') {
-          return;
-        }
-        cb();
+        //Now do me!
+        super.writeToDb(cb);
       });
   }
 
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
     let me = this;
-    if (typeof cb !== 'function') {
-      return;
-    }
+    cb = me.checkCallback(cb);
     me.postal.publish({
       channel: 'Loopback',
       topic: 'Find',
@@ -55,11 +51,11 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
   }
 
   set status(newStatus: string) {
-    this.loopbackModel.status = newStatus;
+    this.setProperty<string>('status', newStatus);
   }
 
   get status(): string {
-    return this.loopbackModel.status;
+    return this.getProperty<string>('status');
   }
 
   set currentStepIndex(newCurrentStepIndex: number) {

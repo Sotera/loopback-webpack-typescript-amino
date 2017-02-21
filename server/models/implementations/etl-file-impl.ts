@@ -11,22 +11,20 @@ const async = require('async');
 export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
   private _flows: EtlFlow[];
 
-  constructor(@inject('IPostal') private postal: IPostal,
-              @inject('CommandUtil') private commandUtil: CommandUtil) {
-    super();
+  constructor(@inject('IPostal') protected postal: IPostal) {
+    super(postal);
   }
 
   writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
     let me = this;
     async.each(me.flows,
+      //First do them ...
       (etlFlow: EtlFlow, cb) => {
         etlFlow.writeToDb(cb);
       },
       (err, results) => {
-        if (typeof cb !== 'function') {
-          return;
-        }
-        cb();
+        //Now do me!
+        super.writeToDb(cb);
       });
   }
 

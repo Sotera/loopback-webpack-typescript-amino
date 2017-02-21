@@ -69,7 +69,7 @@ export class DbMonitorImpl implements DbMonitor {
     me.server.on('started', () => {
       let efc = me.etlFileCache;
       me.refreshEtlFileCache((err, etlFiles) => {
-        etlFiles[0].flows[0].steps[0].status = 'Bloog';
+        etlFiles[0].flows[0].steps[0].status = 'BooJiffer';
         me.writeBackEtlFileCache((err) => {
           let e = err;
         });
