@@ -1,20 +1,35 @@
-import {inject, injectable} from 'inversify';
-import {IPostal} from "firmament-yargs";
+import {unmanaged, injectable} from 'inversify';
+import {IPostal, CommandUtil} from "firmament-yargs";
 import {EtlBase} from "../interfaces/etl-base";
+const async = require('async');
 
 @injectable()
 export class EtlBaseImpl implements EtlBase {
   protected updateObject = {};
   loopbackModel: any;
 
-  constructor(protected postal: IPostal) {
+  constructor(@unmanaged() protected commandUtil: CommandUtil,
+              @unmanaged() protected postal: IPostal) {
   }
 
   get loopbackClassName() {
     return this.constructor.name.replace(/Impl/, '');
   }
 
-  writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
+  removeFromDb(cb?: (err?: Error, etlBase?: EtlBase) => void) {
+    let me = this;
+    me.postal.publish({
+      channel: 'Loopback',
+      topic: 'DestroyById',
+      data: {
+        className: me.loopbackClassName,
+        id: me.id,
+        callback: cb
+      }
+    });
+  }
+
+  writeToDb(cb?: (err?: Error, etlBase?: EtlBase) => void) {
     let me = this;
     me.postal.publish({
       channel: 'Loopback',
@@ -23,13 +38,13 @@ export class EtlBaseImpl implements EtlBase {
         className: me.loopbackClassName,
         loopbackModelToUpdate: me.loopbackModel,
         updatedAttributes: me.updateObject,
-        callback: me.checkCallback(cb)
+        callback: EtlBaseImpl.checkCallback(cb)
       }
     });
   }
 
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
-    this.checkCallback(cb)();
+    EtlBaseImpl.checkCallback(cb)();
   }
 
   get pojo(): any {
@@ -65,7 +80,23 @@ export class EtlBaseImpl implements EtlBase {
       : this.loopbackModel[propertyName];
   }
 
-  protected checkCallback(cb: any) {
+  protected static executeOnCollections(etlBase: EtlBase,
+                                        superMethod: ((cb: (err, etlBase) => void) => void),
+                                        collectionName: string,
+                                        methodName: string,
+                                        cb: (err, etlBase: EtlBase) => void) {
+    etlBase.loadEntireObject(() => {
+      async.each(etlBase[collectionName],
+        (etlBase: EtlBase, cb) => {
+          etlBase[methodName](cb);
+        },
+        (err) => {
+          superMethod.bind(etlBase)(EtlBaseImpl.checkCallback(cb));
+        });
+    });
+  }
+
+  protected static checkCallback(cb: any) {
     return (typeof cb === 'function') ? cb : (() => {
       });
   }

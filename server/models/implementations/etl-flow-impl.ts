@@ -1,10 +1,9 @@
 import {injectable, inject} from 'inversify';
-import {IPostal, CommandUtil} from "firmament-yargs";
-import {EtlBaseImpl} from "./etl-base-impl";
-import {EtlFlow} from "../interfaces/etl-flow";
-import {EtlStep} from "../interfaces/etl-step";
-import * as _ from 'lodash';
-import {EtlBase} from "../interfaces/etl-base";
+import {IPostal, CommandUtil} from 'firmament-yargs';
+import {EtlBaseImpl} from './etl-base-impl';
+import {EtlFlow} from '../interfaces/etl-flow';
+import {EtlStep} from '../interfaces/etl-step';
+import {EtlBase} from '../interfaces/etl-base';
 const async = require('async');
 
 @injectable()
@@ -12,30 +11,21 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
   private _steps: EtlStep[];
   expanded: boolean;
 
-  constructor(@inject('IPostal') protected postal: IPostal) {
-    super(postal);
+  constructor(@inject('CommandUtil') protected commandUtil: CommandUtil,
+              @inject('IPostal') protected postal: IPostal) {
+    super(commandUtil, postal);
   }
 
-  get steps(): EtlStep[] {
-    return this._steps || [];
+  removeFromDb(cb?: (err?: Error, etlBase?: EtlBase) => void) {
+    EtlBaseImpl.executeOnCollections(this, super['removeFromDb'], 'steps', 'removeFromDb', cb);
   }
 
   writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
-    let me = this;
-    async.each(me.steps,
-      //First do them ...
-      (etlStep: EtlStep, cb) => {
-        etlStep.writeToDb(cb);
-      },
-      (err, results) => {
-        //Now do me!
-        super.writeToDb(cb);
-      });
+    EtlBaseImpl.executeOnCollections(this, super['writeToDb'], 'steps', 'writeToDb', cb);
   }
 
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
     let me = this;
-    cb = me.checkCallback(cb);
     me.postal.publish({
       channel: 'Loopback',
       topic: 'Find',
@@ -44,42 +34,10 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
         filter: {where: {parentFlowAminoId: me.aminoId}},
         callback: (err, etlSteps: EtlStep[]) => {
           me._steps = etlSteps;
-          cb(err, me);
+          EtlBaseImpl.checkCallback(cb)(err, me);
         }
       }
     });
-  }
-
-  set status(newStatus: string) {
-    this.setProperty<string>('status', newStatus);
-  }
-
-  get status(): string {
-    return this.getProperty<string>('status');
-  }
-
-  set currentStepIndex(newCurrentStepIndex: number) {
-    this.loopbackModel.currentStepIndex = newCurrentStepIndex;
-  }
-
-  get currentStepIndex(): number {
-    return this.loopbackModel.currentStepIndex;
-  }
-
-  set type(newType: string) {
-    this.loopbackModel.type = newType;
-  }
-
-  get type(): string {
-    return this.loopbackModel.type;
-  }
-
-  set parentFileAminoId(newParentFileAminoId: string) {
-    this.loopbackModel.parentFileAminoId = newParentFileAminoId;
-  }
-
-  get parentFileAminoId(): string {
-    return this.loopbackModel.parentFileAminoId;
   }
 
   addSteps(steps: any[], cb: (err: Error, etlSteps: EtlStep[]) => void): void {
@@ -99,10 +57,14 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
           containerObject: me,
           parentPropertyName: 'parentFlowAminoId',
           containedObjects,
-          callback: cb
+          callback: EtlBaseImpl.checkCallback(cb)
         }
       });
     });
+  }
+
+  get steps(): EtlStep[] {
+    return this._steps || [];
   }
 
   get pojo(): any {
@@ -111,5 +73,37 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
       return step.pojo;
     });
     return retVal;
+  }
+
+  set status(newStatus: string) {
+    this.setProperty<string>('status', newStatus);
+  }
+
+  get status(): string {
+    return this.getProperty<string>('status');
+  }
+
+  set currentStepIndex(newCurrentStepIndex: number) {
+    this.setProperty<number>('currentStepIndex', newCurrentStepIndex);
+  }
+
+  get currentStepIndex(): number {
+    return this.getProperty<number>('currentStepIndex');
+  }
+
+  set type(newType: string) {
+    this.setProperty<string>('type', newType);
+  }
+
+  get type(): string {
+    return this.getProperty<string>('type');
+  }
+
+  set parentFileAminoId(newParentFileAminoId: string) {
+    this.setProperty<string>('parentFileAminoId', newParentFileAminoId);
+  }
+
+  get parentFileAminoId(): string {
+    return this.getProperty<string>('parentFileAminoId');
   }
 }

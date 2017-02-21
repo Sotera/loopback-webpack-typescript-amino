@@ -5,5 +5,6 @@ export interface EtlBase {
   loopbackModel: any;
   pojo: any;
   loadEntireObject(cb: (err: Error, etlBase: EtlBase) => void): void;
-  writeToDb(cb: (err: Error, etlBase: EtlBase) => void): void;
+  writeToDb(cb?: (err?: Error, etlBase?: EtlBase) => void): void;
+  removeFromDb(cb?: (err?: Error, etlBase?: EtlBase) => void): void;
 }

@@ -4,55 +4,40 @@ import {EtlFile} from "../interfaces/etl-file";
 import {EtlBaseImpl} from "./etl-base-impl";
 import {EtlFlow} from "../interfaces/etl-flow";
 import {EtlBase} from "../interfaces/etl-base";
-import * as _ from 'lodash';
 const async = require('async');
 
 @injectable()
 export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
   private _flows: EtlFlow[];
 
-  constructor(@inject('IPostal') protected postal: IPostal) {
-    super(postal);
+  constructor(@inject('CommandUtil') protected commandUtil: CommandUtil,
+              @inject('IPostal') protected postal: IPostal) {
+    super(commandUtil, postal);
+  }
+
+  removeFromDb(cb?: (err?: Error, etlBase?: EtlBase) => void) {
+    EtlBaseImpl.executeOnCollections(this, super['removeFromDb'], 'flows', 'removeFromDb', cb);
   }
 
   writeToDb(cb: (err?: Error, etlBase?: EtlBase) => void) {
-    let me = this;
-    async.each(me.flows,
-      //First do them ...
-      (etlFlow: EtlFlow, cb) => {
-        etlFlow.writeToDb(cb);
-      },
-      (err, results) => {
-        //Now do me!
-        super.writeToDb(cb);
-      });
+    EtlBaseImpl.executeOnCollections(this, super['writeToDb'], 'flows', 'writeToDb', cb);
   }
 
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
     let me = this;
-    if (typeof cb !== 'function') {
-      return;
-    }
-    async.waterfall([
-      (cb) => {
-        me.postal.publish({
-          channel: 'Loopback',
-          topic: 'Find',
-          data: {
-            className: 'EtlFlow',
-            filter: {where: {parentFileAminoId: me.aminoId}},
-            callback: cb
-          }
-        });
-      },
-      (etlFlows: EtlFlow[], cb) => {
-        me._flows = etlFlows;
-        async.map(etlFlows, (etlFlow, cb) => {
-          etlFlow.loadEntireObject(cb);
-        }, cb);
+    me.postal.publish({
+      channel: 'Loopback',
+      topic: 'Find',
+      data: {
+        className: 'EtlFlow',
+        filter: {where: {parentFileAminoId: me.aminoId}},
+        callback: (err, etlFlows: EtlFlow[]) => {
+          me._flows = etlFlows;
+          async.map(etlFlows, (etlFlow, cb) => {
+            etlFlow.loadEntireObject(cb);
+          }, cb);
+        }
       }
-    ], (err) => {
-      cb(err, me);
     });
   }
 
@@ -134,6 +119,10 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
     ], cb);
   }
 
+  get flows(): EtlFlow[] {
+    return this._flows || [];
+  }
+
   get pojo(): any {
     let retVal = JSON.parse(JSON.stringify(this.loopbackModel));
     retVal.flows = this.flows.map(flow => {
@@ -142,39 +131,27 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
     return retVal;
   }
 
-  set parentFlowAminoId(newParentFlowAminoId) {
-    this.loopbackModel.parentFlowAminoId = newParentFlowAminoId;
-  }
-
-  get parentFlowAminoId(): string {
-    return this.loopbackModel.parentFlowAminoId;
-  }
-
-  set size(newSize) {
-    this.loopbackModel.size = newSize;
-  }
-
-  get flows(): EtlFlow[] {
-    return this._flows || [];
+  set size(newSize: number) {
+    this.setProperty<number>('size', newSize);
   }
 
   get size(): number {
-    return this.loopbackModel.size;
+    return this.getProperty<number>('size');
   }
 
-  set path(newPath) {
-    this.loopbackModel.path = newPath;
+  set path(newPath: string) {
+    this.setProperty<string>('path', newPath);
   }
 
   get path(): string {
-    return this.loopbackModel.path;
+    return this.getProperty<string>('path');
   }
 
-  set createDate(newCreateDate) {
-    this.loopbackModel.createDate = newCreateDate;
+  set createDate(newCreateDate: Date) {
+    this.setProperty<Date>('createDate', newCreateDate);
   }
 
   get createDate(): Date {
-    return this.loopbackModel.createDate;
+    return this.getProperty<Date>('createDate');
   }
 }

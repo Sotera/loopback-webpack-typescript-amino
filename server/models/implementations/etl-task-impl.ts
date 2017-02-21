@@ -1,11 +1,12 @@
 import {injectable, inject} from 'inversify';
-import {IPostal} from "firmament-yargs";
+import {IPostal, CommandUtil} from "firmament-yargs";
 import {EtlBaseImpl} from "./etl-base-impl";
 import {EtlTask} from "../interfaces/etl-task";
 @injectable()
 export class EtlTaskImpl extends EtlBaseImpl implements EtlTask {
-  constructor(@inject('IPostal') protected postal: IPostal) {
-    super(postal);
+  constructor(@inject('CommandUtil') protected commandUtil: CommandUtil,
+              @inject('IPostal') protected postal: IPostal) {
+    super(commandUtil, postal);
   }
 
   get fileId(): string {

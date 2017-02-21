@@ -35,8 +35,10 @@ export class DbMonitorImpl implements DbMonitor {
       topic: 'CreateChangeStream',
       data: {
         className: 'EtlFile',
-        collectionChangedCallback: (/*change*/) => {
-          me.writeBackRefreshAndPublishEtlFileCache();
+        collectionChangedCallback: (change) => {
+          if (change.type === 'create' || change.type === 'remove') {
+            me.writeBackRefreshAndPublishEtlFileCache();
+          }
         }
       }
     });
@@ -67,13 +69,29 @@ export class DbMonitorImpl implements DbMonitor {
     cb(null, {message: 'Initialized dbMonitor'});
 
     me.server.on('started', () => {
-      let efc = me.etlFileCache;
-      me.refreshEtlFileCache((err, etlFiles) => {
-        etlFiles[0].flows[0].steps[0].status = 'BooJiffer';
-        me.writeBackEtlFileCache((err) => {
-          let e = err;
-        });
-      });
+/*      me.postal.publish({
+        channel: 'Loopback',
+        topic: 'FindById',
+        data: {
+          className: 'EtlFile',
+          id: '58ac8fd7da266e6a4392a789',
+          callback: (err, etlFile: EtlFile) => {
+            if (me.commandUtil.logError(err)) {
+              return;
+            }
+            etlFile.removeFromDb((err) => {
+              me.commandUtil.logError(err);
+            });
+          }
+        }
+      });*/
+      /*      let efc = me.etlFileCache;
+       me.refreshEtlFileCache((err, etlFiles) => {
+       etlFiles[0].flows[0].steps[0].status = 'BooJiffer';
+       me.writeBackEtlFileCache((err) => {
+       let e = err;
+       });
+       });*/
     });
   }
 
@@ -123,13 +141,17 @@ export class DbMonitorImpl implements DbMonitor {
       callback: (fileId) => {
         me.postal.publish({
           channel: 'Loopback',
-          topic: 'DestroyById',
+          topic: 'FindById',
           data: {
             className: 'EtlFile',
             id: fileId.id,
-            callback: (err) => {
-              me.commandUtil.logError(err);
-              me.writeBackRefreshAndPublishEtlFileCache();
+            callback: (err, etlFile: EtlFile) => {
+              if (me.commandUtil.logError(err)) {
+                return;
+              }
+              etlFile.removeFromDb((err) => {
+                me.commandUtil.logError(err);
+              });
             }
           }
         });

@@ -24,8 +24,8 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
           name: 'MergePCap'
         }
       ]
-    },
-    {
+    }
+/*    ,{
       name: 'Bring',
       type: 'template',
       filter: {where: {and: [{name: 'Bring'}, {type: 'template'}]}},
@@ -40,7 +40,7 @@ export class InitializeDatabaseImpl implements InitializeDatabase {
           name: 'SavABaloonHead'
         }
       ]
-    }
+    }*/
   ];
 
   constructor(@inject('BaseService') private baseService: BaseService,
