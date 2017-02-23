@@ -3,11 +3,11 @@
   <div class="col-md-12">
     <ba-card title="Unprocessed Files" baCardClass="with-scroll">
       <div align="right">
-<!--        <button type="button" class="btn btn-primary btn-md" (click)="loadFiles()"><i class="ion-refresh"
-                                                                                      title="Refresh results">
-          Refresh</i></button>-->
+        <!--        <button type="button" class="btn btn-primary btn-md" (click)="loadFiles()"><i class="ion-refresh"
+                                                                                              title="Refresh results">
+                  Refresh</i></button>-->
         <button type="button" class="btn btn-primary btn-md" (click)="testPostalSignal()"><i class="ion-refresh"
-                                                                                      title="Refresh results">
+                                                                                             title="Refresh results">
           Prod Vita</i></button>
       </div>
       <div class="table-responsive">
@@ -60,7 +60,7 @@
                 <td class="td-center">{{file.path}}{{file.name}}</td>
                 <td class="td-center">{{flow.id}}</td>
                 <td class="td-center">
-<!--                  <div *ngIf="!flow.errs">{{flow.lastStatus}}</div>
+                  <div *ngIf="!flow.errs">{{flow.lastStatus}}</div>
                   <div *ngIf="flow.errs">{{flow.lastStatus}} ({{flow.errs.length}})</div>
                   <div *ngIf="flow.errs">
                     <div [hidden]="!flow.steps.hideElement">
@@ -69,15 +69,18 @@
                         <div>file - '{{err.location}}'</div>
                       </div>
                     </div>
-                  </div>-->
+                  </div>
                 </td>
                 <td class="td-center">
                   <div *ngIf="!flow.expanded">. . .</div>
                   <div *ngIf="flow.expanded">
                     <div *ngFor="let step of flow.steps">
                       <div><strong>{{step.name}}</strong></div>
-                      <div><strong>Start:</strong> {{step.start | date: 'medium'}}</div>
-                      <div><strong>End:</strong> {{step.end | date: 'medium'}}</div>
+                      <div><strong>Status:</strong> {{step.status}}</div>
+                      <div><strong>Progress:</strong> {{step.progress}}</div>
+                      <div><strong>Start:</strong> {{step.startTime | date: 'medium'}}</div>
+                      <div><strong>Current:</strong> {{step.currentTime | date: 'medium'}}</div>
+                      <div><strong>End:</strong> {{step.endTime | date: 'medium'}}</div>
                       <!--                      <div><strong>Source:</strong></div>
                                             <div>{{step.source.path}}</div>
                                             <div><strong>Products:</strong></div>

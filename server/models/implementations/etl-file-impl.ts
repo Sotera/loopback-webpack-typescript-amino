@@ -30,12 +30,14 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
       topic: 'Find',
       data: {
         className: 'EtlFlow',
-        filter: {where: {parentFileAminoId: me.aminoId}},
+        filter: {where: {parentAminoId: me.aminoId}},
         callback: (err, etlFlows: EtlFlow[]) => {
           me._flows = etlFlows;
           async.map(etlFlows, (etlFlow, cb) => {
             etlFlow.loadEntireObject(cb);
-          }, cb);
+          }, (err) => {
+            cb(err, me);
+          });
         }
       }
     });
@@ -71,13 +73,13 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
       },
       (etlFlows: EtlFlow[], cb) => {
         async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
-          let steps = etlFlow.pojo.steps.map(step => {
+          let tmpSteps = etlFlow.steps.map(step => {
             return {name: step.name};
           });
           cb(null, {
             className: 'EtlFlow',
             initializationObject: {
-              name: etlFlow.pojo.name, steps
+              name: etlFlow.name, tmpSteps
             }
           });
         }, (err, containedObjects) => {
@@ -86,7 +88,7 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
             topic: 'CreateHasManyObject',
             data: {
               containerObject: me,
-              parentPropertyName: 'parentFileAminoId',
+              parentPropertyName: 'parentAminoId',
               containedObjects,
               callback: cb
             }
@@ -95,9 +97,10 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
       },
       (etlFlows: EtlFlow[], cb) => {
         async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
-          let steps = etlFlow.loopbackModel.steps.map(step => {
+          let steps = etlFlow.loopbackModel.tmpSteps.map(step => {
             return {name: step.name};
           });
+          etlFlow.loopbackModel.tmpSteps = null;
           etlFlow.addSteps(steps, () => {
             //Remove 'steps' property from etlFlow
             me.postal.publish({
@@ -106,7 +109,7 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
               data: {
                 className: 'EtlFlow',
                 loopbackModelToUpdate: etlFlow.loopbackModel,
-                attributeName: 'steps',
+                attributeName: 'tmpSteps',
                 newAttributeValue: null,
                 callback: (err) => {
                   cb(err, etlFlow);
@@ -123,10 +126,14 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
     return this._flows || [];
   }
 
-  get pojo(): any {
-    let retVal = JSON.parse(JSON.stringify(this.loopbackModel));
-    retVal.flows = this.flows.map(flow => {
-      return flow.pojo;
+  getPojo(): any {
+    let me = this;
+    let retVal = super.getPojo();
+    retVal.size = me.size;
+    retVal.path = me.path;
+    retVal.createDate = me.createDate;
+    retVal.flows = me.flows.map((flow) => {
+      return flow.getPojo();
     });
     return retVal;
   }

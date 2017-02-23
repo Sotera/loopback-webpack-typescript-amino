@@ -15,9 +15,6 @@
     },
     "currentStepIndex": {
       "type": "number"
-    },
-    "parentFileAminoId": {
-      "type": "string"
     }
   },
   "validations": [],

@@ -4,6 +4,7 @@ import {EtlBaseImpl} from './etl-base-impl';
 import {EtlFlow} from '../interfaces/etl-flow';
 import {EtlStep} from '../interfaces/etl-step';
 import {EtlBase} from '../interfaces/etl-base';
+import {Util} from "../../util/util";
 const async = require('async');
 
 @injectable()
@@ -31,10 +32,10 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
       topic: 'Find',
       data: {
         className: 'EtlStep',
-        filter: {where: {parentFlowAminoId: me.aminoId}},
+        filter: {where: {parentAminoId: me.aminoId}},
         callback: (err, etlSteps: EtlStep[]) => {
           me._steps = etlSteps;
-          EtlBaseImpl.checkCallback(cb)(err, me);
+          Util.checkCallback(cb)(err, me);
         }
       }
     });
@@ -55,9 +56,9 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
         topic: 'CreateHasManyObject',
         data: {
           containerObject: me,
-          parentPropertyName: 'parentFlowAminoId',
+          parentPropertyName: 'parentAminoId',
           containedObjects,
-          callback: EtlBaseImpl.checkCallback(cb)
+          callback: Util.checkCallback(cb)
         }
       });
     });
@@ -67,10 +68,13 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
     return this._steps || [];
   }
 
-  get pojo(): any {
-    let retVal = JSON.parse(JSON.stringify(this.loopbackModel));
-    retVal.steps = this.steps.map(step => {
-      return step.pojo;
+  getPojo(): any {
+    let me = this;
+    let retVal = super.getPojo();
+    retVal.status = me.status;
+    retVal.currentStepIndex = me.currentStepIndex;
+    retVal.steps = me.steps.map((step) => {
+      return step.getPojo();
     });
     return retVal;
   }
@@ -97,13 +101,5 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
 
   get type(): string {
     return this.getProperty<string>('type');
-  }
-
-  set parentFileAminoId(newParentFileAminoId: string) {
-    this.setProperty<string>('parentFileAminoId', newParentFileAminoId);
-  }
-
-  get parentFileAminoId(): string {
-    return this.getProperty<string>('parentFileAminoId');
   }
 }

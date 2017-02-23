@@ -3,7 +3,6 @@ import {CommandUtil, IPostal} from 'firmament-yargs';
 import {BaseService} from '../interfaces/base-service';
 import {Loopback} from '../interfaces/loopback';
 import kernel from '../../inversify.config';
-import * as _ from 'lodash';
 import {EtlBase} from '../../models/interfaces/etl-base';
 import {
   ModelCreateOptions,
@@ -12,12 +11,12 @@ import {
   ModelFindByIdOptions
 } from '../../models/interfaces/loopback-control';
 import {ModelFindOrCreateOptions} from '../../models/interfaces/loopback-control';
-import {Guid} from '../../util/guid-gen';
 import {ModelCreateHasManyObjectOptions} from '../../models/interfaces/loopback-control';
 import {UpdateAttributesOptions} from "../../models/interfaces/loopback-control";
 import {UpdateAttributeOptions} from "../../models/interfaces/loopback-control";
 import {ModelDestroyByIdOptions} from "../../models/interfaces/loopback-control";
 import {ModelFindByAminoIdOptions} from "../../models/interfaces/loopback-control";
+import {Util} from "../../util/util";
 const async = require('async');
 
 @injectable()
@@ -96,12 +95,9 @@ export class LoopbackImpl implements Loopback {
       updateAttributeOptions.attributeName,
       updateAttributeOptions.newAttributeValue,
       (err, updatedInstance) => {
-        if (typeof updateAttributeOptions.callback !== 'function') {
-          return;
-        }
         let newWrapper = kernel.get<EtlBase>(updateAttributeOptions.className);
         newWrapper.loopbackModel = updatedInstance;
-        updateAttributeOptions.callback(err, newWrapper);
+        Util.checkCallback(updateAttributeOptions.callback)(err, newWrapper);
       });
   }
 
@@ -109,25 +105,15 @@ export class LoopbackImpl implements Loopback {
     updateAttributesOptions.loopbackModelToUpdate.updateAttributes(
       updateAttributesOptions.updatedAttributes,
       (err, updatedInstance) => {
-        if (typeof updateAttributesOptions.callback !== 'function') {
-          return;
-        }
         let newWrapper = kernel.get<EtlBase>(updateAttributesOptions.className);
         newWrapper.loopbackModel = updatedInstance;
-        updateAttributesOptions.callback(err, newWrapper);
+        Util.checkCallback(updateAttributesOptions.callback)(err, newWrapper);
       });
   }
 
   private createChangeStream(createChangeStreamOptions: CreateChangeStreamOptions) {
-    let me = this;
-    let cb = createChangeStreamOptions.collectionChangedCallback;
-    if (typeof cb !== 'function') {
-      return;
-    }
-    me.server.models[createChangeStreamOptions.className].createChangeStream((err, changes) => {
-      changes.on('data', change => {
-        cb(change);
-      });
+    this.server.models[createChangeStreamOptions.className].createChangeStream((err, changes) => {
+      changes.on('data', Util.checkCallback(createChangeStreamOptions.collectionChangedCallback));
     });
   }
 
@@ -135,11 +121,8 @@ export class LoopbackImpl implements Loopback {
     let me = this;
     me.server.models[modelDestroyByIdOptions.className].destroyById(
       modelDestroyByIdOptions.id,
-      (err, model) => {
-        if (typeof modelDestroyByIdOptions.callback !== 'function') {
-          return;
-        }
-        modelDestroyByIdOptions.callback(err);
+      (err) => {
+        Util.checkCallback(modelDestroyByIdOptions.callback)(err);
       });
   }
 
@@ -151,31 +134,25 @@ export class LoopbackImpl implements Loopback {
         let foundModel = (foundModels && foundModels.length === 1)
           ? foundModels[0]
           : null;
-        modelFindByAminoIdOptions.callback(err, foundModel);
+        Util.checkCallback(modelFindByAminoIdOptions.callback)(err, foundModel);
       }
     });
   }
 
   private loopbackFindById(modelFindByIdOptions: ModelFindByIdOptions) {
     let me = this;
-    if (typeof modelFindByIdOptions.callback !== 'function') {
-      return;
-    }
     me.server.models[modelFindByIdOptions.className].findById(
       modelFindByIdOptions.id,
       modelFindByIdOptions.filter || {},
       (err, model) => {
         let newWrapper = kernel.get<EtlBase>(modelFindByIdOptions.className);
         newWrapper.loopbackModel = model;
-        modelFindByIdOptions.callback(err, newWrapper);
+        Util.checkCallback(modelFindByIdOptions.callback)(err, newWrapper);
       });
   }
 
   private loopbackFind(modelFindOptions: ModelFindOptions) {
     let me = this;
-    if (typeof modelFindOptions.callback !== 'function') {
-      return;
-    }
     me.server.models[modelFindOptions.className].find(modelFindOptions.filter || {},
       (err, models) => {
         let modelWrappers = [];
@@ -184,32 +161,27 @@ export class LoopbackImpl implements Loopback {
           newWrapper.loopbackModel = model;
           modelWrappers.push(newWrapper);
         });
-        modelFindOptions.callback(err, modelWrappers);
+        Util.checkCallback(modelFindOptions.callback)(err, modelWrappers);
       }
     );
   }
 
   private loopbackFindOrCreate(modelFindOrCreateOptions: ModelFindOrCreateOptions) {
     let me = this;
-    if (typeof modelFindOrCreateOptions.callback !== 'function') {
-      return;
-    }
     let initializationObject = modelFindOrCreateOptions.initializationObject || {};
-    initializationObject.aminoId = Guid.generate();
+    initializationObject.aminoId = Util.generateUUID();
     me.server.models[modelFindOrCreateOptions.className].findOrCreate(
       modelFindOrCreateOptions.filter || {},
       initializationObject,
       (err, model) => {
         let newWrapper = kernel.get<EtlBase>(modelFindOrCreateOptions.className);
         newWrapper.loopbackModel = model;
-        modelFindOrCreateOptions.callback(err, newWrapper);
+        Util.checkCallback(modelFindOrCreateOptions.callback)(err, newWrapper);
       });
   }
 
   private loopbackCreateHasManyObject(mCHMOO: ModelCreateHasManyObjectOptions) {
     let me = this;
-    mCHMOO.callback = mCHMOO.callback || (() => {
-      });
     async.map(mCHMOO.containedObjects,
       (modelCreateOptions: ModelCreateOptions, cb) => {
         modelCreateOptions.callback = cb;
@@ -219,23 +191,20 @@ export class LoopbackImpl implements Loopback {
           topic: 'Create',
           data: modelCreateOptions
         });
-      }, mCHMOO.callback);
+      }, Util.checkCallback(mCHMOO.callback));
   }
 
   private loopbackCreate(modelCreateOptions: ModelCreateOptions) {
     let me = this;
     let initializationObject = modelCreateOptions.initializationObject || {};
-    initializationObject.aminoId = Guid.generate();
-    initializationObject.name = initializationObject.name || Guid.generate();
+    initializationObject.aminoId = Util.generateUUID();
+    initializationObject.name = initializationObject.name || Util.generateUUID();
     me.server.models[modelCreateOptions.className].create(
       initializationObject,
       (err, newModel) => {
         let newWrapper = kernel.get<EtlBase>(modelCreateOptions.className);
         newWrapper.loopbackModel = newModel;
-        if (typeof modelCreateOptions.callback !== 'function') {
-          return;
-        }
-        modelCreateOptions.callback(err, newWrapper);
+        Util.checkCallback(modelCreateOptions.callback)(err, newWrapper);
       });
   }
 }

@@ -50,5 +50,9 @@
   "EtlBase": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "EtlError": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

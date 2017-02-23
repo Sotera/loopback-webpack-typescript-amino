@@ -1,6 +1,8 @@
 import {unmanaged, injectable} from 'inversify';
 import {IPostal, CommandUtil} from "firmament-yargs";
 import {EtlBase} from "../interfaces/etl-base";
+import {Util} from "../../util/util";
+import {EtlError} from "../interfaces/etl-error";
 const async = require('async');
 
 @injectable()
@@ -14,6 +16,29 @@ export class EtlBaseImpl implements EtlBase {
 
   get loopbackClassName() {
     return this.constructor.name.replace(/Impl/, '');
+  }
+
+  addErrors(errors: any[], cb: (err: Error, etlErrors: EtlError[]) => void): void {
+    let me = this;
+    async.map(errors, (error, cb) => {
+      cb(null, {
+        className: 'EtlError',
+        initializationObject: {
+          message: error.message
+        }
+      });
+    }, (err, containedObjects) => {
+      me.postal.publish({
+        channel: 'Loopback',
+        topic: 'CreateHasManyObject',
+        data: {
+          containerObject: me,
+          parentPropertyName: 'parentAminoId',
+          containedObjects,
+          callback: Util.checkCallback(cb)
+        }
+      });
+    });
   }
 
   removeFromDb(cb?: (err?: Error, etlBase?: EtlBase) => void) {
@@ -38,25 +63,39 @@ export class EtlBaseImpl implements EtlBase {
         className: me.loopbackClassName,
         loopbackModelToUpdate: me.loopbackModel,
         updatedAttributes: me.updateObject,
-        callback: EtlBaseImpl.checkCallback(cb)
+        callback: Util.checkCallback(cb)
       }
     });
   }
 
   loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
-    EtlBaseImpl.checkCallback(cb)();
+    Util.checkCallback(cb)();
   }
 
-  get pojo(): any {
-    return JSON.parse(JSON.stringify(this.loopbackModel));
+  getPojo(): any {
+    let me = this;
+    return {
+      id: me.id,
+      name: me.name,
+      aminoId: me.aminoId,
+      parentAminoId: me.parentAminoId
+    }
   }
 
   get id(): string {
-    return this.loopbackModel.id;
+    return this.getProperty<string>('id');
+  }
+
+  set parentAminoId(newParentAminoId: string) {
+    this.setProperty<string>('parentAminoId', newParentAminoId);
+  }
+
+  get parentAminoId(): string {
+    return this.getProperty<string>('parentAminoId');
   }
 
   get aminoId(): string {
-    return this.loopbackModel.aminoId;
+    return this.getProperty<string>('aminoId');
   }
 
   set name(newName: string) {
@@ -85,19 +124,20 @@ export class EtlBaseImpl implements EtlBase {
                                         collectionName: string,
                                         methodName: string,
                                         cb: (err, etlBase: EtlBase) => void) {
-    etlBase.loadEntireObject(() => {
-      async.each(etlBase[collectionName],
-        (etlBase: EtlBase, cb) => {
+    async.each(etlBase[collectionName],
+      (etlBase: EtlBase, cb) => {
+        try {
           etlBase[methodName](cb);
-        },
-        (err) => {
-          superMethod.bind(etlBase)(EtlBaseImpl.checkCallback(cb));
-        });
-    });
-  }
-
-  protected static checkCallback(cb: any) {
-    return (typeof cb === 'function') ? cb : (() => {
+        } catch (err) {
+          Util.checkCallback(cb)(err);
+        }
+      },
+      () => {
+        try {
+          superMethod.bind(etlBase)(Util.checkCallback(cb));
+        } catch (err) {
+          Util.checkCallback(cb)(err);
+        }
       });
   }
 }

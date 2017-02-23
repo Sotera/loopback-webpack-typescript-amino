@@ -8,6 +8,7 @@ import {EtlFile} from "../../models/interfaces/etl-file";
 import {EtlFlow} from "../../models/interfaces/etl-flow";
 import {EtlBase} from "../../models/interfaces/etl-base";
 import {EtlStep} from "../../models/interfaces/etl-step";
+import {Util} from "../../util/util";
 const path = require('path');
 const async = require('async');
 const config = require('../../config.json');
@@ -54,37 +55,37 @@ export class DbMonitorImpl implements DbMonitor {
         }
       }
     });
-    me.postal.publish({
-      channel: 'Loopback',
-      topic: 'CreateChangeStream',
-      data: {
-        className: 'EtlFlow',
-        collectionChangedCallback: (change) => {
-          if (change.type === 'create') {
-            me.startFlow(change.target.toString());
-          }
-        }
-      }
-    });
+    /*    me.postal.publish({
+     channel: 'Loopback',
+     topic: 'CreateChangeStream',
+     data: {
+     className: 'EtlFlow',
+     collectionChangedCallback: (change) => {
+     if (change.type === 'create') {
+     me.startFlow(change.target.toString());
+     }
+     }
+     }
+     });*/
     cb(null, {message: 'Initialized dbMonitor'});
 
     me.server.on('started', () => {
-/*      me.postal.publish({
-        channel: 'Loopback',
-        topic: 'FindById',
-        data: {
-          className: 'EtlFile',
-          id: '58ac8fd7da266e6a4392a789',
-          callback: (err, etlFile: EtlFile) => {
-            if (me.commandUtil.logError(err)) {
-              return;
-            }
-            etlFile.removeFromDb((err) => {
-              me.commandUtil.logError(err);
-            });
-          }
-        }
-      });*/
+      /*      me.postal.publish({
+       channel: 'Loopback',
+       topic: 'FindById',
+       data: {
+       className: 'EtlFile',
+       id: '58ac8fd7da266e6a4392a789',
+       callback: (err, etlFile: EtlFile) => {
+       if (me.commandUtil.logError(err)) {
+       return;
+       }
+       etlFile.removeFromDb((err) => {
+       me.commandUtil.logError(err);
+       });
+       }
+       }
+       });*/
       /*      let efc = me.etlFileCache;
        me.refreshEtlFileCache((err, etlFiles) => {
        etlFiles[0].flows[0].steps[0].status = 'BooJiffer';
@@ -98,7 +99,6 @@ export class DbMonitorImpl implements DbMonitor {
   initSubscriptions(cb: (err: Error, result: any) => void) {
     let me = this;
 
-    //TODO: Park this subscription here temporarily until we design the subscription service
     /*    me.postal.subscribe({
      channel: 'TestSignal',
      topic: 'ProdFirmamentVita',
@@ -165,38 +165,30 @@ export class DbMonitorImpl implements DbMonitor {
     //EtlTask DB. Now we need to add a flow to the appropriate EtlFile object
     let me = this;
     me.getModelById(fileId, 'EtlFile', (err, etlFile: EtlFile) => {
-      if (me.commandUtil.logError(err)) {
-        return;
+      try {
+        etlFile.addFlows([{name: flowId}], (err, etlFlows: EtlFlow[]) => {
+          me.startFlow(etlFile, etlFlows[0]);
+        });
+      } catch (err) {
+        me.commandUtil.logError(err);
       }
-      etlFile.addFlows([{name: flowId}], () => {
-        me.writeBackRefreshAndPublishEtlFileCache();
-      });
     });
   }
 
-  private startFlow(flowId: string) {
+  private startFlow(etlFile: EtlFile, etlFlow: EtlFlow) {
     let me = this;
-    async.waterfall([
-      (cb) => {
-        me.getModelById(flowId, 'EtlFlow', cb);
-      },
-      (etlFlow: EtlFlow, cb) => {
-        me.getModelByAminoId(etlFlow.parentFileAminoId, 'EtlFile', (err, etlFile: EtlFile) => {
-          etlFlow.loadEntireObject((err, etlFlow: EtlFlow) => {
-            cb(err, {etlFlow, etlFile});
-          });
-        });
-      }
-    ], (err, {etlFlow, etlFile}) => {
-
+    //Make sure steps already exist in flow before sending it to Vita module
+    etlFlow.loadEntireObject((err, etlFlow: EtlFlow) => {
       me.fullPipeline.tag = etlFlow;
       me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
       me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
       me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
-      me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-        me.updateEtlStatus(status.tag);
-      }, (err, result) => {
-        me.appendEtlResults(result);
+      me.writeBackRefreshAndPublishEtlFileCache(() => {
+        me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
+          me.updateEtlStatus(status.tag);
+        }, (err, result) => {
+          me.appendEtlResults(result);
+        });
       });
     });
   }
@@ -204,7 +196,9 @@ export class DbMonitorImpl implements DbMonitor {
   private updateEtlStatus(etlFlow: EtlFlow) {
     let me = this;
     me.commandUtil.log(JSON.stringify(etlFlow, undefined, 2));
-
+    etlFlow.writeToDb((err, etlFlow) => {
+      me.writeBackRefreshAndPublishEtlFileCache();
+    });
 
     /*    let etlFile = _.find(me.etlFileCache, ['id', status.tag.fileId]);
      let etlFlow = _.find(etlFile.flows, ['id', status.tag.flowId]);
@@ -215,7 +209,6 @@ export class DbMonitorImpl implements DbMonitor {
      });
      return;
      }*/
-    me.publishEtlFileCache();
 ///--->
     /*    EtlFile.findById(status.tag.fileId, (err, etlFile) => {
      me.updatingEtlStatus = false;
@@ -399,11 +392,12 @@ export class DbMonitorImpl implements DbMonitor {
      })*/
   }
 
-  private writeBackRefreshAndPublishEtlFileCache() {
+  private writeBackRefreshAndPublishEtlFileCache(cb: ((err) => void) = null) {
     let me = this;
     me.writeBackEtlFileCache(() => {
       me.refreshEtlFileCache((err, etlFiles) => {
         me.publishEtlFileCache(etlFiles);
+        Util.checkCallback(cb)(err);
       });
     });
   }
@@ -418,24 +412,17 @@ export class DbMonitorImpl implements DbMonitor {
         channel: 'EtlFile',
         topic: 'AllFiles',
         data: etlFileCache.map((etlFile) => {
-          return etlFile.pojo;
+          let retVal = etlFile.getPojo();
+          return retVal;
         })
       }
     });
   }
 
   private writeBackEtlFileCache(cb: (err) => void) {
-    let me = this;
-    async.each(me.etlFileCache,
-      (etlFile: EtlFile, cb) => {
-        etlFile.writeToDb(cb);
-      },
-      (err) => {
-        if (typeof cb !== 'function') {
-          return;
-        }
-        cb(null);
-      });
+    async.each(this.etlFileCache, (etlFile: EtlFile, cb) => {
+      etlFile.writeToDb(cb);
+    }, cb);
   }
 
   private refreshEtlFileCache(cb: (err, etlFiles: EtlFile[]) => void) {
@@ -451,10 +438,7 @@ export class DbMonitorImpl implements DbMonitor {
             etlFile.loadEntireObject(cb);
           }, (err, etlFiles) => {
             me.etlFileCache = etlFiles;
-            if (typeof cb !== 'function') {
-              return;
-            }
-            cb(err, etlFiles);
+            Util.checkCallback(cb)(err, etlFiles);
           });
         }
       }

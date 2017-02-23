@@ -1,6 +1,7 @@
 import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
-import {PostalService, PublishTarget} from "../../../../_services/postal.service";
-import {EtlFile} from "../../../../../../server/models/interfaces/etl-file";
+import {PostalService, PublishTarget} from '../../../../_services/postal.service';
+import {EtlFile} from '../../../../../../server/models/interfaces/etl-file';
+import {EtlFlow} from '../../../../../../server/models/interfaces/etl-flow';
 
 @Component({
   selector: 'etl-activity-component',
@@ -20,10 +21,10 @@ export class EtlActivity implements AfterViewInit {
     let me = this;
     me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles: EtlFile[]) => {
       try {
-        etlFiles.forEach(etlFile => {
-          etlFile.flows.forEach(flow => {
-            this.flowExpanded[flow.parentFileAminoId] = this.flowExpanded[flow.parentFileAminoId] || [];
-            flow.expanded = this.flowExpanded[flow.parentFileAminoId][flow.id];
+        etlFiles.forEach((etlFile) => {
+          etlFile.flows.forEach((etlFlow) => {
+            me.flowExpanded[etlFlow.parentAminoId] = me.flowExpanded[etlFlow.parentAminoId] || [];
+            etlFlow.expanded = me.flowExpanded[etlFlow.parentAminoId][etlFlow.id];
           });
         });
         me.displayFiles = etlFiles;
@@ -37,11 +38,11 @@ export class EtlActivity implements AfterViewInit {
     this.loadFiles();
   }
 
-  toggleFlowExpanded(flow) {
-    this.flowExpanded[flow.etlFileId] = this.flowExpanded[flow.etlFileId] || [];
-    flow.expanded
-      = this.flowExpanded[flow.etlFileId][flow.id]
-      = !this.flowExpanded[flow.etlFileId][flow.id];
+  toggleFlowExpanded(etlFlow: EtlFlow) {
+    this.flowExpanded[etlFlow.parentAminoId] = this.flowExpanded[etlFlow.parentAminoId] || [];
+    etlFlow.expanded
+      = this.flowExpanded[etlFlow.parentAminoId][etlFlow.id]
+      = !this.flowExpanded[etlFlow.parentAminoId][etlFlow.id];
   }
 
   testPostalSignal() {

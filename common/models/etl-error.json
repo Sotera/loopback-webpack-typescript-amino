@@ -1,22 +1,15 @@
 {
-  "name": "EtlBase",
-  "plural": "EtlBases",
+  "name": "EtlError",
+  "plural": "EtlErrors",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "message": {
       "type": "string",
       "required": true
-    },
-    "aminoId": {
-      "type": "string",
-      "required": true
-    },
-    "parentAminoId": {
-      "type": "string"
     }
   },
   "validations": [],
