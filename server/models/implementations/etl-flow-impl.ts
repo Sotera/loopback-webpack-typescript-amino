@@ -35,7 +35,13 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
         filter: {where: {parentAminoId: me.aminoId}},
         callback: (err, etlSteps: EtlStep[]) => {
           me._steps = etlSteps;
-          Util.checkCallback(cb)(err, me);
+          async.map(etlSteps, (etlStep, cb) => {
+            etlStep.loadEntireObject(cb);
+          }, (err) => {
+            super.loadEntireObject((err) => {
+              cb(err, me);
+            });
+          });
         }
       }
     });

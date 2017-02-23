@@ -36,7 +36,12 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
           async.map(etlFlows, (etlFlow, cb) => {
             etlFlow.loadEntireObject(cb);
           }, (err) => {
-            cb(err, me);
+            if (me.commandUtil.callbackIfError(cb, err)) {
+              return;
+            }
+            super.loadEntireObject((err) => {
+              cb(err, me);
+            });
           });
         }
       }

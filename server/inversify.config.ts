@@ -20,6 +20,8 @@ import {EtlTask} from "./models/interfaces/etl-task";
 import {EtlTaskImpl} from "./models/implementations/etl-task-impl";
 import {EtlStepImpl} from "./models/implementations/etl-step-impl";
 import {EtlStep} from "./models/interfaces/etl-step";
+import {EtlErrorImpl} from "./models/implementations/etl-error-impl";
+import {EtlError} from "./models/interfaces/etl-error";
 
 kernel.bind<BaseService>('BaseService').to(BaseServiceImpl).inSingletonScope();
 kernel.bind<ServiceManager>('ServiceManager').to(ServiceManagerImpl).inSingletonScope();
@@ -31,5 +33,6 @@ kernel.bind<EtlFile>('EtlFile').to(EtlFileImpl);
 kernel.bind<EtlFlow>('EtlFlow').to(EtlFlowImpl);
 kernel.bind<EtlTask>('EtlTask').to(EtlTaskImpl);
 kernel.bind<EtlStep>('EtlStep').to(EtlStepImpl);
+kernel.bind<EtlError>('EtlError').to(EtlErrorImpl);
 
 export default kernel;

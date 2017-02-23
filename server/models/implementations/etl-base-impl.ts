@@ -8,6 +8,7 @@ const async = require('async');
 @injectable()
 export class EtlBaseImpl implements EtlBase {
   protected updateObject = {};
+  private _errors: EtlError[];
   loopbackModel: any;
 
   constructor(@unmanaged() protected commandUtil: CommandUtil,
@@ -16,6 +17,22 @@ export class EtlBaseImpl implements EtlBase {
 
   get loopbackClassName() {
     return this.constructor.name.replace(/Impl/, '');
+  }
+
+  loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
+    let me = this;
+    me.postal.publish({
+      channel: 'Loopback',
+      topic: 'Find',
+      data: {
+        className: 'EtlError',
+        filter: {where: {parentAminoId: me.aminoId}},
+        callback: (err, etlErrors: EtlError[]) => {
+          me._errors = etlErrors;
+          Util.checkCallback(cb)(err, me);
+        }
+      }
+    });
   }
 
   addErrors(errors: any[], cb: (err: Error, etlErrors: EtlError[]) => void): void {
@@ -68,8 +85,8 @@ export class EtlBaseImpl implements EtlBase {
     });
   }
 
-  loadEntireObject(cb: (err?: Error, etlBase?: EtlBase) => void): void {
-    Util.checkCallback(cb)();
+  get errors(): EtlError[] {
+    return this._errors || [];
   }
 
   getPojo(): any {
@@ -78,7 +95,10 @@ export class EtlBaseImpl implements EtlBase {
       id: me.id,
       name: me.name,
       aminoId: me.aminoId,
-      parentAminoId: me.parentAminoId
+      parentAminoId: me.parentAminoId,
+      errors: me.errors.map((error) => {
+        return error.getPojo();
+      })
     }
   }
 
