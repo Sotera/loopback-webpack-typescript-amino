@@ -12,16 +12,12 @@ import {DbMonitorImpl} from "./services/implementations/db-monitor-impl";
 import {DbMonitor} from "./services/interfaces/db-monitor";
 import {Loopback} from "./services/interfaces/loopback";
 import {LoopbackImpl} from "./services/implementations/loopback-impl";
-import {EtlFile} from "./models/interfaces/etl-file";
 import {EtlFileImpl} from "./models/implementations/etl-file-impl";
-import {EtlFlow} from "./models/interfaces/etl-flow";
 import {EtlFlowImpl} from "./models/implementations/etl-flow-impl";
-import {EtlTask} from "./models/interfaces/etl-task";
 import {EtlTaskImpl} from "./models/implementations/etl-task-impl";
 import {EtlStepImpl} from "./models/implementations/etl-step-impl";
-import {EtlStep} from "./models/interfaces/etl-step";
 import {EtlErrorImpl} from "./models/implementations/etl-error-impl";
-import {EtlError} from "./models/interfaces/etl-error";
+import {EtlFile, EtlFlow, EtlTask, EtlStep, EtlError} from "../node_modules/etl-typings/index";
 
 kernel.bind<BaseService>('BaseService').to(BaseServiceImpl).inSingletonScope();
 kernel.bind<ServiceManager>('ServiceManager').to(ServiceManagerImpl).inSingletonScope();

@@ -1,4 +1,4 @@
-import {EtlBase} from "./etl-base";
+import {EtlBase} from "../../../node_modules/etl-typings/index";
 export interface CreateChangeStreamOptions {
   className: string;
   collectionChangedCallback: (change: any) => void;

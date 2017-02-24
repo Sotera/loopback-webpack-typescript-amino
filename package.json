@@ -29,6 +29,7 @@
     "core-js": "^2.4.1",
     "easy-pie-chart": "^2.1.7",
     "errorhandler": "^1.5.0",
+    "etl-typings": "^0.1.1",
     "find-free-port": "^1.0.2",
     "firmament-vita": "^1.1.5",
     "font-awesome": "^4.6.3",

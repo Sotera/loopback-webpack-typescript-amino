@@ -1,14 +1,13 @@
 import {injectable, inject} from 'inversify';
-import {CommandUtil, IPostal} from "firmament-yargs";
-import {BaseService} from "../interfaces/base-service";
-import {DbMonitor} from "../interfaces/db-monitor";
-import {FullPipeline, VitaTasks} from "firmament-vita";
-import * as _ from 'lodash';
-import {EtlFile} from "../../models/interfaces/etl-file";
-import {EtlFlow} from "../../models/interfaces/etl-flow";
-import {EtlBase} from "../../models/interfaces/etl-base";
-import {EtlStep} from "../../models/interfaces/etl-step";
-import {Util} from "../../util/util";
+import {CommandUtil, IPostal} from 'firmament-yargs';
+import {BaseService} from '../interfaces/base-service';
+import {DbMonitor} from '../interfaces/db-monitor';
+import {PostalAgent} from 'firmament-vita';
+import {Util} from '../../util/util';
+import {EtlFile, EtlFlow, EtlBase} from '../../../node_modules/etl-typings/index';
+import {
+  ProcessFileWithFlowOptions
+} from "../../../node_modules/firmament-vita/js/interfaces/vita-options-results";
 const path = require('path');
 const async = require('async');
 const config = require('../../config.json');
@@ -19,8 +18,7 @@ export class DbMonitorImpl implements DbMonitor {
 
   constructor(@inject('BaseService') private baseService: BaseService,
               @inject('IPostal') private postal: IPostal,
-              @inject('FullPipeline') private fullPipeline: FullPipeline,
-              @inject('VitaTasks') private vitaTasks: VitaTasks,
+              @inject('VitaPostalAgent') private postalAgent: PostalAgent,
               @inject('CommandUtil') private commandUtil: CommandUtil) {
     this.commandUtil.log('DbMonitor created');
   }
@@ -31,6 +29,7 @@ export class DbMonitorImpl implements DbMonitor {
 
   init(cb: (err: Error, result: any) => void) {
     let me = this;
+
     me.postal.publish({
       channel: 'Loopback',
       topic: 'CreateChangeStream',
@@ -55,18 +54,18 @@ export class DbMonitorImpl implements DbMonitor {
         }
       }
     });
-    /*    me.postal.publish({
-     channel: 'Loopback',
-     topic: 'CreateChangeStream',
-     data: {
-     className: 'EtlFlow',
-     collectionChangedCallback: (change) => {
-     if (change.type === 'create') {
-     me.startFlow(change.target.toString());
-     }
-     }
-     }
-     });*/
+    me.postal.publish({
+      channel: 'Loopback',
+      topic: 'CreateChangeStream',
+      data: {
+        className: 'EtlFlow',
+        collectionChangedCallback: (change) => {
+          if (change.type === 'create') {
+            me.writeBackRefreshAndPublishEtlFileCache();
+          }
+        }
+      }
+    });
     cb(null, {message: 'Initialized dbMonitor'});
 
     me.server.on('started', () => {
@@ -98,22 +97,6 @@ export class DbMonitorImpl implements DbMonitor {
 
   initSubscriptions(cb: (err: Error, result: any) => void) {
     let me = this;
-
-    /*    me.postal.subscribe({
-     channel: 'TestSignal',
-     topic: 'ProdFirmamentVita',
-     callback: () => {
-     me.fullPipeline.tag = {fileId:'abcd', flowId:'efgh'};
-     me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve('/tmp', 'tmp.txt')];
-     me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
-     me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
-     me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-     me.updateEtlStatus(status);
-     }, (err, result) => {
-     me.appendEtlResults(result);
-     });
-     }
-     });*/
     me.postal.subscribe({
       channel: 'EtlTask',
       topic: 'AddTask',
@@ -160,37 +143,48 @@ export class DbMonitorImpl implements DbMonitor {
     cb(null, {message: 'Initialized dbMonitor Subscriptions'});
   }
 
-  private taskAdded(fileId: string, flowId: string) {
+  private taskAdded(fileId: string, flowName: string) {
     //This gets called from a DB signal indicating a task was created in the
     //EtlTask DB. Now we need to add a flow to the appropriate EtlFile object
     let me = this;
     me.getModelById(fileId, 'EtlFile', (err, etlFile: EtlFile) => {
-      try {
-        etlFile.addFlows([{name: flowId}], (err, etlFlows: EtlFlow[]) => {
-          me.startFlow(etlFile, etlFlows[0]);
-        });
-      } catch (err) {
-        me.commandUtil.logError(err);
-      }
+      let operationUUID = Util.generateUUID();
+      me.postal.subscribe({
+        channel: 'FirmamentVita',
+        topic: operationUUID,
+        callback: (data) => {
+          let d = data;
+        }
+      })
+      me.postal.publish({
+        channel: 'FirmamentVita',
+        topic: 'ProcessFileWithFlow',
+        data: <ProcessFileWithFlowOptions>{
+          etlFile,
+          fileEncryptionPassword: config.decryptPassword,
+          flowName,
+          operationUUID
+        }
+      });
     });
   }
 
   private startFlow(etlFile: EtlFile, etlFlow: EtlFlow) {
     let me = this;
     //Make sure steps already exist in flow before sending it to Vita module
-    etlFlow.loadEntireObject((err, etlFlow: EtlFlow) => {
-      me.fullPipeline.tag = etlFlow;
-      me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
-      me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
-      me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
-      me.writeBackRefreshAndPublishEtlFileCache(() => {
-        me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-          me.updateEtlStatus(status.tag);
-        }, (err, result) => {
-          me.appendEtlResults(result);
-        });
-      });
-    });
+    /*    etlFlow.loadEntireObject((err, etlFlow: EtlFlow) => {
+     me.fullPipeline.tag = etlFlow;
+     me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
+     me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
+     me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
+     me.writeBackRefreshAndPublishEtlFileCache(() => {
+     me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
+     me.updateEtlStatus(status.tag);
+     }, (err, result) => {
+     me.appendEtlResults(result);
+     });
+     });
+     });*/
   }
 
   private updateEtlStatus(etlFlow: EtlFlow) {

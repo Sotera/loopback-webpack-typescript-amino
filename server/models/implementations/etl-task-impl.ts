@@ -1,7 +1,7 @@
 import {injectable, inject} from 'inversify';
 import {IPostal, CommandUtil} from "firmament-yargs";
 import {EtlBaseImpl} from "./etl-base-impl";
-import {EtlTask} from "../interfaces/etl-task";
+import {EtlTask} from "../../../node_modules/etl-typings/index";
 @injectable()
 export class EtlTaskImpl extends EtlBaseImpl implements EtlTask {
   constructor(@inject('CommandUtil') protected commandUtil: CommandUtil,

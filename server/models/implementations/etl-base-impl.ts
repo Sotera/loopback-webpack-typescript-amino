@@ -1,8 +1,7 @@
 import {unmanaged, injectable} from 'inversify';
 import {IPostal, CommandUtil} from "firmament-yargs";
-import {EtlBase} from "../interfaces/etl-base";
 import {Util} from "../../util/util";
-import {EtlError} from "../interfaces/etl-error";
+import {EtlBase, EtlError} from "../../../node_modules/etl-typings/index";
 const async = require('async');
 
 @injectable()

@@ -61,7 +61,7 @@
                 <td class="td-center">{{flow.id}}</td>
                 <td class="td-center">
                   <div *ngIf="!flow.errors">{{flow.status}}</div>
-                  <div *ngIf="flow.errors">{{flow.errors[0].message}} ({{flow.errors.length}})</div>
+<!--                  <div *ngIf="flow.errors">{{flow.errors[0].message}} ({{flow.errors.length}})</div>-->
                   <div *ngFor="let step of flow.steps">
                     <div *ngFor="let error of step.errors">
                       <div><strong>{{error.message}}</strong></div>
@@ -94,12 +94,10 @@
                   </div>
                 </td>
                 <td class="td-center">
-                  <button type="button" class="btn btn-primary btn-icon"
-                          (click)="toggleFlowExpanded(flow)" *ngIf="!flow.expanded"
-                          title="show Details"><i class="ion-android-expand"></i></button>
-                  <button type="button" class="btn btn-primary btn-icon"
-                          (click)="toggleFlowExpanded(flow)" *ngIf="flow.expanded"
-                          title="hide Details"><i class="ion-android-contract"></i></button>
+                  <button type="button" class="btn btn-primary btn-icon" (click)="toggleFlowExpanded(flow)"
+                          *ngIf="!flow.expanded" title="show Details"><i class="ion-android-expand"></i></button>
+                  <button type="button" class="btn btn-primary btn-icon" (click)="toggleFlowExpanded(flow)"
+                          *ngIf="flow.expanded" title="hide Details"><i class="ion-android-contract"></i></button>
                   <button type="button" class="btn btn-danger btn-icon" (click)="deleteFile(file.id)"
                           title="Delete File History"><i class="ion-trash-a"></i></button>
                 </td>

@@ -1,9 +1,8 @@
 import {injectable, inject} from 'inversify';
 import {IPostal, CommandUtil} from "firmament-yargs";
-import {EtlFile} from "../interfaces/etl-file";
 import {EtlBaseImpl} from "./etl-base-impl";
-import {EtlFlow} from "../interfaces/etl-flow";
-import {EtlBase} from "../interfaces/etl-base";
+import {Util} from "../../util/util";
+import {EtlFile, EtlFlow, EtlBase} from "../../../node_modules/etl-typings/index";
 const async = require('async');
 
 @injectable()
@@ -50,81 +49,27 @@ export class EtlFileImpl extends EtlBaseImpl implements EtlFile {
 
   addFlows(flows: any[], cb: (err: Error, etlFlows: EtlFlow[]) => void) {
     let me = this;
-    async.waterfall([
-      (cb) => {
-        async.map(flows, (flow, cb) => {
-          me.postal.publish({
-            channel: 'Loopback',
-            topic: 'Find',
-            data: {
-              className: 'EtlFlow',
-              filter: {where: {and: [{name: flow.name}, {type: 'template'}]}},
-              callback: (err, etlFlows: EtlFlow[]) => {
-                cb(err, etlFlows.length ? etlFlows[0] : null);
-              }
-            }
-          });
-        }, (err, etlFlows: EtlFlow[]) => {
-          cb(err, etlFlows.filter(etlFlow => {
-            return !!etlFlow;
-          }));
-        });
-      },
-      (etlFlows: EtlFlow[], cb) => {
-        //Get the steps for each flow
-        async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
-          etlFlow.loadEntireObject(cb);
-        }, cb);
-      },
-      (etlFlows: EtlFlow[], cb) => {
-        async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
-          let tmpSteps = etlFlow.steps.map(step => {
-            return {name: step.name};
-          });
-          cb(null, {
-            className: 'EtlFlow',
-            initializationObject: {
-              name: etlFlow.name, tmpSteps
-            }
-          });
-        }, (err, containedObjects) => {
-          me.postal.publish({
-            channel: 'Loopback',
-            topic: 'CreateHasManyObject',
-            data: {
-              containerObject: me,
-              parentPropertyName: 'parentAminoId',
-              containedObjects,
-              callback: cb
-            }
-          });
-        });
-      },
-      (etlFlows: EtlFlow[], cb) => {
-        async.map(etlFlows, (etlFlow: EtlFlow, cb) => {
-          let steps = etlFlow.loopbackModel.tmpSteps.map(step => {
-            return {name: step.name};
-          });
-          etlFlow.loopbackModel.tmpSteps = null;
-          etlFlow.addSteps(steps, () => {
-            //Remove 'steps' property from etlFlow
-            me.postal.publish({
-              channel: 'Loopback',
-              topic: 'UpdateAttribute',
-              data: {
-                className: 'EtlFlow',
-                loopbackModelToUpdate: etlFlow.loopbackModel,
-                attributeName: 'tmpSteps',
-                newAttributeValue: null,
-                callback: (err) => {
-                  cb(err, etlFlow);
-                }
-              }
-            });
-          });
-        }, cb);
-      }
-    ], cb);
+    async.map(flows, (flow, cb) => {
+      cb(null, {
+        className: 'EtlFlow',
+        initializationObject: {
+          name: flow.name
+        }
+      });
+    }, (err, containedObjects) => {
+      me.postal.publish({
+        channel: 'Loopback',
+        topic: 'CreateHasManyObject',
+        data: {
+          containerObject: me,
+          parentPropertyName: 'parentAminoId',
+          containedObjects,
+          callback: (err, etlFlows: EtlFlow[]) => {
+            Util.checkCallback(cb)(err, etlFlows);
+          }
+        }
+      });
+    });
   }
 
   get flows(): EtlFlow[] {

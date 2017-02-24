@@ -3,7 +3,6 @@ import {CommandUtil, IPostal} from 'firmament-yargs';
 import {BaseService} from '../interfaces/base-service';
 import {Loopback} from '../interfaces/loopback';
 import kernel from '../../inversify.config';
-import {EtlBase} from '../../models/interfaces/etl-base';
 import {
   ModelCreateOptions,
   CreateChangeStreamOptions,
@@ -17,6 +16,7 @@ import {UpdateAttributeOptions} from "../../models/interfaces/loopback-control";
 import {ModelDestroyByIdOptions} from "../../models/interfaces/loopback-control";
 import {ModelFindByAminoIdOptions} from "../../models/interfaces/loopback-control";
 import {Util} from "../../util/util";
+import {EtlBase} from "../../../node_modules/etl-typings/index";
 const async = require('async');
 
 @injectable()

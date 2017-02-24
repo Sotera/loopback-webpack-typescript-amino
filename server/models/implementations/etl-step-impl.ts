@@ -1,8 +1,7 @@
 import {injectable, inject} from 'inversify';
 import {IPostal, CommandUtil} from "firmament-yargs";
 import {EtlBaseImpl} from "./etl-base-impl";
-import {EtlStep} from "../interfaces/etl-step";
-import {EtlBase} from "../interfaces/etl-base";
+import {EtlStep, EtlBase} from "../../../node_modules/etl-typings/index";
 @injectable()
 export class EtlStepImpl extends EtlBaseImpl implements EtlStep {
   constructor(@inject('CommandUtil') protected commandUtil: CommandUtil,
