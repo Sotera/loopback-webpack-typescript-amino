@@ -155,7 +155,7 @@ export class DbMonitorImpl implements DbMonitor {
         callback: (data) => {
           let d = data;
         }
-      })
+      });
       me.postal.publish({
         channel: 'FirmamentVita',
         topic: 'ProcessFileWithFlow',
@@ -167,24 +167,6 @@ export class DbMonitorImpl implements DbMonitor {
         }
       });
     });
-  }
-
-  private startFlow(etlFile: EtlFile, etlFlow: EtlFlow) {
-    let me = this;
-    //Make sure steps already exist in flow before sending it to Vita module
-    /*    etlFlow.loadEntireObject((err, etlFlow: EtlFlow) => {
-     me.fullPipeline.tag = etlFlow;
-     me.fullPipeline.decryptAndUnTarOptions.encryptedFiles = [path.resolve(etlFile.path, etlFile.name)];
-     me.fullPipeline.decryptAndUnTarOptions.password = config.decryptPassword;
-     me.fullPipeline.mergePcapFilesOptions.mergedPcapFile = 'mergedMike.pcap';
-     me.writeBackRefreshAndPublishEtlFileCache(() => {
-     me.vitaTasks.processFullPipelineInstance(me.fullPipeline, (err, status: any) => {
-     me.updateEtlStatus(status.tag);
-     }, (err, result) => {
-     me.appendEtlResults(result);
-     });
-     });
-     });*/
   }
 
   private updateEtlStatus(etlFlow: EtlFlow) {
