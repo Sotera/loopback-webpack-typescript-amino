@@ -50,9 +50,7 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
     async.map(steps, (step, cb) => {
       cb(null, {
         className: 'EtlStep',
-        initializationObject: {
-          name: step.name
-        }
+        initializationObject: step
       });
     }, (err, containedObjects) => {
       me.postal.publish({

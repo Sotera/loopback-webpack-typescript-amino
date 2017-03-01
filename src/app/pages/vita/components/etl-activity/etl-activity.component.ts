@@ -1,6 +1,7 @@
 import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
 import {PostalService, PublishTarget} from '../../../../_services/postal.service';
 import {EtlFile, EtlFlow} from "../../../../../../node_modules/etl-typings/index";
+import * as _ from 'lodash';
 
 @Component({
   selector: 'etl-activity-component',
@@ -18,7 +19,7 @@ export class EtlActivity implements AfterViewInit {
 
   constructor(private postalService: PostalService) {
     let me = this;
-    me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles: EtlFile[]) => {
+    let throttledFunction = _.throttle((etlFiles) => {
       try {
         etlFiles.forEach((etlFile) => {
           etlFile.flows.forEach((etlFlow) => {
@@ -30,6 +31,9 @@ export class EtlActivity implements AfterViewInit {
       } catch (err) {
         alert(JSON.stringify(err));
       }
+    }, 1500);
+    me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles: EtlFile[]) => {
+      throttledFunction(etlFiles);
     });
   }
 

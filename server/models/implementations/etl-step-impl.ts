@@ -56,6 +56,14 @@ export class EtlStepImpl extends EtlBaseImpl implements EtlStep {
     return this.getProperty<number>('progress');
   }
 
+  set index(newIndex: number) {
+    this.setProperty<number>('index', newIndex);
+  }
+
+  get index(): number {
+    return this.getProperty<number>('index');
+  }
+
   set status(newStatus: string) {
     this.setProperty<string>('status', newStatus);
   }

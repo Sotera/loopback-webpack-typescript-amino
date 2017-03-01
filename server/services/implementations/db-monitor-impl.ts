@@ -8,6 +8,7 @@ import {EtlFile, EtlFlow, EtlBase} from '../../../node_modules/etl-typings/index
 import {
   ProcessFileWithFlowOptions
 } from "../../../node_modules/firmament-vita/js/interfaces/vita-options-results";
+import * as _ from 'lodash';
 const path = require('path');
 const async = require('async');
 const config = require('../../config.json');
@@ -15,6 +16,7 @@ const config = require('../../config.json');
 @injectable()
 export class DbMonitorImpl implements DbMonitor {
   private etlFileCache: EtlFile[] = [];
+  private throttlePublishEtlFileCache: () => void;
 
   constructor(@inject('BaseService') private baseService: BaseService,
               @inject('IPostal') private postal: IPostal,
@@ -153,7 +155,7 @@ export class DbMonitorImpl implements DbMonitor {
         channel: 'FirmamentVita',
         topic: operationUUID,
         callback: (data) => {
-          let d = data;
+          me.writeBackRefreshAndPublishEtlFileCache();
         }
       });
       me.postal.publish({
@@ -371,28 +373,33 @@ export class DbMonitorImpl implements DbMonitor {
   private writeBackRefreshAndPublishEtlFileCache(cb: ((err) => void) = null) {
     let me = this;
     me.writeBackEtlFileCache(() => {
-      me.refreshEtlFileCache((err, etlFiles) => {
-        me.publishEtlFileCache(etlFiles);
+      me.refreshEtlFileCache((err) => {
+        me.publishEtlFileCache();
         Util.checkCallback(cb)(err);
       });
     });
   }
 
-  private publishEtlFileCache(etlFileCache: EtlFile[] = null) {
+
+  private publishEtlFileCache() {
     let me = this;
-    etlFileCache = etlFileCache || me.etlFileCache;
-    me.postal.publish({
-      channel: 'WebSocket',
-      topic: 'Broadcast',
-      data: {
-        channel: 'EtlFile',
-        topic: 'AllFiles',
-        data: etlFileCache.map((etlFile) => {
-          let retVal = etlFile.getPojo();
-          return retVal;
-        })
-      }
-    });
+    if(!me.throttlePublishEtlFileCache){
+      me.throttlePublishEtlFileCache = _.throttle(() => {
+        me.postal.publish({
+          channel: 'WebSocket',
+          topic: 'Broadcast',
+          data: {
+            channel: 'EtlFile',
+            topic: 'AllFiles',
+            data: me.etlFileCache.map((etlFile) => {
+              let retVal = etlFile.getPojo();
+              return retVal;
+            })
+          }
+        });
+      }, 1500);
+    }
+    me.throttlePublishEtlFileCache();
   }
 
   private writeBackEtlFileCache(cb: (err) => void) {
@@ -425,7 +432,26 @@ export class DbMonitorImpl implements DbMonitor {
     this.postal.publish({channel: 'Loopback', topic: 'FindByAminoId', data: {className, aminoId, callback}});
   }
 
-  private getModelById(id: string, className: string, callback: (err, etlBase: EtlBase) => void) {
-    this.postal.publish({channel: 'Loopback', topic: 'FindById', data: {className, id, callback}});
+  private getModelById(id: string, className: string, cb: (err, etlBase?: EtlBase) => void) {
+    let me = this;
+    //Look for it in the cache
+    if (className === 'EtlFile') {
+      let etlFile = _.find(me.etlFileCache, (f) => {
+        return f.id.toString() === id;
+      });
+      if (!etlFile) {
+        me.refreshEtlFileCache(() => {
+          let etlFile = _.find(me.etlFileCache, (f) => {
+            return f.id.toString() === id;
+          });
+          if (!etlFile) {
+            cb(new Error('Not Found'));
+            return;
+          }
+          cb(null, etlFile);
+        });
+      }
+      cb(null, etlFile);
+    }
   }
 }
