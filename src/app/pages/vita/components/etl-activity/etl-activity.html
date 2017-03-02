@@ -61,7 +61,7 @@
                 <td class="td-center">{{flow.id}}</td>
                 <td class="td-center">
                   <div *ngIf="!flow.errors">{{flow.status}}</div>
-<!--                  <div *ngIf="flow.errors">{{flow.errors[0].message}} ({{flow.errors.length}})</div>-->
+                  <!--                  <div *ngIf="flow.errors">{{flow.errors[0].message}} ({{flow.errors.length}})</div>-->
                   <div *ngFor="let step of flow.steps">
                     <div *ngFor="let error of step.errors">
                       <div><strong>{{error.message}}</strong></div>
@@ -80,7 +80,7 @@
                     <div *ngFor="let step of flow.steps">
                       <div><strong>{{step.name}}</strong></div>
                       <div><strong>Status:</strong> {{step.status}}</div>
-                      <div><strong>Progress:</strong> {{step.progress}}</div>
+                      <div><strong>Progress:</strong> {{step.progress | number:'.2-2'}}</div>
                       <div><strong>Start:</strong> {{step.startTime | date: 'medium'}}</div>
                       <div><strong>Current:</strong> {{step.currentTime | date: 'medium'}}</div>
                       <div><strong>End:</strong> {{step.endTime | date: 'medium'}}</div>

@@ -26,10 +26,6 @@
     "index": {
       "type": "number",
       "required": false
-    },
-    "status": {
-      "type": "string",
-      "required": false
     }
   },
   "validations": [],

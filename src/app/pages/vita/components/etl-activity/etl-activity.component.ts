@@ -31,7 +31,7 @@ export class EtlActivity implements AfterViewInit {
       } catch (err) {
         alert(JSON.stringify(err));
       }
-    }, 1500);
+    }, 900);
     me.postalService.subscribe('EtlFile', 'AllFiles', (etlFiles: EtlFile[]) => {
       throttledFunction(etlFiles);
     });

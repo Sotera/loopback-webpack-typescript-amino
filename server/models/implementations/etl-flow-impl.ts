@@ -73,20 +73,11 @@ export class EtlFlowImpl extends EtlBaseImpl implements EtlFlow {
   getPojo(): any {
     let me = this;
     let retVal = super.getPojo();
-    retVal.status = me.status;
     retVal.currentStepIndex = me.currentStepIndex;
     retVal.steps = me.steps.map((step) => {
       return step.getPojo();
     });
     return retVal;
-  }
-
-  set status(newStatus: string) {
-    this.setProperty<string>('status', newStatus);
-  }
-
-  get status(): string {
-    return this.getProperty<string>('status');
   }
 
   set currentStepIndex(newCurrentStepIndex: number) {

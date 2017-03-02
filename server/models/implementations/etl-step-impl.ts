@@ -16,7 +16,6 @@ export class EtlStepImpl extends EtlBaseImpl implements EtlStep {
     retVal.startTime = me.startTime;
     retVal.currentTime = me.currentTime;
     retVal.progress = me.progress;
-    retVal.status = me.status;
     return retVal;
   }
 
@@ -62,13 +61,5 @@ export class EtlStepImpl extends EtlBaseImpl implements EtlStep {
 
   get index(): number {
     return this.getProperty<number>('index');
-  }
-
-  set status(newStatus: string) {
-    this.setProperty<string>('status', newStatus);
-  }
-
-  get status(): string {
-    return this.getProperty<string>('status');
   }
 }

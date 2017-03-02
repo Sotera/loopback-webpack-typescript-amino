@@ -397,7 +397,7 @@ export class DbMonitorImpl implements DbMonitor {
             })
           }
         });
-      }, 1500);
+      }, 500);
     }
     me.throttlePublishEtlFileCache();
   }

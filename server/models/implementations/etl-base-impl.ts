@@ -94,6 +94,7 @@ export class EtlBaseImpl implements EtlBase {
       id: me.id,
       name: me.name,
       aminoId: me.aminoId,
+      status: me.status,
       parentAminoId: me.parentAminoId,
       errors: me.errors.map((error) => {
         return error.getPojo();
@@ -123,6 +124,14 @@ export class EtlBaseImpl implements EtlBase {
 
   get name(): string {
     return this.getProperty<string>('name');
+  }
+
+  set status(newStatus: string) {
+    this.setProperty<string>('status', newStatus);
+  }
+
+  get status(): string {
+    return this.getProperty<string>('status');
   }
 
   protected setProperty<T>(propertyName: string, newPropertyValue: T) {

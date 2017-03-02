@@ -17,6 +17,10 @@
     },
     "parentAminoId": {
       "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
