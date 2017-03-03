@@ -2,9 +2,11 @@ import {injectable, inject} from 'inversify';
 import {CommandUtil, IPostal} from "firmament-yargs";
 import {BaseService} from "../interfaces/base-service";
 import {FolderMonitor} from "../interfaces/folder-monitor";
+const path = require('path');
+const fs = require('fs');
 
 const chokidar = require('chokidar');
-const config = require('../../config.json');
+const config = require((<any>global).configFilePath);
 
 //noinspection JSUnusedGlobalSymbols
 @injectable()

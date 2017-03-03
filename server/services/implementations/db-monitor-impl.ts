@@ -11,7 +11,7 @@ import {
 import * as _ from 'lodash';
 const path = require('path');
 const async = require('async');
-const config = require('../../config.json');
+const config = require((<any>global).configFilePath);
 
 @injectable()
 export class DbMonitorImpl implements DbMonitor {

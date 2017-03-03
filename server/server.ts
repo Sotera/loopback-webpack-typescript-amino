@@ -1,7 +1,17 @@
 (() => {
   const loopback = require('loopback');
   const boot = require('loopback-boot');
+  const path = require('path');
+  const fs = require('fs');
   const app = module.exports = loopback();
+
+  (<any>global).configFilePath = path.resolve(__dirname, 'config.json');
+  if (process.env.CONFIG_FILE_FOLDER) {
+    let configFilePath = path.resolve(process.env.CONFIG_FILE_FOLDER, 'config.json');
+    if (fs.existsSync(configFilePath)) {
+      (<any>global).configFilePath = configFilePath;
+    }
+  }
 
   app.start = function () {
     // start the web server
