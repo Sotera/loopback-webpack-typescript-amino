@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="">
+    <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="Add 'del' --save-dev for gulpfile">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/etl-base.json" afterPath="$PROJECT_DIR$/common/models/etl-base.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/etl-flow.json" afterPath="$PROJECT_DIR$/common/models/etl-flow.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/etl-step.json" afterPath="$PROJECT_DIR$/common/models/etl-step.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/implementations/etl-base-impl.ts" afterPath="$PROJECT_DIR$/server/models/implementations/etl-base-impl.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/implementations/etl-flow-impl.ts" afterPath="$PROJECT_DIR$/server/models/implementations/etl-flow-impl.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/implementations/etl-step-impl.ts" afterPath="$PROJECT_DIR$/server/models/implementations/etl-step-impl.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" afterPath="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" afterPath="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db-monitor-impl.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db-monitor-impl.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="399" column="9" lean-forward="false" selection-start-line="399" selection-start-column="9" selection-end-line="399" selection-end-column="9" />
+            <state relative-caret-position="252">
+              <caret line="382" column="0" lean-forward="false" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
                 <element signature="e#2316#2963#0" expanded="false" />
@@ -49,10 +40,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="etl-activity.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="594">
               <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
@@ -64,7 +65,7 @@
       <file leaf-file-name="postal-agent-impl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/js/implementations/postal-agent-impl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
+            <state relative-caret-position="1080">
               <caret line="60" column="74" lean-forward="false" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
               <folding />
             </state>
@@ -74,7 +75,7 @@
       <file leaf-file-name="etl-activity.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
+            <state relative-caret-position="1476">
               <caret line="82" column="84" lean-forward="false" selection-start-line="82" selection-start-column="84" selection-end-line="82" selection-end-column="84" />
               <folding />
             </state>
@@ -188,7 +189,6 @@
         <option value="$PROJECT_DIR$/server/services/implementations/loopback-impl.ts" />
         <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl.ts" />
         <option value="$PROJECT_DIR$/server/config.json" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/common/models/etl-step.json" />
         <option value="$PROJECT_DIR$/common/models/etl-base.json" />
         <option value="$PROJECT_DIR$/common/models/etl-flow.json" />
@@ -199,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html" />
         <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts" />
         <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -243,7 +244,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1919" />
     <option name="width" value="1922" />
-    <option name="height" value="1055" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1058,30 +1059,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
+    <frame x="1919" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3397642" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29689175" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14654718" sideWeight="0.53886926" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47695607" sideWeight="0.50395364" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2113864" sideWeight="0.46113074" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34334764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26688102" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3397642" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29689175" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14707433" sideWeight="0.53886926" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41050375" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26609442" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386924" sideWeight="0.4960464" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34334764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41050375" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3386924" sideWeight="0.4960464" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1153,250 +1154,6 @@
         <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.js" />
         <option value="$PROJECT_DIR$/node_modules/ng2-smart-table/ng2-smart-table.js.map" />
         <option value="$PROJECT_DIR$/node_modules/ng2-smart-table/ng2-smart-table.js" />
-        <option value="$PROJECT_DIR$/src/vendor.browser.js" />
-        <option value="$PROJECT_DIR$/src/polyfills.browser.js.map" />
-        <option value="$PROJECT_DIR$/src/desktop.js.map" />
-        <option value="$PROJECT_DIR$/src/main.browser.aot.js.map" />
-        <option value="$PROJECT_DIR$/src/polyfills.browser.js" />
-        <option value="$PROJECT_DIR$/src/main.browser.js" />
-        <option value="$PROJECT_DIR$/src/main.browser.aot.js" />
-        <option value="$PROJECT_DIR$/src/main.browser.js.map" />
-        <option value="$PROJECT_DIR$/src/vendor.browser.js.map" />
-        <option value="$PROJECT_DIR$/src/desktop.js" />
-        <option value="$PROJECT_DIR$/src/app/app.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/environment.js" />
-        <option value="$PROJECT_DIR$/src/app/app.routing.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app.module.js" />
-        <option value="$PROJECT_DIR$/src/app/app.routing.js" />
-        <option value="$PROJECT_DIR$/src/app/app.menu.js.map" />
-        <option value="$PROJECT_DIR$/src/app/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/global.state.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app.service.js" />
-        <option value="$PROJECT_DIR$/src/app/app.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/index.js" />
-        <option value="$PROJECT_DIR$/src/app/app.menu.js" />
-        <option value="$PROJECT_DIR$/src/app/environment.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app.component.js" />
-        <option value="$PROJECT_DIR$/src/app/global.state.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.routing.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.module.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.menu.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.routing.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/pages.menu.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/nga.module.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/nga.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/theme.constants.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/theme.configProvider.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/theme.config.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/theme.config.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/theme.configProvider.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/theme.constants.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_guards/auth.guard.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_guards/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_guards/auth.guard.js" />
-        <option value="$PROJECT_DIR$/src/app/_guards/headers.js" />
-        <option value="$PROJECT_DIR$/src/app/_guards/index.js" />
-        <option value="$PROJECT_DIR$/src/app/_guards/headers.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_models/authentication.models.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_models/authentication.models.js" />
-        <option value="$PROJECT_DIR$/src/app/modules/alert.module.js" />
-        <option value="$PROJECT_DIR$/src/app/modules/alert.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_services/authentication.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_services/websocket.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_services/user.service.js" />
-        <option value="$PROJECT_DIR$/src/app/_services/alert.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_services/app-description.service.js" />
-        <option value="$PROJECT_DIR$/src/app/_services/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_services/app-description.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_services/authentication.service.js" />
-        <option value="$PROJECT_DIR$/src/app/_services/websocket.service.js" />
-        <option value="$PROJECT_DIR$/src/app/_services/alert.service.js" />
-        <option value="$PROJECT_DIR$/src/app/_services/postal.service.js" />
-        <option value="$PROJECT_DIR$/src/app/_services/postal.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_services/index.js" />
-        <option value="$PROJECT_DIR$/src/app/_services/user.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_directives/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_directives/index.js" />
-        <option value="$PROJECT_DIR$/src/app/_directives/alert.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/_directives/alert.component.js" />
-        <option value="$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.js" />
-        <option value="$PROJECT_DIR$/src/app/_interfaces/etl.interfaces.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.module.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.routing.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/vita.routing.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login.routing.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login.module.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login.routing.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/login/login.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.routing.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.module.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.routing.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/register/register.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.module.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.module.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routing.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routing.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/validators/email.validator.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/validators/equalPasswords.validator.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/validators/equalPasswords.validator.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/validators/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/validators/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/validators/email.validator.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baAppPicture/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baAppPicture/baAppPicture.pipe.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baAppPicture/baAppPicture.pipe.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baAppPicture/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baProfilePicture/baProfilePicture.pipe.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baProfilePicture/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baProfilePicture/baProfilePicture.pipe.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baProfilePicture/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baKameleonPicture/baKameleonPicture.pipe.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baKameleonPicture/baKameleonPicture.pipe.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baKameleonPicture/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/pipes/baKameleonPicture/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baMenu/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baMenu/baMenu.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baMenu/baMenu.service.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baMenu/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baImageLoader/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baImageLoader/baImageLoader.service.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baImageLoader/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baImageLoader/baImageLoader.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemeSpinner/baThemeSpinner.service.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemeSpinner/baThemeSpinner.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemeSpinner/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemeSpinner/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemePreloader/baThemePreloader.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemePreloader/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemePreloader/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/services/baThemePreloader/baThemePreloader.service.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/baCardBlurHelper.service.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/bgMetrics.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/baCardBlurHelper.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/baCardBlur.directive.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/bgMetrics.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/baCard.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCard/baCardBlur.directive.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/baMenu.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/baMenu.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChartTheme.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baAmChart/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baAmChart/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChartTheme.service.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baAmChart/baAmChart.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baBackTop/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baBackTop/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baBackTop/baBackTop.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baBackTop/baBackTop.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPageTop/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPageTop/baPageTop.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPageTop/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baSidebar/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baSidebar/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baSidebar/baSidebar.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCheckbox/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCheckbox/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCheckbox/baCheckbox.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baCheckbox/baCheckbox.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.service.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMsgCenter/baMsgCenter.service.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baContentTop/baContentTop.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baContentTop/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baContentTop/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baContentTop/baContentTop.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baFullCalendar/baFullCalendar.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baChartistChart/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baChartistChart/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baChartistChart/baChartistChart.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMultiCheckbox/baMultiCheckbox.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baPictureUploader/baPictureUploader.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baThemeRun/baThemeRun.directive.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baThemeRun/baThemeRun.directive.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baThemeRun/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baThemeRun/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baSlimScroll/baSlimScroll.directive.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baScrollPosition/index.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baScrollPosition/baScrollPosition.directive.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baScrollPosition/baScrollPosition.directive.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/directives/baScrollPosition/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-flow/etl-flow.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/etl-task1.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-task1/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/index.js" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/pages/vita/components/etl-fileManager/etl-fileManager.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/index.js.map" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/baMenuItem.component.js" />
-        <option value="$PROJECT_DIR$/src/app/theme/components/baMenu/components/baMenuItem/index.js" />
         <option value="$PROJECT_DIR$/server/models/implementations/etl-base-impl.js" />
         <option value="$PROJECT_DIR$/server/models/implementations/etl-step-impl.js.map" />
         <option value="$PROJECT_DIR$/server/models/implementations/etl-task-impl.js" />
@@ -1589,16 +1346,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/highlight.js/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -1714,19 +1461,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/etl-step.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1734,7 +1472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1742,7 +1479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1758,7 +1494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1774,7 +1509,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/js/implementations/postal-agent-impl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="1080">
           <caret line="60" column="74" lean-forward="false" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
           <folding />
         </state>
@@ -1782,7 +1517,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
+        <state relative-caret-position="1476">
           <caret line="82" column="84" lean-forward="false" selection-start-line="82" selection-start-column="84" selection-end-line="82" selection-end-column="84" />
           <folding />
         </state>
@@ -1790,7 +1525,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="594">
           <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
@@ -1800,8 +1535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/services/implementations/db-monitor-impl.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="399" column="9" lean-forward="false" selection-start-line="399" selection-start-column="9" selection-end-line="399" selection-end-column="9" />
+        <state relative-caret-position="252">
+          <caret line="382" column="0" lean-forward="false" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
             <element signature="e#2316#2963#0" expanded="false" />
@@ -1809,6 +1544,14 @@
             <element signature="n#!!block;n#refreshEtlFileCache#0;n#DbMonitorImpl#0" expanded="false" />
             <element signature="n#!!block;n#getModelByAminoId#0;n#DbMonitorImpl#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
