@@ -29,6 +29,8 @@ export class FolderMonitorImpl implements FolderMonitor {
   init(cb: (err: Error, result: any) => void) {
     let me = this;
 
+    console.log(`config.folderMonitorPath: ${config.folderMonitorPath}`);
+
     let watcher = chokidar.watch(config.folderMonitorPath, {
       ignored: /[\/\\]\./,
       ignoreInitial: true,
