@@ -29,15 +29,6 @@ module.exports = function (server) {
     wsServer.on('connection',conn=>{
       connections[conn.key] = conn;
       commandUtil.log(`Connection from: ${conn.key}`);
-      let msg = `Connection from: ${conn.key}`;
-      fs.appendFileSync(path.resolve('/tmp','log.txt'), `${msg}\n`);
-      ///--> Test
-      postal.publish({
-        channel: 'Test',
-        topic: 'console.log',
-        data: `Connection from: ${conn.key}`
-      });
-      ///--> Test (end)
 
       console.log(`Connection from: ${conn.key}`);
       conn.on('text', text => {

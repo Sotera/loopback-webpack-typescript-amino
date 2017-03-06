@@ -23,14 +23,6 @@ export class FolderMonitorImpl implements FolderMonitor {
   }
 
   initSubscriptions(cb: (err: Error, result: any) => void) {
-    let me = this;
-    me.postal.subscribe({
-      channel: 'Test',
-      topic: 'console.log',
-      callback: (msg) => {
-        fs.appendFileSync(path.resolve(config.folderMonitorPath,'log.txt'), `${msg}\n`);
-      }
-    });
     cb(null, {message: 'Initialized folderMonitor Subscriptions'});
   }
 
