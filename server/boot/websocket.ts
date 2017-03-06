@@ -27,6 +27,14 @@ module.exports = function (server) {
     wsServer.on('connection',conn=>{
       connections[conn.key] = conn;
       commandUtil.log(`Connection from: ${conn.key}`);
+      ///--> Test
+      postal.publish({
+        channel: 'Test',
+        topic: 'console.log',
+        data: `Connection from: ${conn.key}`
+      });
+      ///--> Test (end)
+
       console.log(`Connection from: ${conn.key}`);
       conn.on('text', text => {
         //Incoming message from websocket, make sure it's shaped like Postal's IEnvelope<T> then

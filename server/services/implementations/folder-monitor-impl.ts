@@ -23,6 +23,14 @@ export class FolderMonitorImpl implements FolderMonitor {
   }
 
   initSubscriptions(cb: (err: Error, result: any) => void) {
+    let me = this;
+    me.postal.subscribe({
+      channel: 'Test',
+      topic: 'console.log',
+      callback: (msg) => {
+        console.log(msg);
+      }
+    });
     cb(null, {message: 'Initialized folderMonitor Subscriptions'});
   }
 
