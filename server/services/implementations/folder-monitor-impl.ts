@@ -33,7 +33,7 @@ export class FolderMonitorImpl implements FolderMonitor {
 
     let watcher = chokidar.watch(config.folderMonitorPath, {
       ignored: /[\/\\]\./,
-      ignoreInitial: true,
+      ignoreInitial: false,
       persistent: true,
       awaitWriteFinish: {
         stabilityThreshold: 2000,
