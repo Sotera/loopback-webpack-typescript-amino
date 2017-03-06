@@ -54,6 +54,6 @@ export class FolderMonitorImpl implements FolderMonitor {
         }
       });
     });
-    cb(null, {message: 'Initialized folderMonitor'});
+    cb(null, {message: `Initialized folderMonitor (Watching: ${config.folderMonitorPath})`});
   }
 }
