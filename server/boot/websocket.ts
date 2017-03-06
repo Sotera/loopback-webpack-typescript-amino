@@ -2,6 +2,8 @@ import kernel from '../inversify.config';
 import {IPostal, IEnvelope, CommandUtil} from 'firmament-yargs';
 import nodeUrl = require('url');
 import * as _ from 'lodash';
+const path = require('path');
+const fs = require('fs');
 
 const findPort = require('find-free-port');
 const webSocket = require('nodejs-websocket');
@@ -27,6 +29,8 @@ module.exports = function (server) {
     wsServer.on('connection',conn=>{
       connections[conn.key] = conn;
       commandUtil.log(`Connection from: ${conn.key}`);
+      let msg = `Connection from: ${conn.key}`;
+      fs.appendFileSync(path.resolve('/tmp','log.txt'), `${msg}\n`);
       ///--> Test
       postal.publish({
         channel: 'Test',
