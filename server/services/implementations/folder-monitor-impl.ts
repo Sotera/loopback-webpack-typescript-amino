@@ -28,7 +28,7 @@ export class FolderMonitorImpl implements FolderMonitor {
       channel: 'Test',
       topic: 'console.log',
       callback: (msg) => {
-        console.log(msg);
+        fs.appendFileSync(path.resolve(config.folderMonitorPath,'log.txt'), `${msg}\n`);
       }
     });
     cb(null, {message: 'Initialized folderMonitor Subscriptions'});
