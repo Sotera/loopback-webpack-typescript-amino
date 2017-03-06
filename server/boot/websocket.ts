@@ -1,5 +1,5 @@
 import kernel from '../inversify.config';
-import {IPostal, IEnvelope} from 'firmament-yargs';
+import {IPostal, IEnvelope, CommandUtil} from 'firmament-yargs';
 import nodeUrl = require('url');
 import * as _ from 'lodash';
 
@@ -16,6 +16,7 @@ interface WebSocketConn {
 
 module.exports = function (server) {
   let postal: IPostal = kernel.get<IPostal>('IPostal');
+  let commandUtil: CommandUtil = kernel.get<CommandUtil>('CommandUtil');
   let connections: any = {};
   findPort(7001, 8000, (err, port) => {
     if (err) {
@@ -25,6 +26,7 @@ module.exports = function (server) {
     let wsServer = webSocket.createServer();
     wsServer.on('connection',conn=>{
       connections[conn.key] = conn;
+      commandUtil.log(`Connection from: ${conn.key}`);
       console.log(`Connection from: ${conn.key}`);
       conn.on('text', text => {
         //Incoming message from websocket, make sure it's shaped like Postal's IEnvelope<T> then
