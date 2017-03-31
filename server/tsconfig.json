@@ -15,8 +15,8 @@
       "es6",
       "dom"
     ],
-    "types":[
-      "async"
+    "typeRoots": [
+      "node_modules/@types"
     ],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true

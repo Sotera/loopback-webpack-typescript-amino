@@ -1,4 +1,4 @@
-let websocket;
+/*let websocket;
 let output;
 let wsUri = 'ws://localhost:7001';
 
@@ -53,4 +53,4 @@ function writeToScreen(message)
   output.appendChild(pre);
 }
 
-window.addEventListener("load", init, false);
+window.addEventListener("load", init, false);*/
