@@ -8,6 +8,7 @@
   (<any>global).configFilePath = path.resolve(__dirname, 'config.json');
   if (process.env.CONFIG_FILE_FOLDER) {
     let configFilePath = path.resolve(process.env.CONFIG_FILE_FOLDER, 'config.json');
+    console.log(configFilePath);
     if (fs.existsSync(configFilePath)) {
       (<any>global).configFilePath = configFilePath;
     }
