@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401a67df-0d68-43e1-8351-c44f5e6b34f7" name="Default" comment="Fix strongloop deploy">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/_run_docker_mongo.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker/_run_docker_dist.sh" afterPath="$PROJECT_DIR$/docker/_run_docker_dist.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.ts" afterPath="$PROJECT_DIR$/server/server.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,31 +24,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/config.json">
+      <file leaf-file-name="app.routing.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.routing.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_run_docker_dist.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docker/_run_docker_dist.sh">
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#60#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.ts">
+      <file leaf-file-name="dashboard.routing.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routing.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="224">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_run_docker_mongo.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/_run_docker_mongo.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,7 +127,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="webSockets" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -214,7 +229,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1919" />
     <option name="width" value="1922" />
-    <option name="height" value="1080" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -247,48 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loopback-webpack-typescript-amino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -332,6 +305,34 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loopback-webpack-typescript-amino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,6 +381,18 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
     <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
@@ -434,6 +447,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -485,7 +505,6 @@
         <env name="CONFIG_FILE_FOLDER_0" value="/home/jreeme/tmp" />
       </envs>
       <browser start="true" with-js-debugger="true" url="http://localhost:3000/index.html" />
-      <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
           <list />
@@ -521,7 +540,6 @@
         <env name="NODE_ENV" value="development" />
       </envs>
       <browser with-js-debugger="true" url="http://localhost:3000/index.html" />
-      <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
           <list />
@@ -819,30 +837,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="0" width="1922" height="1080" extended-state="6" />
-    <editor active="false" />
+    <frame x="1919" y="0" width="1922" height="1053" extended-state="6" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611492" sideWeight="0.3397642" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32672232" sideWeight="0.49604222" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14865577" sideWeight="0.53886926" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.49604222" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14865577" sideWeight="0.53886926" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31008583" sideWeight="0.5039578" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4697286" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2113864" sideWeight="0.46113074" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34334764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45929018" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45922747" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4055794" sideWeight="0.4960464" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34334764" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4697286" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4060543" sideWeight="0.4960464" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -872,68 +889,68 @@
     <option name="processedProjectFiles" value="true" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server/static/js/test-websocket.js" />
-        <option value="$PROJECT_DIR$/server/static/js/test-websocket.js.map" />
+        <option value="$PROJECT_DIR$/server/util/util.js" />
+        <option value="$PROJECT_DIR$/server/util/util.js.map" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-flow-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl.js" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl-old.js" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-task-impl.js" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-base-impl.js" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-error-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-task-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-step-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-error-impl.js" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-step-impl.js" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-flow-impl.js" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl-old.js.map" />
+        <option value="$PROJECT_DIR$/server/models/implementations/etl-base-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/services/implementations/loopback-impl.js" />
+        <option value="$PROJECT_DIR$/server/services/implementations/service-manager-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/services/implementations/service-manager-impl.js" />
+        <option value="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.js" />
+        <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.js" />
+        <option value="$PROJECT_DIR$/server/services/implementations/base-service-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/services/implementations/base-service-impl.js" />
+        <option value="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.js" />
+        <option value="$PROJECT_DIR$/server/services/implementations/loopback-impl.js.map" />
+        <option value="$PROJECT_DIR$/server/models/interfaces/loopback-control.js.map" />
+        <option value="$PROJECT_DIR$/server/models/interfaces/loopback-control.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/server/inversify.config.js" />
+        <option value="$PROJECT_DIR$/server/inversify.config.js.map" />
+        <option value="$PROJECT_DIR$/server/custom-typings.js.map" />
+        <option value="$PROJECT_DIR$/server/custom-typings.js" />
+        <option value="$PROJECT_DIR$/server/server.js.map" />
         <option value="$PROJECT_DIR$/server/boot/websocket.js.map" />
-        <option value="$PROJECT_DIR$/server/boot/static.js" />
-        <option value="$PROJECT_DIR$/server/boot/authentication.js" />
+        <option value="$PROJECT_DIR$/server/boot/root.js" />
         <option value="$PROJECT_DIR$/server/boot/service-manager-startup.js" />
+        <option value="$PROJECT_DIR$/server/boot/authentication.js" />
         <option value="$PROJECT_DIR$/server/boot/static.js.map" />
         <option value="$PROJECT_DIR$/server/boot/service-manager-startup.js.map" />
         <option value="$PROJECT_DIR$/server/boot/webpack.js.map" />
+        <option value="$PROJECT_DIR$/server/boot/static.js" />
         <option value="$PROJECT_DIR$/server/boot/websocket.js" />
-        <option value="$PROJECT_DIR$/server/boot/webpack.js" />
-        <option value="$PROJECT_DIR$/server/boot/root.js" />
         <option value="$PROJECT_DIR$/server/boot/authentication.js.map" />
+        <option value="$PROJECT_DIR$/server/boot/webpack.js" />
         <option value="$PROJECT_DIR$/server/boot/root.js.map" />
-        <option value="$PROJECT_DIR$/server/server.js.map" />
-        <option value="$PROJECT_DIR$/server/custom-typings.js.map" />
-        <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/server/custom-typings.js" />
-        <option value="$PROJECT_DIR$/server/inversify.config.js" />
-        <option value="$PROJECT_DIR$/server/inversify.config.js.map" />
-        <option value="$PROJECT_DIR$/server/services/interfaces/folder-monitor.js" />
-        <option value="$PROJECT_DIR$/server/services/interfaces/service-manager.js" />
+        <option value="$PROJECT_DIR$/server/static/js/test-websocket.js" />
+        <option value="$PROJECT_DIR$/server/static/js/test-websocket.js.map" />
+        <option value="$PROJECT_DIR$/server/services/interfaces/initialize-database.js" />
+        <option value="$PROJECT_DIR$/server/services/interfaces/loopback.js.map" />
         <option value="$PROJECT_DIR$/server/services/interfaces/service-manager.js.map" />
         <option value="$PROJECT_DIR$/server/services/interfaces/initialize-database.js.map" />
+        <option value="$PROJECT_DIR$/server/services/interfaces/service-manager.js" />
+        <option value="$PROJECT_DIR$/server/services/interfaces/loopback.js" />
+        <option value="$PROJECT_DIR$/server/services/interfaces/folder-monitor.js" />
         <option value="$PROJECT_DIR$/server/services/interfaces/db-monitor.js" />
         <option value="$PROJECT_DIR$/server/services/interfaces/base-service.js.map" />
         <option value="$PROJECT_DIR$/server/services/interfaces/folder-monitor.js.map" />
-        <option value="$PROJECT_DIR$/server/services/interfaces/initialize-database.js" />
         <option value="$PROJECT_DIR$/server/services/interfaces/db-monitor.js.map" />
         <option value="$PROJECT_DIR$/server/services/interfaces/base-service.js" />
-        <option value="$PROJECT_DIR$/server/services/implementations/service-manager-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/services/implementations/service-manager-impl.js" />
-        <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/services/implementations/base-service-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.js" />
-        <option value="$PROJECT_DIR$/server/services/implementations/db-monitor-impl.js" />
-        <option value="$PROJECT_DIR$/server/services/implementations/folder-monitor-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/services/implementations/base-service-impl.js" />
-        <option value="$PROJECT_DIR$/server/services/implementations/initialize-database-impl.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-base-impl.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-step-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-task-impl.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-flow-impl.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-step-impl.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-flow-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-task-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-base-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/services/interfaces/loopback.js" />
-        <option value="$PROJECT_DIR$/server/services/interfaces/loopback.js.map" />
-        <option value="$PROJECT_DIR$/server/services/implementations/loopback-impl.js" />
-        <option value="$PROJECT_DIR$/server/services/implementations/loopback-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-error-impl.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-error-impl.js.map" />
-        <option value="$PROJECT_DIR$/server/util/util.js.map" />
-        <option value="$PROJECT_DIR$/server/util/util.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl-old.js" />
-        <option value="$PROJECT_DIR$/server/models/implementations/etl-file-impl-old.js.map" />
-        <option value="$PROJECT_DIR$/server/models/interfaces/loopback-control.js" />
-        <option value="$PROJECT_DIR$/server/models/interfaces/loopback-control.js.map" />
       </list>
     </option>
   </component>
@@ -977,14 +994,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/models/glue.json" />
-    <entry file="file://$PROJECT_DIR$/server/model-config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="52" column="2" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/etl-file.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -992,41 +1001,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/minimatch/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/hammerjs/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/handlebars/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/highlight.js/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/highlight.js/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/minimatch/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/hammerjs/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/handlebars/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/highlight.js/README.md" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/highlight.js/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/server/models/interfaces/etl-base.ts" />
     <entry file="file://$PROJECT_DIR$/server/models/interfaces/etl-error.ts" />
     <entry file="file://$PROJECT_DIR$/server/models/interfaces/etl-file.ts" />
@@ -1131,13 +1110,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/js/implementations/postal-agent-impl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="60" column="74" lean-forward="false" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/js/implementations/postal-agent-impl.js" />
     <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -1170,9 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,32 +1150,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/ng2-smart-table/node_modules/@angular/common/package.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/@angular/common/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/common/package.json" />
+    <entry file="file://$PROJECT_DIR$/node_modules/firmament-vita/package.json" />
     <entry file="file://$PROJECT_DIR$/src/app/pages/vita/components/etl-activity/etl-activity.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,10 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <marker date="1490996340407" expanded="true" signature="636:648" ph="..." />
-            <marker date="1490996340407" expanded="true" signature="765:776" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,7 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,7 +1181,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,7 +1188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1248,23 +1195,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
           <caret line="76" column="26" lean-forward="false" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/lodash/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/lodash/package.json" />
     <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1272,7 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1280,7 +1217,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,22 +1224,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/server/server.js" />
     <entry file="file://$PROJECT_DIR$/docker/_run_docker_dist.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/_run_docker_mongo.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
